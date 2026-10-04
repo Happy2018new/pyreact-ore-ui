@@ -12,21 +12,25 @@ from .oreui import (OreSettingsScreen, OreNavigationItem, OreNavigationGroup,
                     OreRadio, OreListItem, OreCard, OreWorldCard, OreImage, OreIcon,
                     OreScrollView, OreDialog, OreDrawer, OreSide, OreBanner,
                     OreTone, OreProgress, OreTag, OreBadge, OreAccordion,
-                    OrePagination, OreHelp, asset_names)
+                    OrePagination, OreHelp, asset_names, OreWorldNavigation,
+                    OreFriendsPanel, OreActionMenu)
+from .settings_examples import DemoPacks, DemoPlayers
 
 PAGES = [('通用', 'overview', 'general_icon'), ('高级', 'selection', 'advanced_icon'),
          ('多人游戏', 'toggles', 'multiplayer_icon'), ('按钮', 'buttons', None),
          ('输入框', 'fields', None), ('下拉菜单', 'dropdowns', None),
          ('滑块', 'sliders', None), ('导航', 'navigation', 'ui_menu_worlds_tab'),
          ('列表与容器', 'containers', 'grass_block'), ('消息', 'messages', 'accessibility'),
-         ('弹窗', 'dialogs', None), ('资源图鉴', 'media', 'world')]
+         ('弹窗', 'dialogs', None), ('资源图鉴', 'media', 'world'), ('好友', 'social', 'friends')]
 INITIAL = dict(name='我的世界', seed='8675309', mode='creative', difficulty='peaceful',
                distance=0, multiplayer=True, coordinates=False, days=False,
                recipes=True, fire=True, respawn=False, beds=True, volume=0.6,
                step=2, locked=False, permission='member', access='friends',
                invite=True, checkbox=False, radio='survival', tab='worlds',
                drop='normal', language='zh', expanded=True, page=1,
-               animated=True, query='', selected='a', notice=True)
+               animated=True, query='', selected='a', notice=True,
+               packTab='available', packShare=False, packOpen=0, activePacks=[],
+               friendQuery='', friendTab='friends', friendName='Steve', messageExpanded=True)
 
 
 @Component
@@ -77,6 +81,14 @@ def OrePlayground():
         set_generation(lambda count: count + 1)
         record('已恢复默认设置')
 
+    def open_player(name):
+        change('friendName', name)
+        set_overlay('friend_options')
+
+    def player_action(label):
+        record(label)
+        set_overlay('drawer')
+
     def row_switch(title, description, name, key=None, disabled=False):
         return OreSettingsRow(title=title, description=description, disabled=disabled,
             children=OreSwitch(key=key or 'setting_' + name, value=values[name], disabled=disabled,
@@ -87,13 +99,16 @@ def OrePlayground():
             children=OreSegmentedControl(key=key or 'choices_' + name, value=values[name],
                 options=options, disabled=disabled, onChange=partial(change, name)))
 
-    navigation = Panel(style=Style(width='100%'), children=[
+    navigation = OreWorldNavigation(onPlay=partial(record, '选择了游戏'),
+        onRealms=partial(record, '选择了 Realms'), children=[
         OreNavigationGroup(children=[OreNavigationItem(key='lab_page_' + value, label=label,
             icon=icon, selected=page == value, onClick=partial(set_page, value))
             for label, value, icon in PAGES[:3]]),
-        OreNavigationGroup(title='控件', children=[OreNavigationItem(key='lab_page_' + value,
+        OreNavigationItem(key='lab_page_containers', label='资源包', icon='resource_packs_icon',
+            selected=page == 'containers', onClick=partial(set_page, 'containers')),
+        OreNavigationGroup(title='界面', children=[OreNavigationItem(key='lab_page_' + value,
             label=label, icon=icon, selected=page == value, onClick=partial(set_page, value))
-            for label, value, icon in PAGES[3:]]),
+            for label, value, icon in PAGES[3:] if value != 'containers']),
         OreNavigationGroup(title='设置', children=[
             OreNavigationItem(key='lab_reset', label='恢复默认设置', icon='general_icon', onClick=reset),
             OreNavigationItem(key='lab_close', label='返回游戏', icon='world', onClick=navigator.pop),
@@ -209,6 +224,9 @@ def OrePlayground():
             ]),
             OreSettingsRow(title='世界', children=OrePagination(key='lab_pagination', page=values['page'], pages=3,
                 onChange=partial(change, 'page'))),
+            OreSettingsRow(title='世界预览', layout=OreSettingLayout.stacked, children=
+                OreWorldCard(key='lab_world_card', title='我的世界', subtitle='创造模式',
+                    onOpen=partial(record, '打开了世界'), onEdit=partial(set_overlay, 'form'))),
         ])
     elif page == 'buttons':
         body = OreSettingsSection(title='世界操作', children=[
@@ -237,22 +255,7 @@ def OrePlayground():
             ])),
         ])
     elif page == 'containers':
-        body = OreSettingsSection(title='世界与资源包', children=[
-            OreSettingsRow(title='我的世界', layout=OreSettingLayout.stacked,
-                children=OreWorldCard(key='lab_world_card', title='我的世界', subtitle='2026.10.04', mode='创造',
-                    onOpen=partial(record, '选择了我的世界'), onEdit=partial(set_overlay, 'form'))),
-            OreSettingsRow(title='世界类型', children=OreTag(label='创造模式')),
-            OreSettingsRow(title='资源包', layout=OreSettingLayout.stacked,
-                children=OreAccordion(key='lab_accordion', title='已启用', expanded=values['expanded'],
-                    onToggle=partial(change, 'expanded', not values['expanded']), children=[
-                        OreListItem(title='默认资源包', icon='grass_block'), OreText(content='1 个资源包') ])),
-            OreSettingsRow(title='世界列表', layout=OreSettingLayout.stacked,
-                children=OreScrollView(key='lab_nested_scroll', style=Style(width='100%', height=80), children=[
-                    OreNavigationItem(label='世界 %d' % index, icon='world', onClick=partial(record, '选择世界'))
-                    for index in range(1, 13)])),
-            OreSettingsRow(title='游戏模式', layout=OreSettingLayout.stacked,
-                children=OreHelp(key='lab_help', label='了解游戏模式', message='生存模式需要收集资源。创造模式提供无限材料。')),
-        ])
+        body = DemoPacks(values=values, onChange=change)
     elif page == 'messages':
         body = OreSettingsSection(title='消息', children=[
             [OreSettingsRow(title=label, layout=OreSettingLayout.stacked,
@@ -265,6 +268,14 @@ def OrePlayground():
             OreSettingsRow(title='同步进度', valueText='%d%%' % (values['volume'] * 100), layout=OreSettingLayout.stacked,
                 children=[OreProgress(value=values['volume']), OreImage(name='animation', animate=values['animated'], style=Style(width=20, height=20))]),
             OreSettingsRow(title='邀请', children=OreBadge(label='3')),
+            OreSettingsRow(title='世界状态', children=OreTag(label='已保存')),
+            OreSettingsRow(layout=OreSettingLayout.stacked, children=OreHelp(key='lab_help',
+                label='如何同步世界？', message='在同一账号下登录后，可以继续查看已保存的世界。')),
+            OreSettingsRow(layout=OreSettingLayout.stacked, children=OreAccordion(key='lab_message_accordion',
+                title='世界信息', expanded=values['messageExpanded'],
+                onToggle=partial(change, 'messageExpanded', not values['messageExpanded']),
+                children=OreCard(children=OreText(content='我的世界已保存。你可以随时返回继续建造。',
+                    style=Style(width='100%'))))),
             OreSettingsRow(title='操作 %d 次' % events, description=latest),
         ])
     elif page == 'dialogs':
@@ -276,12 +287,22 @@ def OrePlayground():
         ])
     elif page == 'media':
         body = DemoAssetPage(values=values, onChange=change)
+    elif page == 'social':
+        body = OreSettingsSection(title='好友', children=[
+            OreSettingsRow(title='搜索人员', layout=OreSettingLayout.field, children=OreField(
+                key='lab_friend_search', value=values['friendQuery'], onChange=partial(change, 'friendQuery'))),
+            OreSettingsRow(layout=OreSettingLayout.field, children=OreButton(key='lab_open_friends',
+                label='打开好友面板', onClick=partial(set_overlay, 'drawer'))),
+            OreSettingsRow(layout=OreSettingLayout.stacked, children=DemoPlayers(values=values,
+                onOptions=open_player)),
+        ])
     dialog_content = OreField(key='lab_dialog_name', value=values['name'], onChange=partial(change, 'name'))
     if overlay == 'progress':
         dialog_content = Panel(style=Style(width='100%'), children=[OreImage(name='animation', animate=True,
             style=Style(width=20, height=20)), OreProgress(value=values['volume'])])
     return Panel(style=Style(width='100%', height='100%'), children=[
-        OreSettingsScreen(title='Ore UI', navigation=navigation, activeItem=page, onClose=navigator.pop,
+        OreSettingsScreen(title='编辑世界', navigation=navigation, activeItem=page, onClose=navigator.pop,
+            onSocial=partial(set_overlay, 'drawer'),
             scrollKey='lab_scroll_' + page + '_' + str(generation), children=body),
         OreDialog(key='lab_dialog', visible=overlay in ('form', 'progress', 'warning'),
             title='删除世界？' if overlay == 'warning' else '同步世界' if overlay == 'progress' else '编辑世界',
@@ -289,7 +310,11 @@ def OrePlayground():
             confirmLabel='删除' if overlay == 'warning' else '完成',
             confirmVariant=OreVariant.destructive if overlay == 'warning' else OreVariant.primary,
             onClose=partial(set_overlay, None), onConfirm=partial(set_overlay, None), children=dialog_content),
-        OreDrawer(key='lab_drawer', visible=overlay == 'drawer', title='好友与邀请', side=OreSide.right,
-            onClose=partial(set_overlay, None), children=[OreListItem(title='Steve', description='在线'),
-                OreListItem(title='Alex', description='离线', disabled=True)]),
+        OreFriendsPanel(key='lab_drawer', visible=overlay in ('drawer', 'friend_options'),
+            onClose=partial(set_overlay, None), query=values['friendQuery'], onSearch=partial(change, 'friendQuery'),
+            tab=values['friendTab'], onTabChange=partial(change, 'friendTab'),
+            children=DemoPlayers(values=values, onOptions=open_player)),
+        OreActionMenu(key='lab_friend_menu', visible=overlay == 'friend_options', title=values['friendName'] + ' 的选项',
+            onClose=partial(set_overlay, 'drawer'), actions=[(label, partial(player_action, label))
+                for label in ('添加到收藏夹', '静音', '拉黑', '举报', '移除好友')]),
     ])
