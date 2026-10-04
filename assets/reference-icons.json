@@ -1,0 +1,128 @@
+{
+  "reference_social": {
+    "src": "textures/pyreact_ore/reference/reference_social",
+    "size": [
+      52,
+      48
+    ],
+    "source_capture": "audit-edit.png",
+    "crop": [
+      1784,
+      18,
+      1836,
+      66
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "5fdedb9702a63eb5abecc4009c84aa472a85252adba259a02eabb7b58b6ad2a5",
+    "extraction": "dark"
+  },
+  "reference_friends": {
+    "src": "textures/pyreact_ore/reference/reference_friends",
+    "size": [
+      48,
+      40
+    ],
+    "source_capture": "audit-friends2.png",
+    "crop": [
+      1440,
+      164,
+      1488,
+      204
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+    "extraction": "light49"
+  },
+  "reference_team": {
+    "src": "textures/pyreact_ore/reference/reference_team",
+    "size": [
+      48,
+      44
+    ],
+    "source_capture": "audit-friends2.png",
+    "crop": [
+      1792,
+      154,
+      1840,
+      198
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+    "extraction": "light72"
+  },
+  "reference_audio": {
+    "src": "textures/pyreact_ore/reference/reference_audio",
+    "size": [
+      48,
+      48
+    ],
+    "source_capture": "audit-audio-selected-default.png",
+    "crop": [
+      36,
+      872,
+      84,
+      920
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+    "extraction": "RGBA crop"
+  },
+  "reference_video": {
+    "src": "textures/pyreact_ore/reference/reference_video",
+    "size": [
+      48,
+      48
+    ],
+    "source_capture": "audit-audio-selected-default.png",
+    "crop": [
+      36,
+      776,
+      84,
+      824
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+    "extraction": "RGBA crop"
+  },
+  "reference_account": {
+    "src": "textures/pyreact_ore/reference/reference_account",
+    "size": [
+      48,
+      48
+    ],
+    "source_capture": "audit-audio-selected-default.png",
+    "crop": [
+      36,
+      968,
+      84,
+      1016
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+    "extraction": "RGBA crop"
+  },
+  "reference_steve_face": {
+    "src": "textures/pyreact_ore/reference/reference_steve_face",
+    "size": [
+      96,
+      96
+    ],
+    "source_capture": "audit-friends2.png",
+    "crop": [
+      1328,
+      348,
+      1424,
+      444
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+    "extraction": "RGBA crop"
+  }
+}

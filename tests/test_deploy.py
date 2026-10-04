@@ -30,7 +30,7 @@ class DeploymentTests(unittest.TestCase):
             self.assertEqual(first, (resources / 'ui/PyreactBase.json').read_bytes())
             current = json.loads(first)
             self.assertEqual(current['rootBase']['controls'][0], template['rootBase']['controls'][0])
-            self.assertEqual(len(current['rootBase']['controls']), 6)
+            self.assertEqual(len(current['rootBase']['controls']), 8)
             current_defs = json.loads((resources / 'ui/_ui_defs.json').read_text(encoding='utf8'))
             self.assertEqual(current_defs['host_metadata'], 42)
             self.assertEqual(current_defs['ui_defs'], ['ui/MyMod.json', 'ui/PyreactBase.json', 'ui/OreUI.json'])
@@ -42,5 +42,8 @@ class DeploymentTests(unittest.TestCase):
             for name in ('input', 'thumb', 'track', 'scroll_thumb', 'switch_on_default'):
                 self.assertTrue((resources / ('textures/pyreact_ore/skin/' + name + '.png')).is_file(), name)
             for name in ('general_icon', 'advanced_icon', 'member', 'operator', 'player_permissions',
-                         'edit', 'world_demo_screen_big', 'ui_menu_worlds_tab'):
+                         'edit', 'world_demo_screen_big', 'ui_menu_worlds_tab', 'icon_alex',
+                         'no_player_profile', 'bracket_open', 'bracket_close'):
                 self.assertTrue((resources / ('textures/pyreact_ore/' + name + '.png')).is_file(), name)
+            for name in ('reference_social', 'reference_friends', 'reference_team', 'reference_steve_face'):
+                self.assertTrue((resources / ('textures/pyreact_ore/reference/' + name + '.png')).is_file(), name)

@@ -8,7 +8,10 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE_EXTRA = frozenset(('settings', 'world', 'general_icon', 'advanced_icon',
     'multiplayer_icon', 'accessibility', 'ui_menu_worlds_tab', 'ui_menu_server_tab',
     'realms', 'grass_block', 'member', 'operator', 'player_permissions',
-    'edit', 'world_demo_screen_big'))
+    'edit', 'world_demo_screen_big', 'information', 'friends', 'resource_packs_icon',
+    'minecraft_texture_pack', 'steve_thumb', 'alex_thumb', 'ari_thumb', 'kai_thumb',
+    'efe_thumb', 'sunny_thumb', 'magnifying_glass', 'add_resource_pack', 'remove_resource_pack',
+    'icon_alex', 'no_player_profile'))
 
 
 def core_assets(manifest):
@@ -47,10 +50,12 @@ def deploy(client_package, resource_pack, pyreact_root=None, asset_set='all'):
     copy_tree(ROOT / 'oreui', client_package / 'oreui')
     copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/type', resource_pack / 'textures/pyreact_ore/type')
     copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/skin', resource_pack / 'textures/pyreact_ore/skin')
+    copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/reference', resource_pack / 'textures/pyreact_ore/reference')
     shutil.copyfile(ROOT / 'resource_pack/ui/OreUI.json', resource_pack / 'ui/OreUI.json')
     template = json.loads(template_path.read_text(encoding='utf-8-sig'))
     controls = template['rootBase']['controls']
-    for suffix, target in [('glyph', 'glyph'), ('field_text', 'field_text'), ('input', 'input'), ('slider', 'slider'), ('scroll', 'scroll')]:
+    for suffix, target in [('glyph', 'glyph'), ('field_text', 'field_text'), ('input', 'input'),
+                          ('search_input', 'search_input'), ('step', 'step'), ('slider', 'slider'), ('scroll', 'scroll')]:
         name = 'ore_' + suffix + '_tmpl@OreUI.' + target
         if not any(name in entry for entry in controls):
             controls.append({name: {}})

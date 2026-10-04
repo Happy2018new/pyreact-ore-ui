@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Stable texture names, metadata, and OreUI theme enums."""
 from ._catalog import ASSETS, PALETTE
+from ._reference_assets import ASSETS as REFERENCE_ASSETS
 
 
 class OreVariant(object):
@@ -33,9 +34,9 @@ class OreIconName(object):
 
 def asset(name):
     """Return a copy so callers cannot mutate the shared generated catalog."""
-    if name not in ASSETS:
+    if name not in ASSETS and name not in REFERENCE_ASSETS:
         raise ValueError('Unknown Ore asset: ' + str(name))
-    metadata = dict(ASSETS[name])
+    metadata = dict(REFERENCE_ASSETS[name] if name in REFERENCE_ASSETS else ASSETS[name])
     if 'frames' in metadata:
         metadata['frames'] = [dict(frame) for frame in metadata['frames']]
     if 'frameDurations' in metadata:
@@ -48,7 +49,7 @@ def texture(name):
 
 
 def asset_names(prefix=''):
-    return sorted(name for name in ASSETS if name.startswith(prefix))
+    return sorted(name for name in list(ASSETS) + list(REFERENCE_ASSETS) if name.startswith(prefix))
 
 
 def button_asset(variant, state, elevated=False):

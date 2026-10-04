@@ -29,7 +29,7 @@ python -X utf8 tools/build_demo.py --pyreact 'D:/Path/To/PyreactMC'
 
 ## 包选型
 
-`--assets core` 包含 gameplay 核心控件资源及 settings、world 图标。`--assets all` 包含全部 589 项导入图片。两种包都包含 OreUI.json、生成的控件皮肤、完整字体图集和 OFL 许可证。完整 catalog 随组件提供，因此部署 core 后，渲染额外图片前须确认对应 PNG 已部署。
+`--assets core` 包含 gameplay 核心控件资源、世界图标、资源包与好友组件使用的预览及图标。`--assets all` 包含全部 589 项导入图片。两种包都包含 OreUI.json、生成的控件皮肤、完整字体图集、国际版参考派生图标和 OFL 许可证。完整 catalog 随组件提供，因此部署 core 后，渲染额外图片前须确认对应 PNG 已部署。
 
 ```powershell
 python -X utf8 tools/package_library.py --assets core

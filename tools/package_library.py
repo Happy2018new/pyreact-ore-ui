@@ -18,6 +18,8 @@ def package(output, asset_set):
     paths += [ROOT / 'resource_pack/ui/OreUI.json']
     paths += list((ROOT / 'resource_pack/textures/pyreact_ore/type').glob('*'))
     paths += list((ROOT / 'resource_pack/textures/pyreact_ore/skin').glob('*'))
+    paths += list((ROOT / 'resource_pack/textures/pyreact_ore/reference').glob('*'))
+    paths += [ROOT / 'assets/reference-icons.json']
     paths += [ROOT / p for p in ('README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'assets/manifest.json',
                                   'tools/deploy.py')]
     paths += [p for p in (ROOT / 'docs').rglob('*') if p.is_file() and
