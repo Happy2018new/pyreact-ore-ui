@@ -307,9 +307,9 @@
     {
       "name": "PlayerAvatar",
       "group": "公共控件",
-      "status": "资源图鉴",
-      "page": "资源图鉴",
-      "notes": "静态资源，未模拟玩家账户/皮肤服务",
+      "status": "公共API",
+      "page": "好友",
+      "notes": "OrePlayerRow 接收头像资源名，资料与选项分别回调，账户与皮肤服务由宿主接入",
       "sources": [
         "index/packages/ui/src/PlayerAvatar"
       ]
@@ -317,9 +317,9 @@
     {
       "name": "PlayerStatusBadge",
       "group": "公共控件",
-      "status": "资源图鉴",
-      "page": "资源图鉴",
-      "notes": "静态资源，未模拟玩家账户/皮肤服务",
+      "status": "公共API",
+      "page": "好友",
+      "notes": "OrePlayerRow 的 online 状态标记，使用独立白框与绿色内部",
       "sources": [
         "index/packages/ui/src/PlayerStatusBadge"
       ]
@@ -339,8 +339,8 @@
       "name": "RadioGroup",
       "group": "公共控件",
       "status": "公共API",
-      "page": "开关与单选",
-      "notes": "",
+      "page": "多人游戏",
+      "notes": "OreRadio 使用菱形指示器，整行命中，选中和禁用有独立状态；同版本原像素验收仍待补充",
       "sources": [
         "index/packages/ui/src/RadioGroup",
         "gameplay/packages/ui/src/RadioGroup"
@@ -453,9 +453,9 @@
     {
       "name": "TabBar",
       "group": "公共控件",
-      "status": "组合演示",
-      "page": "选项",
-      "notes": "",
+      "status": "公共API",
+      "page": "导航与资源包",
+      "notes": "OreTabs 提供相接页签、图标与可点击左右提示，物理键绑定由宿主接入",
       "sources": [
         "index/packages/ui/src/TabBar",
         "gameplay/packages/ui/src/TabBar"

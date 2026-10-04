@@ -74,6 +74,10 @@ def SettingsPage():
 | `OreTabs` | 受控页签组 |
 | `OreSettingsScreen`、`OreNavigationItem`、`OreSettingsRow` | 设置页框架、灰色目录和双线分隔的设置行 |
 | `OreSegmentedControl`、`OreWorldCard` | 带图标的分段选项、世界预览与独立编辑操作 |
+| `OreWorldNavigation` | 存档编辑侧栏的世界预览、游戏与 Realms 入口 |
+| `OrePackRow`、`OrePackGroup` | 带独立详情与激活动作的资源包列表 |
+| `OrePlayerRow`、`OrePlayerGroup` | 玩家头像、在线状态与好友分组 |
+| `OreFriendsPanel`、`OreActionMenu` | 可搜索的好友抽屉和玩家操作菜单 |
 | `OreCheckbox` | 受控或非受控复选框 |
 | `OreSlider` | 受控/非受控滑块，支持拖动与禁用 |
 | `OreProgress` | 0..1 进度条 |
@@ -93,11 +97,11 @@ def SettingsPage():
 
 ## 示例与验证
 
-`examples/demo/` 是带 ModSDK 入口的示例源码。默认打开 `settings_playground.py` 的设置测试页，布局使用公共 `OreSettingsScreen`、`OreNavigationItem` 和 `OreSettingsRow`，控件参考国际版 Bedrock 的原尺寸采集。包含 **12 个分区、32 个公共组件**：通用、高级、多人游戏、按钮、输入框、下拉菜单、滑块、导航、列表与容器、消息、弹窗、资源图鉴。
+`examples/demo/` 是带 ModSDK 入口的示例源码。默认打开 `settings_playground.py` 的设置测试页，布局使用公共 `OreSettingsScreen`、`OreNavigationItem` 和 `OreSettingsRow`，控件参考国际版 Bedrock 的原尺寸采集。包含 **13 个分区、39 个公共组件**：通用、高级、多人游戏、按钮、输入框、下拉菜单、滑块、导航、资源包、消息、弹窗、资源图鉴、好友。
 
-五种按钮配色、分段选项、双线设置行、带图标页签和完整图像预览都有交互示例。输入和菜单包含空值、禁用、受控与非受控模式，滑块包含连续值和五档整数值。资源页支持检索和翻页，可浏览全部 589 项资产。窄屏改用抽屉目录。旧版图鉴保留为 `LegacyOrePlayground`，其回归记录不代表新版设置页已经通过。
+五种按钮配色、分段选项、双线设置行、带图标页签和完整图像预览都有交互示例。输入和菜单包含空值、禁用、受控与非受控模式，滑块包含连续值和五档整数值。资源包可以分别展开、激活和停用，好友抽屉包含搜索、在线与离线分组及玩家选项。资源图鉴支持检索和翻页，可浏览全部 589 项导入资产与补充参考图标。窄屏改用抽屉目录。旧版图鉴保留为 `LegacyOrePlayground`，其回归记录不代表新版设置页已经通过。
 
-关闭 UI 后按 F11 切换开发客户端的鼠标/触屏模拟，再按 F8 打开图鉴。自动回归遵循同样顺序。构建工具在忽略目录中组装完整 Addon：
+关闭 UI 后按 F11 切换开发客户端的鼠标/触屏模拟，再按 F8 打开测试页。自动回归遵循同样顺序。构建工具在忽略目录中组装完整 Addon：
 
 ```powershell
 python -m pip install -r requirements-dev.txt
@@ -108,7 +112,7 @@ python -X utf8 -m unittest discover -s tests -v
 
 使用 `.agents/skills/pyreact-debugging` 的受管实例启动构建后的 Addon。准备与调试命令见 [VALIDATION.md](docs/VALIDATION.md)。新版回归入口为 `tools/verify_settings.py --session <session.json> --owner <owner>`，通过技能脚本完成快照、真实鼠标与 F11 模拟触屏输入，并保存业务状态、原生读回和截图证据。国际版参考采集、裁切及像素差分由 `.agents/skills/bedrock-ore-reference` 提供。
 
-验证包含真实 Python 2.7 组件契约、589 项资源校验、实际鼠标输入、关闭 UI 后用 F11 切换的单指模拟，以及逐页截图检查。旧版断言曾漏掉外观问题，不能用旧版通过次数证明当前质量。本次结果和截图记录在 [VISUAL_REPAIR.md](docs/VISUAL_REPAIR.md)。Android、iOS 硬件、手机输入法和多指操作仍需独立验收。
+验证包含真实 Python 2.7 组件契约、589 项资源校验、实际鼠标输入、关闭 UI 后用 F11 切换的单指模拟，以及逐页截图检查。26 个参考状态使用完整控件比较，保留文字、图标和外围像素，固定端点且容差为零。**当前仍未达到完整控件原像素一致。** 本次结果和截图记录在 [VISUAL_REPAIR.md](docs/VISUAL_REPAIR.md) 和 [validation-latest.json](docs/validation-latest.json)。Android、iOS 硬件、手机输入法和多指操作仍需独立验收。
 
 已在开发游戏 **3.9.0.401155** 验证示例与真实点击；本机 3.10.0.420447 启动未建立 IPC 通道，不能将其计为 3.10 实机通过。资源来源于 3.10，其贴图在 3.9 正常工作。详见验证记录中的范围和限制。
 
@@ -120,7 +124,7 @@ python -X utf8 -m unittest discover -s tests -v
 
 ![Ore 纵屏设置页](docs/images/settings-portrait.jpg)
 
-新 ZIP 的 Web 目录包含 84 个源码目录（77 个视觉目录、7 个辅助模块）。[reference-coverage.json](docs/reference-coverage.json) 记录源目录映射，不代表所有模块已经移植或逐像素一致。账户、商城、虚拟化列表和游戏手柄焦点导航未自动移植。新版国际版采集的版本、状态与误差在 [international-evidence.json](docs/international-evidence.json)。
+新 ZIP 的 Web 目录包含 84 个源码目录（77 个视觉目录、7 个辅助模块）。[reference-coverage.json](docs/reference-coverage.json) 记录源目录映射，不代表所有模块已经移植或逐像素一致。账户、商城、虚拟化列表和游戏手柄焦点导航未自动移植。完整控件当前误差在 [validation-latest.json](docs/validation-latest.json)，早期边框与采集历史保留在 [international-evidence.json](docs/international-evidence.json)。
 
 ## 生成与打包
 
