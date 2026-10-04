@@ -44,6 +44,7 @@ def OreReferenceFixture(kind='segment', selected=True, disabled=False):
             style=Style(width=324))
     elif kind == 'self-player':
         control = OrePlayerRow(key='reference_control', name='Happy2018new', status='在 Minecraft 菜单中',
+            avatar='reference_steve_face',
             selfPlayer=True, online=True, style=Style(width=160))
     elif kind == 'action-menu':
         return Image(color=Color(0x48494AFF), style=Style(width='100%', height='100%'), children=

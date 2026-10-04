@@ -14,7 +14,7 @@ from .settings import OreIconButton
 
 
 @Component
-def OrePlayerRow(name='', status='离线', avatar='reference_steve_face', selfPlayer=False,
+def OrePlayerRow(name='', status='离线', avatar='no_player_profile', selfPlayer=False,
                  online=False, onClick=None, onOptions=None, style=None):
     return Panel(style=Style(width='100%', height=36 if selfPlayer else 35,
         flexDirection=FlexDirection.row).merge(style), children=[

@@ -11,7 +11,7 @@ PACKS = [('自然纹理', 'minecraft_texture_pack', '让方块和物品呈现自
          ('经典世界', 'grass_block', '保留熟悉的方块外观，适合建造与探索。'),
          ('清澈水面', 'world', '清澈的水面让你更容易观察水下的世界。'),
          ('柔和天空', 'world_demo_screen_big', '柔和的天空色彩与远处的风景。')]
-PLAYERS = [('Steve', 'reference_steve_face'), ('Alex', 'icon_alex'), ('Ari', 'no_player_profile'),
+PLAYERS = [('Steve', 'no_player_profile'), ('Alex', 'icon_alex'), ('Ari', 'no_player_profile'),
            ('Kai', 'no_player_profile'), ('Efe', 'no_player_profile'), ('Sunny', 'no_player_profile')]
 
 
@@ -62,6 +62,7 @@ def DemoPlayers(values, onOptions):
             alignItems=AlignItems.center, justifyContent=JustifyContent.center),
             children=OreText(content='玩家', fontSize=10)),
         OrePlayerRow(key='lab_player_self', name='Player', status='在 Minecraft 菜单中', online=True,
+            avatar='reference_steve_face',
             selfPlayer=True, style=Style(marginTop=4)),
         OrePlayerGroup(title='在线', count=0, online=True),
         OrePlayerGroup(title='离线', count=len(players), children=[
