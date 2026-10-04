@@ -1,0 +1,991 @@
+[
+  {
+    "name": "segments",
+    "kind": "segment",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/segments-default.png",
+        "box": [
+          0,
+          0,
+          1260,
+          128
+        ],
+        "provenance": {
+          "capture": "audit-segment-selected-default.png",
+          "capture_sha256": "cd7a05bcfa79b223856ea2f675c1af44d4bb0fbafd3fc8274a5362cf30998486",
+          "capture_crop": [
+            712,
+            566,
+            1972,
+            694
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1510,
+            47
+          ],
+          "timestamp": 1791108783.9181657,
+          "crop_sha256": "d111f8762307fde6bee3d38c88cd4a58fcd092b85b7e8ebc66932ad024504882"
+        }
+      },
+      {
+        "name": "selected-hover",
+        "source": "docs/images/reference/native/segments-selected-hover.png",
+        "box": [
+          0,
+          0,
+          1260,
+          128
+        ],
+        "hover": [
+          52,
+          15
+        ],
+        "provenance": {
+          "capture": "audit-segment-selected-hover.png",
+          "capture_sha256": "679fada5c7bac4ef202aa90716c65503ea617e5d4ecafb03ca98395cd5fbbcb2",
+          "capture_crop": [
+            712,
+            566,
+            1972,
+            694
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            926,
+            632
+          ],
+          "timestamp": 1791108784.4312944,
+          "crop_sha256": "d111f8762307fde6bee3d38c88cd4a58fcd092b85b7e8ebc66932ad024504882"
+        }
+      },
+      {
+        "name": "unselected-hover",
+        "source": "docs/images/reference/native/segments-unselected-hover.png",
+        "box": [
+          0,
+          0,
+          1260,
+          128
+        ],
+        "hover": [
+          156,
+          15
+        ],
+        "provenance": {
+          "capture": "audit-segment-unselected-hover.png",
+          "capture_sha256": "264e6f11c8c45e9795b9990137b540d33431d047a2d064d9231810cb7dc88ec8",
+          "capture_crop": [
+            712,
+            566,
+            1972,
+            694
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1309,
+            632
+          ],
+          "timestamp": 1791108786.865298,
+          "crop_sha256": "e7df0d8c24788eaa8f8f48df4b6e3024cd4b164633274af8104954cf4d0dc8ea"
+        }
+      }
+    ]
+  },
+  {
+    "name": "field",
+    "kind": "field",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/field-default.png",
+        "box": [
+          0,
+          0,
+          1256,
+          104
+        ],
+        "provenance": {
+          "capture": "field-final-default.png",
+          "capture_sha256": "7771c497bbbbf88ca76e4b1e839361b9971c47adc339668b221263d10031643f",
+          "capture_crop": [
+            716,
+            164,
+            1972,
+            268
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1511,
+            46
+          ],
+          "timestamp": 1791088626.4693406,
+          "crop_sha256": "5d55879e443e89576e24fe858b3dd4b9ef954d9051d05594f2f640cb5abd2118"
+        }
+      },
+      {
+        "name": "hover",
+        "source": "docs/images/reference/native/field-hover.png",
+        "box": [
+          0,
+          0,
+          1256,
+          104
+        ],
+        "hover": [
+          50,
+          12
+        ],
+        "provenance": {
+          "capture": "field-final-hover.png",
+          "capture_sha256": "7771c497bbbbf88ca76e4b1e839361b9971c47adc339668b221263d10031643f",
+          "capture_crop": [
+            716,
+            164,
+            1972,
+            268
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1329,
+            221
+          ],
+          "timestamp": 1791088627.000132,
+          "crop_sha256": "5d55879e443e89576e24fe858b3dd4b9ef954d9051d05594f2f640cb5abd2118"
+        }
+      }
+    ]
+  },
+  {
+    "name": "switch-on",
+    "kind": "switch",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/switch-on-default.png",
+        "box": [
+          0,
+          0,
+          128,
+          72
+        ],
+        "provenance": {
+          "capture": "switch-on-final-default.png",
+          "capture_sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+          "capture_crop": [
+            1848,
+            120,
+            1976,
+            192
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1511,
+            46
+          ],
+          "timestamp": 1791088556.79625,
+          "crop_sha256": "3aba2c0d9b440b9e9afeb685254338c8f3b3f862c45abbdfe80ffa3e4023ebd4"
+        }
+      },
+      {
+        "name": "hover",
+        "source": "docs/images/reference/native/switch-on-hover.png",
+        "box": [
+          0,
+          0,
+          128,
+          72
+        ],
+        "hover": [
+          15,
+          8
+        ],
+        "provenance": {
+          "capture": "switch-on-final-hover.png",
+          "capture_sha256": "d5829e19a15ef3d9b2f7d318b2fa7490906a04929d8d4667cf872d69235c63d7",
+          "capture_crop": [
+            1848,
+            120,
+            1976,
+            192
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1941,
+            157
+          ],
+          "timestamp": 1791088557.3356037,
+          "crop_sha256": "1b0c3a24f9ced069079e0069f916e36a73a27fac6095c3ebfa668dbb8353a61c"
+        }
+      }
+    ]
+  },
+  {
+    "name": "switch-off",
+    "kind": "switch",
+    "selected": false,
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/switch-off-default.png",
+        "box": [
+          0,
+          0,
+          128,
+          72
+        ],
+        "provenance": {
+          "capture": "switch-off-final-default.png",
+          "capture_sha256": "a0c4bb82136c9274c1935129f74c228f5e3adf3cc810ccc0c46265fc01637480",
+          "capture_crop": [
+            1848,
+            523,
+            1976,
+            595
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1511,
+            46
+          ],
+          "timestamp": 1791089465.0585694,
+          "crop_sha256": "228c9ad1efa2ba5860a1a3a5b01643abcb41980501066b91829ca2af28f65381"
+        }
+      },
+      {
+        "name": "hover",
+        "source": "docs/images/reference/native/switch-off-hover.png",
+        "box": [
+          0,
+          0,
+          128,
+          72
+        ],
+        "hover": [
+          15,
+          8
+        ],
+        "provenance": {
+          "capture": "switch-off-final-hover.png",
+          "capture_sha256": "68ceafbe4f4b4145d7063f56ec1f5d0a8c7d18c8855fdeb735b9d07ed650a860",
+          "capture_crop": [
+            1848,
+            523,
+            1976,
+            595
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1891,
+            562
+          ],
+          "timestamp": 1791089465.580377,
+          "crop_sha256": "2b07a808236c5ad0b440f7c29b00b8bcea83be20f802563d724699f15d4e5da6"
+        }
+      }
+    ]
+  },
+  {
+    "name": "navigation",
+    "kind": "navigation",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/navigation-default.png",
+        "box": [
+          0,
+          0,
+          648,
+          492
+        ],
+        "provenance": {
+          "capture": "audit-audio-selected-default.png",
+          "capture_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+          "capture_crop": [
+            0,
+            552,
+            648,
+            1044
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1510,
+            47
+          ],
+          "timestamp": 1791108849.8829193,
+          "crop_sha256": "67422a5e3d9ad59eddc1ff7bf0aa6d94798b565261e0c1521e19cb08fcccf7bb"
+        }
+      },
+      {
+        "name": "selected-hover",
+        "source": "docs/images/reference/native/navigation-selected-hover.png",
+        "box": [
+          0,
+          0,
+          648,
+          492
+        ],
+        "hover": [
+          80,
+          85
+        ],
+        "provenance": {
+          "capture": "audit-audio-selected-hover.png",
+          "capture_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+          "capture_crop": [
+            0,
+            552,
+            648,
+            1044
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            262,
+            890
+          ],
+          "timestamp": 1791108850.3975823,
+          "crop_sha256": "67422a5e3d9ad59eddc1ff7bf0aa6d94798b565261e0c1521e19cb08fcccf7bb"
+        }
+      },
+      {
+        "name": "video-hover",
+        "source": "docs/images/reference/native/navigation-video-hover.png",
+        "box": [
+          0,
+          0,
+          648,
+          492
+        ],
+        "hover": [
+          80,
+          61
+        ],
+        "provenance": {
+          "capture": "audit-audio-hover-video-hover.png",
+          "capture_sha256": "5d7fe00806998d1113a38365a16c89d588264475cbfbd7caaeb742d5abb2bbd9",
+          "capture_crop": [
+            0,
+            552,
+            648,
+            1044
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            262,
+            796
+          ],
+          "timestamp": 1791108852.7879505,
+          "crop_sha256": "bbd0585f4bc196f8fcc9269c5c13e2bfa922dbb606a0785ff59c00a7d0a9d94c"
+        }
+      },
+      {
+        "name": "account-hover",
+        "source": "docs/images/reference/native/navigation-account-hover.png",
+        "box": [
+          0,
+          0,
+          648,
+          492
+        ],
+        "hover": [
+          80,
+          109
+        ],
+        "provenance": {
+          "capture": "audit-audio-hover-account-hover.png",
+          "capture_sha256": "51b2f1e9dccf48188bafde0446cfc136a1c04520973e653d832496759d43a873",
+          "capture_crop": [
+            0,
+            552,
+            648,
+            1044
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            262,
+            989
+          ],
+          "timestamp": 1791108855.162784,
+          "crop_sha256": "2ca5ab6fe8620ae7ba62494e3e91f8a52417444c4c199cf831be6eb56864afa8"
+        }
+      },
+      {
+        "name": "first-hover",
+        "source": "docs/images/reference/native/navigation-first-hover.png",
+        "box": [
+          0,
+          0,
+          648,
+          492
+        ],
+        "hover": [
+          80,
+          37
+        ],
+        "provenance": {
+          "capture": "audit-audio-hover-first-hover.png",
+          "capture_sha256": "9babfe7a13fc5cdc8bee2103d6a7a2b6647aa0ae182321a0b84228c5ae0dcfe1",
+          "capture_crop": [
+            0,
+            552,
+            648,
+            1044
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            262,
+            703
+          ],
+          "timestamp": 1791108857.5131326,
+          "crop_sha256": "863e63cb7d8a83df3a2af3e034d38937494af29ff142c627877217ab9665112e"
+        }
+      }
+    ]
+  },
+  {
+    "name": "disabled-slider",
+    "kind": "slider",
+    "disabled": true,
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/disabled-slider-default.png",
+        "box": [
+          0,
+          0,
+          1256,
+          72
+        ],
+        "provenance": {
+          "capture": "disabled-slider-fixed-default.png",
+          "capture_sha256": "bc9fef14c1f7d9673014a098195595f917348c2e617c4d86101c481c01e6b0ce",
+          "capture_crop": [
+            716,
+            346,
+            1972,
+            418
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1162
+          ],
+          "cursor": [
+            1511,
+            46
+          ],
+          "timestamp": 1791084577.918162,
+          "crop_sha256": "db3e98f222ef3171c948e2f211600e8ca7e280fe7dfdeba0f1fb23433fa89af9"
+        }
+      }
+    ]
+  },
+  {
+    "name": "resource-tabs",
+    "kind": "tabs",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/resource-tabs-default.png",
+        "box": [
+          0,
+          0,
+          1304,
+          104
+        ],
+        "provenance": {
+          "capture": "round5-pack-tabs-default.png",
+          "capture_sha256": "38052ecbd99c0067b343ff26f3aafb8b06dd996f53d4249df7ff0627a84750b2",
+          "capture_crop": [
+            692,
+            236,
+            1996,
+            340
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1510,
+            47
+          ],
+          "timestamp": 1791114069.0844667,
+          "crop_sha256": "eccbf6285a36dfeaee4a0c1a649e5ed095cd29cbde9315bbded7199663b5b55d"
+        }
+      },
+      {
+        "name": "unselected-hover",
+        "source": "docs/images/reference/native/resource-tabs-unselected-hover.png",
+        "box": [
+          0,
+          0,
+          1304,
+          104
+        ],
+        "hover": [
+          81,
+          12
+        ],
+        "provenance": {
+          "capture": "round5-pack-tabs-hover.png",
+          "capture_sha256": "e24ee98ccfc30ce85297225538e9d2a12fc5ab4468c2879e5a4ff4f8cd7427b4",
+          "capture_crop": [
+            692,
+            236,
+            1996,
+            340
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1007,
+            283
+          ],
+          "timestamp": 1791114069.6357913,
+          "crop_sha256": "638a7dfc3d438c3fb5b4a3078b54200e9fd5ca2d645818e7782b06cdb36ed9c6"
+        }
+      },
+      {
+        "name": "selected-hover",
+        "source": "docs/images/reference/native/resource-tabs-selected-hover.png",
+        "box": [
+          0,
+          0,
+          1304,
+          104
+        ],
+        "hover": [
+          243,
+          12
+        ],
+        "provenance": {
+          "capture": "round5-pack-tabs-selected-hover.png",
+          "capture_sha256": "488bf83fc84b41e5e975f8675f488d2b124653c6b6a7fb25fcf15ccae26317f5",
+          "capture_crop": [
+            692,
+            236,
+            1996,
+            340
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1662,
+            290
+          ],
+          "timestamp": 1791114103.0790758,
+          "crop_sha256": "c41510c8a38fa5fcac7c3effe93d3d7014efc41d2a9bad079d24fa581b7dc8d1"
+        }
+      }
+    ]
+  },
+  {
+    "name": "online-empty",
+    "kind": "players",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/online-empty-default.png",
+        "box": [
+          0,
+          0,
+          648,
+          176
+        ],
+        "provenance": {
+          "capture": "audit-friends2.png",
+          "capture_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+          "capture_crop": [
+            1300,
+            496,
+            1948,
+            672
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1863,
+            41
+          ],
+          "timestamp": 1791110558.8718688,
+          "crop_sha256": "f25acc8537cf8ecb0d72965e76b63663c181671e1fb0791ae23f818c2ddd9f4e"
+        }
+      }
+    ]
+  },
+  {
+    "name": "pack-group",
+    "kind": "pack-group",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/pack-group-default.png",
+        "box": [
+          0,
+          0,
+          1304,
+          104
+        ],
+        "provenance": {
+          "capture": "round5-pack-group-default.png",
+          "capture_sha256": "53a20635fb1abd985bdb3f687183c4b5586b841b04f4f3f4fd33aae2c19e5ff3",
+          "capture_crop": [
+            692,
+            348,
+            1996,
+            452
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1510,
+            47
+          ],
+          "timestamp": 1791114104.3094857,
+          "crop_sha256": "2c9c3688d0a7bec7868ecd543c24d4671cacf93c5696f97913628fd20165a583"
+        }
+      },
+      {
+        "name": "hover",
+        "source": "docs/images/reference/native/pack-group-hover.png",
+        "box": [
+          0,
+          0,
+          1304,
+          104
+        ],
+        "hover": [
+          162,
+          12
+        ],
+        "provenance": {
+          "capture": "round5-pack-group-hover.png",
+          "capture_sha256": "7d70c12b9506771eee9df4812ab1a28ebdd7dcdaf7abc822c501baf952c995f9",
+          "capture_crop": [
+            692,
+            348,
+            1996,
+            452
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1309,
+            398
+          ],
+          "timestamp": 1791114104.9074752,
+          "crop_sha256": "b9d7320676a20482fd9e92fb076b540d2cc880c306574c79244af20301614a1d"
+        }
+      }
+    ]
+  },
+  {
+    "name": "search-field",
+    "kind": "search",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/search-field-default.png",
+        "box": [
+          0,
+          0,
+          616,
+          104
+        ],
+        "provenance": {
+          "capture": "round5-search-default.png",
+          "capture_sha256": "b571b5aeea7207999f872fc3a8e430969b077f9a18c5bc30f7f1bba0a0f0275c",
+          "capture_crop": [
+            1280,
+            16,
+            1896,
+            120
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1510,
+            47
+          ],
+          "timestamp": 1791114134.6523876,
+          "crop_sha256": "dd7c673da81f0f9082f727918420cb6f8df59c304caa9dbbcced6048cff26cd9"
+        }
+      },
+      {
+        "name": "hover",
+        "source": "docs/images/reference/native/search-field-hover.png",
+        "box": [
+          0,
+          0,
+          616,
+          104
+        ],
+        "hover": [
+          80,
+          12
+        ],
+        "provenance": {
+          "capture": "round5-search-hover.png",
+          "capture_sha256": "b571b5aeea7207999f872fc3a8e430969b077f9a18c5bc30f7f1bba0a0f0275c",
+          "capture_crop": [
+            1280,
+            16,
+            1896,
+            120
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1571,
+            70
+          ],
+          "timestamp": 1791114135.206598,
+          "crop_sha256": "dd7c673da81f0f9082f727918420cb6f8df59c304caa9dbbcced6048cff26cd9"
+        }
+      }
+    ]
+  },
+  {
+    "name": "self-player",
+    "kind": "self-player",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/self-player-default.png",
+        "box": [
+          0,
+          0,
+          648,
+          152
+        ],
+        "provenance": {
+          "capture": "audit-friends2.png",
+          "capture_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+          "capture_crop": [
+            1300,
+            320,
+            1948,
+            472
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1863,
+            41
+          ],
+          "timestamp": 1791110558.8718688,
+          "crop_sha256": "a5420170f1c714a263c32374227f685d11ccf7777f2adab36431feeb86fe2d26"
+        }
+      }
+    ]
+  },
+  {
+    "name": "action-menu",
+    "kind": "action-menu",
+    "bounds_key": "ore_action_surface",
+    "states": [
+      {
+        "name": "default",
+        "source": "docs/images/reference/native/action-menu-default.png",
+        "box": [
+          0,
+          0,
+          960,
+          668
+        ],
+        "provenance": {
+          "capture": "audit-action-first-default.png",
+          "capture_sha256": "7720edd26156a913e45a13c73b994f22493a8663ec2663b370ef20bb5c034046",
+          "capture_crop": [
+            528,
+            252,
+            1488,
+            920
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1510,
+            47
+          ],
+          "timestamp": 1791110697.3917947,
+          "crop_sha256": "46577a390facf08acea1d75331e056450cfa251b6dd03777e01b84a13cece748"
+        }
+      },
+      {
+        "name": "first-hover",
+        "source": "docs/images/reference/native/action-menu-first-hover.png",
+        "box": [
+          0,
+          0,
+          960,
+          668
+        ],
+        "hover": [
+          60,
+          44
+        ],
+        "provenance": {
+          "capture": "audit-action-first-hover.png",
+          "capture_sha256": "8a86a925c394d99c9638896daba6dc496f44b272fb17a956abe7764f393ce943",
+          "capture_crop": [
+            528,
+            252,
+            1488,
+            920
+          ],
+          "reference_scale": 4,
+          "margin_logical": 1,
+          "version": "1.26.5203.0",
+          "client": [
+            2015,
+            1172
+          ],
+          "cursor": [
+            1007,
+            433
+          ],
+          "timestamp": 1791110697.933722,
+          "crop_sha256": "f6a6d2f88a74fedcedd2b104db23d91c09e15b95d684dc5fdff7a72475af7406"
+        }
+      }
+    ]
+  }
+]
