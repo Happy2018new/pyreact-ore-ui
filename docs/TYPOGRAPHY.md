@@ -1,0 +1,17 @@
+# 字体渲染
+
+OreText 使用提前烘焙的 Noto Sans SC Regular 中文字形和源包 Minecraft Seven 西文字形，与 better-building-editor 采用相同的图集方式。字体来自用户提供的新 ZIP，烘焙尺寸为 64 像素，图集为 2048×2048。完整中文 cmap 提供 30759 个字形，共 50 页，覆盖后续模组输入的中文名称，不依赖示例里的固定文案。西文字形按相同基线烘焙，源包字体没有附加开源许可，不能将整套图集都视为 OFL 内容。
+
+`tools/build_typography.py` 生成纹理和 `oreui/_font_atlas.py`。需要 Pillow 和 fontTools，字体许可证随图集部署在 `textures/pyreact_ore/type/OFL.txt`。
+
+```powershell
+python -X utf8 tools/build_typography.py --font 'D:/Fonts/NotoSansSC-Regular.otf' --latin-font 'D:/Fonts/Minecraft-Seven.ttf' --license 'D:/Fonts/OFL.txt'
+```
+
+布局和绘制共享 advance、基线和换行规则，行高为字号的 1.5 倍。逗号、句号和右括号会与前一个字一起换行。当前最小字号为 7 个游戏 UI 单位。缺失字形显示替代符，不会静默删除文字。
+
+当前 PyreactMC 没有自定义文字测量钩子。本库安装一个限定作用范围的适配：只有 OreString 文本使用图集测量，普通 Label 仍走宿主的原生测量。另一处适配只为本库 Label 解析百分比和 flex 祖先的可用宽度。初始化发生在客户端控件首次挂载时，import 不会创建游戏控件。升级 PyreactMC 时须复核 `_resolve_label_max_width` 和文字测量签名。
+
+文字的原生 Label 保留逻辑文本属性，实际 ink 由 bilinear 字形图像显示。每个 Label 保存自己的可增长字形池，更新文本时复用已有控件，卸载父控件时一起释放。
+
+OreField 未编辑时使用同一套烘焙字形。进入编辑状态后，原生 display_text 显示文字、光标和输入法组合串，烘焙层自动隐藏。编辑状态保留游戏字体，这是原生光标定位的边界，与参考编辑器保持一致。两层都位于原生裁剪面板内，长输入不会盖到框外。

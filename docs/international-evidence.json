@@ -1,0 +1,1723 @@
+{
+  "date": "2026-10-04",
+  "executable": "D:/Program/Minecraft/Minecraft.Windows.exe",
+  "version": "1.26.5203.0",
+  "captures": [
+    {
+      "component": "OreNavigationItem",
+      "page": "world_edit_multiplayer",
+      "variant": "selected",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/nav-selected-final-default.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        4,
+        964,
+        644,
+        1060
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "world_edit_multiplayer",
+      "variant": "selected",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/nav-selected-final-hover.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        302,
+        1014
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        4,
+        964,
+        644,
+        1060
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "world_edit_multiplayer",
+      "variant": "unselected",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/nav-unselected-final-default.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        4,
+        868,
+        644,
+        964
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "world_edit_multiplayer",
+      "variant": "unselected",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/nav-unselected-final-hover.png",
+      "sha256": "ffe3c0afa7d436d5781dbd146fd6d9e87998e98fd46031eff4c9fcb97dc85d92",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        302,
+        918
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        4,
+        868,
+        644,
+        964
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSwitch",
+      "page": "world_edit_multiplayer",
+      "variant": "on",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/switch-on-final-default.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1852,
+        124,
+        1972,
+        188
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSwitch",
+      "page": "world_edit_multiplayer",
+      "variant": "on",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/switch-on-final-hover.png",
+      "sha256": "d5829e19a15ef3d9b2f7d318b2fa7490906a04929d8d4667cf872d69235c63d7",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1941,
+        157
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1852,
+        124,
+        1972,
+        188
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSwitch",
+      "page": "video",
+      "variant": "off",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/switch-off-final-default.png",
+      "sha256": "a0c4bb82136c9274c1935129f74c228f5e3adf3cc810ccc0c46265fc01637480",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1852,
+        527,
+        1972,
+        591
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSwitch",
+      "page": "video",
+      "variant": "off",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/switch-off-final-hover.png",
+      "sha256": "68ceafbe4f4b4145d7063f56ec1f5d0a8c7d18c8855fdeb735b9d07ed650a860",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1891,
+        562
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1852,
+        527,
+        1972,
+        591
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSegmentedControl",
+      "page": "world_edit_multiplayer",
+      "variant": "selected",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/segment-selected-final-default.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1132,
+        400,
+        1552,
+        520
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSegmentedControl",
+      "page": "world_edit_multiplayer",
+      "variant": "selected",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/segment-selected-final-hover.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1339,
+        469
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1132,
+        400,
+        1552,
+        520
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSegmentedControl",
+      "page": "world_edit_multiplayer",
+      "variant": "unselected",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/segment-unselected-final-default.png",
+      "sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        716,
+        400,
+        1136,
+        520
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSegmentedControl",
+      "page": "world_edit_multiplayer",
+      "variant": "unselected",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/segment-unselected-final-hover.png",
+      "sha256": "8c891a4bfb9cb799093a314412a5f911eadab3b3d74ff29e8280ded75d1fd6ff",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        906,
+        469
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        716,
+        400,
+        1136,
+        520
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreField",
+      "page": "world_edit_general",
+      "variant": "value",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/field-final-default.png",
+      "sha256": "7771c497bbbbf88ca76e4b1e839361b9971c47adc339668b221263d10031643f",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        720,
+        168,
+        1968,
+        264
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreField",
+      "page": "world_edit_general",
+      "variant": "value",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/field-final-hover.png",
+      "sha256": "7771c497bbbbf88ca76e4b1e839361b9971c47adc339668b221263d10031643f",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1329,
+        221
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        720,
+        168,
+        1968,
+        264
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "thumb",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/slider-final-default.png",
+      "sha256": "dc12bb40394468b24c92024a951b54e1724ee1d1e87aa91e6cb6aeead43ec359",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1164,
+        504,
+        1228,
+        568
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "thumb",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/slider-final-hover.png",
+      "sha256": "4dba9075e63a78006d7aef945ef27f60efe6ba04d94b5ae304a36b0178afde23",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1194,
+        535
+      ],
+      "version": "1.26.5203.0",
+      "crop": [
+        1164,
+        504,
+        1228,
+        568
+      ],
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "disabled",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/disabled-slider-fixed-default.png",
+      "sha256": "bc9fef14c1f7d9673014a098195595f917348c2e617c4d86101c481c01e6b0ce",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "disabled",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/disabled-slider-fixed-hover.png",
+      "sha256": "cac90f9e7bb7e521a7acd9383f54bdb1ea82aa18d2010e0464951a06122560f8",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1047,
+        382
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "video",
+      "variant": "selected",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/resume-nav-selected-default.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "video",
+      "variant": "selected",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/resume-nav-selected-hover.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        302,
+        1057
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "video",
+      "variant": "unselected",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/resume-nav-unselected-default.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreNavigationItem",
+      "page": "video",
+      "variant": "unselected",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/resume-nav-unselected-hover.png",
+      "sha256": "bd711943ceeedce7d350acb468e6216612afac5af9cb38670e5b145fc10b1098",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        302,
+        958
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSwitch",
+      "page": "video",
+      "variant": "on",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/resume-switch-on-default.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSwitch",
+      "page": "video",
+      "variant": "on",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/resume-switch-on-hover.png",
+      "sha256": "4e747f10af89d00357164a8d8587ae53c5bd97e6a5887e8e49aaa2ffe05e1288",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1913,
+        918
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "stepped_thumb",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/resume-slider-default.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "stepped_thumb",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/resume-slider-hover.png",
+      "sha256": "32b592a6c7f35ccde5b0cb2d72f495067f540ccc139eb7d0dbb01cb23c36f613",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1933,
+        597
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "disabled_thumb",
+      "state": "default",
+      "source": ".runtime/bedrock-reference/resume-slider-disabled-default.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1511,
+        46
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    },
+    {
+      "component": "OreSlider",
+      "page": "video",
+      "variant": "disabled_thumb",
+      "state": "hover",
+      "source": ".runtime/bedrock-reference/resume-slider-disabled-hover.png",
+      "sha256": "3b8cc1eecb7408cfc01e9d23fbd049b9fd63de417379c755bc85a96b4df66865",
+      "client": [
+        327,
+        205,
+        2015,
+        1162
+      ],
+      "cursor": [
+        1047,
+        803
+      ],
+      "version": "1.26.5203.0",
+      "crop": null,
+      "reference_pixel_scale": 4,
+      "input": "absolute desktop pointer"
+    }
+  ],
+  "generated_skin_comparisons": {
+    "client_version": "1.26.5203.0",
+    "reference_pixel_scale": 4,
+    "scope": "Generated skins only. Actual game rendering is a separate comparison.",
+    "rows": [
+      {
+        "reference": ".runtime/bedrock-reference/skin-audit/switch_on-default.png",
+        "actual": "resource_pack/textures/pyreact_ore/skin/switch_on_default.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          30,
+          16
+        ],
+        "scale": 4,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": "#48494a",
+        "mean_channel_error": 0.00017361111111111112,
+        "max_channel_error": 1,
+        "different_fraction": 0.00026041666666666666,
+        "compared_pixels": 7680,
+        "component": "switch_on",
+        "state": "default",
+        "source": ".runtime\\bedrock-reference\\switch-on-final-default.png",
+        "box": [
+          1852,
+          124,
+          1972,
+          188
+        ],
+        "alignment_search": {
+          "radius": 8,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "scope": "reference versus generated skin; no text or icons excluded"
+      },
+      {
+        "reference": ".runtime/bedrock-reference/skin-audit/switch_on-hover.png",
+        "actual": "resource_pack/textures/pyreact_ore/skin/switch_on_hover.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          30,
+          16
+        ],
+        "scale": 4,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": "#48494a",
+        "mean_channel_error": 0.00017361111111111112,
+        "max_channel_error": 1,
+        "different_fraction": 0.00026041666666666666,
+        "compared_pixels": 7680,
+        "component": "switch_on",
+        "state": "hover",
+        "source": ".runtime\\bedrock-reference\\switch-on-final-hover.png",
+        "box": [
+          1852,
+          124,
+          1972,
+          188
+        ],
+        "alignment_search": {
+          "radius": 8,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "scope": "reference versus generated skin; no text or icons excluded"
+      },
+      {
+        "reference": ".runtime/bedrock-reference/skin-audit/switch_off-default.png",
+        "actual": "resource_pack/textures/pyreact_ore/skin/switch_off_default.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          30,
+          16
+        ],
+        "scale": 4,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": "#48494a",
+        "mean_channel_error": 1.207638888888889,
+        "max_channel_error": 58,
+        "different_fraction": 0.0890625,
+        "compared_pixels": 7680,
+        "component": "switch_off",
+        "state": "default",
+        "source": ".runtime\\bedrock-reference\\switch-off-final-default.png",
+        "box": [
+          1852,
+          527,
+          1972,
+          591
+        ],
+        "alignment_search": {
+          "radius": 8,
+          "offset": [
+            0,
+            -1
+          ]
+        },
+        "scope": "reference versus generated skin; no text or icons excluded"
+      },
+      {
+        "reference": ".runtime/bedrock-reference/skin-audit/switch_off-hover.png",
+        "actual": "resource_pack/textures/pyreact_ore/skin/switch_off_hover.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          30,
+          16
+        ],
+        "scale": 4,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": "#48494a",
+        "mean_channel_error": 1.148611111111111,
+        "max_channel_error": 63,
+        "different_fraction": 0.0890625,
+        "compared_pixels": 7680,
+        "component": "switch_off",
+        "state": "hover",
+        "source": ".runtime\\bedrock-reference\\switch-off-final-hover.png",
+        "box": [
+          1852,
+          527,
+          1972,
+          591
+        ],
+        "alignment_search": {
+          "radius": 8,
+          "offset": [
+            0,
+            -1
+          ]
+        },
+        "scope": "reference versus generated skin; no text or icons excluded"
+      },
+      {
+        "reference": ".runtime/bedrock-reference/skin-audit/thumb-default.png",
+        "actual": "resource_pack/textures/pyreact_ore/skin/thumb_default.png",
+        "reference_size": [
+          64,
+          64
+        ],
+        "actual_native_size": [
+          16,
+          16
+        ],
+        "scale": 4,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": "#48494a",
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 4096,
+        "component": "thumb",
+        "state": "default",
+        "source": ".runtime\\bedrock-reference\\slider-final-default.png",
+        "box": [
+          1164,
+          504,
+          1228,
+          568
+        ],
+        "alignment_search": {
+          "radius": 8,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "scope": "reference versus generated skin; no text or icons excluded"
+      },
+      {
+        "reference": ".runtime/bedrock-reference/skin-audit/thumb-hover.png",
+        "actual": "resource_pack/textures/pyreact_ore/skin/thumb_hover.png",
+        "reference_size": [
+          64,
+          64
+        ],
+        "actual_native_size": [
+          16,
+          16
+        ],
+        "scale": 4,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": "#48494a",
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 4096,
+        "component": "thumb",
+        "state": "hover",
+        "source": ".runtime\\bedrock-reference\\slider-final-hover.png",
+        "box": [
+          1164,
+          504,
+          1228,
+          568
+        ],
+        "alignment_search": {
+          "radius": 8,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "scope": "reference versus generated skin; no text or icons excluded"
+      }
+    ]
+  },
+  "observed_pages": [
+    "settings_accessibility",
+    "settings_video",
+    "play_worlds",
+    "world_edit_general",
+    "world_edit_advanced",
+    "world_edit_multiplayer"
+  ],
+  "invalid_evidence": "Earlier SetCursorPos-only hover captures are excluded from these state comparisons.",
+  "limits": [
+    "Current international GUI scaling uses segments; the user dropdown reference is from an earlier UI.",
+    "Generated skin comparisons do not prove complete game UI equality.",
+    "Keyboard focus, controller navigation and all pressed states are not yet covered.",
+    "Dialog, world-card text, illustration and baked-font rasterization are not pixel-exact international matches."
+  ],
+  "actual_game_comparisons": {
+    "collected": true,
+    "native_exact_whole_ui": false,
+    "rows": [
+      {
+        "reference": "docs/images/pixel-audit/navigation-selected-default-reference.png",
+        "actual": "docs/images/pixel-audit/navigation-selected-default-actual.png",
+        "reference_size": [
+          12,
+          96
+        ],
+        "actual_native_size": [
+          12,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.5034722222222222,
+        "max_channel_error": 21,
+        "different_fraction": 0.052083333333333336,
+        "compared_pixels": 1152,
+        "name": "navigation-selected-default",
+        "source": ".runtime/settings-pixels-calibrated/navigation-selected-default-full.png",
+        "box": [
+          0,
+          291,
+          12,
+          387
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            -1
+          ]
+        },
+        "native_control": {
+          "position": [
+            0.0,
+            73.0
+          ],
+          "size": [
+            159.99832153320312,
+            24.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/navigation-selected-hover-reference.png",
+        "actual": "docs/images/pixel-audit/navigation-selected-hover-actual.png",
+        "reference_size": [
+          12,
+          96
+        ],
+        "actual_native_size": [
+          12,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.5034722222222222,
+        "max_channel_error": 21,
+        "different_fraction": 0.052083333333333336,
+        "compared_pixels": 1152,
+        "name": "navigation-selected-hover",
+        "source": ".runtime/settings-pixels-calibrated/navigation-selected-hover-full.png",
+        "box": [
+          0,
+          291,
+          12,
+          387
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            -1
+          ]
+        },
+        "native_control": {
+          "position": [
+            0.0,
+            73.0
+          ],
+          "size": [
+            159.99832153320312,
+            24.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/navigation-unselected-default-reference.png",
+        "actual": "docs/images/pixel-audit/navigation-unselected-default-actual.png",
+        "reference_size": [
+          12,
+          96
+        ],
+        "actual_native_size": [
+          12,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 1152,
+        "name": "navigation-unselected-default",
+        "source": ".runtime/settings-pixels-calibrated/navigation-unselected-default-full.png",
+        "box": [
+          0,
+          196,
+          12,
+          292
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            0.0,
+            49.0
+          ],
+          "size": [
+            159.99832153320312,
+            24.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/navigation-unselected-hover-reference.png",
+        "actual": "docs/images/pixel-audit/navigation-unselected-hover-actual.png",
+        "reference_size": [
+          12,
+          96
+        ],
+        "actual_native_size": [
+          12,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.71875,
+        "max_channel_error": 21,
+        "different_fraction": 0.052083333333333336,
+        "compared_pixels": 1152,
+        "name": "navigation-unselected-hover",
+        "source": ".runtime/settings-pixels-calibrated/navigation-unselected-hover-full.png",
+        "box": [
+          0,
+          195,
+          12,
+          291
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            -1
+          ]
+        },
+        "native_control": {
+          "position": [
+            0.0,
+            49.0
+          ],
+          "size": [
+            159.99832153320312,
+            24.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/segment-selected-default-reference.png",
+        "actual": "docs/images/pixel-audit/segment-selected-default-actual.png",
+        "reference_size": [
+          8,
+          120
+        ],
+        "actual_native_size": [
+          8,
+          120
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 960,
+        "name": "segment-selected-default",
+        "source": ".runtime/settings-pixels-calibrated/segment-selected-default-full.png",
+        "box": [
+          1126,
+          458,
+          1134,
+          578
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            -1,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            281.6655578613281,
+            114.5
+          ],
+          "size": [
+            101.66722869873047,
+            30.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/segment-selected-hover-reference.png",
+        "actual": "docs/images/pixel-audit/segment-selected-hover-actual.png",
+        "reference_size": [
+          8,
+          120
+        ],
+        "actual_native_size": [
+          8,
+          120
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 960,
+        "name": "segment-selected-hover",
+        "source": ".runtime/settings-pixels-calibrated/segment-selected-hover-full.png",
+        "box": [
+          1126,
+          458,
+          1134,
+          578
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            -1,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            281.6655578613281,
+            114.5
+          ],
+          "size": [
+            101.66722869873047,
+            30.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/segment-unselected-default-reference.png",
+        "actual": "docs/images/pixel-audit/segment-unselected-default-actual.png",
+        "reference_size": [
+          8,
+          120
+        ],
+        "actual_native_size": [
+          8,
+          120
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 960,
+        "name": "segment-unselected-default",
+        "source": ".runtime/settings-pixels-calibrated/segment-unselected-default-full.png",
+        "box": [
+          723,
+          458,
+          731,
+          578
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            -1,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            180.99832153320312,
+            114.5
+          ],
+          "size": [
+            101.66722869873047,
+            30.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/segment-unselected-hover-reference.png",
+        "actual": "docs/images/pixel-audit/segment-unselected-hover-actual.png",
+        "reference_size": [
+          8,
+          120
+        ],
+        "actual_native_size": [
+          8,
+          120
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 960,
+        "name": "segment-unselected-hover",
+        "source": ".runtime/settings-pixels-calibrated/segment-unselected-hover-full.png",
+        "box": [
+          723,
+          458,
+          731,
+          578
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            -1,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            180.99832153320312,
+            114.5
+          ],
+          "size": [
+            101.66722869873047,
+            30.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/switch-on-default-reference.png",
+        "actual": "docs/images/pixel-audit/switch-on-default-actual.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          120,
+          64
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.00017361111111111112,
+        "max_channel_error": 1,
+        "different_fraction": 0.00026041666666666666,
+        "compared_pixels": 7680,
+        "name": "switch-on-default",
+        "source": ".runtime/settings-pixels-calibrated/switch-on-default-full.png",
+        "box": [
+          1816,
+          137,
+          1936,
+          201
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            454.0,
+            34.25
+          ],
+          "size": [
+            30.0,
+            16.0
+          ],
+          "visible": true
+        },
+        "scope": "complete control crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/switch-on-hover-reference.png",
+        "actual": "docs/images/pixel-audit/switch-on-hover-actual.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          120,
+          64
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.00017361111111111112,
+        "max_channel_error": 1,
+        "different_fraction": 0.00026041666666666666,
+        "compared_pixels": 7680,
+        "name": "switch-on-hover",
+        "source": ".runtime/settings-pixels-calibrated/switch-on-hover-full.png",
+        "box": [
+          1816,
+          137,
+          1936,
+          201
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            454.0,
+            34.25
+          ],
+          "size": [
+            30.0,
+            16.0
+          ],
+          "visible": true
+        },
+        "scope": "complete control crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/switch-off-default-reference.png",
+        "actual": "docs/images/pixel-audit/switch-off-default-actual.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          120,
+          64
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 1.207638888888889,
+        "max_channel_error": 58,
+        "different_fraction": 0.0890625,
+        "compared_pixels": 7680,
+        "name": "switch-off-default",
+        "source": ".runtime/settings-pixels-calibrated/switch-off-default-full.png",
+        "box": [
+          1816,
+          137,
+          1936,
+          201
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            454.0,
+            34.25
+          ],
+          "size": [
+            30.0,
+            16.0
+          ],
+          "visible": true
+        },
+        "scope": "complete control crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/switch-off-hover-reference.png",
+        "actual": "docs/images/pixel-audit/switch-off-hover-actual.png",
+        "reference_size": [
+          120,
+          64
+        ],
+        "actual_native_size": [
+          120,
+          64
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 1.148611111111111,
+        "max_channel_error": 63,
+        "different_fraction": 0.0890625,
+        "compared_pixels": 7680,
+        "name": "switch-off-hover",
+        "source": ".runtime/settings-pixels-calibrated/switch-off-hover-full.png",
+        "box": [
+          1816,
+          137,
+          1936,
+          201
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            454.0,
+            34.25
+          ],
+          "size": [
+            30.0,
+            16.0
+          ],
+          "visible": true
+        },
+        "scope": "complete control crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/thumb-default-reference.png",
+        "actual": "docs/images/pixel-audit/thumb-default-actual.png",
+        "reference_size": [
+          64,
+          64
+        ],
+        "actual_native_size": [
+          64,
+          64
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 4096,
+        "name": "thumb-default",
+        "source": ".runtime/settings-pixels-calibrated/thumb-default-full.png",
+        "box": [
+          1419,
+          374,
+          1483,
+          438
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            354.79931640625,
+            93.5
+          ],
+          "size": [
+            16.0,
+            16.0
+          ],
+          "visible": true
+        },
+        "scope": "complete control crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/thumb-hover-reference.png",
+        "actual": "docs/images/pixel-audit/thumb-hover-actual.png",
+        "reference_size": [
+          64,
+          64
+        ],
+        "actual_native_size": [
+          64,
+          64
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 4096,
+        "name": "thumb-hover",
+        "source": ".runtime/settings-pixels-calibrated/thumb-hover-full.png",
+        "box": [
+          1419,
+          374,
+          1483,
+          438
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            354.79931640625,
+            93.5
+          ],
+          "size": [
+            16.0,
+            16.0
+          ],
+          "visible": true
+        },
+        "scope": "complete control crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/field-left-border-default-reference.png",
+        "actual": "docs/images/pixel-audit/field-left-border-default-actual.png",
+        "reference_size": [
+          24,
+          96
+        ],
+        "actual_native_size": [
+          24,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 2304,
+        "name": "field-left-border-default",
+        "source": ".runtime/settings-pixels-calibrated/field-left-border-default-full.png",
+        "box": [
+          723,
+          312,
+          747,
+          408
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            -1,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            180.99832153320312,
+            78.0
+          ],
+          "size": [
+            303.0016784667969,
+            24.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      },
+      {
+        "reference": "docs/images/pixel-audit/field-left-border-hover-reference.png",
+        "actual": "docs/images/pixel-audit/field-left-border-hover-actual.png",
+        "reference_size": [
+          24,
+          96
+        ],
+        "actual_native_size": [
+          24,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 2304,
+        "name": "field-left-border-hover",
+        "source": ".runtime/settings-pixels-calibrated/field-left-border-hover-full.png",
+        "box": [
+          723,
+          312,
+          747,
+          408
+        ],
+        "logical_scale": 4,
+        "alignment_search": {
+          "radius": 2,
+          "offset": [
+            -1,
+            0
+          ]
+        },
+        "native_control": {
+          "position": [
+            180.99832153320312,
+            78.0
+          ],
+          "size": [
+            303.0016784667969,
+            24.0
+          ],
+          "visible": true
+        },
+        "scope": "explicit border or track strip; text is outside this crop"
+      }
+    ],
+    "reference_version": "1.26.5203.0",
+    "scope": "Explicit control crops, nearest scaling and recorded alignment. No whole-page 1:1 claim."
+  }
+}

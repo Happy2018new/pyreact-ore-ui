@@ -1,0 +1,891 @@
+{
+  "reference": "ORE饼干-3.10新.zip",
+  "sha256": "79b3e4df4083fac576db4f1f1325d61ccbf8d3f1489e7b354bf6a5888c08bf06",
+  "source_directories": 84,
+  "visual_directories": 77,
+  "asset_paths": 530,
+  "rows": [
+    {
+      "name": "Badge",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Badge"
+      ]
+    },
+    {
+      "name": "Banner",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Banner"
+      ]
+    },
+    {
+      "name": "Button",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "按钮",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Button",
+        "gameplay/packages/ui/src/Button"
+      ]
+    },
+    {
+      "name": "ButtonIcon",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "按钮",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/ButtonIcon",
+        "gameplay/packages/ui/src/ButtonIcon"
+      ]
+    },
+    {
+      "name": "Card",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Card"
+      ]
+    },
+    {
+      "name": "Checkbox",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "开关与单选",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Checkbox",
+        "gameplay/packages/ui/src/Checkbox"
+      ]
+    },
+    {
+      "name": "DescriptionList",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/DescriptionList"
+      ]
+    },
+    {
+      "name": "DetailedCard",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/DetailedCard"
+      ]
+    },
+    {
+      "name": "Divider",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Divider",
+        "gameplay/packages/ui/src/Divider"
+      ]
+    },
+    {
+      "name": "Drawer",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "弹窗与抽屉",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Drawer"
+      ]
+    },
+    {
+      "name": "Dropdown",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "下拉菜单",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Dropdown"
+      ]
+    },
+    {
+      "name": "EmptyStateMessage",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/EmptyStateMessage"
+      ]
+    },
+    {
+      "name": "FlatList",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/FlatList"
+      ]
+    },
+    {
+      "name": "Form",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "文本与表单",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Form"
+      ]
+    },
+    {
+      "name": "GlassPane",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "弹窗与抽屉",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/GlassPane"
+      ]
+    },
+    {
+      "name": "Grid",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Grid"
+      ]
+    },
+    {
+      "name": "GridList",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/GridList"
+      ]
+    },
+    {
+      "name": "HeroMessage",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/HeroMessage",
+        "gameplay/packages/ui/src/HeroMessage"
+      ]
+    },
+    {
+      "name": "IconButton",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "按钮",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/IconButton"
+      ]
+    },
+    {
+      "name": "InputLegend",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "资源图鉴",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/InputLegend",
+        "gameplay/packages/ui/src/InputLegend"
+      ]
+    },
+    {
+      "name": "Link",
+      "group": "公共控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Link",
+        "gameplay/packages/ui/src/Link"
+      ]
+    },
+    {
+      "name": "ListHeader",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/ListHeader"
+      ]
+    },
+    {
+      "name": "ListItem",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/ListItem"
+      ]
+    },
+    {
+      "name": "Modal",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "弹窗与抽屉",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Modal",
+        "gameplay/packages/ui/src/Modal"
+      ]
+    },
+    {
+      "name": "ModalMenu",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "弹窗与抽屉",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/ModalMenu"
+      ]
+    },
+    {
+      "name": "ModalMenuDropdown",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "弹窗与抽屉",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/ModalMenuDropdown"
+      ]
+    },
+    {
+      "name": "NavigationBarLayout",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/NavigationBarLayout",
+        "gameplay/packages/ui/src/NavigationBarLayout"
+      ]
+    },
+    {
+      "name": "Pagination",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Pagination"
+      ]
+    },
+    {
+      "name": "PanelButton",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/PanelButton"
+      ]
+    },
+    {
+      "name": "PlayerAvatar",
+      "group": "公共控件",
+      "status": "资源图鉴",
+      "page": "资源图鉴",
+      "notes": "静态资源，未模拟玩家账户/皮肤服务",
+      "sources": [
+        "index/packages/ui/src/PlayerAvatar"
+      ]
+    },
+    {
+      "name": "PlayerStatusBadge",
+      "group": "公共控件",
+      "status": "资源图鉴",
+      "page": "资源图鉴",
+      "notes": "静态资源，未模拟玩家账户/皮肤服务",
+      "sources": [
+        "index/packages/ui/src/PlayerStatusBadge"
+      ]
+    },
+    {
+      "name": "ProgressBar",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "进度",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/ProgressBar",
+        "gameplay/packages/ui/src/ProgressBar"
+      ]
+    },
+    {
+      "name": "RadioGroup",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "开关与单选",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/RadioGroup",
+        "gameplay/packages/ui/src/RadioGroup"
+      ]
+    },
+    {
+      "name": "RouteInstantTransition",
+      "group": "公共控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "navigator 页面切换，不复刻浏览器路由动画",
+      "sources": [
+        "index/packages/ui/src/RouteInstantTransition",
+        "gameplay/packages/ui/src/RouteInstantTransition"
+      ]
+    },
+    {
+      "name": "RouteSlideTransition",
+      "group": "公共控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "navigator 页面切换，不复刻浏览器路由动画",
+      "sources": [
+        "index/packages/ui/src/RouteSlideTransition"
+      ]
+    },
+    {
+      "name": "SectionHeader",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/SectionHeader"
+      ]
+    },
+    {
+      "name": "SectionList",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/SectionList"
+      ]
+    },
+    {
+      "name": "SectionListVirtualized",
+      "group": "公共控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "使用普通列表演示布局，未实现虚拟化",
+      "sources": [
+        "index/packages/ui/src/SectionListVirtualized"
+      ]
+    },
+    {
+      "name": "SideMenu",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/SideMenu",
+        "gameplay/packages/ui/src/SideMenu"
+      ]
+    },
+    {
+      "name": "Slider",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "滑块",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Slider",
+        "gameplay/packages/ui/src/Slider"
+      ]
+    },
+    {
+      "name": "Spritesheet",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "资源图鉴",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Spritesheet"
+      ]
+    },
+    {
+      "name": "Summary",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "卡片与列表",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Summary"
+      ]
+    },
+    {
+      "name": "Switch",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "开关与单选",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Switch",
+        "gameplay/packages/ui/src/Switch"
+      ]
+    },
+    {
+      "name": "TabBar",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "选项",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/TabBar",
+        "gameplay/packages/ui/src/TabBar"
+      ]
+    },
+    {
+      "name": "Tag",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Tag"
+      ]
+    },
+    {
+      "name": "TextField",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "文本与表单",
+      "notes": "单行原生输入；密码、多行、手机IME不在本机验收范围",
+      "sources": [
+        "index/packages/ui/src/TextField",
+        "gameplay/packages/ui/src/TextField"
+      ]
+    },
+    {
+      "name": "Toggles",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "开关与单选",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Toggles",
+        "gameplay/packages/ui/src/Toggles"
+      ]
+    },
+    {
+      "name": "Tooltip",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "消息与文字",
+      "notes": "点按说明气泡，未实现浏览器键盘焦点/悬停路由",
+      "sources": [
+        "index/packages/ui/src/Tooltip",
+        "gameplay/packages/ui/src/Tooltip"
+      ]
+    },
+    {
+      "name": "TooltipBubble",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "消息与文字",
+      "notes": "点按说明气泡，未实现浏览器键盘焦点/悬停路由",
+      "sources": [
+        "index/packages/ui/src/TooltipBubble"
+      ]
+    },
+    {
+      "name": "Typography",
+      "group": "公共控件",
+      "status": "公共API",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Typography",
+        "gameplay/packages/ui/src/Typography"
+      ]
+    },
+    {
+      "name": "UIProvider",
+      "group": "公共控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "内部机制没有同名游戏组件",
+      "sources": [
+        "index/packages/ui/src/UIProvider",
+        "gameplay/packages/ui/src/UIProvider"
+      ]
+    },
+    {
+      "name": "uiTranslations",
+      "group": "公共控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/uiTranslations",
+        "gameplay/packages/ui/src/uiTranslations"
+      ]
+    },
+    {
+      "name": "useAnimation",
+      "group": "公共控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/useAnimation",
+        "gameplay/packages/ui/src/useAnimation"
+      ]
+    },
+    {
+      "name": "Window",
+      "group": "公共控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/packages/ui/src/Window",
+        "gameplay/packages/ui/src/Window"
+      ]
+    },
+    {
+      "name": "BaseCheckbox",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "开关与单选",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/BaseCheckbox",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/BaseCheckbox"
+      ]
+    },
+    {
+      "name": "BaseDropdown",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "下拉菜单",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/BaseDropdown",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/BaseDropdown"
+      ]
+    },
+    {
+      "name": "BaseSlider",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "滑块",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/BaseSlider",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/BaseSlider"
+      ]
+    },
+    {
+      "name": "BaseSwitch",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "开关与单选",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/BaseSwitch",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/BaseSwitch"
+      ]
+    },
+    {
+      "name": "BaseTextField",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "文本与表单",
+      "notes": "单行原生输入；密码、多行、手机IME不在本机验收范围",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/BaseTextField",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/BaseTextField"
+      ]
+    },
+    {
+      "name": "DropdownMenu",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "下拉菜单",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/DropdownMenu"
+      ]
+    },
+    {
+      "name": "Focus",
+      "group": "基础控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "仅显式外观，不实现 Web/手柄焦点管理",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/Focus",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/Focus"
+      ]
+    },
+    {
+      "name": "InputChangesOverride",
+      "group": "基础控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "内部机制没有同名游戏组件",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/InputChangesOverride",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/InputChangesOverride"
+      ]
+    },
+    {
+      "name": "InteractiveSiblingState",
+      "group": "基础控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "内部机制没有同名游戏组件",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/InteractiveSiblingState",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/InteractiveSiblingState"
+      ]
+    },
+    {
+      "name": "MaybeIcon",
+      "group": "基础控件",
+      "status": "公共API",
+      "page": "资源图鉴",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/MaybeIcon",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/MaybeIcon"
+      ]
+    },
+    {
+      "name": "NavigationButton",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "按钮",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/NavigationButton",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/NavigationButton"
+      ]
+    },
+    {
+      "name": "Panel",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/Panel",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/Panel"
+      ]
+    },
+    {
+      "name": "Pressable",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "按钮",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/Pressable",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/Pressable"
+      ]
+    },
+    {
+      "name": "Reflection",
+      "group": "基础控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "内部机制没有同名游戏组件",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/Reflection",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/Reflection"
+      ]
+    },
+    {
+      "name": "ResponsivePixelArt",
+      "group": "基础控件",
+      "status": "公共API",
+      "page": "资源图鉴",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/ResponsivePixelArt"
+      ]
+    },
+    {
+      "name": "ScrollView",
+      "group": "基础控件",
+      "status": "公共API",
+      "page": "容器与滚动",
+      "notes": "OreScrollView 使用独立 Ore 皮肤并保留原生滚动；嵌套内容不会扩大外层滚动范围",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/ScrollView",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/ScrollView"
+      ]
+    },
+    {
+      "name": "Spacing",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/Spacing",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/Spacing"
+      ]
+    },
+    {
+      "name": "Spinner",
+      "group": "基础控件",
+      "status": "公共API",
+      "page": "进度",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/Spinner",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/Spinner"
+      ]
+    },
+    {
+      "name": "TitleBar",
+      "group": "基础控件",
+      "status": "组合演示",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/TitleBar",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/TitleBar"
+      ]
+    },
+    {
+      "name": "uiInternalTranslations",
+      "group": "基础控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui-internal/src/uiInternalTranslations",
+        "gameplay/bedrock/mge/menus/core/ui-internal/src/uiInternalTranslations"
+      ]
+    },
+    {
+      "name": "Accordion",
+      "group": "扩展控件",
+      "status": "公共API",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/Accordion"
+      ]
+    },
+    {
+      "name": "hooks",
+      "group": "扩展控件",
+      "status": "辅助模块",
+      "page": "覆盖清单",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/hooks"
+      ]
+    },
+    {
+      "name": "PlayerAvatarsIcon",
+      "group": "扩展控件",
+      "status": "资源图鉴",
+      "page": "资源图鉴",
+      "notes": "静态资源，未模拟玩家账户/皮肤服务",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/PlayerAvatarsIcon"
+      ]
+    },
+    {
+      "name": "ProfanityWarningModal",
+      "group": "扩展控件",
+      "status": "组合演示",
+      "page": "弹窗与抽屉",
+      "notes": "提示演示，不调用文本审核服务",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/ProfanityWarningModal"
+      ]
+    },
+    {
+      "name": "ProgressSpinnerModal",
+      "group": "扩展控件",
+      "status": "组合演示",
+      "page": "弹窗与抽屉",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/ProgressSpinnerModal"
+      ]
+    },
+    {
+      "name": "RowWrapper",
+      "group": "扩展控件",
+      "status": "组合演示",
+      "page": "容器与滚动",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/RowWrapper"
+      ]
+    },
+    {
+      "name": "TabWrapper",
+      "group": "扩展控件",
+      "status": "组合演示",
+      "page": "导航与分页",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/TabWrapper"
+      ]
+    },
+    {
+      "name": "TagWrapper",
+      "group": "扩展控件",
+      "status": "组合演示",
+      "page": "消息与文字",
+      "notes": "",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/TagWrapper"
+      ]
+    },
+    {
+      "name": "VanillaTextField",
+      "group": "扩展控件",
+      "status": "组合演示",
+      "page": "文本与表单",
+      "notes": "单行原生输入；密码、多行、手机IME不在本机验收范围",
+      "sources": [
+        "index/bedrock/mge/menus/core/ui/src/VanillaTextField"
+      ]
+    },
+    {
+      "name": "RouteNoTransition",
+      "group": "公共控件",
+      "status": "宿主边界",
+      "page": "覆盖清单",
+      "notes": "navigator 页面切换，不复刻浏览器路由动画",
+      "sources": [
+        "gameplay/packages/ui/src/RouteNoTransition"
+      ]
+    }
+  ]
+}

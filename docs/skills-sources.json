@@ -1,0 +1,38 @@
+{
+  "ffi-cache": {
+    "repository": "better-building-editor",
+    "source_sha256": "a8a178131c0f1fa974b8a573e66f2d7b536966db7dcafd77675d589c337ae455"
+  },
+  "hash-key": {
+    "repository": "better-building-editor",
+    "source_sha256": "7331de8df43f51652e35d0d77a972540b6e2ecfffd18ed8309ea2167495b3b6c"
+  },
+  "mc-search": {
+    "repository": "better-building-editor",
+    "source_sha256": "e85402d722905408bb1ca4adc3cb2e9ca97328ff6bfadefd8a12ffe09762a095"
+  },
+  "mod-workflow": {
+    "repository": "better-building-editor",
+    "source_sha256": "cda1c08b621de1e56a9a0682dc36bf9c1e3130b3ad93cee531a46d742f300a67"
+  },
+  "next-opt": {
+    "repository": "better-building-editor",
+    "source_sha256": "358d082fbc1ab3c20825d58ef351caa28cd8fb4a375c1f8f5216aed7567266ec"
+  },
+  "py-except": {
+    "repository": "better-building-editor",
+    "source_sha256": "86d14d8feba8eb096230d17cec25a38a7c46353da5dab2beb0f0caefe2ba190f"
+  },
+  "py-init": {
+    "repository": "better-building-editor",
+    "source_sha256": "1420cf66533070c77d834b4aff58124c5d2ac3b0016e5d0e6092b41cd660371d"
+  },
+  "pyreact-debugging": {
+    "repository": "PyreactMC",
+    "source_sha256": "fbb9e29e45cd765fa472d235d62bf4227163ac6c04d0aa67c320e13519807f2f"
+  },
+  "pyreact-ui-building": {
+    "repository": "PyreactMC",
+    "source_sha256": "8964bbb5bbfa874778a314fa12ec8b6a4bf1625b39c7174c48de0984f88e2b71"
+  }
+}
