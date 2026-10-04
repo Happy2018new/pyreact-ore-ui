@@ -59,8 +59,10 @@ def prepare_config(project, config, game_exe, port, instance_id, preset=None):
     result["ptvsd_debugger"] = {"enabled": False}
     if preset == "ui":
         result.update(world_seed=0, world_type=2, game_mode=1,
-                      do_weather_cycle=False, do_daylight_cycle=False,
-                      auto_hot_reload_mods=True, auto_hot_reload_ui=True)
+                      do_weather_cycle=False, do_daylight_cycle=False)
+        # Explicit project settings take precedence over preset defaults.
+        result.setdefault("auto_hot_reload_mods", True)
+        result.setdefault("auto_hot_reload_ui", True)
     return result
 
 
