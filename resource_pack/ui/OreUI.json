@@ -1,0 +1,434 @@
+{
+  "namespace": "OreUI",
+  "glyph@PyreactBase.image": {
+    "bilinear": true
+  },
+  "field_text@PyreactBase.label": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "display_text",
+        "source_property_name": "(not #text_edit_selected)",
+        "target_property_name": "#visible",
+        "resolve_sibling_scope": true
+      }
+    ]
+  },
+  "input@PyreactBase.input": {
+    "$edit_box_default_texture": "textures/pyreact_ore/skin/input",
+    "$edit_box_hover_texture": "textures/pyreact_ore/skin/input_hover",
+    "$nineslice_size": [
+      1,
+      3,
+      1,
+      1
+    ],
+    "$place_holder_text": "",
+    "$font_scale_factor": 1.0,
+    "$text_box_text_color": [
+      1,
+      1,
+      1
+    ],
+    "controls": [
+      {
+        "centering_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "clipper_panel": {
+                "type": "panel",
+                "size": [
+                  "100% - 16px",
+                  "100% - 8px"
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "display_text@common.text_edit_box_label": {
+                      "size": [
+                        "default",
+                        "default"
+                      ],
+                      "min_size": [
+                        "100% - 2px",
+                        0
+                      ],
+                      "offset": [
+                        -1,
+                        0
+                      ],
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "bindings": [
+                        {
+                          "binding_type": "$text_edit_box_content_binding_type",
+                          "binding_condition": "$text_edit_box_binding_condition",
+                          "binding_collection_name": "$text_edit_box_grid_collection_name",
+                          "binding_name": "$text_edit_box_content_binding_name",
+                          "binding_name_override": "#item_name"
+                        },
+                        {
+                          "binding_name": "#newline_refresh"
+                        },
+                        {
+                          "binding_type": "view",
+                          "source_property_name": "#text_edit_selected",
+                          "target_property_name": "#alpha"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "visibility_panel": {
+                      "type": "panel",
+                      "controls": [
+                        {
+                          "place_holder_control@common.text_edit_box_place_holder_label": {
+                            "size": [
+                              "default",
+                              "default"
+                            ],
+                            "min_size": [
+                              "100% - 2px",
+                              0
+                            ],
+                            "offset": [
+                              -1,
+                              0
+                            ],
+                            "anchor_from": "right_middle",
+                            "anchor_to": "right_middle"
+                          }
+                        }
+                      ],
+                      "bindings": [
+                        {
+                          "binding_type": "view",
+                          "source_control_name": "display_text",
+                          "source_property_name": "(#item_name = '')",
+                          "target_property_name": "#visible",
+                          "resolve_sibling_scope": true
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "default@PyreactBase.edit_box_background_default": {}
+      },
+      {
+        "hover@PyreactBase.edit_box_background_hover": {}
+      },
+      {
+        "pressed@PyreactBase.edit_box_background_hover": {}
+      },
+      {
+        "locked@PyreactBase.edit_box_background_default": {}
+      }
+    ]
+  },
+  "scroll_thumb": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/scroll_thumb",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "keep_ratio": false
+  },
+  "scroll_track": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/track",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "keep_ratio": false
+  },
+  "scroll@PyreactBase.scrollBase": {
+    "$scroll_size": [
+      6,
+      "100%"
+    ],
+    "$scroll_size_touch": [
+      6,
+      "100%"
+    ],
+    "$scroll_box_mouse_image_control": "OreUI.scroll_thumb",
+    "$scroll_box_touch_image_control": "OreUI.scroll_thumb",
+    "$scroll_track_image_control": "OreUI.scroll_track"
+  },
+  "slider@PyreactBase.slider": {
+    "$slider_box_size": [
+      16,
+      16
+    ],
+    "controls": [
+      {
+        "slider_box@common.slider_box": {
+          "$slider_box_layout": "$slider_box_layout",
+          "$slider_box_size": "$slider_box_size",
+          "$slider_track_button": "$slider_name"
+        }
+      },
+      {
+        "slider_bar_default@OreUI.slider_bar_default": {}
+      },
+      {
+        "slider_bar_hover@OreUI.slider_bar_hover": {
+          "visible": false
+        }
+      }
+    ],
+    "$background_default_control": "OreUI.background_default",
+    "$progress_default_control": "OreUI.progress_default",
+    "$background_hover_control": "OreUI.background_hover",
+    "$progress_hover_control": "OreUI.progress_hover",
+    "$slider_box_layout": "OreUI.slider_box",
+    "$slider_box_hover_layout": "OreUI.slider_box_hover",
+    "$slider_box_locked_layout": "OreUI.slider_box_locked",
+    "$slider_box_indent_layout": "OreUI.slider_box_indent",
+    "$slider_step_factory_control_ids": {
+      "slider_step": "@OreUI.slider_step",
+      "slider_step_hover": "@OreUI.slider_step_hover",
+      "slider_step_progress": "@OreUI.slider_step_progress",
+      "slider_step_progress_hover": "@OreUI.slider_step_progress_hover"
+    }
+  },
+  "slider_bar_default": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/transparent",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "sizing_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "slider_background@OreUI.background_default": {
+                "layer": 1
+              }
+            },
+            {
+              "slider_progress@OreUI.progress_default": {
+                "clip_direction": "left",
+                "clip_pixelperfect": false,
+                "layer": 3
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slider_bar_hover": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/transparent",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "sizing_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "slider_background_hover@OreUI.background_hover": {
+                "layer": 1
+              }
+            },
+            {
+              "slider_progress_hover@OreUI.progress_hover": {
+                "clip_direction": "left",
+                "clip_pixelperfect": false,
+                "layer": 3
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "background_default": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/track",
+    "size": [
+      "100%",
+      6
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "keep_ratio": false
+  },
+  "progress_default": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/progress",
+    "size": [
+      "100%",
+      6
+    ],
+    "keep_ratio": false
+  },
+  "background_hover": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/track",
+    "size": [
+      "100%",
+      6
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "keep_ratio": false
+  },
+  "progress_hover": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/progress_hover",
+    "size": [
+      "100%",
+      6
+    ],
+    "keep_ratio": false
+  },
+  "slider_box": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/thumb",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "keep_ratio": false
+  },
+  "slider_box_hover": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/thumb_hover",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "keep_ratio": false
+  },
+  "slider_box_locked": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/thumb_locked",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "keep_ratio": false
+  },
+  "slider_box_indent": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/thumb_hover",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "nineslice_size": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "keep_ratio": false
+  },
+  "slider_step": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/step",
+    "size": [
+      1,
+      6
+    ],
+    "layer": 4,
+    "offset": "$step_offset"
+  },
+  "slider_step_hover": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/step",
+    "size": [
+      1,
+      6
+    ],
+    "layer": 4,
+    "offset": "$step_offset"
+  },
+  "slider_step_progress": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/step",
+    "size": [
+      1,
+      6
+    ],
+    "layer": 4,
+    "offset": "$step_offset"
+  },
+  "slider_step_progress_hover": {
+    "type": "image",
+    "texture": "textures/pyreact_ore/skin/step",
+    "size": [
+      1,
+      6
+    ],
+    "layer": 4,
+    "offset": "$step_offset"
+  }
+}
