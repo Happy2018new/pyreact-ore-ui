@@ -10,7 +10,7 @@ from verify_visual_repair import PROBE
 from capture_settings_pixels import operate as native_pixels
 
 PAGES = ('overview', 'selection', 'toggles', 'buttons', 'fields', 'dropdowns',
-         'sliders', 'navigation', 'containers', 'messages', 'dialogs', 'media')
+         'sliders', 'navigation', 'containers', 'messages', 'dialogs', 'media', 'social')
 
 
 class SettingsVerification(AtlasVerification):
@@ -87,21 +87,23 @@ class SettingsVerification(AtlasVerification):
         start = [(x + width * fraction) / self.screen[0], (y + height / 2) / self.screen[1]]
         end = [(x + width * target) / self.screen[0], start[1]]
         native_pixels(self.session, self.owner, points=[start])
-        self.input([{'do': 'move', 'at': start}, {'do': 'wait', 'ms': 250},
+        evidence = native_pixels(self.session, self.owner, steps=[{'do': 'move', 'at': start}, {'do': 'wait', 'ms': 250},
             {'do': 'drag', 'from': start, 'to': end, 'segments': 20, 'hold_ms': 300},
-            {'do': 'wait', 'ms': 400}], 'drag-' + key)
+            {'do': 'wait', 'ms': 400}])
+        (self.output / ('drag-' + key + '-absolute.json')).write_text(json.dumps(evidence), encoding='utf8')
         return self.native_probe('slider-after', [key])[key]['value']
 
-    def scoped_at(self, parent_key, child_key):
+    def scoped_at(self, parent_key, child_key, within=None):
         probe = self.code('from ore_demo import dev_probe\nfrom ore_demo.pyreact import host\n'
             'from ore_demo.pyreact.primitives import ButtonPrimitive\n'
             'runtime=host._ACTIVE_HOST[0]\n'
-            'parent=next(f for f in dev_probe._walk(runtime._root_fiber) if f.key==%r)\n'
+            'scope=next(f for f in dev_probe._walk(runtime._root_fiber) if f.key==%r) if %r else runtime._root_fiber\n'
+            'parent=next(f for f in dev_probe._walk(scope) if f.key==%r)\n'
             'target=next(f for f in dev_probe._walk(parent) if f.key==%r)\n'
             'button=next(f for f in dev_probe._walk(target) if isinstance(f.comp_type,ButtonPrimitive))\n'
             'control=runtime.GetBaseUIControl(button.native_path)\n'
             '_result=dict(position=control.GetGlobalPosition(),size=control.GetSize())\n'
-            % (parent_key, child_key), 'scoped-position')
+            % (within, within, parent_key, child_key), 'scoped-position')
         x, y = probe['position']
         width, height = probe['size']
         at = [(x + width / 2) / self.screen[0], (y + height / 2) / self.screen[1]]
@@ -179,6 +181,36 @@ class SettingsVerification(AtlasVerification):
         self.verify_sliders(mode, touch)
         self.verify_remaining(mode, touch)
 
+    def verify_radio(self):
+        for touch in (False, True):
+            mode = 'touch' if touch else 'mouse'
+            self.set_touch(touch)
+            self.mount()
+            self.page('toggles')
+            for option in ('creative', 'survival'):
+                key = 'ore_radio_' + option
+                if not touch:
+                    self.hover(key)
+                self.tap(key)
+                self.check(mode + ' full radio row selects ' + option,
+                    self.business()['values']['radio'] == option)
+                geometry = self.native_probe(mode + '-radio-' + option, [key])[key]
+                states = self.code('from ore_demo.pyreact import host\n'
+                    'root=host._ACTIVE_HOST[0]\n'
+                    '_result={name:root.GetBaseUIControl(%r+"/"+name).GetSize() '
+                    'for name in ("default","hover","pressed")}\n' % geometry['path'], 'radio-state-size')
+                self.check(mode + ' diamond image remains 16 square ' + option,
+                    all(list(size) == [16, 16] for size in states.values()))
+            radio = find_key(self.dump(mode + '-radio-bounds'), 'lab_radio')
+            bounds = dict(parent=next(node['layout'] for node in nodes(radio) if node.get('layout')),
+                children=[find_key(radio, 'ore_radio_' + option)['layout']
+                          for option in ('survival', 'creative', 'adventure')])
+            self.check(mode + ' complete radio group fits measured parent',
+                all(frame['y'] >= bounds['parent']['y'] and frame['y'] + frame['height'] <=
+                    bounds['parent']['y'] + bounds['parent']['height'] + .1 for frame in bounds['children']))
+            self.disabled('ore_radio_adventure')
+            self.capture(mode + '-diamond-radio')
+
     def verify_sliders(self, mode, touch):
         self.page('sliders')
         value = self.drag_slider('lab_slider', 0.8)
@@ -187,6 +219,17 @@ class SettingsVerification(AtlasVerification):
         for target, expected in ((0, 0), (.25, 1), (.5, 2), (.75, 3), (1, 4)):
             actual = self.drag_slider('lab_step_slider', target)
             self.check(mode + ' native integer stop ' + str(expected), actual == expected and self.business()['values']['step'] == expected)
+            probe = self.native_probe('step-geometry', ['lab_step_slider'])['lab_step_slider']
+            thumb = self.code('from ore_demo.pyreact import host\n'
+                'control=host._ACTIVE_HOST[0].GetBaseUIControl(%r)\n'
+                '_result=dict(position=control.GetGlobalPosition(),size=control.GetSize())\n'
+                % (probe['path'] + '/slider_box'), 'step-thumb')
+            desired_center = probe['position'][0] + probe['size'][0] * expected / 4
+            self.check(mode + ' integer thumb aligns at stop ' + str(expected),
+                abs(thumb['position'][0] + thumb['size'][0] / 2 - desired_center) < .26)
+            self.check(mode + ' integer thumb fits track at stop ' + str(expected),
+                thumb['position'][0] >= probe['position'][0] - 8.1 and
+                thumb['position'][0] + thumb['size'][0] <= probe['position'][0] + probe['size'][0] + 8.1)
             self.capture(mode + '-step-' + str(expected))
         if not touch:
             self.hover('lab_step_slider', 'slider_bar_hover')
@@ -238,17 +281,6 @@ class SettingsVerification(AtlasVerification):
         self.tap('ore_page_next')
         self.check(mode + ' pagination advances', self.business()['values']['page'] == 2)
         self.capture(mode + '-navigation')
-
-        self.page('containers')
-        self.tap('lab_accordion')
-        self.check(mode + ' accordion collapse', not self.business()['values']['expanded'])
-        self.tap('lab_accordion')
-        self.check(mode + ' accordion expands', self.business()['values']['expanded'])
-        self.tap('lab_help')
-        self.check(mode + ' help appears', any(n['props'].get('content') == '生存模式需要收集资源。创造模式提供无限材料。'
-            for n in nodes(self.dump('help-visible'))))
-        self.capture(mode + '-containers')
-        self.tap('ore_world_open')
         before = self.event_count()
         self.tap('ore_world_open')
         self.check(mode + ' world card opens once', self.event_count() == before + 1)
@@ -256,7 +288,32 @@ class SettingsVerification(AtlasVerification):
         self.check(mode + ' world card edit opens dialog', self.business()['overlay'] == 'form')
         self.tap('ore_dialog_close')
 
+        self.page('containers')
+        self.tap('lab_accordion')
+        self.check(mode + ' accordion collapse', not self.business()['values']['expanded'])
+        self.tap('lab_accordion')
+        self.check(mode + ' accordion expands', self.business()['values']['expanded'])
+        self.tap_at(self.scoped_at('lab_pack_0', 'ore_pack_details'), 'pack-details')
+        self.check(mode + ' pack details collapse', self.business()['values']['packOpen'] is None)
+        self.tap_at(self.scoped_at('lab_pack_0', 'ore_pack_details'), 'pack-details-open')
+        self.check(mode + ' pack details expand', self.business()['values']['packOpen'] == 0)
+        self.tap_at(self.scoped_at('lab_pack_0', 'ore_pack_action'), 'activate-pack')
+        self.check(mode + ' pack activates independently', self.business()['values']['activePacks'] == [0])
+        self.tap_at(self.scoped_at('lab_pack_tabs', '0'), 'active-packs-tab')
+        self.check(mode + ' active pack tab', self.business()['values']['packTab'] == 'active')
+        self.tap_at(self.scoped_at('lab_pack_0', 'ore_pack_action'), 'deactivate-pack')
+        self.check(mode + ' pack deactivates independently', self.business()['values']['activePacks'] == [])
+        self.capture(mode + '-containers')
+
         self.page('messages')
+        self.tap('lab_help')
+        self.check(mode + ' help expands', any(n['props'].get('content') ==
+            '在同一账号下登录后，可以继续查看已保存的世界。' for n in nodes(self.dump('help-open'))))
+        self.tap('lab_help')
+        self.tap('lab_message_accordion')
+        self.check(mode + ' message accordion collapses', not self.business()['values']['messageExpanded'])
+        self.tap('lab_message_accordion')
+        self.check(mode + ' message accordion expands', self.business()['values']['messageExpanded'])
         self.tap('ore_banner_close')
         self.check(mode + ' banner dismisses', not self.business()['values']['notice'])
 
@@ -271,6 +328,18 @@ class SettingsVerification(AtlasVerification):
         self.capture(mode + '-drawer')
         self.tap_at([.04, .8], 'drawer-backdrop')
         self.check(mode + ' drawer backdrop closes', self.business()['overlay'] is None)
+
+        self.page('social')
+        self.tap('lab_open_friends')
+        self.check(mode + ' friends panel opens', self.business()['overlay'] == 'drawer')
+        self.tap_at(self.scoped_at('lab_player_0', 'ore_player_options', within='ore_friends_surface'), 'player-options')
+        self.check(mode + ' player options open', self.business()['overlay'] == 'friend_options')
+        before = self.event_count()
+        self.tap('ore_action_0')
+        self.check(mode + ' player action fires once and returns',
+            self.event_count() == before + 1 and self.business()['overlay'] == 'drawer')
+        self.tap('ore_friends_close')
+        self.check(mode + ' friends panel closes', self.business()['overlay'] is None)
 
         self.page('media')
         self.tap('lab_asset_search')
@@ -326,6 +395,8 @@ class SettingsVerification(AtlasVerification):
             if phase == 'remaining':
                 self.set_touch(False)
                 self.verify_remaining('mouse', False)
+            if phase == 'radio':
+                self.verify_radio()
             if phase in ('all', 'calibrated'):
                 self.verify_calibrated()
         finally:
@@ -340,7 +411,7 @@ def main():
     parser.add_argument('--session', required=True)
     parser.add_argument('--owner', required=True)
     parser.add_argument('--output', type=Path, default=Path('.runtime/settings-verification'))
-    parser.add_argument('--phase', choices=('all', 'visual', 'mouse', 'touch', 'sliders', 'remaining', 'calibrated'), default='all')
+    parser.add_argument('--phase', choices=('all', 'visual', 'mouse', 'touch', 'sliders', 'remaining', 'calibrated', 'radio'), default='all')
     args = parser.parse_args()
     verifier = SettingsVerification(args.session, args.owner, args.output)
     try:

@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = ROOT / '.agents/skills/bedrock-ore-reference/scripts'
 
 
-def operate(session, owner, output=None, points=None, click=False):
+def operate(session, owner, output=None, points=None, click=False, steps=None):
     data = json.loads(Path(session).read_text(encoding='utf8'))
     if data['owner'] != owner:
         raise RuntimeError('Instance owner does not match')
@@ -29,6 +29,8 @@ def operate(session, owner, output=None, points=None, click=False):
             raise RuntimeError('Expected one owned NetEase window')
         window = windows[0]
         desktop.activate(window)
+        if steps:
+            desktop.run(window, steps)
         for point in points or ():
             desktop.foreground(window)
             desktop.pointer(window, point)
@@ -48,7 +50,7 @@ def operate(session, owner, output=None, points=None, click=False):
         cursor = desktop.Point()
         desktop.U.GetCursorPos(desktop.ctypes.byref(cursor))
         x, y, width, height = desktop.geometry(window)
-        return dict(pid=window['pid'], points=points, click=click, cursor=[cursor.x - x, cursor.y - y],
+        return dict(pid=window['pid'], points=points, click=click, steps=steps, cursor=[cursor.x - x, cursor.y - y],
                     client_size=[width, height], input='absolute desktop pointer')
 
 

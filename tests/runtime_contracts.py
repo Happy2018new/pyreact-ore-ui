@@ -138,6 +138,37 @@ def render(component, fiber=None, **props):
 
 
 class ComponentTests(unittest.TestCase):
+    def test_pack_details_and_action_are_independent_and_disabled_blocks_both(self):
+        changed = []
+        element, unused = render(oreui.OrePackRow, title='Pack',
+            onToggle=lambda: changed.append('details'), onAction=lambda: changed.append('activate'))
+        details, action = element.children[0].children
+        action.props['onClick']()
+        self.assertEqual(changed, ['activate'])
+        details.props['onClick']()
+        self.assertEqual(changed, ['activate', 'details'])
+        disabled, unused = render(oreui.OrePackRow, disabled=True,
+            onToggle=lambda: changed.append('wrong'), onAction=lambda: changed.append('wrong'))
+        self.assertTrue(all(button.props['onClick'] is None for button in disabled.children[0].children))
+
+    def test_tab_hints_cycle_enabled_options_and_wrap(self):
+        changed = []
+        element, unused = render(oreui.OreTabs, options=[('A', 'a'), ('B', 'b'), ('C', 'c')],
+            value='a', disabled=['b'], keyboardHints=True, onChange=changed.append)
+        element.children[-1].children[0].props['onClick']()
+        self.assertEqual(changed, ['c'])
+        element.children[-2].children[0].props['onClick']()
+        self.assertEqual(changed, ['c', 'c'])
+
+    def test_player_options_do_not_activate_profile(self):
+        changed = []
+        element, unused = render(oreui.OrePlayerRow, name='Alex',
+            onClick=lambda: changed.append('profile'), onOptions=lambda: changed.append('options'))
+        element.children[1].props['onClick']()
+        self.assertEqual(changed, ['options'])
+        self_player, unused = render(oreui.OrePlayerRow, selfPlayer=True)
+        self.assertEqual(len(self_player.children), 1)
+
     def test_demo_pages_and_overlay_branches_render_in_python2(self):
         from ore_demo.settings_playground import OrePlayground, PAGES
 
@@ -157,7 +188,7 @@ class ComponentTests(unittest.TestCase):
             element, unused = render(OrePlayground, fiber=fiber)
             dialogs = [item for item in descendants(element) if item.comp_type is oreui.OreDialog]
             self.assertEqual(dialogs[0].props['visible'], overlay in ('form', 'progress', 'warning'))
-            drawers = [item for item in descendants(element) if item.comp_type is oreui.OreDrawer]
+            drawers = [item for item in descendants(element) if item.comp_type is oreui.OreFriendsPanel]
             self.assertEqual(drawers[0].props['visible'], overlay == 'drawer')
             if overlay == 'warning':
                 self.assertEqual(dialogs[0].props['confirmVariant'], oreui.OreVariant.destructive)
@@ -219,8 +250,9 @@ class ComponentTests(unittest.TestCase):
         self.assertIsNone(segments.children[0].props['onClick'])
         segments.children[1].props['onClick']()
         self.assertEqual(changes, ['member'])
-        self.assertEqual(segments.children[1].children[0].comp_type, oreui.OreIcon)
-        icon, unused = render(oreui.OreIcon, **segments.children[1].children[0].props)
+        icon_element = segments.children[1].children[0].children[0]
+        self.assertEqual(icon_element.comp_type, oreui.OreIcon)
+        icon, unused = render(oreui.OreIcon, **icon_element.props)
         self.assertEqual(icon.props['src'], 'textures/pyreact_ore/skin/member_tintable')
 
     def test_field_placeholder_does_not_become_native_value(self):
@@ -268,15 +300,18 @@ class ComponentTests(unittest.TestCase):
     def test_slider_supports_controlled_uncontrolled_and_disabled_modes(self):
         changes = []
         slider, _ = render(oreui.OreSlider, defaultValue=0.25, onChange=changes.append)
+        slider = slider.children[0]
         self.assertEqual(slider.props['value'], 0.25)
         slider.props['onChange'](0.75)
         self.assertEqual(changes, [0.75])
 
         controlled, _ = render(oreui.OreSlider, value=0.4, onChange=changes.append)
+        controlled = controlled.children[0]
         self.assertEqual(controlled.props['value'], 0.4)
 
         disabled, _ = render(oreui.OreSlider, value=0.4, disabled=True,
                              onChange=lambda value: self.fail('disabled slider changed'))
+        disabled = disabled.children[0]
         self.assertIsNone(disabled.props['onChange'])
 
         host = FakeHost()
@@ -291,10 +326,12 @@ class ComponentTests(unittest.TestCase):
         changes = []
         for value, expected in [(0.49, 0), (0.5, 1), (2.4, 2), (2.5, 3), (99, 4), (-1, 0)]:
             element, _ = render(oreui.OreSlider, value=value, steps=5, onChange=changes.append)
+            element = element.children[0]
             self.assertEqual(element.props['value'], expected)
             element.props['onChange'](value)
             self.assertEqual(changes[-1], expected)
         element, _ = render(oreui.OreSlider, value=2, steps=5, onChange=changes.append)
+        element = element.children[0]
         host = FakeHost()
         fiber = Fiber(element, host)
         fiber.native_path = '/slider'
@@ -325,6 +362,7 @@ class ComponentTests(unittest.TestCase):
                 self.slider_callback(value)
         changes = []
         element, _ = render(oreui.OreSlider, value=1, steps=5, onChange=changes.append)
+        element = element.children[0]
         host = EventHost()
         fiber = Fiber(element, host)
         fiber.native_path = '/slider'
@@ -365,7 +403,7 @@ class ComponentTests(unittest.TestCase):
         self.assertTrue(opened.children[1].children[0].props['visible'])
         modal = opened.children[1].children[0]
         surface = modal.props['children'][1].children[0]
-        menu = surface.children[1].props['children'][0]
+        menu = surface.children[1].children[0].props['children'][0]
         menu.children[1].props['onClick']()
         self.assertEqual(changed, [2])
         closed, _ = render(oreui.OreDropdown, fiber=fiber, options=[('A', 1), ('B', 2)], value=None)

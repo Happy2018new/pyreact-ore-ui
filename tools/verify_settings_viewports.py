@@ -51,6 +51,14 @@ def verify(session, owner, output, pages=PAGES):
                 geometry = verifier.code(PROBE, name + '-geometry-' + page)
                 verifier.check(name + ' glyph and image geometry ' + page,
                     not geometry['text_errors'] and not geometry['image_errors'])
+                if page == 'toggles':
+                    group = find_key(tree, 'lab_radio')
+                    frame = next(node['layout'] for node in nodes(group) if node.get('layout'))
+                    options = [find_key(group, 'ore_radio_' + option)['layout']
+                               for option in ('survival', 'creative', 'adventure')]
+                    verifier.check(name + ' radio rows fit before divider',
+                        all(option['y'] >= frame['y'] and option['y'] + option['height'] <=
+                            frame['y'] + frame['height'] + .1 for option in options))
                 if page in ('overview', 'selection', 'sliders', 'fields', 'dropdowns', 'media'):
                     verifier.capture(name + '-' + page)
                 if page == 'dropdowns':
@@ -71,6 +79,30 @@ def verify(session, owner, output, pages=PAGES):
                         verifier.check(name + ' dialog fits ' + key, x >= 11.9 and y >= 11.9 and
                             x + w <= verifier.screen[0] - 11.9 and y + h <= verifier.screen[1] - 11.9)
                         verifier.tap('ore_dialog_close')
+                if page == 'social':
+                    verifier.tap('lab_open_friends')
+                    for key in ('ore_friends_surface', 'ore_friends_search'):
+                        probe = verifier.native_probe('social-bounds-' + key, [key])[key]
+                        x, y = probe['position']
+                        w, h = probe['size']
+                        verifier.check(name + ' social bounds ' + key, x >= 0 and y >= 0 and
+                            x + w <= verifier.screen[0] + .1 and y + h <= verifier.screen[1] + .1)
+                    verifier.capture(name + '-friends')
+                    verifier.tap_at(verifier.scoped_at('lab_player_0', 'ore_player_options',
+                        within='ore_friends_surface'), name + '-player-options')
+                    verifier.check(name + ' player options open', verifier.business()['overlay'] == 'friend_options')
+                    probe = verifier.native_probe('social-action-bounds', ['ore_action_surface'])['ore_action_surface']
+                    x, y = probe['position']
+                    w, h = probe['size']
+                    verifier.check(name + ' action menu fits screen', x >= 0 and y >= 0 and
+                        x + w <= verifier.screen[0] + .1 and y + h <= verifier.screen[1] + .1)
+                    verifier.capture(name + '-player-actions')
+                    before = verifier.event_count()
+                    verifier.tap('ore_action_0')
+                    verifier.check(name + ' player action returns once',
+                        verifier.event_count() == before + 1 and verifier.business()['overlay'] == 'drawer')
+                    verifier.tap('ore_friends_close')
+                    verifier.check(name + ' friends closes', verifier.business()['overlay'] is None)
             verifier.capture(name + '-last-page')
         result['ok'] = True
     except Exception as error:
