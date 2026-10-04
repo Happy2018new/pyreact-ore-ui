@@ -12,7 +12,7 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def publish(audit, behavior, output, game_version):
+def publish(audit, behavior, output, client_version, engine_version):
     source = json.loads((audit / 'result.json').read_text(encoding='utf8'))
     cases = json.loads((ROOT / 'tools/reference_cases.json').read_text(encoding='utf8'))
     provenance = {case['name'] + '-' + state['name']: state['provenance']
@@ -54,7 +54,8 @@ def publish(audit, behavior, output, game_version):
                                for size in batch['sizes']]
         results.append(result)
     reference_versions = sorted({row['provenance']['version'] for row in rows})
-    report = dict(reference_versions=reference_versions, game_version=game_version,
+    report = dict(reference_versions=reference_versions, development_client=client_version,
+        game_file_version=engine_version,
         acceptance='Exact original RGB pixels, complete control, text/icons and one logical pixel around it',
         collected=source['collected'], visual_pass=source['visual_pass'],
         native_scale=4, state_count=len(rows), states=rows, behavior=results)
@@ -71,8 +72,9 @@ def publish(audit, behavior, output, game_version):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--audit', required=True, type=Path)
-    parser.add_argument('--game-version', required=True, help='Verified development client file version')
+    parser.add_argument('--client-version', required=True, help='Development client distribution version')
+    parser.add_argument('--engine-version', required=True, help='Verified game executable file version')
     parser.add_argument('--behavior', nargs='*', default=[], help='label=directory entries containing result.json')
     parser.add_argument('--output', type=Path, default=ROOT / 'docs/validation-latest.json')
     args = parser.parse_args()
-    publish(args.audit, args.behavior, args.output, args.game_version)
+    publish(args.audit, args.behavior, args.output, args.client_version, args.engine_version)
