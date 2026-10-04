@@ -395,6 +395,22 @@ class ComponentTests(unittest.TestCase):
         disabled, _ = render(oreui.OreField, value='locked', disabled=True)
         self.assertIsNone(disabled.children[0].props['onChange'])
 
+    def test_modal_guard_partition_covers_background_and_excludes_inputs(self):
+        from ore_demo.oreui._shield import subtract_rectangles
+        bounds = (0, 0, 10, 8)
+        # Overlap, an edge cutout and an entirely outside field must not leave
+        # background gaps or create two guards over the same touch pixel.
+        holes = [(2, 1, 6, 5), (4, 3, 8, 7), (-2, 0, 1, 2), (11, 1, 14, 3)]
+        guards = subtract_rectangles(bounds, holes)
+        for x in range(10):
+            for y in range(8):
+                point = (x + .5, y + .5)
+                covered = sum(left <= point[0] < right and top <= point[1] < bottom
+                    for left, top, right, bottom in guards)
+                excluded = any(left <= point[0] < right and top <= point[1] < bottom
+                    for left, top, right, bottom in holes)
+                self.assertEqual(covered, 0 if excluded else 1)
+
     def test_dropdown_selection_closes_and_respects_controlled_state(self):
         changed = []
         dropdown, fiber = render(oreui.OreDropdown, options=[('A', 1), ('B', 2)], value=None, onChange=changed.append)

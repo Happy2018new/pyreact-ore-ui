@@ -6,7 +6,7 @@ from functools import partial
 from ..pyreact import (Component, Panel, Label, Image,
                       Style, Color,
                       FontSize, FlexDirection, AlignItems, JustifyContent,
-                      ButtonState, TextAlignment, ImageAdaptionType, Modal, Position, AlignSelf, use_state)
+                      ButtonState, TextAlignment, ImageAdaptionType, Position, AlignSelf, use_state)
 from .assets import asset, button_asset, OreVariant, OreState, OreIconName
 from .theme import OreColors, OreTone, OreSide, palette_color
 from ._button import NativeOreButton, NativeOreRadioButton
@@ -16,7 +16,7 @@ from ._scroll import NativeOreScrollView
 from ._text import NativeOreText, NativeOreFieldText
 from .typography import OreString, text_value, layout as text_layout
 from ._image import NativeOreImage
-from ._portal import NativeOrePortal
+from ._portal import NativeOrePortal, OreModal, modal_surface
 from ._skins import state_skin, skin_image
 
 _UNSET = object()
@@ -27,7 +27,7 @@ _STATES = {ButtonState.default: OreState.default,
 
 def _ore_modal(**props):
     return NativeOrePortal(style=Style(position=Position.absolute, left=0, top=0,
-        width=0, height=0), children=Modal(**props))
+        width=0, height=0), children=OreModal(**props))
 
 
 def _image_props(name, animate=False):
@@ -303,9 +303,8 @@ def OreDialog(visible=False, title='', message='', confirmLabel='确定', onConf
                  style=Style(alignItems=AlignItems.center, justifyContent=JustifyContent.center),
                  children=[Image(color=Color(0x00000099), style=Style(
                      position=Position.absolute, left=0, top=0, width='100%', height='100%')),
-                     NativeOreButton(key='ore_dialog_surface',
+                     modal_surface(key='ore_dialog_surface',
                      style=Style(width=width, maxHeight=height),
-                     buttonBuilder=_transparent_button,
                      children=Image(color=OreColors.surface, style=Style(width='100%', flex=1, padding=1), children=[
                      Image(color=OreColors.raised, style=Style(width='100%', height=32, paddingHorizontal=8,
                          flexDirection=FlexDirection.row, alignItems=AlignItems.center), children=[
@@ -386,7 +385,7 @@ def OreDropdown(options=None, value=_UNSET, defaultValue=_UNSET, onChange=None,
             style=Style(alignItems=AlignItems.center, justifyContent=JustifyContent.center), children=[
                 Image(color=Color(0x000000B3), style=Style(position=Position.absolute,
                     left=0, top=0, width='100%', height='100%')),
-                NativeOreButton(key='ore_dropdown_surface', buttonBuilder=_transparent_button,
+                modal_surface(key='ore_dropdown_surface',
                     style=Style(width=240, maxWidth='90%', height=26 + min(5, len(options)) * 24), children=
                     Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height='100%', padding=1), children=[
                         Image(
@@ -553,7 +552,7 @@ def OreDrawer(visible=False, title='', onClose=None, side=OreSide.right, childre
                              else AlignItems.flex_end), children=[
         Image(color=Color(0x00000099), style=Style(position=Position.absolute,
               left=0, top=0, width='100%', height='100%')),
-        NativeOreButton(key='ore_drawer_surface', buttonBuilder=_transparent_button,
+        modal_surface(key='ore_drawer_surface',
                         style=Style(width=200, maxWidth='85%', height='100%'),
                         children=OreCard(style=Style(width='100%', height='100%', gap=8), children=[
             Panel(style=Style(flexDirection=FlexDirection.row, gap=5,

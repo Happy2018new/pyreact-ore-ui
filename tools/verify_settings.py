@@ -211,6 +211,55 @@ class SettingsVerification(AtlasVerification):
             self.disabled('ore_radio_adventure')
             self.capture(mode + '-diamond-radio')
 
+    def verify_social(self):
+        for touch in (False, True):
+            mode = 'touch' if touch else 'mouse'
+            self.set_touch(touch)
+            self.mount()
+            self.page('social')
+            self.tap('lab_open_friends')
+            self.tap('ore_friends_search')
+            self.input([{'do':'text','value':'Steve'},{'do':'key','keys':'enter'},
+                        {'do':'wait','ms':250}], mode + '-friend-query')
+            self.check(mode + ' friends search updates controlled query',
+                self.business()['values']['friendQuery'] == 'Steve')
+            self.check(mode + ' search click keeps drawer open', self.business()['overlay'] == 'drawer')
+            self.check(mode + ' search filters player list',
+                not any(node.get('key') == 'lab_player_1' for node in nodes(self.dump(mode + '-filtered-friends'))))
+            bounds = self.native_probe('drawer-surface', ['ore_friends_surface'])['ore_friends_surface']
+            x, y = bounds['position']
+            width, height = bounds['size']
+            before = self.event_count()
+            self.tap_at([(x + width - 2) / self.screen[0], (y + height - 2) / self.screen[1]],
+                mode + '-drawer-blank-surface')
+            self.check(mode + ' blank drawer surface blocks background', self.business()['overlay'] == 'drawer'
+                and self.event_count() == before)
+            self.tap_at(self.scoped_at('lab_player_0', 'ore_player_options', within='ore_friends_surface'),
+                mode + '-friend-options')
+            self.tap('ore_action_close')
+            self.check(mode + ' menu close returns above drawer', self.business()['overlay'] == 'drawer')
+            self.tap_at(self.scoped_at('lab_player_0', 'ore_player_options', within='ore_friends_surface'),
+                mode + '-friend-options-again')
+            before = self.event_count()
+            self.tap('ore_action_4')
+            self.check(mode + ' last menu action fires once', self.event_count() == before + 1 and
+                self.business()['overlay'] == 'drawer')
+            self.tap('ore_friends_close')
+            self.check(mode + ' drawer close returns to settings', self.business()['overlay'] is None)
+            self.page('dialogs')
+            self.tap('lab_open_dialog')
+            self.tap('lab_dialog_name')
+            self.input([{'do':'key','keys':'ctrl+a'}, {'do':'text','value':'Workshop'},
+                        {'do':'key','keys':'enter'}, {'do':'wait','ms':250}], mode + '-dialog-input')
+            self.check(mode + ' dialog field receives real text', self.business()['values']['name'] == 'Workshop')
+            self.check(mode + ' dialog input keeps surface open', self.business()['overlay'] == 'form')
+            self.tap('ore_dialog_confirm')
+            self.check(mode + ' edited dialog confirms', self.business()['overlay'] is None)
+            guards = self.code('from ore_demo.pyreact import host\n'
+                '_result=[path for path in host._ACTIVE_HOST[0]._button_handlers if "/ore_guard_" in path]\n',
+                mode + '-guard-cleanup')
+            self.check(mode + ' closed overlays unregister input guards', not guards)
+
     def verify_sliders(self, mode, touch):
         self.page('sliders')
         value = self.drag_slider('lab_slider', 0.8)
@@ -397,6 +446,8 @@ class SettingsVerification(AtlasVerification):
                 self.verify_remaining('mouse', False)
             if phase == 'radio':
                 self.verify_radio()
+            if phase in ('all', 'social'):
+                self.verify_social()
             if phase in ('all', 'calibrated'):
                 self.verify_calibrated()
         finally:
@@ -411,7 +462,7 @@ def main():
     parser.add_argument('--session', required=True)
     parser.add_argument('--owner', required=True)
     parser.add_argument('--output', type=Path, default=Path('.runtime/settings-verification'))
-    parser.add_argument('--phase', choices=('all', 'visual', 'mouse', 'touch', 'sliders', 'remaining', 'calibrated', 'radio'), default='all')
+    parser.add_argument('--phase', choices=('all', 'visual', 'mouse', 'touch', 'sliders', 'remaining', 'calibrated', 'radio', 'social'), default='all')
     args = parser.parse_args()
     verifier = SettingsVerification(args.session, args.owner, args.output)
     try:

@@ -6,8 +6,9 @@ from ..pyreact import (Component, Panel, Image, Style, Color, Position, FlexDire
                       AlignItems, JustifyContent, TextAlignment, AlignSelf, ImageAdaptionType, use_state)
 from .typography import layout as text_layout, text_value
 from .components import (OreText, OreIcon, OreImage, OreField, OreTabs,
-                         OreScrollView, _ore_modal, _transparent_button, _menu_row)
+                         OreScrollView, _ore_modal, _menu_row)
 from ._button import NativeOreButton
+from ._portal import modal_surface
 from ._skins import state_skin
 from .settings import OreIconButton
 
@@ -70,7 +71,7 @@ def OreActionMenu(visible=False, title='', actions=None, onClose=None, style=Non
         style=Style(zIndex=2000, alignItems=AlignItems.center, justifyContent=JustifyContent.center), children=[
             Image(color=Color(0x000000BB), style=Style(position=Position.absolute,
                 left=0, top=0, width='100%', height='100%')),
-            NativeOreButton(key='ore_action_surface', buttonBuilder=_transparent_button,
+            modal_surface(key='ore_action_surface',
                 style=Style(width=238, maxWidth='90%', height=height, maxHeight='90%').merge(style), children=
                 Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height='100%', padding=1), children=[
                     Image(src='textures/pyreact_ore/skin/menu_header',
@@ -112,7 +113,7 @@ def OreFriendsPanel(visible=False, onClose=None, children=None, query='', onSear
         style=Style(alignItems=AlignItems.flex_end, justifyContent=JustifyContent.center), children=[
             Image(color=Color(0x000000B3), style=Style(position=Position.absolute,
                 left=0, top=0, width='100%', height='100%')),
-            NativeOreButton(key='ore_friends_surface', buttonBuilder=_transparent_button,
+            modal_surface(key='ore_friends_surface',
                 style=Style(width=188, maxWidth='90%', height='100%').merge(style), children=
                 Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height='100%', padding=1), children=
                     Image(color=Color(0x48494AFF), style=Style(width='100%', height='100%', padding=4, gap=4), children=[
