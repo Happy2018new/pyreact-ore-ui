@@ -32,7 +32,11 @@ class SettingsVerification(AtlasVerification):
         native_pixels(self.session, self.owner, output=self.output / ('hover-' + key + '.png'))
 
     def tap_at(self, at, name):
-        evidence = native_pixels(self.session, self.owner, points=[at], click=True)
+        # A game-window capture can leave the engine cursor at a different
+        # location than the desktop cursor. Move away before the target so
+        # even a repeated tap receives a fresh pointer-motion event.
+        away = [.95,.08] if at != [.95,.08] else [.04,.8]
+        evidence = native_pixels(self.session, self.owner, points=[away,at], click=True)
         (self.output / (name + '-absolute.json')).write_text(json.dumps(evidence), encoding='utf8')
 
     def input(self, steps, name='input'):
@@ -276,7 +280,19 @@ class SettingsVerification(AtlasVerification):
             self.set_touch(touch)
             self.mount()
             self.page('dropdowns')
+            self.capture(mode + '-before-dropdown-tap')
             self.tap('lab_dropdown')
+            short_list = self.code('from ore_demo import dev_probe\nfrom ore_demo.pyreact import host\n'
+                'from ore_demo.pyreact.primitives import ScrollViewPrimitive\n'
+                'runtime=host._ACTIVE_HOST[0]\n'
+                'surface=next(f for f in dev_probe._walk(runtime._root_fiber) if f.key=="ore_dropdown_surface")\n'
+                'scroll=next(f for f in dev_probe._walk(surface) if isinstance(f.comp_type,ScrollViewPrimitive))\n'
+                'content_path=scroll.comp_type._content_path(scroll.native_path,runtime)\n'
+                'viewport=runtime.GetBaseUIControl(content_path.rsplit("/",1)[0])\n'
+                'content=runtime.GetBaseUIControl(content_path)\n'
+                '_result=dict(viewport=viewport.GetSize(),content=content.GetSize())\n', mode + '-short-list-range')
+            self.check(mode + ' short dropdown fits all rows without scrolling',
+                short_list['content'][1] <= short_list['viewport'][1] + .1)
             self.tap('ore_option_2')
             self.check(mode + ' nested dropdown selects and closes', self.business()['values']['drop'] == 'fancy'
                 and not any(node.get('key') == 'ore_option_2' for node in nodes(self.dump(mode + '-nested-dropdown'))))

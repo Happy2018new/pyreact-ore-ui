@@ -386,7 +386,9 @@ def OreDropdown(options=None, value=_UNSET, defaultValue=_UNSET, onChange=None,
                 Image(color=Color(0x000000B3), style=Style(position=Position.absolute,
                     left=0, top=0, width='100%', height='100%')),
                 modal_surface(key='ore_dropdown_surface',
-                    style=Style(width=240, maxWidth='90%', height=26 + min(5, len(options)) * 24), children=
+                    # Outer border, header and the list's bottom separator
+                    # need 27 units. A 26-unit budget scrolls even three rows.
+                    style=Style(width=240, maxWidth='90%', height=27 + min(5, len(options)) * 24), children=
                     Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height='100%', padding=1), children=[
                         Image(
                             src='textures/pyreact_ore/skin/dropdown_header',
