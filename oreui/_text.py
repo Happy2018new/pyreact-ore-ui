@@ -104,7 +104,8 @@ class LabelPrimitive(BaseLabelPrimitive):
         if state.get('ore_text_paint') == signature:
             return
         state['ore_text_paint'] = signature
-        pieces, widths = layout(text_value(props['content']), font, None if props.get('singleLine') else width)
+        pieces, widths = layout(text_value(props['content']), font, None if props.get('singleLine') else width,
+            spacing=0.2 * abs(state.get('_visual_scale', (1.0, 1.0))[1]))
         pool = state.setdefault('ore_glyph_pool', [])
         while len(pool) < len(pieces):
             name = 'ink%d' % len(pool)
