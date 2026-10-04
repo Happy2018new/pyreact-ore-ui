@@ -20,3 +20,5 @@ class OreInputPrimitive(InputPrimitive):
 
 
 NativeOreInput = OreInputPrimitive()
+NativeOreSearchInput = OreInputPrimitive()
+NativeOreSearchInput.template_path = '/root/ore_search_input_tmpl'

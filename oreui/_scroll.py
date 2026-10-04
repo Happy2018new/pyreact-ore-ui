@@ -13,12 +13,14 @@ class ScrollViewPrimitive(BaseScrollViewPrimitive):
         body = scroll_view_path + ('/panel' if is_touch else '/stack_panel')
         track = native.get_control(host, body + '/bar_and_track')
         if track is not None:
-            native.set_size(track, (6.0, height))
-            track.SetPosition((max(0.0, width - 6.0), 0.0))
+            native.set_size(track, (6.0, max(0.0, height - 7.0)))
+            track.SetPosition((max(0.0, width - 8.0), 3.0))
+            track.SetLayer(100)
         for suffix in ('/background_and_viewport', '/background_and_viewport/scrolling_view_port'):
             control = native.get_control(host, body + suffix)
             if control is not None:
-                native.set_size(control, (max(0.0, width - (8 if show_scrollbar else 0)), height))
+                # The reference scroll bar overlays full-width row dividers.
+                native.set_size(control, (width, height))
 
     def _scroll_content_size(self, node):
         right = node.frame_x + node.frame_w

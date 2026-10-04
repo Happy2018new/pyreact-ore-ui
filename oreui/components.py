@@ -9,9 +9,9 @@ from ..pyreact import (Component, Panel, Label, Image,
                       ButtonState, TextAlignment, ImageAdaptionType, Modal, Position, AlignSelf, use_state)
 from .assets import asset, button_asset, OreVariant, OreState, OreIconName
 from .theme import OreColors, OreTone, OreSide, palette_color
-from ._button import NativeOreButton
+from ._button import NativeOreButton, NativeOreRadioButton
 from ._slider import NativeOreSlider
-from ._input import NativeOreInput
+from ._input import NativeOreInput, NativeOreSearchInput
 from ._scroll import NativeOreScrollView
 from ._text import NativeOreText, NativeOreFieldText
 from .typography import OreString, text_value, layout as text_layout
@@ -96,6 +96,8 @@ def OreImage(name, style=None, animate=False, color=None, children=None, contain
 def OreIcon(name=OreIconName.check, size=12, style=None, color=None):
     width, height = asset(name)['size']
     if color is not None and name in ('member', 'operator', 'player_permissions',
+                                     'information', 'add_resource_pack', 'remove_resource_pack',
+                                     'chevron_up', 'chevron_down',
                                      'permission_visitor', 'permission_custom'):
         # Native sprite tint multiplies RGB; a black source cannot turn white.
         return Image(src='textures/pyreact_ore/skin/' + name + '_tintable', color=color,
@@ -176,20 +178,38 @@ def OreListItem(title='', description='', icon=None, selected=False, disabled=Fa
 
 
 @Component
-def OreTabs(options, value, onChange=None, style=None, disabled=None):
+def OreTabs(options, value, onChange=None, style=None, disabled=None, keyboardHints=False):
     disabled = disabled or ()
     return Panel(style=Style(width='100%', flexDirection=FlexDirection.row).merge(style), children=[
         NativeOreButton(
             key=str(index),
-            style=Style(flex=1, height=28, paddingHorizontal=4, gap=4, flexDirection=FlexDirection.row),
-            buttonBuilder=state_skin('tab', option[1] == value, option[1] in disabled, (2, 2, 2, 2)),
+            style=Style(flex=1, height=24, paddingHorizontal=4, gap=4,
+                        marginLeft=-1 if index else 0, flexDirection=FlexDirection.row),
+            buttonBuilder=state_skin('tab', option[1] == value, option[1] in disabled,
+                (2, 2, 4, 2) if option[1] == value else (2, 2, 2, 4)),
             onClick=partial(onChange, option[1]) if onChange and option[1] not in disabled else None,
-            children=[OreIcon(name=option[2], size=12) if len(option) > 2 and option[2] else None,
-                OreText(content=option[0], fontSize=8, textAlign=TextAlignment.center),
+            children=[Panel(style=Style(flexDirection=FlexDirection.row, gap=4,
+                    alignItems=AlignItems.center, marginTop=3.5 if option[1] == value else -.5), children=[
+                    OreIcon(name=option[2], size=12) if len(option) > 2 and option[2] else None,
+                    OreText(content=option[0], fontSize=8, textAlign=TextAlignment.center)]),
                 Image(color=OreColors.text, style=Style(position=Position.absolute,
                       bottom=1, width=24, maxWidth='65%', height=1, left='50%', marginLeft=-12)) if option[1] == value else None],
         ) for index, option in enumerate(options)
-    ])
+    ] + ([Panel(style=Style(position=Position.absolute, left=-5, top=6, width=12, height=12),
+                    children=NativeOreButton(style=Style(width=12, height=12), buttonBuilder=_transparent_button,
+                        children=OreImage(name='bracket_open', style=Style(width=10, height=10)),
+                        onClick=partial(_cycle_tab, options, value, onChange, disabled, -1))),
+          Panel(style=Style(position=Position.absolute, right=-5, top=6, width=12, height=12),
+                    children=NativeOreButton(style=Style(width=12, height=12), buttonBuilder=_transparent_button,
+                        children=OreImage(name='bracket_close', style=Style(width=10, height=10)),
+                        onClick=partial(_cycle_tab, options, value, onChange, disabled, 1)))] if keyboardHints else []))
+
+
+def _cycle_tab(options, value, onChange, disabled, direction):
+    values = [option[1] for option in options if option[1] not in disabled]
+    if onChange and values:
+        index = values.index(value) if value in values else 0
+        onChange(values[(index + direction) % len(values)])
 
 
 @Component
@@ -236,30 +256,33 @@ def OreSlider(value=_UNSET, defaultValue=0.5, steps=1, onChange=None, disabled=F
         if onChange is not None and not disabled:
             onChange(next_value)
 
-    slider = NativeOreSlider(
+    slider = Panel(style=Style(width='100%', height=16, minWidth=40,
+        flexDirection=FlexDirection.row).merge(style), children=NativeOreSlider(
         value=current,
         steps=steps,
         disabled=disabled,
         onChange=None if disabled else change,
-        style=Style(width='100%', height=20, minWidth=40,
-                    opacity=1.0).merge(style),
-    )
+        # The native engine places the thumb centre at both ends. Inset its
+        # input range by half a thumb; the native skin extends the track back.
+        style=Style(flex=1, height='100%', marginHorizontal=8, opacity=1.0),
+    ))
     if tickLabels is None:
         return slider
     count = len(tickLabels)
     return Panel(style=Style(width='100%').merge(style), children=[slider,
-        Panel(style=Style(width='100%', height=12), children=[
+        Panel(style=Style(width='100%', height=12), children=Panel(
+            style=Style(position=Position.absolute, left=8, right=8, height=12), children=[
             OreText(content=str(label), fontSize=8, textAlign=TextAlignment.center,
                 style=Style(position=Position.absolute, left=str(100.0 * index / max(1, count - 1)) + '%',
                             top=0, width=16, marginLeft=-8))
-            for index, label in enumerate(tickLabels)])])
+            for index, label in enumerate(tickLabels)]))])
 
 
 @Component
 def OreScrollView(style=None, children=None, showScrollbar=True):
     """Host scrolling template with a bounded range for nested scroll regions."""
     return NativeOreScrollView(style=style, showScrollbar=showScrollbar,
-        children=Panel(style=Style(width='100%', paddingRight=8 if showScrollbar else 0), children=children))
+        children=Panel(style=Style(width='100%'), children=children))
 
 
 @Component
@@ -306,7 +329,7 @@ def OreDialog(visible=False, title='', message='', confirmLabel='确定', onConf
 
 @Component
 def OreField(label='', value=_UNSET, defaultValue='', onChange=None, disabled=False,
-             placeholder='', style=None):
+             placeholder='', style=None, search=False):
     """Ore framed text input with controlled and uncontrolled modes."""
     internal, set_internal = use_state(defaultValue)
     controlled = value is not _UNSET
@@ -326,11 +349,11 @@ def OreField(label='', value=_UNSET, defaultValue='', onChange=None, disabled=Fa
         'value': value if controlled else internal,
         'children': NativeOreFieldText(content=OreString(text_value((value if controlled else internal) or placeholder)),
             fontSize=8, color=OreColors.disabled if disabled or not (value if controlled else internal) else OreColors.text, textAlign=TextAlignment.left, singleLine=True,
-            style=Style(width='100%', height=16)),
+            style=Style(width='100%', height=16, marginTop=3.5, marginLeft=-.5)),
     }
     return Panel(style=Style(width='100%', gap=5).merge(style), children=[
         OreText(content=label, color=OreColors.muted) if label else None,
-        NativeOreInput(**props),
+        (NativeOreSearchInput if search else NativeOreInput)(**props),
     ])
 
 
@@ -363,12 +386,12 @@ def OreDropdown(options=None, value=_UNSET, defaultValue=_UNSET, onChange=None,
                 Image(color=Color(0x000000B3), style=Style(position=Position.absolute,
                     left=0, top=0, width='100%', height='100%')),
                 NativeOreButton(key='ore_dropdown_surface', buttonBuilder=_transparent_button,
-                    style=Style(width=240, maxWidth='90%', height=28 + min(5, len(options)) * 24), children=
+                    style=Style(width=240, maxWidth='90%', height=26 + min(5, len(options)) * 24), children=
                     Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height='100%', padding=1), children=[
                         Image(
                             src='textures/pyreact_ore/skin/dropdown_header',
                             imageAdaption=ImageAdaptionType.origin_nine_slice, nineSliceData=(2, 2, 2, 2),
-                            style=Style(width='100%', height=25, paddingHorizontal=5,
+                            style=Style(width='100%', height=24, paddingHorizontal=5,
                             flexDirection=FlexDirection.row, alignItems=AlignItems.center), children=[
                                 OreText(content=title, fontSize=8, style=Style(position=Position.absolute,
                                     left=24, right=24, top=6), textAlign=TextAlignment.center),
@@ -377,7 +400,8 @@ def OreDropdown(options=None, value=_UNSET, defaultValue=_UNSET, onChange=None,
                                     style=Style(position=Position.absolute, right=3, top=2, width=20, height=20), onClick=partial(set_opened, False),
                                     children=OreIcon(name=OreIconName.close, size=8)),
                             ]),
-                        OreScrollView(showScrollbar=len(options) > 5, style=Style(width='100%', flex=1), children=Panel(style=Style(width='100%'), children=[
+                        Image(color=Color(0x8C8D90FF), style=Style(width='100%', flex=1, paddingHorizontal=1, paddingBottom=1),
+                            children=OreScrollView(showScrollbar=len(options) > 5, style=Style(width='100%', flex=1), children=Panel(style=Style(width='100%'), children=[
                             NativeOreButton(key='ore_option_' + str(index),
                                 buttonBuilder=partial(_menu_row, index), style=Style(width='100%', height=24,
                                     paddingHorizontal=8, flexDirection=FlexDirection.row, alignItems=AlignItems.center),
@@ -385,8 +409,8 @@ def OreDropdown(options=None, value=_UNSET, defaultValue=_UNSET, onChange=None,
                                     OreText(content=text, fontSize=8, style=Style(flex=1)),
                                     OreIcon(name=OreIconName.check, size=9) if item == current else None,
                                     Image(color=Color(0x8C8D90FF), style=Style(position=Position.absolute,
-                                        left=-8, right=-8, height=1, bottom=0)),
-                                ]) for index, (text, item) in enumerate(options)])),
+                                        left=-8, right=-8, height=1, bottom=0)) if index < len(options) - 1 else None,
+                                ]) for index, (text, item) in enumerate(options)]))),
                     ])),
             ]),
     ])
@@ -431,19 +455,19 @@ def OreSwitch(value=_UNSET, defaultValue=False, onChange=None, disabled=False,
 
 @Component
 def OreRadio(options, value, onChange, disabled=None, style=None):
-    """Touch-sized mutually exclusive options with a persistent selected outline."""
+    """Diamond radio indicators with a full-row native hit area."""
     disabled = disabled or []
     children = []
     for label, option in options:
         selected = option == value
         is_disabled = option in disabled
-        children.append(OreButton(
-            key='ore_radio_' + str(option), label=('● ' if selected else '○ ') + label,
-            variant=OreVariant.neutral, elevated=False, focused=selected,
-            disabled=is_disabled, onClick=None if is_disabled else partial(onChange, option),
-            style=Style(width='100%', opacity=0.55 if is_disabled else 1.0),
-        ))
-    return Panel(style=Style(width='100%', gap=4).merge(style), children=children)
+        children.append(NativeOreRadioButton(key='ore_radio_' + str(option),
+            buttonBuilder=state_skin('radio_on' if selected else 'radio_off', disabled=is_disabled,
+                slices=(0, 0, 0, 0)), onClick=None if is_disabled else partial(onChange, option),
+            style=Style(width='100%', minHeight=28, paddingLeft=22,
+                flexDirection=FlexDirection.row, justifyContent=JustifyContent.flex_start),
+            children=OreText(content=label, fontSize=8, color=OreColors.disabled if is_disabled else OreColors.text)))
+    return Panel(style=Style(width='100%').merge(style), children=children)
 
 
 @Component

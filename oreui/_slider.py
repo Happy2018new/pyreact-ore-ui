@@ -97,8 +97,41 @@ class SliderPrimitive(BaseSliderPrimitive):
                 path = fiber.native_path + '/slider_bar_' + state + '/sizing_panel/' + name
                 image = native.get_control(host, path)
                 if image is not None:
-                    image.asImage().SetSprite('textures/pyreact_ore/skin/progress' + ('_hover' if state == 'hover' else ''))
-                    image.SetAlpha(0.0 if disabled else 1.0)
+                    image.asImage().SetSprite('textures/pyreact_ore/skin/progress_disabled' if disabled else
+                        'textures/pyreact_ore/skin/progress' + ('_hover' if state == 'hover' else ''))
+                    image.SetAlpha(1.0)
+                cap = native.get_control(host, fiber.native_path + '/slider_bar_' + state + '/sizing_panel/progress_left_cap')
+                if cap is not None:
+                    cap.asImage().SetSprite('textures/pyreact_ore/skin/cap_disabled' if disabled else 'textures/pyreact_ore/skin/step')
+
+    def apply_layout(self, host, node):
+        # Native factories create duplicate child names, which the SDK cannot
+        # address independently. Keep their offsets, paint addressable markers.
+        fiber = node.fiber
+        props = fiber.props
+        steps = max(1, int(props.get('steps', 1)))
+        count = max(0, steps - 2) if steps > 1 else 0
+        state = fiber.primitive_state
+        applied = state.get('_layout_applied')
+        if not applied:
+            return
+        width, height = applied[:2]
+        signature = (steps, bool(props.get('disabled')), width, height)
+        if state.get('ore_ticks') == signature:
+            return
+        pool = state.setdefault('ore_tick_pool', [])
+        while len(pool) < count:
+            name = 'ore_tick_' + str(len(pool))
+            native.clone(host, '/root/ore_step_tmpl', fiber.native_path, name)
+            pool.append(host.GetBaseUIControl(fiber.native_path + '/' + name))
+        for index, tick in enumerate(pool):
+            tick.SetVisible(index < count, False)
+            if index >= count:
+                continue
+            tick.SetPosition(((width + 16) * (index + 1) / (steps - 1) - 9, (height - 6) / 2))
+            tick.SetSize((1, 6))
+            tick.asImage().SetSprite('textures/pyreact_ore/skin/step_disabled' if props.get('disabled') else 'textures/pyreact_ore/skin/step')
+        state['ore_ticks'] = signature
 
     def unmount(self, host, fiber):
         records = getattr(host, '_ore_slider_records', None)

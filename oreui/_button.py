@@ -38,3 +38,26 @@ class ButtonPrimitive(BaseButtonPrimitive):
 
 
 NativeOreButton = ButtonPrimitive()
+
+
+class RadioButtonPrimitive(ButtonPrimitive):
+    """A full-row hit target whose native state image is a small diamond."""
+
+    def fill_children(self, native_path):
+        return []
+
+    def apply_layout(self, host, node):
+        ButtonPrimitive.apply_layout(self, host, node)
+        signature = (node.frame_w, node.frame_h)
+        state = node.fiber.primitive_state
+        if state.get('ore_radio_geometry') == signature:
+            return
+        for name in (ButtonState.default, ButtonState.hover, ButtonState.pressed):
+            control = native.get_control(host, native.join_path(node.fiber.native_path, name))
+            if control is not None:
+                control.SetSize((16, 16))
+                control.SetPosition((0, (node.frame_h - 16) / 2.0))
+        state['ore_radio_geometry'] = signature
+
+
+NativeOreRadioButton = RadioButtonPrimitive()
