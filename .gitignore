@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.runtime/
+.tools/
+.mcdev.json
+.pyreact-debug/
+dist/
+.agents/skills/pyreact-debugging/bin/
