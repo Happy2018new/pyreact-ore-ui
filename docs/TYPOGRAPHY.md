@@ -1,11 +1,11 @@
 # 字体渲染
 
-OreText 使用提前烘焙的 Noto Sans SC Regular 中文字形和源包 Minecraft Seven 西文字形，与 better-building-editor 采用相同的图集方式。字体来自用户提供的新 ZIP，烘焙尺寸为 64 像素，图集为 2048×2048。完整中文 cmap 提供 30759 个字形，共 50 页，覆盖后续模组输入的中文名称，不依赖示例里的固定文案。西文字形按相同基线烘焙，源包字体没有附加开源许可，不能将整套图集都视为 OFL 内容。
+OreText 使用提前烘焙的 Noto Sans SC Regular 中文字形和源包 Minecraft Seven 西文字形，与 better-building-editor 采用相同的图集方式。字体来自用户提供的新 ZIP，烘焙尺寸为 64 像素，图集为 2048×2048。完整 cmap 提供 30759 个字形，共 50 页，覆盖后续模组输入的中文名称，不依赖示例里的固定文案。中文基线为 69，西文基线为 64，可通过 `--latin-baseline` 调整。西文使用 `Minecraft-Seven-66398119c2c20ee73019.otf`，数字 advance 为 38，先前的 v4 字体为 48。源包字体没有附加开源许可，不能将整套图集都视为 OFL 内容。
 
 `tools/build_typography.py` 生成纹理和 `oreui/_font_atlas.py`。需要 Pillow 和 fontTools，字体许可证随图集部署在 `textures/pyreact_ore/type/OFL.txt`。
 
 ```powershell
-python -X utf8 tools/build_typography.py --font 'D:/Fonts/NotoSansSC-Regular.otf' --latin-font 'D:/Fonts/Minecraft-Seven.ttf' --license 'D:/Fonts/OFL.txt'
+python -X utf8 tools/build_typography.py --font 'D:/Fonts/NotoSansSC-Regular.otf' --latin-font 'D:/Fonts/Minecraft-Seven.otf' --latin-baseline 64 --license 'D:/Fonts/OFL.txt'
 ```
 
 布局和绘制共享 advance、基线和换行规则，行高为字号的 1.5 倍。逗号、句号和右括号会与前一个字一起换行。当前最小字号为 7 个游戏 UI 单位。缺失字形显示替代符，不会静默删除文字。
@@ -15,3 +15,5 @@ python -X utf8 tools/build_typography.py --font 'D:/Fonts/NotoSansSC-Regular.otf
 文字的原生 Label 保留逻辑文本属性，实际 ink 由 bilinear 字形图像显示。每个 Label 保存自己的可增长字形池，更新文本时复用已有控件，卸载父控件时一起释放。
 
 OreField 未编辑时使用同一套烘焙字形。进入编辑状态后，原生 display_text 显示文字、光标和输入法组合串，烘焙层自动隐藏。编辑状态保留游戏字体，这是原生光标定位的边界，与参考编辑器保持一致。两层都位于原生裁剪面板内，长输入不会盖到框外。
+
+烘焙字体仍有可测量的栅格差异。国际版 Gameface 的文字抗锯齿与 ModSDK 字形纹理采样不同，部分字形宽度和边缘有一到三个物理像素差异。完整控件比对会保留这些差异，不用排除文字的边框结果代替文字验收。

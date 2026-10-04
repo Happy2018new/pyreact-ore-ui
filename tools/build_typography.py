@@ -10,7 +10,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def build(path, license_path, latin_path=None):
+def build(path, license_path, latin_path=None, latin_baseline=64):
     output = ROOT / 'resource_pack/textures/pyreact_ore/type'
     output.mkdir(parents=True, exist_ok=True)
     font = ImageFont.truetype(str(path), 64)
@@ -38,7 +38,8 @@ def build(path, license_path, latin_path=None):
             x = y = 2
             image = Image.new('RGBA', (2048, 2048), (255, 255, 255, 0))
             draw = ImageDraw.Draw(image)
-        draw.text((x + 1, y + 69), char, font=active_font, fill='white', anchor='ls')
+        baseline = latin_baseline if active_font is latin else 69
+        draw.text((x + 1, y + baseline), char, font=active_font, fill='white', anchor='ls')
         mapping[char] = [page, x, y, width, advance]
         x += width + 4
     image.save(output / ('atlas_%03d.png' % page), optimize=True)
@@ -56,5 +57,6 @@ if __name__ == '__main__':
     parser.add_argument('--font', type=Path, required=True)
     parser.add_argument('--license', type=Path, required=True)
     parser.add_argument('--latin-font', type=Path)
+    parser.add_argument('--latin-baseline', type=int, default=64)
     args = parser.parse_args()
-    build(args.font, args.license, args.latin_font)
+    build(args.font, args.license, args.latin_font, args.latin_baseline)

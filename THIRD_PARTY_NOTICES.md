@@ -14,7 +14,11 @@ Minecraft、OreUI、Mojang、Microsoft、网易及资源相关权利仍归相应
 
 ## Minecraft Seven
 
-图集中西文部分来自用户 ZIP 的 `Minecraft-Seven-v4-c172545dc1c7c7ec7951.ttf`，SHA-256 为 `a71f94a2cc2993eda7438ea2805ed3c52981ae00502cba54a34b5d9a72cea31a`。源包没有附加字体开源许可，相关字形保留 Minecraft 资产权利，不能引用 Noto 的 OFL 授予其许可。字体版权及许可不被根目录 MIT 覆盖。
+图集中西文部分来自用户 ZIP 的 `Minecraft-Seven-66398119c2c20ee73019.otf`，SHA-256 为 `3ac46d75d4fe3aae7412d18e09047b70073a8e779488f72560c09f8c474fecc6`。该字体的数字宽度与国际版参考相符，替换了先前使用的 v4 字体。源包没有附加字体开源许可，相关字形保留 Minecraft 资产权利，不能引用 Noto 的 OFL 授予其许可。字体版权及许可不被根目录 MIT 覆盖。
+
+## 国际版参考派生图像
+
+`textures/pyreact_ore/reference/` 的社交、好友、队伍、音频、视频、帐户图标和默认 Steve 面部来自本机国际版 `1.26.5203.0` 的无损截图。`assets/reference-icons.json` 记录原始截图哈希、裁切区域、透明度提取方法和版本。`docs/images/reference/native/` 保存完整控件的参考裁切，用于验证实际游戏渲染。这些派生图像保留 Minecraft 资产权利，不由根目录 MIT 或字体 OFL 授权。
 
 ## PyreactMC
 
