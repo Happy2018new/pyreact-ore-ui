@@ -28,9 +28,11 @@ class SurfacePrimitive(PanelPrimitive):
 
 class ShieldPrimitive(PanelPrimitive):
     def apply_layout(self, host, node):
-        control = native.get_control(host, node.fiber.native_path)
-        origin = control.GetGlobalPosition()
-        width, height = control.GetSize()
+        # GetSize can remain zero until UpdateScreen when a newly mounted
+        # modal is still hidden while measuring its origin. Use the completed
+        # layout frames, so the first visible frame already blocks input.
+        width = node.frame_w * node.visual_scale_x
+        height = node.frame_h * node.visual_scale_y
         holes = []
         pending = list(node.parent.children)
         backdrop = bool(node.fiber.props.get('backdrop'))
@@ -42,10 +44,11 @@ class ShieldPrimitive(PanelPrimitive):
             excluded = isinstance(primitive, SurfacePrimitive) if backdrop else (
                 isinstance(primitive, InputPrimitive) and not child.fiber.props.get('disabled'))
             if excluded:
-                target = native.get_control(host, child.fiber.native_path)
-                x, y = target.GetGlobalPosition()
-                w, h = target.GetSize()
-                holes.append((x - origin[0], y - origin[1], x + w - origin[0], y + h - origin[1]))
+                x = (child.frame_x - node.frame_x) * node.visual_scale_x
+                y = (child.frame_y - node.frame_y) * node.visual_scale_y
+                w = child.frame_w * child.visual_scale_x
+                h = child.frame_h * child.visual_scale_y
+                holes.append((x, y, x + w, y + h))
             else:
                 pending.extend(child.children)
         rectangles = subtract_rectangles((0, 0, width, height), holes)
