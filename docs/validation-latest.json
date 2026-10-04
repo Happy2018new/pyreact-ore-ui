@@ -1,0 +1,3684 @@
+{
+  "reference_versions": [
+    "1.26.5203.0"
+  ],
+  "development_client": "3.9.0.401155",
+  "game_file_version": "1.21.120.0",
+  "acceptance": "Exact original RGB pixels, complete control, text/icons and one logical pixel around it",
+  "collected": true,
+  "visual_pass": false,
+  "native_scale": 4,
+  "state_count": 26,
+  "states": [
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.3955253802910055,
+      "max_channel_error": 216,
+      "different_fraction": 0.07915426587301587,
+      "compared_pixels": 161280,
+      "changed_bounds": [
+        4,
+        3,
+        1256,
+        124
+      ],
+      "reference_size": [
+        1260,
+        128
+      ],
+      "actual_native_size": [
+        1260,
+        128
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "segments-default",
+      "kind": "segment",
+      "actual_box": [
+        28,
+        156,
+        1288,
+        284
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          313.0,
+          30.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128100.6279552,
+        "full_capture_sha256": "0169e60ec0920706ae8cbd653039774573c7a6efd90e39b1a74b554850d78469"
+      },
+      "provenance": {
+        "capture": "audit-segment-selected-default.png",
+        "capture_sha256": "cd7a05bcfa79b223856ea2f675c1af44d4bb0fbafd3fc8274a5362cf30998486",
+        "capture_crop": [
+          712,
+          566,
+          1972,
+          694
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1510,
+          47
+        ],
+        "timestamp": 1791108783.9181657,
+        "crop_sha256": "d111f8762307fde6bee3d38c88cd4a58fcd092b85b7e8ebc66932ad024504882"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/segments-default-reference.png",
+          "sha256": "d111f8762307fde6bee3d38c88cd4a58fcd092b85b7e8ebc66932ad024504882"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/segments-default-actual.png",
+          "sha256": "4017bbf4a1aac609adca70d4c720488d2c78990e60901fa09518349bbec36010"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/segments-default.pair.png",
+          "sha256": "b6069072cf9213dff4c585ce4eb3ee3c5f69457622ee05e57f4e5252d76a18ed"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/segments-default.diff.png",
+          "sha256": "746350d919ddaf9f8619b8de51ecfd008517026ae789b202ac2126f61c9c0cd0"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/segments-default.overlay.png",
+          "sha256": "fd7d649b7dc1ea735333822d49aaf962a8301655ec226dfb476701f02d670d6b"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.3955253802910055,
+      "max_channel_error": 216,
+      "different_fraction": 0.07915426587301587,
+      "compared_pixels": 161280,
+      "changed_bounds": [
+        4,
+        3,
+        1256,
+        124
+      ],
+      "reference_size": [
+        1260,
+        128
+      ],
+      "actual_native_size": [
+        1260,
+        128
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "segments-selected-hover",
+      "kind": "segment",
+      "actual_box": [
+        28,
+        156,
+        1288,
+        284
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          313.0,
+          30.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          240,
+          220
+        ],
+        "timestamp": 1791128101.6462293,
+        "full_capture_sha256": "0169e60ec0920706ae8cbd653039774573c7a6efd90e39b1a74b554850d78469"
+      },
+      "provenance": {
+        "capture": "audit-segment-selected-hover.png",
+        "capture_sha256": "679fada5c7bac4ef202aa90716c65503ea617e5d4ecafb03ca98395cd5fbbcb2",
+        "capture_crop": [
+          712,
+          566,
+          1972,
+          694
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          926,
+          632
+        ],
+        "timestamp": 1791108784.4312944,
+        "crop_sha256": "d111f8762307fde6bee3d38c88cd4a58fcd092b85b7e8ebc66932ad024504882"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/segments-selected-hover-reference.png",
+          "sha256": "d111f8762307fde6bee3d38c88cd4a58fcd092b85b7e8ebc66932ad024504882"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/segments-selected-hover-actual.png",
+          "sha256": "4017bbf4a1aac609adca70d4c720488d2c78990e60901fa09518349bbec36010"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/segments-selected-hover.pair.png",
+          "sha256": "b6069072cf9213dff4c585ce4eb3ee3c5f69457622ee05e57f4e5252d76a18ed"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/segments-selected-hover.diff.png",
+          "sha256": "746350d919ddaf9f8619b8de51ecfd008517026ae789b202ac2126f61c9c0cd0"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/segments-selected-hover.overlay.png",
+          "sha256": "fd7d649b7dc1ea735333822d49aaf962a8301655ec226dfb476701f02d670d6b"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.1350715112433862,
+      "max_channel_error": 216,
+      "different_fraction": 0.07916046626984127,
+      "compared_pixels": 161280,
+      "changed_bounds": [
+        4,
+        3,
+        1256,
+        124
+      ],
+      "reference_size": [
+        1260,
+        128
+      ],
+      "actual_native_size": [
+        1260,
+        128
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "segments-unselected-hover",
+      "kind": "segment",
+      "actual_box": [
+        28,
+        156,
+        1288,
+        284
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          313.0,
+          30.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          656,
+          220
+        ],
+        "timestamp": 1791128102.851362,
+        "full_capture_sha256": "d08fdfbd9773d23099cdacf98e4199244b223077157ee56cdfb5eed570e1b95d"
+      },
+      "provenance": {
+        "capture": "audit-segment-unselected-hover.png",
+        "capture_sha256": "264e6f11c8c45e9795b9990137b540d33431d047a2d064d9231810cb7dc88ec8",
+        "capture_crop": [
+          712,
+          566,
+          1972,
+          694
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1309,
+          632
+        ],
+        "timestamp": 1791108786.865298,
+        "crop_sha256": "e7df0d8c24788eaa8f8f48df4b6e3024cd4b164633274af8104954cf4d0dc8ea"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/segments-unselected-hover-reference.png",
+          "sha256": "e7df0d8c24788eaa8f8f48df4b6e3024cd4b164633274af8104954cf4d0dc8ea"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/segments-unselected-hover-actual.png",
+          "sha256": "95ae6c19d9f472f9a66af6d1b7a52e2a825ea4a48435737ea4787a8b18672536"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/segments-unselected-hover.pair.png",
+          "sha256": "3bb0daff6542c62873a4db7c61f9c2652d070e189adad0a635d1849ca8e2caeb"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/segments-unselected-hover.diff.png",
+          "sha256": "60280479a21ec542b9dd01424d294180836d63377a6700aa64dea2f359507091"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/segments-unselected-hover.overlay.png",
+          "sha256": "ada76efa03372555d739b7fe623d760c20854d473f82118be6260a34a6615e34"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 0.8680742691491099,
+      "max_channel_error": 206,
+      "different_fraction": 0.012646986771190593,
+      "compared_pixels": 130624,
+      "changed_bounds": [
+        32,
+        41,
+        161,
+        72
+      ],
+      "reference_size": [
+        1256,
+        104
+      ],
+      "actual_native_size": [
+        1256,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "field-default",
+      "kind": "field",
+      "actual_box": [
+        28,
+        156,
+        1284,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          312.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128105.8629096,
+        "full_capture_sha256": "7e5f3d3dad50712a418429273ddc19c10afa19f81b6c0c84cfe54c3297589399"
+      },
+      "provenance": {
+        "capture": "field-final-default.png",
+        "capture_sha256": "7771c497bbbbf88ca76e4b1e839361b9971c47adc339668b221263d10031643f",
+        "capture_crop": [
+          716,
+          164,
+          1972,
+          268
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1511,
+          46
+        ],
+        "timestamp": 1791088626.4693406,
+        "crop_sha256": "5d55879e443e89576e24fe858b3dd4b9ef954d9051d05594f2f640cb5abd2118"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/field-default-reference.png",
+          "sha256": "5d55879e443e89576e24fe858b3dd4b9ef954d9051d05594f2f640cb5abd2118"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/field-default-actual.png",
+          "sha256": "4e54e25206aead03b79b11a23a9c8952fb666be8856f8c611a124aa0eaaf579f"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/field-default.pair.png",
+          "sha256": "29d49e88497d5ace443c65468e5b37e7e67af74b385dffd2d84df65c29b37c97"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/field-default.diff.png",
+          "sha256": "c2d727cab3062b737e679af9800454794565ec762e0fc37c8024832880903525"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/field-default.overlay.png",
+          "sha256": "1df9a3ef94a7957a6fe149475dbbb1d1dd2c4ff5a401a549d4b1967dd19abd4d"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 0.8680742691491099,
+      "max_channel_error": 206,
+      "different_fraction": 0.012646986771190593,
+      "compared_pixels": 130624,
+      "changed_bounds": [
+        32,
+        41,
+        161,
+        72
+      ],
+      "reference_size": [
+        1256,
+        104
+      ],
+      "actual_native_size": [
+        1256,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "field-hover",
+      "kind": "field",
+      "actual_box": [
+        28,
+        156,
+        1284,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          312.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          232,
+          208
+        ],
+        "timestamp": 1791128106.8941138,
+        "full_capture_sha256": "7e5f3d3dad50712a418429273ddc19c10afa19f81b6c0c84cfe54c3297589399"
+      },
+      "provenance": {
+        "capture": "field-final-hover.png",
+        "capture_sha256": "7771c497bbbbf88ca76e4b1e839361b9971c47adc339668b221263d10031643f",
+        "capture_crop": [
+          716,
+          164,
+          1972,
+          268
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1329,
+          221
+        ],
+        "timestamp": 1791088627.000132,
+        "crop_sha256": "5d55879e443e89576e24fe858b3dd4b9ef954d9051d05594f2f640cb5abd2118"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/field-hover-reference.png",
+          "sha256": "5d55879e443e89576e24fe858b3dd4b9ef954d9051d05594f2f640cb5abd2118"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/field-hover-actual.png",
+          "sha256": "4e54e25206aead03b79b11a23a9c8952fb666be8856f8c611a124aa0eaaf579f"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/field-hover.pair.png",
+          "sha256": "29d49e88497d5ace443c65468e5b37e7e67af74b385dffd2d84df65c29b37c97"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/field-hover.diff.png",
+          "sha256": "c2d727cab3062b737e679af9800454794565ec762e0fc37c8024832880903525"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/field-hover.overlay.png",
+          "sha256": "1df9a3ef94a7957a6fe149475dbbb1d1dd2c4ff5a401a549d4b1967dd19abd4d"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 0.00014467592592592592,
+      "max_channel_error": 1,
+      "different_fraction": 0.00021701388888888888,
+      "compared_pixels": 9216,
+      "changed_bounds": [
+        34,
+        51,
+        36,
+        52
+      ],
+      "reference_size": [
+        128,
+        72
+      ],
+      "actual_native_size": [
+        128,
+        72
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "switch-on-default",
+      "kind": "switch",
+      "actual_box": [
+        28,
+        156,
+        156,
+        228
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          30.0,
+          16.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128109.964797,
+        "full_capture_sha256": "acf2ac9bd1889b47e8d4070f63e96f9f2887660d8a45274fe429c17f8644c215"
+      },
+      "provenance": {
+        "capture": "switch-on-final-default.png",
+        "capture_sha256": "71bec95c567856cf4542bbf1492e0abd5128017112209f2ae1ada067154a60a6",
+        "capture_crop": [
+          1848,
+          120,
+          1976,
+          192
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1511,
+          46
+        ],
+        "timestamp": 1791088556.79625,
+        "crop_sha256": "3aba2c0d9b440b9e9afeb685254338c8f3b3f862c45abbdfe80ffa3e4023ebd4"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/switch-on-default-reference.png",
+          "sha256": "3aba2c0d9b440b9e9afeb685254338c8f3b3f862c45abbdfe80ffa3e4023ebd4"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/switch-on-default-actual.png",
+          "sha256": "6d5ff2394158e88fb33732ad3e3d827d56852a5c47a3fbdf1b7c0d2dc892d258"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/switch-on-default.pair.png",
+          "sha256": "f6464e2f1e81c40a372e9a033740926bcf661c35faa20e1d197510977c9e5916"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/switch-on-default.diff.png",
+          "sha256": "3d3af69ed3cb176d34b8fc6137498a5b0e551dbe28e8b94bde51a07dc51975a1"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/switch-on-default.overlay.png",
+          "sha256": "3aba2c0d9b440b9e9afeb685254338c8f3b3f862c45abbdfe80ffa3e4023ebd4"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 0.00014467592592592592,
+      "max_channel_error": 1,
+      "different_fraction": 0.00021701388888888888,
+      "compared_pixels": 9216,
+      "changed_bounds": [
+        34,
+        51,
+        36,
+        52
+      ],
+      "reference_size": [
+        128,
+        72
+      ],
+      "actual_native_size": [
+        128,
+        72
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "switch-on-hover",
+      "kind": "switch",
+      "actual_box": [
+        28,
+        156,
+        156,
+        228
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          30.0,
+          16.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          92,
+          192
+        ],
+        "timestamp": 1791128110.9571085,
+        "full_capture_sha256": "c31efc233a8bb7e3e51573e577e1685ddd38fa711861cd0e44a648d2a1a8e9f8"
+      },
+      "provenance": {
+        "capture": "switch-on-final-hover.png",
+        "capture_sha256": "d5829e19a15ef3d9b2f7d318b2fa7490906a04929d8d4667cf872d69235c63d7",
+        "capture_crop": [
+          1848,
+          120,
+          1976,
+          192
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1941,
+          157
+        ],
+        "timestamp": 1791088557.3356037,
+        "crop_sha256": "1b0c3a24f9ced069079e0069f916e36a73a27fac6095c3ebfa668dbb8353a61c"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/switch-on-hover-reference.png",
+          "sha256": "1b0c3a24f9ced069079e0069f916e36a73a27fac6095c3ebfa668dbb8353a61c"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/switch-on-hover-actual.png",
+          "sha256": "5b024f8fe5d9ed42f872dd303b2ed4ebb9efa003f3f93e1e3d977e6223039fe7"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/switch-on-hover.pair.png",
+          "sha256": "496b77bca1819db649c16853b8d6015fbc04637fea7f80a890f5e65e3922d399"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/switch-on-hover.diff.png",
+          "sha256": "3d3af69ed3cb176d34b8fc6137498a5b0e551dbe28e8b94bde51a07dc51975a1"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/switch-on-hover.overlay.png",
+          "sha256": "1b0c3a24f9ced069079e0069f916e36a73a27fac6095c3ebfa668dbb8353a61c"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.0665509259259258,
+      "max_channel_error": 58,
+      "different_fraction": 0.08116319444444445,
+      "compared_pixels": 9216,
+      "changed_bounds": [
+        4,
+        3,
+        124,
+        68
+      ],
+      "reference_size": [
+        128,
+        72
+      ],
+      "actual_native_size": [
+        128,
+        72
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "switch-off-default",
+      "kind": "switch",
+      "actual_box": [
+        28,
+        156,
+        156,
+        228
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          30.0,
+          16.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128113.9978244,
+        "full_capture_sha256": "4d96e4fa4832f37d8dcf9b328a0bdac0d4f778f723f9325f8901e81c8bf2439e"
+      },
+      "provenance": {
+        "capture": "switch-off-final-default.png",
+        "capture_sha256": "a0c4bb82136c9274c1935129f74c228f5e3adf3cc810ccc0c46265fc01637480",
+        "capture_crop": [
+          1848,
+          523,
+          1976,
+          595
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1511,
+          46
+        ],
+        "timestamp": 1791089465.0585694,
+        "crop_sha256": "228c9ad1efa2ba5860a1a3a5b01643abcb41980501066b91829ca2af28f65381"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/switch-off-default-reference.png",
+          "sha256": "228c9ad1efa2ba5860a1a3a5b01643abcb41980501066b91829ca2af28f65381"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/switch-off-default-actual.png",
+          "sha256": "5947d9d8e2bb45006229fb1354625f9e39a73b79598e3974673facdb30b9328b"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/switch-off-default.pair.png",
+          "sha256": "dc5dcdfee1f9f790e0538901f62037b8514e95cd5b1362e0d6734a010e4532f7"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/switch-off-default.diff.png",
+          "sha256": "05d0e2590446cd0864fa11d1ed0ce7a52670ed05f0bc528c7b24353329b7612a"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/switch-off-default.overlay.png",
+          "sha256": "1000ed8ae78a0118a28a0abbc69b09b9cd5ba12422095dd45b9ec4baa51e7680"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.0173611111111112,
+      "max_channel_error": 63,
+      "different_fraction": 0.08116319444444445,
+      "compared_pixels": 9216,
+      "changed_bounds": [
+        4,
+        3,
+        124,
+        68
+      ],
+      "reference_size": [
+        128,
+        72
+      ],
+      "actual_native_size": [
+        128,
+        72
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "switch-off-hover",
+      "kind": "switch",
+      "actual_box": [
+        28,
+        156,
+        156,
+        228
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          30.0,
+          16.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          92,
+          192
+        ],
+        "timestamp": 1791128115.0066688,
+        "full_capture_sha256": "820ac153229e5d38bd3ae770d3a8744926e4006d64f6869f4dbcafd321a5aa00"
+      },
+      "provenance": {
+        "capture": "switch-off-final-hover.png",
+        "capture_sha256": "68ceafbe4f4b4145d7063f56ec1f5d0a8c7d18c8855fdeb735b9d07ed650a860",
+        "capture_crop": [
+          1848,
+          523,
+          1976,
+          595
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1891,
+          562
+        ],
+        "timestamp": 1791089465.580377,
+        "crop_sha256": "2b07a808236c5ad0b440f7c29b00b8bcea83be20f802563d724699f15d4e5da6"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/switch-off-hover-reference.png",
+          "sha256": "2b07a808236c5ad0b440f7c29b00b8bcea83be20f802563d724699f15d4e5da6"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/switch-off-hover-actual.png",
+          "sha256": "9cc319be2bbcfb5df9d918833520b320156181d15af07ed5d49844adaa49ebf5"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/switch-off-hover.pair.png",
+          "sha256": "ec90ec25d2a32f6a33935b8f700071e1e85099bc97d04031e124d11cc7d7433d"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/switch-off-hover.diff.png",
+          "sha256": "922b244e517c41521b84f4124069fdb3cb91e22d458669f68cb18da45b7f917f"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/switch-off-hover.overlay.png",
+          "sha256": "0ed77879ce4234d943b797f1e9d1a91263475445406c38252541cb1a1b3acdc0"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.1180733296530496,
+      "max_channel_error": 206,
+      "different_fraction": 0.04905964568904948,
+      "compared_pixels": 318816,
+      "changed_bounds": [
+        0,
+        0,
+        648,
+        492
+      ],
+      "reference_size": [
+        648,
+        492
+      ],
+      "actual_native_size": [
+        648,
+        492
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "navigation-default",
+      "kind": "navigation",
+      "actual_box": [
+        28,
+        156,
+        676,
+        648
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          121.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128118.0616474,
+        "full_capture_sha256": "667a785b3d0e7ae426b589eadab22b3fca95c96d7bf8700f6906f72b79d3b8a4"
+      },
+      "provenance": {
+        "capture": "audit-audio-selected-default.png",
+        "capture_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+        "capture_crop": [
+          0,
+          552,
+          648,
+          1044
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1510,
+          47
+        ],
+        "timestamp": 1791108849.8829193,
+        "crop_sha256": "67422a5e3d9ad59eddc1ff7bf0aa6d94798b565261e0c1521e19cb08fcccf7bb"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/navigation-default-reference.png",
+          "sha256": "67422a5e3d9ad59eddc1ff7bf0aa6d94798b565261e0c1521e19cb08fcccf7bb"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/navigation-default-actual.png",
+          "sha256": "21300fa72b6c6b2a6267f1741eea7a51dd016cbd78a1ea43daa3cdbd2818b8a9"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/navigation-default.pair.png",
+          "sha256": "d9c797efa44f17038564ce4577cd5823fd13915d4f743c5ce710aa8d48725ef7"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/navigation-default.diff.png",
+          "sha256": "733a88de7cb135035cd37c75b785b323426eb90ca645f5b45ea8ff06763c55ed"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/navigation-default.overlay.png",
+          "sha256": "92aaf61a51068a5aa64b29c8b4b0f1f183d9db07b30c9738bb61eca9c94a2fe7"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.1180733296530496,
+      "max_channel_error": 206,
+      "different_fraction": 0.04905964568904948,
+      "compared_pixels": 318816,
+      "changed_bounds": [
+        0,
+        0,
+        648,
+        492
+      ],
+      "reference_size": [
+        648,
+        492
+      ],
+      "actual_native_size": [
+        648,
+        492
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "navigation-selected-hover",
+      "kind": "navigation",
+      "actual_box": [
+        28,
+        156,
+        676,
+        648
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          121.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          352,
+          500
+        ],
+        "timestamp": 1791128119.12976,
+        "full_capture_sha256": "667a785b3d0e7ae426b589eadab22b3fca95c96d7bf8700f6906f72b79d3b8a4"
+      },
+      "provenance": {
+        "capture": "audit-audio-selected-hover.png",
+        "capture_sha256": "39a0dd61a4e80ea7f1b857e75eab6f2e287e9899e51b8aa0ae175262d496aeee",
+        "capture_crop": [
+          0,
+          552,
+          648,
+          1044
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          262,
+          890
+        ],
+        "timestamp": 1791108850.3975823,
+        "crop_sha256": "67422a5e3d9ad59eddc1ff7bf0aa6d94798b565261e0c1521e19cb08fcccf7bb"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/navigation-selected-hover-reference.png",
+          "sha256": "67422a5e3d9ad59eddc1ff7bf0aa6d94798b565261e0c1521e19cb08fcccf7bb"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/navigation-selected-hover-actual.png",
+          "sha256": "21300fa72b6c6b2a6267f1741eea7a51dd016cbd78a1ea43daa3cdbd2818b8a9"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/navigation-selected-hover.pair.png",
+          "sha256": "d9c797efa44f17038564ce4577cd5823fd13915d4f743c5ce710aa8d48725ef7"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/navigation-selected-hover.diff.png",
+          "sha256": "733a88de7cb135035cd37c75b785b323426eb90ca645f5b45ea8ff06763c55ed"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/navigation-selected-hover.overlay.png",
+          "sha256": "92aaf61a51068a5aa64b29c8b4b0f1f183d9db07b30c9738bb61eca9c94a2fe7"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.236181161965941,
+      "max_channel_error": 206,
+      "different_fraction": 0.061028932048579745,
+      "compared_pixels": 318816,
+      "changed_bounds": [
+        0,
+        0,
+        648,
+        492
+      ],
+      "reference_size": [
+        648,
+        492
+      ],
+      "actual_native_size": [
+        648,
+        492
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "navigation-video-hover",
+      "kind": "navigation",
+      "actual_box": [
+        28,
+        156,
+        676,
+        648
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          121.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          352,
+          404
+        ],
+        "timestamp": 1791128120.1790016,
+        "full_capture_sha256": "26897d21686d8fd5b331cb035d8fa81c035beddd70eaa152c0b862f5a6771afe"
+      },
+      "provenance": {
+        "capture": "audit-audio-hover-video-hover.png",
+        "capture_sha256": "5d7fe00806998d1113a38365a16c89d588264475cbfbd7caaeb742d5abb2bbd9",
+        "capture_crop": [
+          0,
+          552,
+          648,
+          1044
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          262,
+          796
+        ],
+        "timestamp": 1791108852.7879505,
+        "crop_sha256": "bbd0585f4bc196f8fcc9269c5c13e2bfa922dbb606a0785ff59c00a7d0a9d94c"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/navigation-video-hover-reference.png",
+          "sha256": "bbd0585f4bc196f8fcc9269c5c13e2bfa922dbb606a0785ff59c00a7d0a9d94c"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/navigation-video-hover-actual.png",
+          "sha256": "322c40f03dd935e53414e71b07513dc2500c2c1168ebac47ee5e2de121f3e50d"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/navigation-video-hover.pair.png",
+          "sha256": "6c4bf2fccf52301d53dc8a215a5d57704934a8f72773bfb139550f49940c7dd2"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/navigation-video-hover.diff.png",
+          "sha256": "dd1141d8b633a4e0a9c30b1f45670c7c27150ffc6cfba84775c9dad289aa7cab"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/navigation-video-hover.overlay.png",
+          "sha256": "f37653351d79ec6d9343662840581bc2589a515696f5b9ff7edd05c9ba39f197"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.25154425541169,
+      "max_channel_error": 206,
+      "different_fraction": 0.06230866706815216,
+      "compared_pixels": 318816,
+      "changed_bounds": [
+        0,
+        0,
+        648,
+        492
+      ],
+      "reference_size": [
+        648,
+        492
+      ],
+      "actual_native_size": [
+        648,
+        492
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "navigation-account-hover",
+      "kind": "navigation",
+      "actual_box": [
+        28,
+        156,
+        676,
+        648
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          121.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          352,
+          595
+        ],
+        "timestamp": 1791128121.2199295,
+        "full_capture_sha256": "6d2123f03ee0187a34266b9c5b4dad64b6af03b9808e81252ca07bdcd38ad5c2"
+      },
+      "provenance": {
+        "capture": "audit-audio-hover-account-hover.png",
+        "capture_sha256": "51b2f1e9dccf48188bafde0446cfc136a1c04520973e653d832496759d43a873",
+        "capture_crop": [
+          0,
+          552,
+          648,
+          1044
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          262,
+          989
+        ],
+        "timestamp": 1791108855.162784,
+        "crop_sha256": "2ca5ab6fe8620ae7ba62494e3e91f8a52417444c4c199cf831be6eb56864afa8"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/navigation-account-hover-reference.png",
+          "sha256": "2ca5ab6fe8620ae7ba62494e3e91f8a52417444c4c199cf831be6eb56864afa8"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/navigation-account-hover-actual.png",
+          "sha256": "f740a32070c6a0a6a5ad9101e36bbbcb951e06db06d8d971af7288e2a8ee1962"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/navigation-account-hover.pair.png",
+          "sha256": "125604f6a2660ef23da1f6f6c74f812b8ac498c6c2c98a2a359b253cc3026872"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/navigation-account-hover.diff.png",
+          "sha256": "4cc148d78be9db25b4abaae419c56c6b0ed0da9faaabbd4b98ba4738eb172435"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/navigation-account-hover.overlay.png",
+          "sha256": "87f34e38ccaa731227c59f6b6925874c78068d3f31441dfda90b94855adf92f2"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.232497741644083,
+      "max_channel_error": 206,
+      "different_fraction": 0.061032068654019875,
+      "compared_pixels": 318816,
+      "changed_bounds": [
+        0,
+        0,
+        648,
+        492
+      ],
+      "reference_size": [
+        648,
+        492
+      ],
+      "actual_native_size": [
+        648,
+        492
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "navigation-first-hover",
+      "kind": "navigation",
+      "actual_box": [
+        28,
+        156,
+        676,
+        648
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          121.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          352,
+          308
+        ],
+        "timestamp": 1791128122.263396,
+        "full_capture_sha256": "734db1fcc33877e3907139320f02e81a51e7b1a0c36803fe05f724c5f33ea4a5"
+      },
+      "provenance": {
+        "capture": "audit-audio-hover-first-hover.png",
+        "capture_sha256": "9babfe7a13fc5cdc8bee2103d6a7a2b6647aa0ae182321a0b84228c5ae0dcfe1",
+        "capture_crop": [
+          0,
+          552,
+          648,
+          1044
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          262,
+          703
+        ],
+        "timestamp": 1791108857.5131326,
+        "crop_sha256": "863e63cb7d8a83df3a2af3e034d38937494af29ff142c627877217ab9665112e"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/navigation-first-hover-reference.png",
+          "sha256": "863e63cb7d8a83df3a2af3e034d38937494af29ff142c627877217ab9665112e"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/navigation-first-hover-actual.png",
+          "sha256": "1f44695fd18936154f075348b08b66770f3903f231f8e85b1ef2662707e34175"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/navigation-first-hover.pair.png",
+          "sha256": "94d6aeb319163ceeaab80a93c7dd214db9e234d5db421ba8b34bb8472f62ebfd"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/navigation-first-hover.diff.png",
+          "sha256": "cd33e3565bb067687a1b67736100b42cc2f611d00a78f3d738818166c127adb4"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/navigation-first-hover.overlay.png",
+          "sha256": "60bcaf2b3f9fdacea314f37974ee5ac38397eabb0478ba9a3bef5da1b39eeb4b"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 0.5503656522764803,
+      "max_channel_error": 17,
+      "different_fraction": 0.055953644727530075,
+      "compared_pixels": 90432,
+      "changed_bounds": [
+        4,
+        3,
+        1252,
+        68
+      ],
+      "reference_size": [
+        1256,
+        72
+      ],
+      "actual_native_size": [
+        1256,
+        72
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "disabled-slider-default",
+      "kind": "slider",
+      "actual_box": [
+        28,
+        156,
+        1284,
+        228
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          312.0,
+          16.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128125.3522785,
+        "full_capture_sha256": "117ba4159a920aad629648dc404cfebbca04f9f40c7fef10c0e6d2d0a5ab6fcb"
+      },
+      "provenance": {
+        "capture": "disabled-slider-fixed-default.png",
+        "capture_sha256": "bc9fef14c1f7d9673014a098195595f917348c2e617c4d86101c481c01e6b0ce",
+        "capture_crop": [
+          716,
+          346,
+          1972,
+          418
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1162
+        ],
+        "cursor": [
+          1511,
+          46
+        ],
+        "timestamp": 1791084577.918162,
+        "crop_sha256": "db3e98f222ef3171c948e2f211600e8ca7e280fe7dfdeba0f1fb23433fa89af9"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/disabled-slider-default-reference.png",
+          "sha256": "db3e98f222ef3171c948e2f211600e8ca7e280fe7dfdeba0f1fb23433fa89af9"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/disabled-slider-default-actual.png",
+          "sha256": "558df7d3d4627f9bc4d77f41a8607bf9db690cdcab17f9cbf5bfe835b258dac8"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/disabled-slider-default.pair.png",
+          "sha256": "ec4ff4831fd1c8ba8f78f34ee3db773cbed42d0c69f13d421fe55a498e0ab55b"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/disabled-slider-default.diff.png",
+          "sha256": "ff8db9ff73448b656a81d5c38b360164da7f4e35ba853243bbbefac1c213013d"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/disabled-slider-default.overlay.png",
+          "sha256": "1f6fd2ace149c6b1bb131ff20534afd6939ee8bf47811d175285c5f719a5d43d"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 2.7004974830895074,
+      "max_channel_error": 249,
+      "different_fraction": 0.036264157621519584,
+      "compared_pixels": 135616,
+      "changed_bounds": [
+        0,
+        0,
+        1304,
+        104
+      ],
+      "reference_size": [
+        1304,
+        104
+      ],
+      "actual_native_size": [
+        1304,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "resource-tabs-default",
+      "kind": "tabs",
+      "actual_box": [
+        28,
+        156,
+        1332,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          324.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128128.3641777,
+        "full_capture_sha256": "0e5294ade70dc61cf991540fdf9dbb28994decb75a7142f85e3bd2a7c653161b"
+      },
+      "provenance": {
+        "capture": "round5-pack-tabs-default.png",
+        "capture_sha256": "38052ecbd99c0067b343ff26f3aafb8b06dd996f53d4249df7ff0627a84750b2",
+        "capture_crop": [
+          692,
+          236,
+          1996,
+          340
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1510,
+          47
+        ],
+        "timestamp": 1791114069.0844667,
+        "crop_sha256": "eccbf6285a36dfeaee4a0c1a649e5ed095cd29cbde9315bbded7199663b5b55d"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/resource-tabs-default-reference.png",
+          "sha256": "eccbf6285a36dfeaee4a0c1a649e5ed095cd29cbde9315bbded7199663b5b55d"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/resource-tabs-default-actual.png",
+          "sha256": "6e42f97167ae134138dff7061fbfb07c6b35462bf90dea2e6d25a80f22a20fa9"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/resource-tabs-default.pair.png",
+          "sha256": "d2521613ab671f340fac3d6b43cdc1a75d8621c88141c98b77bcba65c4b78982"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/resource-tabs-default.diff.png",
+          "sha256": "6ec6a5047f9a285d5a6bc1953a278b378b43f8a64a66d67a6348c727955739ab"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/resource-tabs-default.overlay.png",
+          "sha256": "52b8487422b1c5a38fbf308e72cbec7bbe72f56b23a57b5359ddd9aaef2d573c"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 3.1655925554506843,
+      "max_channel_error": 249,
+      "different_fraction": 0.07572852760736197,
+      "compared_pixels": 135616,
+      "changed_bounds": [
+        0,
+        0,
+        1304,
+        104
+      ],
+      "reference_size": [
+        1304,
+        104
+      ],
+      "actual_native_size": [
+        1304,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "resource-tabs-unselected-hover",
+      "kind": "tabs",
+      "actual_box": [
+        28,
+        156,
+        1332,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          324.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          356,
+          208
+        ],
+        "timestamp": 1791128129.4304156,
+        "full_capture_sha256": "5c5a4bb4f668b3d3d2f9728ec380264ffc44d1cf24c84109b83064ca4621f477"
+      },
+      "provenance": {
+        "capture": "round5-pack-tabs-hover.png",
+        "capture_sha256": "e24ee98ccfc30ce85297225538e9d2a12fc5ab4468c2879e5a4ff4f8cd7427b4",
+        "capture_crop": [
+          692,
+          236,
+          1996,
+          340
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1007,
+          283
+        ],
+        "timestamp": 1791114069.6357913,
+        "crop_sha256": "638a7dfc3d438c3fb5b4a3078b54200e9fd5ca2d645818e7782b06cdb36ed9c6"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/resource-tabs-unselected-hover-reference.png",
+          "sha256": "638a7dfc3d438c3fb5b4a3078b54200e9fd5ca2d645818e7782b06cdb36ed9c6"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/resource-tabs-unselected-hover-actual.png",
+          "sha256": "93515e52bb62c581ecd7460076b582ddb352b15176b31ae589c980d68bd7b3f0"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/resource-tabs-unselected-hover.pair.png",
+          "sha256": "79acd1cb874740a00b2e061e9d521196d7cbf4cb9bbba2aadcad4ebfaeccd7a6"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/resource-tabs-unselected-hover.diff.png",
+          "sha256": "3908922f3d5ffeb0f6830b42a64f2edddcef23438fc8cbf59251a9d3743fb981"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/resource-tabs-unselected-hover.overlay.png",
+          "sha256": "cfb11c866434cd530cd27d0dfcad4cc7a57c28f98054fb32508f952bc067a9b5"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.6925141576215197,
+      "max_channel_error": 231,
+      "different_fraction": 0.030733836715431808,
+      "compared_pixels": 135616,
+      "changed_bounds": [
+        0,
+        16,
+        1304,
+        96
+      ],
+      "reference_size": [
+        1304,
+        104
+      ],
+      "actual_native_size": [
+        1304,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "resource-tabs-selected-hover",
+      "kind": "tabs",
+      "actual_box": [
+        28,
+        156,
+        1332,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          324.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1004,
+          208
+        ],
+        "timestamp": 1791128130.4597442,
+        "full_capture_sha256": "0e5294ade70dc61cf991540fdf9dbb28994decb75a7142f85e3bd2a7c653161b"
+      },
+      "provenance": {
+        "capture": "round5-pack-tabs-selected-hover.png",
+        "capture_sha256": "488bf83fc84b41e5e975f8675f488d2b124653c6b6a7fb25fcf15ccae26317f5",
+        "capture_crop": [
+          692,
+          236,
+          1996,
+          340
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1662,
+          290
+        ],
+        "timestamp": 1791114103.0790758,
+        "crop_sha256": "c41510c8a38fa5fcac7c3effe93d3d7014efc41d2a9bad079d24fa581b7dc8d1"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/resource-tabs-selected-hover-reference.png",
+          "sha256": "c41510c8a38fa5fcac7c3effe93d3d7014efc41d2a9bad079d24fa581b7dc8d1"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/resource-tabs-selected-hover-actual.png",
+          "sha256": "6e42f97167ae134138dff7061fbfb07c6b35462bf90dea2e6d25a80f22a20fa9"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/resource-tabs-selected-hover.pair.png",
+          "sha256": "5fdcad10fbd70417a76593a48b392dd196822dee3ea1f7d204cf20970c3e90ca"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/resource-tabs-selected-hover.diff.png",
+          "sha256": "f0ea299b16bb6c4c39a78fa422bedf5bc3c1f630cd1864403f14d4bbb18d9e21"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/resource-tabs-selected-hover.overlay.png",
+          "sha256": "8fb0ee44db757b842fe3a2bd4cf2513b056d4cf0b929d67c26ed2454e44f0ab8"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.5092124953236064,
+      "max_channel_error": 194,
+      "different_fraction": 0.048137626262626264,
+      "compared_pixels": 114048,
+      "changed_bounds": [
+        8,
+        4,
+        640,
+        130
+      ],
+      "reference_size": [
+        648,
+        176
+      ],
+      "actual_native_size": [
+        648,
+        176
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "online-empty-default",
+      "kind": "players",
+      "actual_box": [
+        28,
+        156,
+        676,
+        332
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          42.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128133.4443107,
+        "full_capture_sha256": "c2829c5d2912e5d84302c706a8a81026bb7e24e9da7ddff94b752b7c8c2adf33"
+      },
+      "provenance": {
+        "capture": "audit-friends2.png",
+        "capture_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+        "capture_crop": [
+          1300,
+          496,
+          1948,
+          672
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1863,
+          41
+        ],
+        "timestamp": 1791110558.8718688,
+        "crop_sha256": "f25acc8537cf8ecb0d72965e76b63663c181671e1fb0791ae23f818c2ddd9f4e"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/online-empty-default-reference.png",
+          "sha256": "f25acc8537cf8ecb0d72965e76b63663c181671e1fb0791ae23f818c2ddd9f4e"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/online-empty-default-actual.png",
+          "sha256": "f6cd1e2038a6647ab69b70e765ab19532523635dc99fa20b58908a3930ec48c1"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/online-empty-default.pair.png",
+          "sha256": "4b916aa84f35b04156b02154f26ee44f4f43518829d8c9e3730541a700a1d36e"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/online-empty-default.diff.png",
+          "sha256": "9060300490c6a67e8ffcb35ce902745d559e2cc92e4e2b6bc54e0b07b230b3c5"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/online-empty-default.overlay.png",
+          "sha256": "c99e371f876339e115f122cce34e6b4b4c23e7596e7a6e9b930c8154fd9c0d8f"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 2.087769879660217,
+      "max_channel_error": 206,
+      "different_fraction": 0.018943192543652666,
+      "compared_pixels": 135616,
+      "changed_bounds": [
+        42,
+        35,
+        226,
+        68
+      ],
+      "reference_size": [
+        1304,
+        104
+      ],
+      "actual_native_size": [
+        1304,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "pack-group-default",
+      "kind": "pack-group",
+      "actual_box": [
+        28,
+        156,
+        1332,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          324.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128136.4788654,
+        "full_capture_sha256": "a88422c3c88144df8b54faadeae93a894a508d5d41e97a4b0d0c03024f8117ab"
+      },
+      "provenance": {
+        "capture": "round5-pack-group-default.png",
+        "capture_sha256": "53a20635fb1abd985bdb3f687183c4b5586b841b04f4f3f4fd33aae2c19e5ff3",
+        "capture_crop": [
+          692,
+          348,
+          1996,
+          452
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1510,
+          47
+        ],
+        "timestamp": 1791114104.3094857,
+        "crop_sha256": "2c9c3688d0a7bec7868ecd543c24d4671cacf93c5696f97913628fd20165a583"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/pack-group-default-reference.png",
+          "sha256": "2c9c3688d0a7bec7868ecd543c24d4671cacf93c5696f97913628fd20165a583"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/pack-group-default-actual.png",
+          "sha256": "3b2d71c5cbf6d1f0bad4293f8ac71e90e588fee49ac9efd096f125db541276d3"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/pack-group-default.pair.png",
+          "sha256": "0e446fda95c44eadd702a555e21d47d8b10e706861cd4162044e2258f5ac2c27"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/pack-group-default.diff.png",
+          "sha256": "a0a3286960ce58432db1f7808859e297a20c8b96defd1400b896821a04bb7afc"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/pack-group-default.overlay.png",
+          "sha256": "6ab3db7fb3fdbb642ac51f49fb83e9665b7e38661f06eb755a60e84d7bba4cab"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.818170422369042,
+      "max_channel_error": 183,
+      "different_fraction": 0.018943192543652666,
+      "compared_pixels": 135616,
+      "changed_bounds": [
+        42,
+        35,
+        226,
+        68
+      ],
+      "reference_size": [
+        1304,
+        104
+      ],
+      "actual_native_size": [
+        1304,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "pack-group-hover",
+      "kind": "pack-group",
+      "actual_box": [
+        28,
+        156,
+        1332,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          324.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          680,
+          208
+        ],
+        "timestamp": 1791128137.4878795,
+        "full_capture_sha256": "a508a3ea0cd675e92ac7daa77c85013d9d60df5acc658fe0e7e79b556c394419"
+      },
+      "provenance": {
+        "capture": "round5-pack-group-hover.png",
+        "capture_sha256": "7d70c12b9506771eee9df4812ab1a28ebdd7dcdaf7abc822c501baf952c995f9",
+        "capture_crop": [
+          692,
+          348,
+          1996,
+          452
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1309,
+          398
+        ],
+        "timestamp": 1791114104.9074752,
+        "crop_sha256": "b9d7320676a20482fd9e92fb076b540d2cc880c306574c79244af20301614a1d"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/pack-group-hover-reference.png",
+          "sha256": "b9d7320676a20482fd9e92fb076b540d2cc880c306574c79244af20301614a1d"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/pack-group-hover-actual.png",
+          "sha256": "20a3463703aeb6e237ae85053b2824c45580bbeb4503398538dd0528739d5814"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/pack-group-hover.pair.png",
+          "sha256": "ba5b2e60db764ca211a71873d576c1430a1c5b7b18898f5bd0103b7570cb420a"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/pack-group-hover.diff.png",
+          "sha256": "fc34819afde9f0726ddeaacc5d413212eed8dcf98b07c98b5a506458f0ae56b8"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/pack-group-hover.overlay.png",
+          "sha256": "16b3702ebab1006feea30c9602e549ae485e89e619e84b5974bd91d9e4408933"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.3982267732267732,
+      "max_channel_error": 206,
+      "different_fraction": 0.027503746253746252,
+      "compared_pixels": 64064,
+      "changed_bounds": [
+        40,
+        31,
+        225,
+        72
+      ],
+      "reference_size": [
+        616,
+        104
+      ],
+      "actual_native_size": [
+        616,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "search-field-default",
+      "kind": "search",
+      "actual_box": [
+        28,
+        156,
+        644,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          152.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128140.553826,
+        "full_capture_sha256": "9b4795249776380bb544416571ae4a236fce1faf7a7062b2fd630d1c1ef93180"
+      },
+      "provenance": {
+        "capture": "round5-search-default.png",
+        "capture_sha256": "b571b5aeea7207999f872fc3a8e430969b077f9a18c5bc30f7f1bba0a0f0275c",
+        "capture_crop": [
+          1280,
+          16,
+          1896,
+          120
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1510,
+          47
+        ],
+        "timestamp": 1791114134.6523876,
+        "crop_sha256": "dd7c673da81f0f9082f727918420cb6f8df59c304caa9dbbcced6048cff26cd9"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/search-field-default-reference.png",
+          "sha256": "dd7c673da81f0f9082f727918420cb6f8df59c304caa9dbbcced6048cff26cd9"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/search-field-default-actual.png",
+          "sha256": "d5c0172fc5aa5164ce33c6ce995f51cc5ef1b0643541ad58f8073eba5dd7befd"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/search-field-default.pair.png",
+          "sha256": "f81c8b07cd46fa9c0aedd8ca792d3842e82abd2395f23ec5232e42a5d169a729"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/search-field-default.diff.png",
+          "sha256": "a03fd93c858da616d7a6af322d04c369a10b322e44b75311d9a8fd3c9ba78413"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/search-field-default.overlay.png",
+          "sha256": "20adfddff9d4e44abe8435cec9efabb9a8f68028f79f0f2861eb2ed9afa79f02"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.3982267732267732,
+      "max_channel_error": 206,
+      "different_fraction": 0.027503746253746252,
+      "compared_pixels": 64064,
+      "changed_bounds": [
+        40,
+        31,
+        225,
+        72
+      ],
+      "reference_size": [
+        616,
+        104
+      ],
+      "actual_native_size": [
+        616,
+        104
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "search-field-hover",
+      "kind": "search",
+      "actual_box": [
+        28,
+        156,
+        644,
+        260
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          152.0,
+          24.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          352,
+          208
+        ],
+        "timestamp": 1791128141.5768995,
+        "full_capture_sha256": "9b4795249776380bb544416571ae4a236fce1faf7a7062b2fd630d1c1ef93180"
+      },
+      "provenance": {
+        "capture": "round5-search-hover.png",
+        "capture_sha256": "b571b5aeea7207999f872fc3a8e430969b077f9a18c5bc30f7f1bba0a0f0275c",
+        "capture_crop": [
+          1280,
+          16,
+          1896,
+          120
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1571,
+          70
+        ],
+        "timestamp": 1791114135.206598,
+        "crop_sha256": "dd7c673da81f0f9082f727918420cb6f8df59c304caa9dbbcced6048cff26cd9"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/search-field-hover-reference.png",
+          "sha256": "dd7c673da81f0f9082f727918420cb6f8df59c304caa9dbbcced6048cff26cd9"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/search-field-hover-actual.png",
+          "sha256": "d5c0172fc5aa5164ce33c6ce995f51cc5ef1b0643541ad58f8073eba5dd7befd"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/search-field-hover.pair.png",
+          "sha256": "f81c8b07cd46fa9c0aedd8ca792d3842e82abd2395f23ec5232e42a5d169a729"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/search-field-hover.diff.png",
+          "sha256": "a03fd93c858da616d7a6af322d04c369a10b322e44b75311d9a8fd3c9ba78413"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/search-field-hover.overlay.png",
+          "sha256": "20adfddff9d4e44abe8435cec9efabb9a8f68028f79f0f2861eb2ed9afa79f02"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 4.531134936105697,
+      "max_channel_error": 225,
+      "different_fraction": 0.05706830734243015,
+      "compared_pixels": 98496,
+      "changed_bounds": [
+        104,
+        24,
+        470,
+        110
+      ],
+      "reference_size": [
+        648,
+        152
+      ],
+      "actual_native_size": [
+        648,
+        152
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "self-player-default",
+      "kind": "self-player",
+      "actual_box": [
+        28,
+        156,
+        676,
+        308
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          8.0,
+          40.0
+        ],
+        "size": [
+          160.0,
+          36.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128144.495231,
+        "full_capture_sha256": "e10894558098b46112458a5264c124ae4081e296de9b03e12556227d52fca97f"
+      },
+      "provenance": {
+        "capture": "audit-friends2.png",
+        "capture_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
+        "capture_crop": [
+          1300,
+          320,
+          1948,
+          472
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1863,
+          41
+        ],
+        "timestamp": 1791110558.8718688,
+        "crop_sha256": "a5420170f1c714a263c32374227f685d11ccf7777f2adab36431feeb86fe2d26"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/self-player-default-reference.png",
+          "sha256": "a5420170f1c714a263c32374227f685d11ccf7777f2adab36431feeb86fe2d26"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/self-player-default-actual.png",
+          "sha256": "d8a60c9b1e8bef56fd29556b534736a5bc9f791be518843215d51c220ff9d6e8"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/self-player-default.pair.png",
+          "sha256": "d1061894f472702b7c95d40ce65195b0e1be3da01fc697dcd82b0fff2728b444"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/self-player-default.diff.png",
+          "sha256": "fcc4048ed65bf179529a3dfadd149d6fba66f889add731b7bb5bdc293c6928c4"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/self-player-default.overlay.png",
+          "sha256": "2893def3cb7258612e7fc1c45fdf026f36f777b87cc014073bdf106ae2279a16"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.290014242348636,
+      "max_channel_error": 183,
+      "different_fraction": 0.03648952095808383,
+      "compared_pixels": 641280,
+      "changed_bounds": [
+        0,
+        0,
+        960,
+        668
+      ],
+      "reference_size": [
+        960,
+        668
+      ],
+      "actual_native_size": [
+        960,
+        668
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "action-menu-default",
+      "kind": "action-menu",
+      "actual_box": [
+        528,
+        252,
+        1488,
+        920
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          133.0,
+          64.0
+        ],
+        "size": [
+          238.0,
+          165.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          1814,
+          234
+        ],
+        "timestamp": 1791128147.4820461,
+        "full_capture_sha256": "a3ea20409b9973ced5f93d2f29d2874e8e9f9b54238e0822e0f5a423d526f7f0"
+      },
+      "provenance": {
+        "capture": "audit-action-first-default.png",
+        "capture_sha256": "7720edd26156a913e45a13c73b994f22493a8663ec2663b370ef20bb5c034046",
+        "capture_crop": [
+          528,
+          252,
+          1488,
+          920
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1510,
+          47
+        ],
+        "timestamp": 1791110697.3917947,
+        "crop_sha256": "46577a390facf08acea1d75331e056450cfa251b6dd03777e01b84a13cece748"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/action-menu-default-reference.png",
+          "sha256": "46577a390facf08acea1d75331e056450cfa251b6dd03777e01b84a13cece748"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/action-menu-default-actual.png",
+          "sha256": "36b88b218eed5f2ce68abb2e5e6b114bdd97f277f4599db499534f31ed0878f6"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/action-menu-default.pair.png",
+          "sha256": "7bab3e8f5c03d068acac585f4d21d6cdb164d8ceb40a778f6a1b1c7fea90348b"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/action-menu-default.diff.png",
+          "sha256": "c8908ac10c248e5c30b1cd69029a551cff979fc3e9f9b9b9e460e8f67c9889a3"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/action-menu-default.overlay.png",
+          "sha256": "004acaff71ba364be0a871861037a311ff5d85f28814dc97686a0ad016a04648"
+        }
+      }
+    },
+    {
+      "native_exact": false,
+      "exact": false,
+      "within_tolerance": false,
+      "mean_channel_error": 1.3036281603459747,
+      "max_channel_error": 183,
+      "different_fraction": 0.03648952095808383,
+      "compared_pixels": 641280,
+      "changed_bounds": [
+        0,
+        0,
+        960,
+        668
+      ],
+      "reference_size": [
+        960,
+        668
+      ],
+      "actual_native_size": [
+        960,
+        668
+      ],
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "tolerance": 0,
+      "name": "action-menu-first-hover",
+      "kind": "action-menu",
+      "actual_box": [
+        528,
+        252,
+        1488,
+        920
+      ],
+      "includes_text": true,
+      "margin_logical": 1,
+      "native_geometry": {
+        "logical_screen": [
+          504.0,
+          293.0
+        ],
+        "position": [
+          133.0,
+          64.0
+        ],
+        "size": [
+          238.0,
+          165.0
+        ]
+      },
+      "actual_capture": {
+        "client_size": [
+          2016,
+          1172
+        ],
+        "cursor": [
+          772,
+          432
+        ],
+        "timestamp": 1791128148.624915,
+        "full_capture_sha256": "b07e0e69e4478568e9d06be9b66412fa62b9a66667e87839d4b28fce558b90af"
+      },
+      "provenance": {
+        "capture": "audit-action-first-hover.png",
+        "capture_sha256": "8a86a925c394d99c9638896daba6dc496f44b272fb17a956abe7764f393ce943",
+        "capture_crop": [
+          528,
+          252,
+          1488,
+          920
+        ],
+        "reference_scale": 4,
+        "margin_logical": 1,
+        "version": "1.26.5203.0",
+        "client": [
+          2015,
+          1172
+        ],
+        "cursor": [
+          1007,
+          433
+        ],
+        "timestamp": 1791110697.933722,
+        "crop_sha256": "f6a6d2f88a74fedcedd2b104db23d91c09e15b95d684dc5fdff7a72475af7406"
+      },
+      "images": {
+        "-reference.png": {
+          "path": "docs/images/reference/audit/action-menu-first-hover-reference.png",
+          "sha256": "f6a6d2f88a74fedcedd2b104db23d91c09e15b95d684dc5fdff7a72475af7406"
+        },
+        "-actual.png": {
+          "path": "docs/images/reference/audit/action-menu-first-hover-actual.png",
+          "sha256": "ad2b9fde0e7d5f5779de30b6aeb0fa667657f142fe6c40e312439ad59b5e2f6c"
+        },
+        ".pair.png": {
+          "path": "docs/images/reference/audit/action-menu-first-hover.pair.png",
+          "sha256": "3db8955b04520e5acc12564501953c86836d1dea1a7a72eb37e7b87dfabe3a77"
+        },
+        ".diff.png": {
+          "path": "docs/images/reference/audit/action-menu-first-hover.diff.png",
+          "sha256": "445f4c25c380f1a4c7036af9ed41cdd999c15bb502a414feacf1e3c9c8494c86"
+        },
+        ".overlay.png": {
+          "path": "docs/images/reference/audit/action-menu-first-hover.overlay.png",
+          "sha256": "67a98b52e126756552223764b166b18fbca931f83be645dbe803bbc96718ad44"
+        }
+      }
+    }
+  ],
+  "behavior": [
+    {
+      "ok": true,
+      "count": 226,
+      "checks": [
+        "page mounts overview",
+        "text and image geometry overview",
+        "page mounts selection",
+        "text and image geometry selection",
+        "page mounts toggles",
+        "text and image geometry toggles",
+        "page mounts buttons",
+        "text and image geometry buttons",
+        "page mounts fields",
+        "text and image geometry fields",
+        "page mounts dropdowns",
+        "text and image geometry dropdowns",
+        "page mounts sliders",
+        "text and image geometry sliders",
+        "page mounts navigation",
+        "text and image geometry navigation",
+        "page mounts containers",
+        "text and image geometry containers",
+        "page mounts messages",
+        "text and image geometry messages",
+        "page mounts dialogs",
+        "text and image geometry dialogs",
+        "page mounts media",
+        "text and image geometry media",
+        "page mounts social",
+        "text and image geometry social",
+        "mouse switch updates controlled state",
+        "native Ore hover visible: lab_switch",
+        "native Ore hover visible: lab_page_overview",
+        "native Ore hover visible: lab_page_selection",
+        "mouse segmented fifth option",
+        "mouse off switch turns on",
+        "native Ore hover visible: lab_switch_off",
+        "disabled rejects native tap: lab_switch_disabled",
+        "mouse checkbox selects",
+        "disabled rejects native tap: lab_checkbox_disabled_off",
+        "disabled rejects native tap: lab_checkbox_disabled_on",
+        "mouse uncontrolled switch updates native skin",
+        "mouse radio selects",
+        "disabled rejects native tap: ore_radio_adventure",
+        "mouse button fires once",
+        "disabled rejects native tap: lab_primary_disabled",
+        "mouse button fires once secondary",
+        "disabled rejects native tap: lab_secondary_disabled",
+        "mouse button fires once neutral",
+        "disabled rejects native tap: lab_neutral_disabled",
+        "mouse button fires once destructive",
+        "disabled rejects native tap: lab_destructive_disabled",
+        "mouse button fires once realms",
+        "disabled rejects native tap: lab_realms_disabled",
+        "mouse flat button fires once primary",
+        "mouse flat button fires once secondary",
+        "mouse flat button fires once neutral",
+        "mouse flat button fires once destructive",
+        "mouse flat button fires once realms",
+        "disabled rejects native tap: lab_icon_disabled",
+        "native Ore hover visible: lab_primary_raised",
+        "mouse continuous drag",
+        "mouse native and controlled continuous values match",
+        "mouse native integer stop 0",
+        "mouse integer thumb aligns at stop 0",
+        "mouse integer thumb fits track at stop 0",
+        "mouse native integer stop 1",
+        "mouse integer thumb aligns at stop 1",
+        "mouse integer thumb fits track at stop 1",
+        "mouse native integer stop 2",
+        "mouse integer thumb aligns at stop 2",
+        "mouse integer thumb fits track at stop 2",
+        "mouse native integer stop 3",
+        "mouse integer thumb aligns at stop 3",
+        "mouse integer thumb fits track at stop 3",
+        "mouse native integer stop 4",
+        "mouse integer thumb aligns at stop 4",
+        "mouse integer thumb fits track at stop 4",
+        "native Ore hover visible: lab_step_slider",
+        "mouse locked slider rejects drag",
+        "mouse disabled continuous value",
+        "mouse disabled integer value",
+        "mouse uncontrolled continuous drag",
+        "mouse editable field native text",
+        "mouse disabled field retains text",
+        "mouse dropdown opens",
+        "native Ore hover visible: ore_option_2",
+        "native Ore hover visible: ore_dropdown_close",
+        "mouse dropdown selects and closes",
+        "disabled rejects native tap: lab_dropdown_disabled",
+        "mouse list selection",
+        "native Ore hover visible: lab_list_b",
+        "native Ore hover visible: lab_list_a",
+        "disabled rejects native tap: lab_list_disabled",
+        "mouse icon tab selects servers",
+        "mouse pagination rejects previous at first page",
+        "mouse pagination advances",
+        "mouse world card opens once",
+        "mouse world card edit opens dialog",
+        "mouse accordion collapse",
+        "mouse accordion expands",
+        "mouse pack details collapse",
+        "mouse pack details expand",
+        "mouse pack activates independently",
+        "mouse active pack tab",
+        "mouse pack deactivates independently",
+        "mouse help expands",
+        "mouse message accordion collapses",
+        "mouse message accordion expands",
+        "mouse banner dismisses",
+        "mouse opens form",
+        "mouse confirm closes form",
+        "mouse opens progress",
+        "mouse confirm closes progress",
+        "mouse opens warning",
+        "mouse confirm closes warning",
+        "mouse drawer backdrop closes",
+        "mouse friends panel opens",
+        "mouse player options open",
+        "mouse player action fires once and returns",
+        "mouse friends panel closes",
+        "mouse asset search state",
+        "mouse animations pause",
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "touch switch updates controlled state",
+        "touch segmented fifth option",
+        "touch off switch turns on",
+        "disabled rejects native tap: lab_switch_disabled",
+        "touch checkbox selects",
+        "disabled rejects native tap: lab_checkbox_disabled_off",
+        "disabled rejects native tap: lab_checkbox_disabled_on",
+        "touch uncontrolled switch updates native skin",
+        "touch radio selects",
+        "disabled rejects native tap: ore_radio_adventure",
+        "touch button fires once",
+        "disabled rejects native tap: lab_primary_disabled",
+        "touch button fires once secondary",
+        "disabled rejects native tap: lab_secondary_disabled",
+        "touch button fires once neutral",
+        "disabled rejects native tap: lab_neutral_disabled",
+        "touch button fires once destructive",
+        "disabled rejects native tap: lab_destructive_disabled",
+        "touch button fires once realms",
+        "disabled rejects native tap: lab_realms_disabled",
+        "touch flat button fires once primary",
+        "touch flat button fires once secondary",
+        "touch flat button fires once neutral",
+        "touch flat button fires once destructive",
+        "touch flat button fires once realms",
+        "disabled rejects native tap: lab_icon_disabled",
+        "touch continuous drag",
+        "touch native and controlled continuous values match",
+        "touch native integer stop 0",
+        "touch integer thumb aligns at stop 0",
+        "touch integer thumb fits track at stop 0",
+        "touch native integer stop 1",
+        "touch integer thumb aligns at stop 1",
+        "touch integer thumb fits track at stop 1",
+        "touch native integer stop 2",
+        "touch integer thumb aligns at stop 2",
+        "touch integer thumb fits track at stop 2",
+        "touch native integer stop 3",
+        "touch integer thumb aligns at stop 3",
+        "touch integer thumb fits track at stop 3",
+        "touch native integer stop 4",
+        "touch integer thumb aligns at stop 4",
+        "touch integer thumb fits track at stop 4",
+        "touch locked slider rejects drag",
+        "touch disabled continuous value",
+        "touch disabled integer value",
+        "touch uncontrolled continuous drag",
+        "touch editable field native text",
+        "touch disabled field retains text",
+        "touch dropdown opens",
+        "touch dropdown selects and closes",
+        "disabled rejects native tap: lab_dropdown_disabled",
+        "touch list selection",
+        "disabled rejects native tap: lab_list_disabled",
+        "touch icon tab selects servers",
+        "touch pagination rejects previous at first page",
+        "touch pagination advances",
+        "touch world card opens once",
+        "touch world card edit opens dialog",
+        "touch accordion collapse",
+        "touch accordion expands",
+        "touch pack details collapse",
+        "touch pack details expand",
+        "touch pack activates independently",
+        "touch active pack tab",
+        "touch pack deactivates independently",
+        "touch help expands",
+        "touch message accordion collapses",
+        "touch message accordion expands",
+        "touch banner dismisses",
+        "touch opens form",
+        "touch confirm closes form",
+        "touch opens progress",
+        "touch confirm closes progress",
+        "touch opens warning",
+        "touch confirm closes warning",
+        "touch drawer backdrop closes",
+        "touch friends panel opens",
+        "touch player options open",
+        "touch player action fires once and returns",
+        "touch friends panel closes",
+        "touch asset search state",
+        "touch animations pause",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground",
+        "mouse permission selects visitor",
+        "mouse permission selects member",
+        "mouse permission selects operator",
+        "mouse joined fifth segment remains reachable",
+        "mouse calibrated field accepts text",
+        "mouse calibrated glyph and image geometry",
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "touch permission selects visitor",
+        "touch permission selects member",
+        "touch permission selects operator",
+        "touch joined fifth segment remains reachable",
+        "touch calibrated field accepts text",
+        "touch calibrated glyph and image geometry",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "name": "historical-input",
+      "source_batch": "round12-input"
+    },
+    {
+      "ok": true,
+      "count": 203,
+      "checks": [
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "landscape page overview",
+        "landscape horizontal text bounds overview",
+        "landscape glyph and image geometry overview",
+        "landscape page selection",
+        "landscape horizontal text bounds selection",
+        "landscape glyph and image geometry selection",
+        "landscape page toggles",
+        "landscape horizontal text bounds toggles",
+        "landscape glyph and image geometry toggles",
+        "landscape page buttons",
+        "landscape horizontal text bounds buttons",
+        "landscape glyph and image geometry buttons",
+        "landscape page fields",
+        "landscape horizontal text bounds fields",
+        "landscape glyph and image geometry fields",
+        "landscape page dropdowns",
+        "landscape horizontal text bounds dropdowns",
+        "landscape glyph and image geometry dropdowns",
+        "landscape dropdown fits screen",
+        "landscape page sliders",
+        "landscape horizontal text bounds sliders",
+        "landscape glyph and image geometry sliders",
+        "landscape page navigation",
+        "landscape horizontal text bounds navigation",
+        "landscape glyph and image geometry navigation",
+        "landscape page containers",
+        "landscape horizontal text bounds containers",
+        "landscape glyph and image geometry containers",
+        "landscape page messages",
+        "landscape horizontal text bounds messages",
+        "landscape glyph and image geometry messages",
+        "landscape page dialogs",
+        "landscape horizontal text bounds dialogs",
+        "landscape glyph and image geometry dialogs",
+        "landscape dialog fits lab_open_dialog",
+        "landscape dialog fits lab_open_progress",
+        "landscape dialog fits lab_open_warning",
+        "landscape page media",
+        "landscape horizontal text bounds media",
+        "landscape glyph and image geometry media",
+        "landscape page social",
+        "landscape horizontal text bounds social",
+        "landscape glyph and image geometry social",
+        "landscape social bounds ore_friends_surface",
+        "landscape social bounds ore_friends_search",
+        "landscape player options open",
+        "landscape action menu fits screen",
+        "landscape player action returns once",
+        "landscape friends closes",
+        "portrait directory opens overview",
+        "portrait page overview",
+        "portrait horizontal text bounds overview",
+        "portrait glyph and image geometry overview",
+        "portrait directory opens selection",
+        "portrait directory closes after navigation selection",
+        "portrait page selection",
+        "portrait horizontal text bounds selection",
+        "portrait glyph and image geometry selection",
+        "portrait directory opens toggles",
+        "portrait directory closes after navigation toggles",
+        "portrait page toggles",
+        "portrait horizontal text bounds toggles",
+        "portrait glyph and image geometry toggles",
+        "portrait directory opens buttons",
+        "portrait directory closes after navigation buttons",
+        "portrait page buttons",
+        "portrait horizontal text bounds buttons",
+        "portrait glyph and image geometry buttons",
+        "portrait directory opens fields",
+        "portrait directory closes after navigation fields",
+        "portrait page fields",
+        "portrait horizontal text bounds fields",
+        "portrait glyph and image geometry fields",
+        "portrait directory opens dropdowns",
+        "portrait directory closes after navigation dropdowns",
+        "portrait page dropdowns",
+        "portrait horizontal text bounds dropdowns",
+        "portrait glyph and image geometry dropdowns",
+        "portrait dropdown fits screen",
+        "portrait directory opens sliders",
+        "portrait directory closes after navigation sliders",
+        "portrait page sliders",
+        "portrait horizontal text bounds sliders",
+        "portrait glyph and image geometry sliders",
+        "portrait directory opens navigation",
+        "portrait directory closes after navigation navigation",
+        "portrait page navigation",
+        "portrait horizontal text bounds navigation",
+        "portrait glyph and image geometry navigation",
+        "portrait directory opens containers",
+        "portrait directory closes after navigation containers",
+        "portrait page containers",
+        "portrait horizontal text bounds containers",
+        "portrait glyph and image geometry containers",
+        "portrait directory opens messages",
+        "portrait directory closes after navigation messages",
+        "portrait page messages",
+        "portrait horizontal text bounds messages",
+        "portrait glyph and image geometry messages",
+        "portrait directory opens dialogs",
+        "portrait directory closes after navigation dialogs",
+        "portrait page dialogs",
+        "portrait horizontal text bounds dialogs",
+        "portrait glyph and image geometry dialogs",
+        "portrait dialog fits lab_open_dialog",
+        "portrait dialog fits lab_open_progress",
+        "portrait dialog fits lab_open_warning",
+        "portrait directory opens media",
+        "portrait directory closes after navigation media",
+        "portrait page media",
+        "portrait horizontal text bounds media",
+        "portrait glyph and image geometry media",
+        "portrait directory opens social",
+        "portrait directory closes after navigation social",
+        "portrait page social",
+        "portrait horizontal text bounds social",
+        "portrait glyph and image geometry social",
+        "portrait social bounds ore_friends_surface",
+        "portrait social bounds ore_friends_search",
+        "portrait player options open",
+        "portrait action menu fits screen",
+        "portrait player action returns once",
+        "portrait friends closes",
+        "compact directory opens overview",
+        "compact page overview",
+        "compact horizontal text bounds overview",
+        "compact glyph and image geometry overview",
+        "compact directory opens selection",
+        "compact directory closes after navigation selection",
+        "compact page selection",
+        "compact horizontal text bounds selection",
+        "compact glyph and image geometry selection",
+        "compact directory opens toggles",
+        "compact directory closes after navigation toggles",
+        "compact page toggles",
+        "compact horizontal text bounds toggles",
+        "compact glyph and image geometry toggles",
+        "compact directory opens buttons",
+        "compact directory closes after navigation buttons",
+        "compact page buttons",
+        "compact horizontal text bounds buttons",
+        "compact glyph and image geometry buttons",
+        "compact directory opens fields",
+        "compact directory closes after navigation fields",
+        "compact page fields",
+        "compact horizontal text bounds fields",
+        "compact glyph and image geometry fields",
+        "compact directory opens dropdowns",
+        "compact directory closes after navigation dropdowns",
+        "compact page dropdowns",
+        "compact horizontal text bounds dropdowns",
+        "compact glyph and image geometry dropdowns",
+        "compact dropdown fits screen",
+        "compact directory opens sliders",
+        "compact directory closes after navigation sliders",
+        "compact page sliders",
+        "compact horizontal text bounds sliders",
+        "compact glyph and image geometry sliders",
+        "compact directory opens navigation",
+        "compact directory closes after navigation navigation",
+        "compact page navigation",
+        "compact horizontal text bounds navigation",
+        "compact glyph and image geometry navigation",
+        "compact directory opens containers",
+        "compact directory closes after navigation containers",
+        "compact page containers",
+        "compact horizontal text bounds containers",
+        "compact glyph and image geometry containers",
+        "compact directory opens messages",
+        "compact directory closes after navigation messages",
+        "compact page messages",
+        "compact horizontal text bounds messages",
+        "compact glyph and image geometry messages",
+        "compact directory opens dialogs",
+        "compact directory closes after navigation dialogs",
+        "compact page dialogs",
+        "compact horizontal text bounds dialogs",
+        "compact glyph and image geometry dialogs",
+        "compact dialog fits lab_open_dialog",
+        "compact dialog fits lab_open_progress",
+        "compact dialog fits lab_open_warning",
+        "compact directory opens media",
+        "compact directory closes after navigation media",
+        "compact page media",
+        "compact horizontal text bounds media",
+        "compact glyph and image geometry media",
+        "compact directory opens social",
+        "compact directory closes after navigation social",
+        "compact page social",
+        "compact horizontal text bounds social",
+        "compact glyph and image geometry social",
+        "compact social bounds ore_friends_surface",
+        "compact social bounds ore_friends_search",
+        "compact player options open",
+        "compact action menu fits screen",
+        "compact player action returns once",
+        "compact friends closes",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "pages": [
+        "overview",
+        "selection",
+        "toggles",
+        "buttons",
+        "fields",
+        "dropdowns",
+        "sliders",
+        "navigation",
+        "containers",
+        "messages",
+        "dialogs",
+        "media",
+        "social"
+      ],
+      "name": "historical-viewports",
+      "source_batch": "round14-viewports",
+      "sizes": [
+        {
+          "name": "landscape",
+          "requested": [
+            1200,
+            540
+          ],
+          "logical": [
+            600.0,
+            270.0
+          ]
+        },
+        {
+          "name": "portrait",
+          "requested": [
+            1008,
+            1440
+          ],
+          "logical": [
+            504.0,
+            720.0
+          ]
+        },
+        {
+          "name": "compact",
+          "requested": [
+            540,
+            800
+          ],
+          "logical": [
+            540.0,
+            800.0
+          ]
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "count": 20,
+      "checks": [
+        "native Ore hover visible: ore_radio_creative",
+        "mouse full radio row selects creative",
+        "mouse diamond image remains 16 square creative",
+        "native Ore hover visible: ore_radio_survival",
+        "mouse full radio row selects survival",
+        "mouse diamond image remains 16 square survival",
+        "mouse complete radio group fits measured parent",
+        "disabled rejects native tap: ore_radio_adventure",
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "touch full radio row selects creative",
+        "touch diamond image remains 16 square creative",
+        "touch full radio row selects survival",
+        "touch diamond image remains 16 square survival",
+        "touch complete radio group fits measured parent",
+        "disabled rejects native tap: ore_radio_adventure",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "name": "radio-followup",
+      "source_batch": "round15-radio"
+    },
+    {
+      "ok": true,
+      "count": 18,
+      "checks": [
+        "mouse permission selects visitor",
+        "mouse permission selects member",
+        "mouse permission selects operator",
+        "mouse joined fifth segment remains reachable",
+        "mouse calibrated field accepts text",
+        "mouse calibrated glyph and image geometry",
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "touch permission selects visitor",
+        "touch permission selects member",
+        "touch permission selects operator",
+        "touch joined fifth segment remains reachable",
+        "touch calibrated field accepts text",
+        "touch calibrated glyph and image geometry",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "name": "field-followup",
+      "source_batch": "round16-calibrated"
+    },
+    {
+      "ok": true,
+      "count": 32,
+      "checks": [
+        "mouse friends search updates controlled query",
+        "mouse search click keeps drawer open",
+        "mouse search filters player list",
+        "mouse visible modal guards have nonzero hit rectangles",
+        "mouse blank drawer surface blocks background",
+        "mouse menu close returns above drawer",
+        "mouse last menu action fires once",
+        "mouse drawer close returns to settings",
+        "mouse backdrop closes without clicking underlying navigation",
+        "mouse dialog field receives real text",
+        "mouse dialog input keeps surface open",
+        "mouse edited dialog confirms",
+        "mouse closed overlays unregister input guards",
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "touch friends search updates controlled query",
+        "touch search click keeps drawer open",
+        "touch search filters player list",
+        "touch visible modal guards have nonzero hit rectangles",
+        "touch blank drawer surface blocks background",
+        "touch menu close returns above drawer",
+        "touch last menu action fires once",
+        "touch drawer close returns to settings",
+        "touch backdrop closes without clicking underlying navigation",
+        "touch dialog field receives real text",
+        "touch dialog input keeps surface open",
+        "touch edited dialog confirms",
+        "touch closed overlays unregister input guards",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "name": "modal-social-input",
+      "source_batch": "round22-social-input"
+    },
+    {
+      "ok": true,
+      "count": 40,
+      "checks": [
+        "mouse editable field native text",
+        "mouse disabled field retains text",
+        "mouse dropdown opens",
+        "native Ore hover visible: ore_option_2",
+        "native Ore hover visible: ore_dropdown_close",
+        "mouse dropdown selects and closes",
+        "disabled rejects native tap: lab_dropdown_disabled",
+        "mouse list selection",
+        "native Ore hover visible: lab_list_b",
+        "native Ore hover visible: lab_list_a",
+        "disabled rejects native tap: lab_list_disabled",
+        "mouse icon tab selects servers",
+        "mouse pagination rejects previous at first page",
+        "mouse pagination advances",
+        "mouse world card opens once",
+        "mouse world card edit opens dialog",
+        "mouse accordion collapse",
+        "mouse accordion expands",
+        "mouse pack details collapse",
+        "mouse pack details expand",
+        "mouse pack activates independently",
+        "mouse active pack tab",
+        "mouse pack deactivates independently",
+        "mouse help expands",
+        "mouse message accordion collapses",
+        "mouse message accordion expands",
+        "mouse banner dismisses",
+        "mouse opens form",
+        "mouse confirm closes form",
+        "mouse opens progress",
+        "mouse confirm closes progress",
+        "mouse opens warning",
+        "mouse confirm closes warning",
+        "mouse drawer backdrop closes",
+        "mouse friends panel opens",
+        "mouse player options open",
+        "mouse player action fires once and returns",
+        "mouse friends panel closes",
+        "mouse asset search state",
+        "mouse animations pause"
+      ],
+      "hardware_touch_tested": false,
+      "name": "modal-mouse",
+      "source_batch": "round22-modal-mouse"
+    },
+    {
+      "ok": true,
+      "count": 78,
+      "checks": [
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "landscape page dropdowns",
+        "landscape horizontal text bounds dropdowns",
+        "landscape glyph and image geometry dropdowns",
+        "landscape dropdown fits screen",
+        "landscape page dialogs",
+        "landscape horizontal text bounds dialogs",
+        "landscape glyph and image geometry dialogs",
+        "landscape dialog fits lab_open_dialog",
+        "landscape dialog fits lab_open_progress",
+        "landscape dialog fits lab_open_warning",
+        "landscape page social",
+        "landscape horizontal text bounds social",
+        "landscape glyph and image geometry social",
+        "landscape social bounds ore_friends_surface",
+        "landscape social bounds ore_friends_search",
+        "landscape player options open",
+        "landscape action menu fits screen",
+        "landscape action close is above friends drawer",
+        "landscape player action returns once",
+        "landscape friends closes",
+        "portrait directory opens dropdowns",
+        "portrait directory closes after navigation dropdowns",
+        "portrait page dropdowns",
+        "portrait horizontal text bounds dropdowns",
+        "portrait glyph and image geometry dropdowns",
+        "portrait dropdown fits screen",
+        "portrait directory opens dialogs",
+        "portrait directory closes after navigation dialogs",
+        "portrait page dialogs",
+        "portrait horizontal text bounds dialogs",
+        "portrait glyph and image geometry dialogs",
+        "portrait dialog fits lab_open_dialog",
+        "portrait dialog fits lab_open_progress",
+        "portrait dialog fits lab_open_warning",
+        "portrait directory opens social",
+        "portrait directory closes after navigation social",
+        "portrait page social",
+        "portrait horizontal text bounds social",
+        "portrait glyph and image geometry social",
+        "portrait social bounds ore_friends_surface",
+        "portrait social bounds ore_friends_search",
+        "portrait player options open",
+        "portrait action menu fits screen",
+        "portrait action close is above friends drawer",
+        "portrait player action returns once",
+        "portrait friends closes",
+        "compact directory opens dropdowns",
+        "compact directory closes after navigation dropdowns",
+        "compact page dropdowns",
+        "compact horizontal text bounds dropdowns",
+        "compact glyph and image geometry dropdowns",
+        "compact dropdown fits screen",
+        "compact directory opens dialogs",
+        "compact directory closes after navigation dialogs",
+        "compact page dialogs",
+        "compact horizontal text bounds dialogs",
+        "compact glyph and image geometry dialogs",
+        "compact dialog fits lab_open_dialog",
+        "compact dialog fits lab_open_progress",
+        "compact dialog fits lab_open_warning",
+        "compact directory opens social",
+        "compact directory closes after navigation social",
+        "compact page social",
+        "compact horizontal text bounds social",
+        "compact glyph and image geometry social",
+        "compact social bounds ore_friends_surface",
+        "compact social bounds ore_friends_search",
+        "compact player options open",
+        "compact action menu fits screen",
+        "compact action close is above friends drawer",
+        "compact player action returns once",
+        "compact friends closes",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "pages": [
+        "dropdowns",
+        "dialogs",
+        "social"
+      ],
+      "name": "modal-viewports",
+      "source_batch": "round22-modal-viewports",
+      "sizes": [
+        {
+          "name": "landscape",
+          "requested": [
+            1200,
+            540
+          ],
+          "logical": [
+            600.0,
+            270.0
+          ]
+        },
+        {
+          "name": "portrait",
+          "requested": [
+            1008,
+            1440
+          ],
+          "logical": [
+            504.0,
+            720.0
+          ]
+        },
+        {
+          "name": "compact",
+          "requested": [
+            540,
+            800
+          ],
+          "logical": [
+            540.0,
+            800.0
+          ]
+        }
+      ]
+    },
+    {
+      "ok": true,
+      "count": 14,
+      "checks": [
+        "mouse short dropdown fits all rows without scrolling",
+        "mouse nested dropdown selects and closes",
+        "mouse long dropdown close is reachable",
+        "mouse dropdown backdrop blocks underlying navigation",
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "touch short dropdown fits all rows without scrolling",
+        "touch nested dropdown selects and closes",
+        "touch long dropdown close is reachable",
+        "touch dropdown backdrop blocks underlying navigation",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "name": "final-short-dropdown-input",
+      "source_batch": "round23-nested-overlays"
+    },
+    {
+      "ok": true,
+      "count": 22,
+      "checks": [
+        "UI closed before F11",
+        "F11 switches simulated touch to True",
+        "F8 opens playground",
+        "landscape page dropdowns",
+        "landscape horizontal text bounds dropdowns",
+        "landscape glyph and image geometry dropdowns",
+        "landscape dropdown fits screen",
+        "portrait directory opens dropdowns",
+        "portrait directory closes after navigation dropdowns",
+        "portrait page dropdowns",
+        "portrait horizontal text bounds dropdowns",
+        "portrait glyph and image geometry dropdowns",
+        "portrait dropdown fits screen",
+        "compact directory opens dropdowns",
+        "compact directory closes after navigation dropdowns",
+        "compact page dropdowns",
+        "compact horizontal text bounds dropdowns",
+        "compact glyph and image geometry dropdowns",
+        "compact dropdown fits screen",
+        "UI closed before F11",
+        "F11 switches simulated touch to False",
+        "F8 opens playground"
+      ],
+      "hardware_touch_tested": false,
+      "pages": [
+        "dropdowns"
+      ],
+      "name": "final-short-dropdown-viewports",
+      "source_batch": "round23-dropdown-viewports",
+      "sizes": [
+        {
+          "name": "landscape",
+          "requested": [
+            1200,
+            540
+          ],
+          "logical": [
+            600.0,
+            270.0
+          ]
+        },
+        {
+          "name": "portrait",
+          "requested": [
+            1008,
+            1440
+          ],
+          "logical": [
+            504.0,
+            720.0
+          ]
+        },
+        {
+          "name": "compact",
+          "requested": [
+            540,
+            800
+          ],
+          "logical": [
+            540.0,
+            800.0
+          ]
+        }
+      ]
+    }
+  ],
+  "runtime_source_sha256": {
+    "oreui/__init__.py": "9887c14627c0a81d56536dca2d812a9f22185b2bdb53bebb7b5ee452afd2c2d8",
+    "oreui/_button.py": "544ecc87b57997ed54d950d83f4712195a6ca8790eebb1440dcb1d685226fa49",
+    "oreui/_catalog.py": "44c0b0088ce92b525f3e49d06d8ee2d0eda212b84da163ef92af56d9a86c0fc6",
+    "oreui/_font_atlas.py": "fb4414109ce1ecf2ec9b30f4438dff40b69655947943c64e4ef77ebc6ebc31d0",
+    "oreui/_image.py": "09fb18e48aa9aa01c5931082dff9e128b1127a68209e19e5510b9b406ded2266",
+    "oreui/_input.py": "4c9a301c631a1769f9454949b40d36ae012c0b534b0ebc8f8efb216a90a1c5b5",
+    "oreui/_portal.py": "358165380403494b13cea51b69c6d846b214772168487b1c2f5ce71256c88ed9",
+    "oreui/_reference_assets.py": "c8c5d7cc1df6357b070abc8ee166eb7602cab3326bcc30e6cd217e4ec62edde0",
+    "oreui/_scroll.py": "09e4d27e98433718d6ce5420e7d3c1d79c26fd078ebfdc9394286e16763d983c",
+    "oreui/_shield.py": "6cb924dcf95f225ab291791dccc4977f23e5d39fc42fb1bbd7c7661cc97e9a8f",
+    "oreui/_skins.py": "2ed347edb1794c725cedb6031a8f9ce9545d574fc101658878d7e6a613e84761",
+    "oreui/_slider.py": "71e69dc3b91c6c77b485b1a22875090ee27253654d49b6f49ca680a3559a38ff",
+    "oreui/_text.py": "8c5c55f4064c3a0c93eecea7474236f0e9f66928a79a1b19211914a6f78df37b",
+    "oreui/assets.py": "d35599c2ae5710ddbca86b9ed36651c763570faec90da6a42ab7b306f237e94c",
+    "oreui/components.py": "7b58a3e9bd4949c97212c407df4e3a67db35acda02aeb0f55949944d871fcc89",
+    "oreui/packs.py": "c7efda2d7ea36c23cd2d75fc84cf43fcbca2b5b5cfc230367f215d62620147e9",
+    "oreui/settings.py": "20a465dd93932f7094100cf85e944330baf8d846cf37a7921141ab75cc62172a",
+    "oreui/social.py": "f498b4c154e20715ccb64f5a4e860c647b44859a2b135b712162b9dfd1ad4873",
+    "oreui/theme.py": "77c0deed0c8799bcabd1da337d3d5e62272005792ebedd45c9ad93a6e1b23e35",
+    "oreui/typography.py": "d228444bc1124dac9994875c5ed76a5ed3a9170af0412bd1a537b89c607d2ba3",
+    "oreui/worlds.py": "b452e89f6b87d63131bd289eec88730da9135c1ec7e80bfa40f105b1e80d75dc",
+    "resource_pack/ui/OreUI.json": "7c7967c36f742daf23b5a93d16c937e2cf9f630610100e7603b2dd3f33638595"
+  }
+}
