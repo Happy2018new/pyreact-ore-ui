@@ -67,7 +67,7 @@ def OreActionMenu(visible=False, title='', actions=None, onClose=None, style=Non
     actions = actions or ()
     height = 38 + (27 if actions else 0) + max(0, len(actions) - 1) * 24.5 + (2 if len(actions) > 1 else 0)
     return _ore_modal(visible=visible, onClick=onClose,
-        style=Style(alignItems=AlignItems.center, justifyContent=JustifyContent.center), children=[
+        style=Style(zIndex=2000, alignItems=AlignItems.center, justifyContent=JustifyContent.center), children=[
             Image(color=Color(0x000000BB), style=Style(position=Position.absolute,
                 left=0, top=0, width='100%', height='100%')),
             NativeOreButton(key='ore_action_surface', buttonBuilder=_transparent_button,

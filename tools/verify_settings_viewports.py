@@ -97,6 +97,11 @@ def verify(session, owner, output, pages=PAGES):
                     verifier.check(name + ' action menu fits screen', x >= 0 and y >= 0 and
                         x + w <= verifier.screen[0] + .1 and y + h <= verifier.screen[1] + .1)
                     verifier.capture(name + '-player-actions')
+                    verifier.tap('ore_action_close')
+                    verifier.check(name + ' action close is above friends drawer',
+                        verifier.business()['overlay'] == 'drawer')
+                    verifier.tap_at(verifier.scoped_at('lab_player_0', 'ore_player_options', within='ore_friends_surface'),
+                        name + '-reopen-player-options')
                     before = verifier.event_count()
                     verifier.tap('ore_action_0')
                     verifier.check(name + ' player action returns once',
