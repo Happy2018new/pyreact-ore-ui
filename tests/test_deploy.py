@@ -45,5 +45,5 @@ class DeploymentTests(unittest.TestCase):
                          'edit', 'world_demo_screen_big', 'ui_menu_worlds_tab', 'icon_alex',
                          'no_player_profile', 'bracket_open', 'bracket_close'):
                 self.assertTrue((resources / ('textures/pyreact_ore/' + name + '.png')).is_file(), name)
-            for name in ('reference_social', 'reference_friends', 'reference_team', 'reference_steve_face'):
+            for name in ('reference_social', 'reference_friends', 'reference_team', 'reference_steve_face', 'reference_search'):
                 self.assertTrue((resources / ('textures/pyreact_ore/reference/' + name + '.png')).is_file(), name)

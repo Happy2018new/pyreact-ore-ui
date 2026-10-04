@@ -15,6 +15,7 @@ CASES = [
     ('reference_video', 'audit-audio-selected-default', [36, 776, 84, 824], None),
     ('reference_account', 'audit-audio-selected-default', [36, 968, 84, 1016], None),
     ('reference_steve_face', 'audit-friends2', [1328, 348, 1424, 444], None),
+    ('reference_search', 'round5-search-default', [1312, 48, 1360, 96], 'light49'),
 ]
 
 

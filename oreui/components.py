@@ -348,8 +348,9 @@ def OreField(label='', value=_UNSET, defaultValue='', onChange=None, disabled=Fa
         'disabled': disabled,
         'value': value if controlled else internal,
         'children': NativeOreFieldText(content=OreString(text_value((value if controlled else internal) or placeholder)),
-            fontSize=8, color=OreColors.disabled if disabled or not (value if controlled else internal) else OreColors.text, textAlign=TextAlignment.left, singleLine=True,
-            style=Style(width='100%', height=16, marginTop=3.5, marginLeft=-.5)),
+            fontSize=8, color=OreColors.disabled if disabled else OreColors.muted
+                if not (value if controlled else internal) else OreColors.text, textAlign=TextAlignment.left, singleLine=True,
+            style=Style(width='100%', height=16, marginTop=3.5, marginLeft=.75)),
     }
     return Panel(style=Style(width='100%', gap=5).merge(style), children=[
         OreText(content=label, color=OreColors.muted) if label else None,
@@ -464,7 +465,7 @@ def OreRadio(options, value, onChange, disabled=None, style=None):
         children.append(NativeOreRadioButton(key='ore_radio_' + str(option),
             buttonBuilder=state_skin('radio_on' if selected else 'radio_off', disabled=is_disabled,
                 slices=(0, 0, 0, 0)), onClick=None if is_disabled else partial(onChange, option),
-            style=Style(width='100%', minHeight=28, paddingLeft=22,
+            style=Style(width='100%', height=28, minHeight=28, paddingLeft=22,
                 flexDirection=FlexDirection.row, justifyContent=JustifyContent.flex_start),
             children=OreText(content=label, fontSize=8, color=OreColors.disabled if is_disabled else OreColors.text)))
     return Panel(style=Style(width='100%').merge(style), children=children)

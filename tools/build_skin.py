@@ -23,8 +23,8 @@ def input_controls(search=False):
         {'binding_type': 'view', 'source_property_name': '#text_edit_selected', 'target_property_name': '#alpha'},
     ])
     return [{'centering_panel': {'type': 'panel', 'size': ['100%', '100%'], 'controls': ([
-        {'search_icon': {'type': 'image', 'texture': 'textures/pyreact_ore/magnifying_glass',
-            'layer': 4, 'size': [12, 12], 'offset': [7, 0], 'anchor_from': 'left_middle', 'anchor_to': 'left_middle'}}
+        {'search_icon': {'type': 'image', 'texture': 'textures/pyreact_ore/reference/reference_search',
+            'layer': 4, 'size': [12, 12], 'offset': [7, 1], 'anchor_from': 'left_middle', 'anchor_to': 'left_middle'}}
         ] if search else []) + [
         {'clipper_panel': {'type': 'panel', 'size': ['100% - 28px' if search else '100% - 12px', '100% - 8px'],
             'offset': [8 if search else 0, 0],

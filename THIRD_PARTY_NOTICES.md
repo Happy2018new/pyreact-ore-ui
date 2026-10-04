@@ -18,7 +18,7 @@ Minecraft、OreUI、Mojang、Microsoft、网易及资源相关权利仍归相应
 
 ## 国际版参考派生图像
 
-`textures/pyreact_ore/reference/` 的社交、好友、队伍、音频、视频、帐户图标和默认 Steve 面部来自本机国际版 `1.26.5203.0` 的无损截图。`assets/reference-icons.json` 记录原始截图哈希、裁切区域、透明度提取方法和版本。`docs/images/reference/native/` 保存完整控件的参考裁切，用于验证实际游戏渲染。这些派生图像保留 Minecraft 资产权利，不由根目录 MIT 或字体 OFL 授权。
+`textures/pyreact_ore/reference/` 的社交、好友、队伍、音频、视频、帐户、搜索图标和默认 Steve 面部来自本机国际版 `1.26.5203.0` 的无损截图。`assets/reference-icons.json` 记录原始截图哈希、裁切区域、透明度提取方法和版本。`docs/images/reference/native/` 保存完整控件的参考裁切，用于验证实际游戏渲染。这些派生图像保留 Minecraft 资产权利，不由根目录 MIT 或字体 OFL 授权。
 
 ## PyreactMC
 

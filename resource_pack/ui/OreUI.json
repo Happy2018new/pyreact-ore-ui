@@ -239,7 +239,7 @@
             {
               "search_icon": {
                 "type": "image",
-                "texture": "textures/pyreact_ore/magnifying_glass",
+                "texture": "textures/pyreact_ore/reference/reference_search",
                 "layer": 4,
                 "size": [
                   12,
@@ -247,7 +247,7 @@
                 ],
                 "offset": [
                   7,
-                  0
+                  1
                 ],
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle"

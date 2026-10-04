@@ -124,5 +124,23 @@
     "version": "1.26.5203.0",
     "source_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
     "extraction": "RGBA crop"
+  },
+  "reference_search": {
+    "src": "textures/pyreact_ore/reference/reference_search",
+    "size": [
+      48,
+      48
+    ],
+    "source_capture": "round5-search-default.png",
+    "crop": [
+      1312,
+      48,
+      1360,
+      96
+    ],
+    "reference_scale": 4,
+    "version": "1.26.5203.0",
+    "source_sha256": "b571b5aeea7207999f872fc3a8e430969b077f9a18c5bc30f7f1bba0a0f0275c",
+    "extraction": "light49"
   }
 }
