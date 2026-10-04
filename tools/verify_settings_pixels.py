@@ -71,32 +71,20 @@ def verify(session, owner, output):
         scale = round(capture['client'][2] / verifier.screen[0])
         if abs(capture['client'][2] / verifier.screen[0] - scale) > .01:
             raise AssertionError('Unexpected native pixel scale')
-        x, y = [round(n * scale) for n in box['position']]
-        width, height = [round(n * scale) for n in box['size']]
+        x, y, right, bottom = pixels.logical_box(box['position'], box['size'], scale)
+        width, height = right - x, bottom - y
         if strip:
             dx, dy, width, height = [round(n * scale) for n in strip]
             x += dx
             y += dy
         image = Image.open(full).convert('RGB')
         expected = Image.open(reference).convert('RGB')
-        target = np.asarray(expected, dtype=np.int16)
-        ratios = [expected.width / width, expected.height / height]
-        if abs(ratios[0] - ratios[1]) > .001:
-            raise AssertionError('Reference crop aspect does not match native control')
-        candidates = []
-        for dy in range(-2, 3):
-            for dx in range(-2, 3):
-                candidate = image.crop((x + dx, y + dy, x + dx + width, y + dy + height))
-                candidate = candidate.resize(expected.size, Image.Resampling.NEAREST)
-                error = float(np.abs(np.asarray(candidate, dtype=np.int16) - target).mean())
-                candidates.append((error, abs(dx) + abs(dy), dx, dy))
-        unused, unused_distance, dx, dy = min(candidates)
-        crop_box = [x + dx, y + dy, x + dx + width, y + dy + height]
+        crop_box = [x, y, x + width, y + height]
         crop = verifier.output / (name + '-crop.png')
-        image.crop(crop_box).save(crop)
-        result = pixels.compare(reference, crop, verifier.output / name, scale=ratios[0])
+        pixels.checked_crop(full, crop_box).save(crop)
+        result = pixels.compare(reference, crop, verifier.output / name)
         result.update(name=name, source=str(full), box=crop_box, logical_scale=scale,
-            alignment_search={'radius': 2, 'offset': [dx, dy]}, native_control=box,
+            alignment_search=None, native_control=box,
             scope='complete control crop' if not strip else 'explicit border or track strip; text is outside this crop')
         rows.append(result)
         print(json.dumps(dict(name=name, mean_channel_error=result['mean_channel_error'],
@@ -149,7 +137,8 @@ def verify(session, owner, output):
         except Exception as error:
             result['restoration_error'] = str(error)
     (verifier.output / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf8')
-    return 0 if result['collected'] and 'restoration_error' not in result else 1
+    # This legacy strip audit is supplemental, never whole-control acceptance.
+    return 0 if result['collected'] and all(row['within_tolerance'] for row in rows) and 'restoration_error' not in result else 1
 
 
 if __name__ == '__main__':
