@@ -1,0 +1,11 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Pyreact Ore UI 示例",
+    "description": "可复用 Ore 控件与交互示例",
+    "uuid": "c4944452-d03b-40fd-8a9a-d6bcedbff071",
+    "version": [0, 1, 0],
+    "min_engine_version": [1, 18, 0]
+  },
+  "modules": [{"type": "data", "uuid": "c7ab67a7-8898-451a-a629-0919e9474b8c", "version": [0, 1, 0]}]
+}
