@@ -1,0 +1,3729 @@
+{
+  "passed": true,
+  "target_count": 120,
+  "rows": [
+    {
+      "name": "primary-00",
+      "case": {
+        "kind": "primary",
+        "selected": false,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "primary-selected-00",
+      "case": {
+        "kind": "primary",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "primary-disabled-00",
+      "case": {
+        "kind": "primary",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "secondary-00",
+      "case": {
+        "kind": "secondary",
+        "selected": false,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "secondary-selected-00",
+      "case": {
+        "kind": "secondary",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "secondary-disabled-00",
+      "case": {
+        "kind": "secondary",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "neutral-00",
+      "case": {
+        "kind": "neutral",
+        "selected": false,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "neutral-selected-00",
+      "case": {
+        "kind": "neutral",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "neutral-disabled-00",
+      "case": {
+        "kind": "neutral",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "destructive-00",
+      "case": {
+        "kind": "destructive",
+        "selected": false,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "destructive-selected-00",
+      "case": {
+        "kind": "destructive",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "destructive-disabled-00",
+      "case": {
+        "kind": "destructive",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "realms-00",
+      "case": {
+        "kind": "realms",
+        "selected": false,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "realms-selected-00",
+      "case": {
+        "kind": "realms",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "button",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "realms-disabled-00",
+      "case": {
+        "kind": "realms",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "segments-00",
+      "case": {
+        "kind": "segments"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "segments-01",
+      "case": {
+        "kind": "segments"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "segments-02",
+      "case": {
+        "kind": "segments"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "tabs-00",
+      "case": {
+        "kind": "tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "tabs-01",
+      "case": {
+        "kind": "tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "tabs-02",
+      "case": {
+        "kind": "tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "tabs-03",
+      "case": {
+        "kind": "tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icon-tabs-00",
+      "case": {
+        "kind": "icon-tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icon-tabs-01",
+      "case": {
+        "kind": "icon-tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icon-tabs-02",
+      "case": {
+        "kind": "icon-tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icon-tabs-03",
+      "case": {
+        "kind": "icon-tabs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "navigation-00",
+      "case": {
+        "kind": "navigation"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "navigation",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "navigation-01",
+      "case": {
+        "kind": "navigation"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "navigation",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "navigation-02",
+      "case": {
+        "kind": "navigation"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "navigation",
+            2
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-00",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "group",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-01",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "details",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-02",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "activate",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-03",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "details",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-04",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "activate",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-05",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "details",
+            2
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-06",
+      "case": {
+        "kind": "packs"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "activate",
+            2
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "players-00",
+      "case": {
+        "kind": "players"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "profile",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "players-01",
+      "case": {
+        "kind": "players"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "options",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "players-02",
+      "case": {
+        "kind": "players"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "profile",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "players-03",
+      "case": {
+        "kind": "players"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "options",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "players-04",
+      "case": {
+        "kind": "players"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "profile",
+            2
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "players-05",
+      "case": {
+        "kind": "players"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "options",
+            2
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "group-00",
+      "case": {
+        "kind": "group"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "group",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "slider-00",
+      "case": {
+        "kind": "slider"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "search-00",
+      "case": {
+        "kind": "search"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icons-00",
+      "case": {
+        "kind": "icons"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "icon",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icons-01",
+      "case": {
+        "kind": "icons"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "framed",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icons-02",
+      "case": {
+        "kind": "icons"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "light",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-00",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "checkbox",
+            true
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-01",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "radio",
+            "survival"
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-02",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "radio",
+            "creative"
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-03",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "list",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-04",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-05",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "pagination",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-06",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "pagination",
+            3
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-07",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-08",
+      "case": {
+        "kind": "extras"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "banner",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "world-navigation-00",
+      "case": {
+        "kind": "world-navigation"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "play",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "world-navigation-01",
+      "case": {
+        "kind": "world-navigation"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "realms",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dialog-00",
+      "case": {
+        "kind": "dialog"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "close",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dialog-01",
+      "case": {
+        "kind": "dialog"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "close",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dialog-02",
+      "case": {
+        "kind": "dialog"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "confirm",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "drawer-00",
+      "case": {
+        "kind": "drawer"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "close",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "friends-00",
+      "case": {
+        "kind": "friends"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "friends-01",
+      "case": {
+        "kind": "friends"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "close",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "friends-02",
+      "case": {
+        "kind": "friends"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            "friends"
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "friends-03",
+      "case": {
+        "kind": "friends"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            "team"
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "friends-04",
+      "case": {
+        "kind": "friends"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            "team"
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "friends-05",
+      "case": {
+        "kind": "friends"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "tab",
+            "team"
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "settings-00",
+      "case": {
+        "kind": "settings"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "back",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "settings-01",
+      "case": {
+        "kind": "settings"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "social",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "slider-selected-00",
+      "case": {
+        "kind": "slider",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "slider-disabled-00",
+      "case": {
+        "kind": "slider",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "slider-selected-disabled-00",
+      "case": {
+        "kind": "slider",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "segments-disabled-00",
+      "case": {
+        "kind": "segments",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "segments-disabled-01",
+      "case": {
+        "kind": "segments",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "segments-disabled-02",
+      "case": {
+        "kind": "segments",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-00",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "group",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-01",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-02",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-03",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-04",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-05",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "packs-disabled-06",
+      "case": {
+        "kind": "packs",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icons-disabled-00",
+      "case": {
+        "kind": "icons",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icons-disabled-01",
+      "case": {
+        "kind": "icons",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "icons-disabled-02",
+      "case": {
+        "kind": "icons",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-00",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-01",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-02",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-03",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-04",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-05",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "pagination",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-06",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "pagination",
+            3
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-07",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "extras-selected-disabled-08",
+      "case": {
+        "kind": "extras",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "held_frame_stable": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true,
+        "neighbors_unchanged": true,
+        "outside_release_does_not_click": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "banner",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "field-00",
+      "case": {
+        "kind": "field"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "field-disabled-00",
+      "case": {
+        "kind": "field",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "slider-reference-00",
+      "case": {
+        "kind": "slider-reference"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": null,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "switch-00",
+      "case": {
+        "kind": "switch"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "switch",
+            true
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "menu-00",
+      "case": {
+        "kind": "menu"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "close",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "menu-01",
+      "case": {
+        "kind": "menu"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "action",
+            0
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "menu-02",
+      "case": {
+        "kind": "menu"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "action",
+            1
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "menu-03",
+      "case": {
+        "kind": "menu"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "action",
+            2
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "menu-04",
+      "case": {
+        "kind": "menu"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "action",
+            3
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "menu-05",
+      "case": {
+        "kind": "menu"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "action",
+            4
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "switch-selected-00",
+      "case": {
+        "kind": "switch",
+        "selected": true,
+        "disabled": false
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "switch",
+            false
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "switch-disabled-00",
+      "case": {
+        "kind": "switch",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "switch-selected-disabled-00",
+      "case": {
+        "kind": "switch",
+        "selected": true,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-00",
+      "case": {
+        "kind": "dropdown"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-disabled-00",
+      "case": {
+        "kind": "dropdown",
+        "selected": false,
+        "disabled": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "content_depressed": true,
+        "face_depressed": true,
+        "move_out_restores_content": true,
+        "reentry_content_matches_native_face": true,
+        "release_restores_content": true,
+        "release_clears_hold": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "disabled_visual_stable": true,
+        "disabled_no_event": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": null,
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-open-01",
+      "case": {
+        "kind": "dropdown",
+        "opened": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": []
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-open-02",
+      "case": {
+        "kind": "dropdown",
+        "opened": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "dropdown",
+            4
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-open-03",
+      "case": {
+        "kind": "dropdown",
+        "opened": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "dropdown",
+            6
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-open-04",
+      "case": {
+        "kind": "dropdown",
+        "opened": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "dropdown",
+            8
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-open-05",
+      "case": {
+        "kind": "dropdown",
+        "opened": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "dropdown",
+            10
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "dropdown-open-06",
+      "case": {
+        "kind": "dropdown",
+        "opened": true
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "dropdown",
+            12
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "worlds-00",
+      "case": {
+        "kind": "worlds"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "open",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "worlds-01",
+      "case": {
+        "kind": "worlds"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "open",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    },
+    {
+      "name": "worlds-02",
+      "case": {
+        "kind": "worlds"
+      },
+      "checks": {
+        "physical_button_held": true,
+        "physical_button_released": true,
+        "native_default_not_hovered": true,
+        "native_pressed_visible": true,
+        "no_click_while_held": true,
+        "outside_release_does_not_click": true,
+        "held_frame_stable": true,
+        "neighbors_unchanged": true,
+        "reentered_frame_matches_native_state": true,
+        "inside_release_dispatches_once": true
+      },
+      "passed": true,
+      "changed_neighbor_pixels": 0,
+      "inside_release": {
+        "count": 1,
+        "events": [
+          [
+            "edit",
+            null
+          ]
+        ]
+      },
+      "input_held": true,
+      "input_released": true
+    }
+  ]
+}

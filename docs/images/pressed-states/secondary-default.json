@@ -1,0 +1,123 @@
+{
+  "reference": "secondary-default-reference.png",
+  "actual": "secondary-default-actual.png",
+  "reference_size": [
+    888,
+    104
+  ],
+  "actual_native_size": [
+    888,
+    104
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 2.1887632825132823,
+  "max_channel_error": 181,
+  "different_fraction": 0.02367030492030492,
+  "compared_pixels": 92352,
+  "changed_bounds": [
+    379,
+    34,
+    509,
+    66
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "secondary",
+  "state": "default",
+  "reference_box": [
+    568,
+    686,
+    1456,
+    790
+  ],
+  "actual_box": [
+    28,
+    156,
+    916,
+    260
+  ],
+  "reference_capture": "secondary-confirm-default.png",
+  "actual_capture": "secondary-00-default.png",
+  "reference_sha256": "eda1a8fe6d102e3d5306ed0540d0a05eba6c6dc3f7cc820781701c29d1bac760",
+  "actual_sha256": "4abbf5511f573cfda0b0456d98ecd41f85dfac2ce3b4e68b8ade15c7882f663c",
+  "reference_evidence": {
+    "pid": 33360,
+    "exe": "D:\\Program\\Minecraft\\Minecraft.Windows.exe",
+    "version": "1.26.5203.0",
+    "created": 134355508838742189,
+    "client": [
+      379,
+      200,
+      2021,
+      1165
+    ],
+    "cursor": [
+      1515,
+      47
+    ],
+    "timestamp": 1791181981.217254,
+    "mouse_left_down_before": false,
+    "mouse_left_down_after": false,
+    "hold_ms": 0
+  },
+  "actual_evidence": {
+    "pid": 30884,
+    "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+    "version": null,
+    "created": 134356619850527109,
+    "client": [
+      272,
+      235,
+      2016,
+      1164
+    ],
+    "cursor": [
+      1814,
+      116
+    ],
+    "timestamp": 1791189956.9063532,
+    "mouse_left_down_before": false,
+    "mouse_left_down_after": false,
+    "hold_ms": 0,
+    "native_states": {
+      "default": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          220.0,
+          24.0
+        ],
+        "visible": true
+      },
+      "hover": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.0,
+          0.0
+        ],
+        "visible": false
+      },
+      "pressed": {
+        "position": [
+          0.0,
+          2.0
+        ],
+        "size": [
+          0.0,
+          0.0
+        ],
+        "visible": false
+      }
+    }
+  }
+}

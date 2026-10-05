@@ -1,0 +1,270 @@
+{
+  "ok": true,
+  "states": {
+    "default": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        303,
+        9
+      ],
+      "timestamp": 1791192131.4153156,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-default.png",
+      "sha256": "55e0e0000d450624875ffe0565e06825c56bae5b9388f5ce72405574a0d6903b",
+      "mouse_left_down_before": false,
+      "mouse_left_down_after": false,
+      "observation": {
+        "state": "default",
+        "hold_ms": 0,
+        "requested_pointer": [
+          0.95,
+          0.05
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    },
+    "hover": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        80,
+        89
+      ],
+      "timestamp": 1791192132.0791752,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-hover.png",
+      "sha256": "48b1f46cef9d7740f94843dcae0c893d482a41601c6bb271f416c4930e70070f",
+      "mouse_left_down_before": false,
+      "mouse_left_down_after": false,
+      "observation": {
+        "state": "hover",
+        "hold_ms": 0,
+        "requested_pointer": [
+          0.25,
+          0.5
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    },
+    "pressed": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        80,
+        89
+      ],
+      "timestamp": 1791192132.7462358,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-pressed.png",
+      "sha256": "d06a6e2849b3baa82d5094b555a5e52d313ae1ecb2af65138070d06dc8b1b455",
+      "mouse_left_down_before": true,
+      "mouse_left_down_after": true,
+      "observation": {
+        "state": "pressed",
+        "hold_ms": 450,
+        "requested_pointer": [
+          0.25,
+          0.5
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    },
+    "pressed-held": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        80,
+        89
+      ],
+      "timestamp": 1791192133.2064147,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-pressed-held.png",
+      "sha256": "d06a6e2849b3baa82d5094b555a5e52d313ae1ecb2af65138070d06dc8b1b455",
+      "mouse_left_down_before": true,
+      "mouse_left_down_after": true,
+      "observation": {
+        "state": "pressed-held",
+        "hold_ms": 912,
+        "requested_pointer": [
+          0.25,
+          0.5
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    },
+    "pressed-outside": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        303,
+        9
+      ],
+      "timestamp": 1791192133.4195435,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-pressed-outside.png",
+      "sha256": "55e0e0000d450624875ffe0565e06825c56bae5b9388f5ce72405574a0d6903b",
+      "mouse_left_down_before": true,
+      "mouse_left_down_after": true,
+      "observation": {
+        "state": "pressed-outside",
+        "hold_ms": 1121,
+        "requested_pointer": [
+          0.95,
+          0.05
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    },
+    "pressed-reentered": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        80,
+        89
+      ],
+      "timestamp": 1791192133.6304817,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-pressed-reentered.png",
+      "sha256": "48b1f46cef9d7740f94843dcae0c893d482a41601c6bb271f416c4930e70070f",
+      "mouse_left_down_before": true,
+      "mouse_left_down_after": true,
+      "observation": {
+        "state": "pressed-reentered",
+        "hold_ms": 1334,
+        "requested_pointer": [
+          0.25,
+          0.5
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    },
+    "released": {
+      "hwnd": 9575398,
+      "pid": 41268,
+      "title": "Ore reference sampler self-test",
+      "exe": "D:\\Program\\Python\\python.exe",
+      "created": 134356657295677865,
+      "client": [
+        711,
+        445,
+        320,
+        180
+      ],
+      "cursor": [
+        303,
+        9
+      ],
+      "timestamp": 1791192133.945722,
+      "output": "D:\\Happy2018new\u306e\u4e2a\u4eba\u6587\u4ef6\\GitHub\\pyreact-ore-ui\\.runtime\\pressed-audit\\sampler\\sample-released.png",
+      "sha256": "55e0e0000d450624875ffe0565e06825c56bae5b9388f5ce72405574a0d6903b",
+      "mouse_left_down_before": false,
+      "mouse_left_down_after": false,
+      "observation": {
+        "state": "released",
+        "hold_ms": 0,
+        "requested_pointer": [
+          0.95,
+          0.05
+        ],
+        "context_box": [
+          16,
+          36,
+          284,
+          144
+        ]
+      }
+    }
+  },
+  "release_moved_outside": true,
+  "mouse_released": true,
+  "verified": [
+    "default",
+    "hover",
+    "pressed",
+    "pressed-held",
+    "pressed-outside",
+    "pressed-reentered",
+    "unchanged neighbor",
+    "fixed crop",
+    "release"
+  ]
+}

@@ -15,7 +15,7 @@ python -X utf8 tools/deploy.py `
   --resource-pack 'D:/MyMod/resource_pack' --assets core
 ```
 
-工具检查依赖和 `_ui_defs.json`，追加 `ui/OreUI.json` 注册及 `ore_glyph_tmpl`、`ore_field_text_tmpl`、`ore_input_tmpl`、`ore_slider_tmpl`、`ore_scroll_tmpl` 隐藏模板。宿主原有模板不被替换，重复部署不会追加重复条目。工具不改变资源包 manifest、模组系统注册或业务代码。库升级会覆盖目的目录中同名的 Ore 文件和纹理。
+工具检查依赖和 `_ui_defs.json`，追加 `ui/OreUI.json` 注册，以及字体、可编辑字段、禁用字段、滑块、滚动区域、导航和 `ore_pressable_tmpl` 等隐藏模板。宿主原有模板不被替换，重复部署不会追加重复条目。工具不改变资源包 manifest、模组系统注册或业务代码。库升级会覆盖目的目录中同名的 Ore 文件和纹理。
 
 ## 新建示例
 
@@ -42,10 +42,18 @@ python -X utf8 tools/package_library.py --assets all
 
 当前适配基于 PyreactMC commit `9580d01` 的 Image、Button、Slider、Input、Dropdown、Toggle 和 Modal 接口。`_button.py` 补齐 state image 切片；`_slider.py` 和 `_input.py` 补充原生 `SetTouchEnable` 禁用路径，并使用 Ore 皮肤模板。填充布局、回调注册和卸载沿用宿主。升级框架时先运行运行时 contract tests，再检查游戏 hover/press、拖动、文本输入和 F11 模式；不依赖上游尚未实现的复杂 buttonBuilder 子树。
 
-`OreListItem(selected=True)` 在 default / hover / pressed 中保持独立的选中边框，悬停仍使用明亮的 hover 贴图；`OreTabs` 保留当前页签的 focused 外观。禁用的按钮、列表项、复选框和滑块不绑定业务回调；滑块和输入框还调用原生 `SetTouchEnable(False)`。
+`OreListItem(selected=True)` 在 default / hover / pressed 中保持独立的选中边框，悬停仍使用明亮的 hover 贴图；`OreTabs` 保留当前页签的选中外观。凸起按钮以及未选中的标签页、分段选项，在按住时将表面和内容同时下移 2 个逻辑像素，命中范围保持不变。鼠标移出会取消按压，保持按住再移回时跟随网易原生按钮恢复 hover，内容也恢复原位。取消不会触发业务回调。原生模板必须保留 `is_handle_button_move_event: true`。禁用的按钮、列表项、复选框和滑块不绑定业务回调；滑块和输入框还调用原生 `SetTouchEnable(False)`。
+
+拼接列表生成的内部 key 使用 Python 2 `str`。本次实机确认，网易 SDK 对 `unicode` 控件路径可以渲染和显示 hover，却不派发按钮回调。`OrePlayerGroup` 和 `OrePackGroup` 均通过同一个 `joined_rows` 实现规避这个问题。
+
+`OreField(disabled=True)` 使用相同边框、搜索图标和文字裁剪区域的静态模板，不挂载可取得焦点的编辑框。实机发现，仅调用 `SetTouchEnable(False)` 仍可能让原生输入框取得焦点并隐藏烘焙提示文字。重新启用时恢复标准编辑框。
 
 资源路径统一在 `textures/pyreact_ore/`，原版纹理不被覆盖。PyreactBase 仅追加 Ore 隐藏模板。多个模组使用同版本资源可以共享相同路径，不同版本混装时需统一版本或重命名资源并同步 catalog。
 
 需要嵌套列表时使用 `OreScrollView`。当前宿主的滚动 content_h 会把内层被裁剪的长内容向外传播，导致外层尾部空白；本库 `_scroll.py` 使用 Ore 滚动条模板，保留原生输入，在计算滚动范围时停止于嵌套视口。升级 Pyreact 后重点复核此内部适配路径。原生滚动位置 API 使用 ScrollView 根控件；对内部同名 scroll_view 节点调用，在本机版本没有更新实际位置。
 
 导入源包的权利归相应权利人。MIT 只覆盖本库原创代码。使用/再分发前保留 THIRD_PARTY_NOTICES，并遵守 PyreactMC LICENSE/NOTICE；部署工具会同时复制依赖的许可文件。
+
+`OreScrollView(scrollbarGutter=True)` 为内容右侧保留 10 个逻辑像素，防止滚动块盖住列表操作和标签页的键盘提示。`OreSettingsScreen` 支持同名参数。资源包示例开启该选项；需要分隔线延伸到滚动条下方的设置行可以使用默认的 `False`。`showScrollbar=False` 时不保留这段空间。
+
+`OreIconButton(light=True)` 适用于浅色页头，悬停和按住分别使用浅色反馈；`framed=True` 的独立边框样式优先。

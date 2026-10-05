@@ -1,0 +1,123 @@
+{
+  "reference": "player-profile-hover-reference.png",
+  "actual": "player-profile-hover-actual.png",
+  "reference_size": [
+    648,
+    292
+  ],
+  "actual_native_size": [
+    648,
+    292
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 2.5559853994024464,
+  "max_channel_error": 183,
+  "different_fraction": 0.031582952815829526,
+  "compared_pixels": 189216,
+  "changed_bounds": [
+    145,
+    44,
+    341,
+    250
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "player-profile",
+  "state": "hover",
+  "reference_box": [
+    1308,
+    740,
+    1956,
+    1032
+  ],
+  "actual_box": [
+    28,
+    244,
+    676,
+    536
+  ],
+  "reference_capture": "player-profile-hover.png",
+  "actual_capture": "players-00-hover.png",
+  "reference_sha256": "c41a16c38ea76af536f7ed1e8d384aff19e462c501b036ba5d0a5e4e543c3c32",
+  "actual_sha256": "d42961a14fafd862d3344edd435c0173f0107b95c04684e04a60531cc1792e3f",
+  "reference_evidence": {
+    "pid": 33360,
+    "exe": "D:\\Program\\Minecraft\\Minecraft.Windows.exe",
+    "version": "1.26.5203.0",
+    "created": 134355508838742189,
+    "client": [
+      379,
+      200,
+      2021,
+      1165
+    ],
+    "cursor": [
+      1586,
+      802
+    ],
+    "timestamp": 1791181200.1033235,
+    "mouse_left_down_before": false,
+    "mouse_left_down_after": false,
+    "hold_ms": 0
+  },
+  "actual_evidence": {
+    "pid": 30884,
+    "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+    "version": null,
+    "created": 134356619850527109,
+    "client": [
+      272,
+      235,
+      2016,
+      1164
+    ],
+    "cursor": [
+      284,
+      320
+    ],
+    "timestamp": 1791190243.7925768,
+    "mouse_left_down_before": false,
+    "mouse_left_down_after": false,
+    "hold_ms": 0,
+    "native_states": {
+      "default": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.0,
+          0.0
+        ],
+        "visible": false
+      },
+      "hover": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          124.0,
+          34.0
+        ],
+        "visible": true
+      },
+      "pressed": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.0,
+          0.0
+        ],
+        "visible": false
+      }
+    }
+  }
+}

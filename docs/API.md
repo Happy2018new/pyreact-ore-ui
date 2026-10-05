@@ -20,7 +20,7 @@
 
 | 组件 | 参数与默认值 |
 | --- | --- |
-| `OreField` | `label=''`；省略 `value` 为非受控；`defaultValue=''`；`onChange=None`；`disabled=False`；`placeholder=''`；`style=None`；`search=False`。24 高的原生单行文本框，上边缘有暗色内凹边。search 在左侧放置搜索图标，并为图标保留文字空间。空值提示不写入原生值，编辑时隐藏。禁用阻断原生触摸。 |
+| `OreField` | `label=''`；省略 `value` 为非受控；`defaultValue=''`；`onChange=None`；`disabled=False`；`placeholder=''`；`style=None`；`search=False`。24 高的原生单行文本框，上边缘有暗色内凹边。search 在左侧放置搜索图标，并为图标保留文字空间。空值提示不写入原生值，编辑时隐藏。禁用态使用相同裁剪几何的静态模板，不能取得编辑焦点。 |
 | `OreDropdown` | `options=None`，格式 `(文本, 值)`，`value` 和 `defaultValue` 可省略，`onChange=None`，`placeholder='请选择'`，`disabled=False`，`style=None`，`title='请选择'`。浅灰按钮展开为居中灰色菜单，标题居中，关闭按钮有 hover 底色，选项间有细分隔线。选中项右侧显示勾号，超过五项时可滚动。 |
 | `OreSwitch` | `value` 可省略，`defaultValue=False`，`onChange=None`，`disabled=False`，`label=''`，`style=None`。Ore 方形手柄和开关标记，回调为布尔值，默认 30×16。hover 与按下使用较深手柄，标签本身不切换状态。 |
 | `OreRadio` | `options`、`value`、`onChange` 必填；`disabled=None` 为禁用值列表；`style=None`。受控互斥单选，使用 Ore 菱形指示器，整行可点按。选中、未选中、hover、pressed 和禁用分别绘制。 |
@@ -31,7 +31,7 @@
 | `OrePagination` | `page=1`；`pages=1`；`onChange=None`；`style=None`。页码裁剪到 1..pages，边界禁止前进/后退。 |
 | `OreDrawer` | `visible=False`；`title=''`；`onClose=None`；`side='right'`（left/right）；`children=None`。宽 200、最大屏宽 85% 的全高抽屉；内部吞噬背景输入。 |
 | `OreHelp` | `label='说明'`；`message=''`；`style=None`。点按展开/收起提示，触屏也可访问。 |
-| `OreScrollView` | `style=None`；`children=None`；`showScrollbar=True`。style 必须给出稳定 height 或 flex，宽度也必须可解析。原生 ScrollView 的本地适配器，嵌套滚动内容在内层视口边界停止向外传播。静态操作沿用宿主 `ScrollView.scroll_to` / `scroll_to_percent` / `get_scroll_position`，参数为 ref 得到的原生根控件。 |
+| `OreScrollView` | `style=None`；`children=None`；`showScrollbar=True`，`scrollbarGutter=False`。启用 gutter 时在右侧预留 10 个逻辑像素，避免列表操作和键盘提示被滚动条遮挡。style 必须给出稳定 height 或 flex，宽度也必须可解析。原生 ScrollView 的本地适配器，嵌套滚动内容在内层视口边界停止向外传播。静态操作沿用宿主 `ScrollView.scroll_to` / `scroll_to_percent` / `get_scroll_position`，参数为 ref 得到的原生根控件。 |
 
 `OreVariant`：`primary`、`secondary`、`neutral`、`destructive`、`realms`。
 
@@ -45,9 +45,9 @@
 | `OreSettingsRow` | `title=''`，`description=''`，`valueText=''`，`children=None`，`layout=OreSettingLayout.inline`，`disabled=False`，`divider=True`，`style=None`。统一标题、说明、右侧控件和分隔线。inline 用于开关，stacked 用于说明在上方的滑块，field 用于输入和分段选项。 |
 | `OreSettingsSection` | `title=''`，`description=''`，`children=None`，`style=None`。每段连续的直接 `OreSettingsRow` 子项以一条浅线开始，以一条深线结束，中间保留深浅双线。组件复制行的 props，不修改传入的 Element，保留 key 与 ref。支持嵌套 section，下一组标题前保留空白。直接传入行或行数组即可；自定义包装组件自行组织行时，应在包装内部使用 section。 |
 | `OreSegmentedControl` | `options` 和 `value` 必填，`onChange=None`，`disabled=False`，`disabledOptions=None`，`style=None`。options 为 `(文本, 值)` 或 `(文本, 值, 图标名)`。绿色选中项有居中的底部白色短线，禁用项可逐项指定。 |
-| `OreIconButton` | `icon='cross_white'`，`onClick=None`，`disabled=False`，`size=20`，`color=None`，`style=None`，`iconSize=8`，`framed=False`。默认透明背景，`framed=True` 使用完整外框和一像素内侧明暗边。好友搜索旁的关闭按钮使用 22×24、iconSize=7。命中区域与图标尺寸分别设置。 |
+| `OreIconButton` | `icon='cross_white'`，`onClick=None`，`disabled=False`，`size=20`，`color=None`，`style=None`，`iconSize=8`，`framed=False`，`light=False`。light 使用浅色页头反馈。默认透明背景，`framed=True` 使用完整外框和一像素内侧明暗边。好友搜索旁的关闭按钮使用 22×24、iconSize=7。命中区域与图标尺寸分别设置。 |
 | `OreWorldCard` | `title=''`，`subtitle=''`，`mode=''`，`image='world_demo_screen_big'`，`onOpen=None`，`onEdit=None`，`disabled=False`，`style=None`。完整比例的世界预览，下方名称与日期，打开和铅笔编辑分别回调。 |
-| `OreSettingsScreen` | `title='设置'`，`navigation=None`，`children=None`，`onClose=None`，`onSocial=None`，`scrollKey='ore_settings_scroll'`，`activeItem=None`，`style=None`。浅灰顶栏、灰色侧栏和独立滚动内容。宽屏可显示社交入口，标题始终居中；窄屏用目录抽屉，activeItem 变化时收起目录。 |
+| `OreSettingsScreen` | `title='设置'`，`navigation=None`，`children=None`，`onClose=None`，`onSocial=None`，`scrollKey='ore_settings_scroll'`，`activeItem=None`，`style=None`，`scrollbarGutter=False`。gutter 传给内容滚动区域。浅灰顶栏、灰色侧栏和独立滚动内容。宽屏可显示社交入口，标题始终居中；窄屏用目录抽屉，activeItem 变化时收起目录。 |
 | `OreWorldNavigation` | `image='world_demo_screen_big'`，`onPlay=None`，`onRealms=None`，`children=None`，`style=None`。世界预览、游戏按钮、Realms 按钮和成就状态组成的存档编辑导航区。 |
 
 资源包与好友组件：

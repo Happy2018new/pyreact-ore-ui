@@ -1,0 +1,123 @@
+{
+  "reference": "navigation-unselected-pressed-reference.png",
+  "actual": "navigation-unselected-pressed-actual.png",
+  "reference_size": [
+    675,
+    296
+  ],
+  "actual_native_size": [
+    675,
+    296
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 7.889362696029362,
+  "max_channel_error": 240,
+  "different_fraction": 0.07061561561561562,
+  "compared_pixels": 199800,
+  "changed_bounds": [
+    0,
+    0,
+    675,
+    296
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "navigation-unselected",
+  "state": "pressed",
+  "reference_box": [
+    0,
+    456,
+    675,
+    752
+  ],
+  "actual_box": [
+    28,
+    156,
+    703,
+    452
+  ],
+  "reference_capture": "nav-unselected-pressed.png",
+  "actual_capture": "navigation-00-pressed.png",
+  "reference_sha256": "d3565e6905069c8e040cc34fb5941761998ed452b5b2a6178a03f0762ac3481e",
+  "actual_sha256": "acd2e87992f7085bc2a4765f169ef5c720f101a02932905bd2d92ad4b60b30b6",
+  "reference_evidence": {
+    "pid": 33360,
+    "exe": "D:\\Program\\Minecraft\\Minecraft.Windows.exe",
+    "version": "1.26.5203.0",
+    "created": 134355508838742189,
+    "client": [
+      379,
+      200,
+      2021,
+      1165
+    ],
+    "cursor": [
+      303,
+      508
+    ],
+    "timestamp": 1791180554.3166895,
+    "mouse_left_down_before": true,
+    "mouse_left_down_after": true,
+    "hold_ms": 450
+  },
+  "actual_evidence": {
+    "pid": 30884,
+    "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+    "version": null,
+    "created": 134356619850527109,
+    "client": [
+      272,
+      235,
+      2016,
+      1164
+    ],
+    "cursor": [
+      365,
+      208
+    ],
+    "timestamp": 1791190157.648028,
+    "mouse_left_down_before": true,
+    "mouse_left_down_after": true,
+    "hold_ms": 450,
+    "native_states": {
+      "default": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.0,
+          0.0
+        ],
+        "visible": false
+      },
+      "hover": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.0,
+          0.0
+        ],
+        "visible": false
+      },
+      "pressed": {
+        "position": [
+          0.0,
+          0.0
+        ],
+        "size": [
+          166.75,
+          24.0
+        ],
+        "visible": true
+      }
+    }
+  }
+}

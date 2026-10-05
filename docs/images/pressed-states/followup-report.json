@@ -1,0 +1,148 @@
+{
+  "checks": [
+    {
+      "name": "cold start packs callbacks exactly once",
+      "passed": true
+    },
+    {
+      "name": "cold start players callbacks exactly once",
+      "passed": true
+    },
+    {
+      "name": "native touch mode confirmed",
+      "passed": true
+    },
+    {
+      "name": "touch held state secondary0",
+      "passed": true
+    },
+    {
+      "name": "touch content follows face secondary",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once secondary0",
+      "passed": true
+    },
+    {
+      "name": "touch held state segments1",
+      "passed": true
+    },
+    {
+      "name": "touch content follows face segments",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once segments1",
+      "passed": true
+    },
+    {
+      "name": "touch held state tabs0",
+      "passed": true
+    },
+    {
+      "name": "touch content follows face tabs",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once tabs0",
+      "passed": true
+    },
+    {
+      "name": "touch held state packs1",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once packs1",
+      "passed": true
+    },
+    {
+      "name": "touch held state packs2",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once packs2",
+      "passed": true
+    },
+    {
+      "name": "touch held state players1",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once players1",
+      "passed": true
+    },
+    {
+      "name": "touch held state icons1",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once icons1",
+      "passed": true
+    },
+    {
+      "name": "touch held state switch0",
+      "passed": true
+    },
+    {
+      "name": "touch inside release once switch0",
+      "passed": true
+    },
+    {
+      "name": "touch stepped slider reaches final integer",
+      "passed": true
+    },
+    {
+      "name": "touch backdrop closes dialog",
+      "passed": true
+    },
+    {
+      "name": "touch backdrop closes drawer",
+      "passed": true
+    },
+    {
+      "name": "touch backdrop closes menu",
+      "passed": true
+    },
+    {
+      "name": "touch backdrop closes friends",
+      "passed": true
+    },
+    {
+      "name": "mouse mode restored",
+      "passed": true
+    },
+    {
+      "name": "scrollbar does not overlap tabs or pack actions",
+      "passed": true
+    },
+    {
+      "name": "scrollbar does not overlap tabs or pack actions",
+      "passed": true
+    },
+    {
+      "name": "scrollbar thumb drag changes content position",
+      "passed": true
+    }
+  ],
+  "transitions": [
+    {
+      "method": "GameComponentClient.SimulateTouchWithMouse",
+      "actual": {
+        "mode": 1,
+        "simulated": true,
+        "touch": true
+      }
+    },
+    {
+      "method": "GameComponentClient.SimulateTouchWithMouse",
+      "actual": {
+        "mode": 0,
+        "simulated": false,
+        "touch": false
+      }
+    }
+  ],
+  "passed": true,
+  "touch_scope": "NetEase simulated touch on Windows; not a physical phone"
+}

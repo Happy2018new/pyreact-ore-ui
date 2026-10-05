@@ -1,0 +1,89 @@
+{
+  "reference": "slider-default-reference.png",
+  "actual": "slider-default-actual.png",
+  "reference_size": [
+    1260,
+    72
+  ],
+  "actual_native_size": [
+    1260,
+    72
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.04000587889476778,
+  "max_channel_error": 137,
+  "different_fraction": 0.000837742504409171,
+  "compared_pixels": 90720,
+  "changed_bounds": [
+    3,
+    24,
+    11,
+    48
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "slider",
+  "state": "default",
+  "reference_box": [
+    720,
+    500,
+    1980,
+    572
+  ],
+  "actual_box": [
+    28,
+    156,
+    1288,
+    228
+  ],
+  "reference_capture": "slider-middle-default.png",
+  "actual_capture": "slider-reference-00-default.png",
+  "reference_sha256": "0f8bcc27916e0d16429edbfbc44a4573383e99d215b69b2befac9beb9419d97d",
+  "actual_sha256": "190eb34f0eabe609176157374b53935ae5954ccff41bb3fdccadf1a88b3eff33",
+  "reference_evidence": {
+    "pid": 33360,
+    "exe": "D:\\Program\\Minecraft\\Minecraft.Windows.exe",
+    "version": "1.26.5203.0",
+    "created": 134355508838742189,
+    "client": [
+      379,
+      200,
+      2021,
+      1165
+    ],
+    "cursor": [
+      1515,
+      47
+    ],
+    "timestamp": 1791182675.2728376,
+    "mouse_left_down_before": false,
+    "mouse_left_down_after": false,
+    "hold_ms": 0
+  },
+  "actual_evidence": {
+    "pid": 56408,
+    "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+    "version": null,
+    "created": 134356648873902780,
+    "client": [
+      272,
+      235,
+      2016,
+      1164
+    ],
+    "cursor": [
+      1814,
+      116
+    ],
+    "timestamp": 1791191570.7668955,
+    "mouse_left_down_before": false,
+    "mouse_left_down_after": false,
+    "hold_ms": 0,
+    "native_states": {}
+  }
+}

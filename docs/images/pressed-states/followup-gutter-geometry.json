@@ -1,0 +1,195 @@
+{
+  "scroll_before": 0.0,
+  "scroll_path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515",
+  "targets": [
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_pack_tabs",
+        "0"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2530/_0__2531",
+      "position": [
+        174.0,
+        63.5
+      ],
+      "press_offset": 2,
+      "size": [
+        157.5,
+        24.0
+      ],
+      "steps": 1,
+      "type": "PressablePrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_pack_tabs",
+        "1"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2530/_1__2534",
+      "position": [
+        330.5,
+        63.5
+      ],
+      "press_offset": 0,
+      "size": [
+        157.5,
+        24.0
+      ],
+      "steps": 1,
+      "type": "PressablePrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_pack_tabs"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2530/__pyr_2538/__pyr_2539",
+      "position": [
+        169.0,
+        69.5
+      ],
+      "press_offset": 0,
+      "size": [
+        12.0,
+        12.0
+      ],
+      "steps": 1,
+      "type": "ButtonPrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_pack_tabs"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2530/__pyr_2541/__pyr_2542",
+      "position": [
+        481.0,
+        69.5
+      ],
+      "press_offset": 0,
+      "size": [
+        12.0,
+        12.0
+      ],
+      "steps": 1,
+      "type": "ButtonPrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_accordion",
+        "ore_joined_lab_pack_0",
+        "lab_pack_0",
+        "ore_pack_action"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2544/__pyr_2551/ore_joined_lab_pack_0__2552/__pyr_2553/__pyr_2554/ore_pack_action__2560",
+      "position": [
+        453.0,
+        116.5
+      ],
+      "press_offset": 0,
+      "size": [
+        34.0,
+        34.0
+      ],
+      "steps": 1,
+      "type": "ButtonPrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_accordion",
+        "ore_joined_lab_pack_1",
+        "lab_pack_1",
+        "ore_pack_action"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2544/__pyr_2551/ore_joined_lab_pack_1__2566/__pyr_2567/__pyr_2568/ore_pack_action__2574",
+      "position": [
+        453.0,
+        181.5
+      ],
+      "press_offset": 0,
+      "size": [
+        34.0,
+        34.0
+      ],
+      "steps": 1,
+      "type": "ButtonPrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_accordion",
+        "ore_joined_lab_pack_2",
+        "lab_pack_2",
+        "ore_pack_action"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2544/__pyr_2551/ore_joined_lab_pack_2__2577/__pyr_2578/__pyr_2579/ore_pack_action__2585",
+      "position": [
+        453.0,
+        216.5
+      ],
+      "press_offset": 0,
+      "size": [
+        34.0,
+        34.0
+      ],
+      "steps": 1,
+      "type": "ButtonPrimitive",
+      "value": null
+    },
+    {
+      "clickable": true,
+      "keys": [
+        "lab_scroll_containers_0",
+        "lab_accordion",
+        "ore_joined_lab_pack_3",
+        "lab_pack_3",
+        "ore_pack_action"
+      ],
+      "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/background_and_viewport/scrolling_view_port/scrolling_content/__pyr_2516/__pyr_2517/__pyr_2529/__pyr_2544/__pyr_2551/ore_joined_lab_pack_3__2588/__pyr_2589/__pyr_2590/ore_pack_action__2596",
+      "position": [
+        453.0,
+        251.5
+      ],
+      "press_offset": 0,
+      "size": [
+        34.0,
+        34.0
+      ],
+      "steps": 1,
+      "type": "ButtonPrimitive",
+      "value": null
+    }
+  ],
+  "track": {
+    "children": [
+      "stack_panel"
+    ],
+    "path": "/root/__pyr_2318/__pyr_2319/__pyr_2320/__pyr_2330/__pyr_2401/__pyr_2515/scroll_mouse/scroll_view/stack_panel/bar_and_track",
+    "position": [
+      496.0,
+      28.0
+    ],
+    "size": [
+      6.0,
+      259.0
+    ]
+  },
+  "scroll_after": 7.5
+}
