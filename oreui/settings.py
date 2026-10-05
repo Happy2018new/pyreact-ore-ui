@@ -7,6 +7,7 @@ from ..pyreact import (Component, Panel, Image, Style, Color, Position,
                       SafeArea, use_state, use_event, use_effect, native)
 from .components import OreText, OreIcon, OreScrollView, OreDrawer
 from ._button import NativeOreButton, NativeOreNavigationButton, NativeOrePressable
+from ._joined import NativeOreJoinedRow
 from ._scroll import NativeOreNavigationScrollView
 from ._skins import state_skin
 from .theme import OreSide
@@ -121,7 +122,7 @@ def OreSettingsSection(title='', description='', children=None, style=None):
 def OreSegmentedControl(options, value, onChange=None, disabled=False,
                         disabledOptions=None, style=None):
     disabledOptions = disabledOptions or ()
-    return Panel(style=Style(width='100%', flexDirection=FlexDirection.row).merge(style), children=[
+    return NativeOreJoinedRow(style=Style(width='100%', flexDirection=FlexDirection.row).merge(style), children=[
         NativeOrePressable(key='ore_segment_' + str(index),
             style=Style(flex=1, height=30, paddingHorizontal=3, gap=4,
                         marginLeft=-1 if index else 0, flexDirection=FlexDirection.row),
@@ -153,6 +154,45 @@ def OreIconButton(icon='cross_white', onClick=None, disabled=False, size=20,
 
 
 @Component
+def OreHeader(title='', onBack=None, onSocial=None, socialCount=0, onMenu=None, style=None):
+    """Shared Ore page chrome: 22-unit face and two-unit lower depth."""
+    return Panel(style=Style(width='100%', height=24).merge(style), children=[
+        Image(color=Color(0xE6E8EBFF), style=Style(width='100%', height=22,
+            flexDirection=FlexDirection.row, alignItems=AlignItems.center), children=[
+            NativeOreButton(key='ore_header_back', onClick=onBack,
+                buttonBuilder=state_skin('icon_light', slices=(0, 0, 0, 0)),
+                style=Style(width=20, height=20, margin=1),
+                children=OreIcon(name='chevron_left', size=7, color=Color(0x1E1E1FFF))),
+            OreText(content=title, fontSize=10, color=Color(0x1E1E1FFF),
+                textAlign=TextAlignment.center, style=Style(position=Position.absolute,
+                    left=76.5 if onSocial else 22.5, right=75.5 if onSocial else 21.5, top=4.25)),
+            Panel(style=Style(flex=1)),
+            Panel(style=Style(width=68.5, height=22, flexDirection=FlexDirection.row), children=[
+                Image(color=Color(0xA1A3A5FF), style=Style(width=1, height='100%'), children=
+                    Image(color=Color(0xB4B5B7FF), style=Style(position=Position.absolute,
+                        bottom=0, left=0, width=1, height=1))),
+                Image(color=Color(0xFFFFFFFF), style=Style(width=1, height='100%')),
+                NativeOreButton(key='ore_settings_social',
+                    buttonBuilder=state_skin('icon_light', slices=(0, 0, 0, 0)), onClick=onSocial,
+                    style=Style(flex=1, height=20, marginVertical=1, marginRight=.25, paddingRight=.25,
+                        flexDirection=FlexDirection.row, gap=2),
+                    children=[OreIcon(name='reference_social', color=Color(0x1E1E1FFF), size=12,
+                            style=Style(marginTop=-1)),
+                        OreText(content='社交 (%d)' % socialCount, fontSize=8, color=Color(0x1E1E1FFF),
+                            style=Style(marginTop=1.5, left=-.25))]),
+            ]) if onSocial else OreIconButton(key='ore_settings_menu', icon='settings',
+                color=Color(0x1E1E1FFF), size=20, light=True, style=Style(margin=1), onClick=onMenu)
+                if onMenu else Panel(style=Style(width=22)),
+            Image(color=Color(0xEBEDEFFF), style=Style(position=Position.absolute,
+                left=0, right=68.5 if onSocial else 0, bottom=0, height=1)),
+            Image(color=Color(0xEBEDEFFF), style=Style(position=Position.absolute,
+                right=0, width=66.5, bottom=0, height=1)) if onSocial else None,
+        ]),
+        Image(color=Color(0xB1B2B5FF), style=Style(width='100%', height=2)),
+    ])
+
+
+@Component
 def OreSettingsScreen(title='设置', navigation=None, children=None, onClose=None, onSocial=None,
                       scrollKey='ore_settings_scroll', activeItem=None, style=None, scrollbarGutter=False):
     size, set_size = use_state(native.get_screen_size())
@@ -162,22 +202,8 @@ def OreSettingsScreen(title='设置', navigation=None, children=None, onClose=No
     use_effect(partial(set_menu, False), [activeItem, wide])
     return Image(color=Color(0x48494AFF), style=Style(width='100%', height='100%').merge(style), children=[
         SafeArea(style=Style(width='100%', height='100%'), children=[
-            Image(color=Color(0xE6E8EBFF), style=Style(width='100%', height=22,
-                  flexDirection=FlexDirection.row, alignItems=AlignItems.center), children=[
-                OreIconButton(icon='chevron_left', color=Color(0x1E1E1FFF), onClick=onClose, size=22, light=True),
-                OreText(content=title, fontSize=10, color=Color(0x1E1E1FFF),
-                    textAlign=TextAlignment.center, style=Style(position=Position.absolute,
-                        left=76 if onSocial else 22, right=76 if onSocial else 22, top=3.5)),
-                Panel(style=Style(flex=1)),
-                NativeOreButton(key='ore_settings_social', buttonBuilder=state_skin('icon_light', slices=(0, 0, 0, 0)),
-                    onClick=onSocial, style=Style(width=68, height=22, flexDirection=FlexDirection.row, gap=3),
-                    children=[OreIcon(name='reference_social', color=Color(0x1E1E1FFF), size=12),
-                        OreText(content='社交 (0)', fontSize=8, color=Color(0x1E1E1FFF))]) if onSocial and wide else
-                Panel(style=Style(width=22)) if wide else OreIconButton(key='ore_settings_menu',
-                    icon='settings', color=Color(0x1E1E1FFF), size=22, light=True,
-                    onClick=partial(set_menu, not menu)),
-            ]),
-            Image(color=Color(0xB1B2B5FF), style=Style(width='100%', height=3)),
+            OreHeader(title=title, onBack=onClose, onSocial=onSocial if wide else None,
+                onMenu=partial(set_menu, not menu) if not wide else None),
             Panel(style=Style(width='100%', flex=1, flexDirection=FlexDirection.row), children=[
                 Image(color=Color(0x313233FF), style=Style(width=max(0, int(size[0] / 3) - 1), height='100%'), children=[
                     NativeOreNavigationScrollView(key='ore_settings_navigation', style=Style(width='100%', height='100%'),

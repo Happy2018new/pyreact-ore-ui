@@ -49,7 +49,7 @@ def OrePlayerGroup(title='在线', count=0, online=False, children=None, style=N
     unused, widths = text_layout(text_value(label), 7)
     return Panel(style=Style(width='100%', marginTop=8).merge(style), children=[
         Image(color=Color(0x1E1E1FFF), style=Style(height=14, width=max(widths) + 10,
-            maxWidth='100%', padding=1, alignSelf=AlignSelf.flex_start), children=
+            maxWidth='100%', padding=1, alignSelf=AlignSelf.flex_start, zIndex=2), children=
             Image(color=color, style=Style(height=13, paddingHorizontal=4), children=
                 OreText(content=label, fontSize=7, color=Color(0x1E1E1FFF), style=Style(marginTop=1)))),
         Panel(style=Style(width='100%', marginTop=-4), children=[
@@ -130,7 +130,8 @@ def OreFriendsPanel(visible=False, onClose=None, children=None, query='', onSear
                             options=[('', 'friends', 'reference_friends'), ('', 'team', 'reference_team')], keyboardHints=True),
                         Image(color=Color(0x1E1E1FFF), style=Style(width='100%', flex=1, padding=1, marginTop=-4), children=
                             Image(color=Color(0x313233FF), style=Style(width='100%', height='100%'), children=
-                                OreScrollView(style=Style(width='100%', height='100%'), children=
+                                OreScrollView(key='ore_friends_scroll_' + str(tab),
+                                    style=Style(width='100%', height='100%'), children=
                                     Panel(style=Style(width='100%', paddingLeft=4, paddingRight=12, paddingVertical=4), children=children)))),
                     ]))),
         ])

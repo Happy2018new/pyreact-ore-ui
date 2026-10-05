@@ -19,7 +19,7 @@ def OreWorldCard(title='', subtitle='', mode='', image='world_demo_screen_big',
                 Image(color=Color(0x313233FF), style=Style(position=Position.absolute,
                     left=1, bottom=1, paddingHorizontal=3), children=OreText(content=mode, fontSize=8)) if mode else None,
             ]),
-        Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height=34, padding=1,
+        Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height=34, padding=1, marginTop=-1,
             flexDirection=FlexDirection.row), children=[
             NativeOreButton(key='ore_world_open', onClick=None if disabled else onOpen,
                 buttonBuilder=state_skin('player_cell', disabled=disabled, slices=(1, 1, 1, 1)),

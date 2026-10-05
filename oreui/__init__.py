@@ -10,7 +10,7 @@ from .components import (OreImage, OreIcon, OreText, OreButton, OreCard, OreList
                          OreBadge, OreBanner, OreAccordion, OrePagination, OreDrawer, OreHelp, OreScrollView)
 from .settings import (OreDivider, OreNavigationItem, OreNavigationGroup,
                        OreSettingsRow, OreSettingsSection, OreSegmentedControl,
-                       OreIconButton, OreSettingsScreen, OreSettingLayout)
+                       OreIconButton, OreHeader, OreSettingsScreen, OreSettingLayout)
 from .worlds import OreWorldCard, OreWorldNavigation
 from .packs import OrePackRow, OrePackGroup
 from .social import (OrePlayerRow, OrePlayerGroup, OreActionMenu, OreFriendsPanel)
@@ -22,5 +22,5 @@ __all__ = ['asset', 'asset_names', 'texture', 'button_asset', 'OreVariant', 'Ore
            'OreProgress', 'OreDialog', 'OreField', 'OreDropdown', 'OreSwitch', 'OreRadio',
            'OreTag', 'OreBadge', 'OreBanner', 'OreAccordion', 'OrePagination', 'OreDrawer', 'OreHelp', 'OreScrollView',
            'OreDivider', 'OreNavigationItem', 'OreNavigationGroup', 'OreSettingsRow',
-           'OreSettingsSection', 'OreSegmentedControl', 'OreIconButton', 'OreSettingsScreen', 'OreSettingLayout', 'OreWorldCard',
+           'OreSettingsSection', 'OreSegmentedControl', 'OreIconButton', 'OreHeader', 'OreSettingsScreen', 'OreSettingLayout', 'OreWorldCard',
            'OrePackRow', 'OrePackGroup', 'OrePlayerRow', 'OrePlayerGroup', 'OreActionMenu', 'OreFriendsPanel', 'OreWorldNavigation']

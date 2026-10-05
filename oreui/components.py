@@ -10,6 +10,7 @@ from ..pyreact import (Component, Panel, Label, Image,
 from .assets import asset, button_asset, OreVariant, OreState, OreIconName
 from .theme import OreColors, OreTone, OreSide, palette_color
 from ._button import NativeOreButton, NativeOreRadioButton, NativeOrePressable
+from ._joined import NativeOreJoinedRow
 from ._slider import NativeOreSlider
 from ._input import (NativeOreInput, NativeOreSearchInput,
                      NativeOreReadOnlyInput, NativeOreReadOnlySearchInput)
@@ -187,7 +188,7 @@ def OreListItem(title='', description='', icon=None, selected=False, disabled=Fa
 @Component
 def OreTabs(options, value, onChange=None, style=None, disabled=None, keyboardHints=False):
     disabled = disabled or ()
-    return Panel(style=Style(width='100%', flexDirection=FlexDirection.row).merge(style), children=[
+    return NativeOreJoinedRow(style=Style(width='100%', flexDirection=FlexDirection.row).merge(style), children=[
         NativeOrePressable(
             key=str(index),
             style=Style(flex=1, height=24, paddingHorizontal=4, gap=4,
@@ -198,9 +199,12 @@ def OreTabs(options, value, onChange=None, style=None, disabled=None, keyboardHi
             pressOffset=2 if option[1] != value and option[1] not in disabled else 0,
             onClick=partial(onChange, option[1]) if onChange and option[1] not in disabled else None,
             children=[Panel(style=Style(flexDirection=FlexDirection.row, gap=4,
-                    alignItems=AlignItems.center, marginTop=3.5 if option[1] == value else -.5), children=[
-                    OreIcon(name=option[2], size=12) if len(option) > 2 and option[2] else None,
-                    OreText(content=option[0], fontSize=8, textAlign=TextAlignment.center)]),
+                    alignItems=AlignItems.center,
+                    marginTop=(3.5 if option[1] == value else -.5) if option[0] else
+                              (2 if option[1] == value else -2)), children=[
+                    OreImage(name=option[2], style=Style(width=12, height=12))
+                    if len(option) > 2 and option[2] else None,
+                    OreText(content=option[0], fontSize=8, textAlign=TextAlignment.center) if option[0] else None]),
                 Image(color=OreColors.text, style=Style(position=Position.absolute,
                       bottom=1, width=24, maxWidth='65%', height=1, left='50%', marginLeft=-12)) if option[1] == value else None],
         ) for index, option in enumerate(options)

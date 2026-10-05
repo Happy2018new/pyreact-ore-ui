@@ -33,7 +33,11 @@
     "reference_scale": 4,
     "version": "1.26.5203.0",
     "source_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
-    "extraction": "light49"
+    "extraction": "light49",
+    "canvas_translation": [
+      1,
+      0
+    ]
   },
   "reference_team": {
     "src": "textures/pyreact_ore/reference/reference_team",
@@ -51,7 +55,11 @@
     "reference_scale": 4,
     "version": "1.26.5203.0",
     "source_sha256": "39f4fdffe5929ec469f8f4101f044e2a051c97e1022eb06e1624993ea1c0e0c6",
-    "extraction": "light72"
+    "extraction": "light72",
+    "canvas_translation": [
+      -1,
+      0
+    ]
   },
   "reference_audio": {
     "src": "textures/pyreact_ore/reference/reference_audio",

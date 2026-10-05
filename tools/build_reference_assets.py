@@ -34,6 +34,16 @@ def build():
                 coverage = (230 - r) / 200.0 if ink == 'dark' else (r - background) / (255.0 - background)
                 pixels.append((255, 255, 255, max(0, min(255, round(coverage * 255)))))
             image.putdata(pixels)
+        translation = None
+        if name in ('reference_friends', 'reference_team'):
+            # The recorded crop has asymmetric empty padding. Keep its canvas
+            # and native ink intact, but center that ink for an icon-only tab.
+            bounds = image.getchannel('A').getbbox()
+            dx = round((image.width - bounds[0] - bounds[2]) / 2)
+            centered = Image.new('RGBA', image.size)
+            centered.paste(image, (dx, 0))
+            image = centered
+            translation = [dx, 0]
         target = OUT / (name + '.png')
         image.save(target)
         metadata = json.loads(source.with_suffix('.json').read_text('utf8'))
@@ -42,6 +52,8 @@ def build():
             reference_scale=4, version=metadata['version'],
             source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
             extraction=ink or 'RGBA crop')
+        if translation is not None:
+            records[name]['canvas_translation'] = translation
     (ROOT / 'assets/reference-icons.json').write_text(json.dumps(records, indent=2) + '\n', 'utf8')
     catalog = {name: dict(src=row['src'], size=row['size']) for name, row in records.items()}
     (ROOT / 'oreui/_reference_assets.py').write_text(
