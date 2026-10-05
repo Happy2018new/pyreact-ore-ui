@@ -114,7 +114,7 @@ def OrePlayground():
             OreNavigationItem(key='lab_close', label='返回游戏', icon='world', onClick=navigator.pop),
         ]),
     ])
-    body = Panel(style=Style(width='100%'), children=[
+    body = OreSettingsSection(children=[
         OreSettingsRow(title='世界名称', layout=OreSettingLayout.field,
             children=OreField(key='lab_name', value=values['name'], onChange=partial(change, 'name'))),
         choices('游戏模式', '创建、建造和探索你的世界。', 'mode',

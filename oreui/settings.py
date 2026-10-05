@@ -10,6 +10,7 @@ from ._button import NativeOreButton, NativeOreNavigationButton
 from ._scroll import NativeOreNavigationScrollView
 from ._skins import state_skin
 from .theme import OreSide
+from ..pyreact.element import Element, normalize_children
 
 
 class OreSettingLayout(object):
@@ -21,7 +22,7 @@ class OreSettingLayout(object):
 @Component
 def OreDivider(style=None):
     return Panel(style=Style(width='100%', height=2).merge(style), children=[
-        Image(color=Color(0x313233FF), style=Style(width='100%', height=1)),
+        Image(color=Color(0x333334FF), style=Style(width='100%', height=1)),
         Image(color=Color(0x5A5B5CFF), style=Style(width='100%', height=1)),
     ])
 
@@ -87,6 +88,24 @@ def OreSettingsRow(title='', description='', valueText='', children=None,
 
 @Component
 def OreSettingsSection(title='', description='', children=None, style=None):
+    # A run of setting rows owns one light opening edge and one dark closing
+    # edge. Keep row keys/refs intact and never mutate the caller's Elements.
+    items = normalize_children(children)
+    grouped = []
+    for index, child in enumerate(items):
+        if child.comp_type is not OreSettingsRow:
+            grouped.append(child)
+            continue
+        first = index == 0 or items[index - 1].comp_type is not OreSettingsRow
+        last = index == len(items) - 1 or items[index + 1].comp_type is not OreSettingsRow
+        if first:
+            grouped.append(Image(color=Color(0x5A5B5CFF), style=Style(width='100%', height=1)))
+        props = dict(child.props)
+        if last:
+            props['divider'] = False
+        grouped.append(Element(child.comp_type, props, child.style, child.children, child.key, child.ref))
+        if last:
+            grouped.append(Image(color=Color(0x333334FF), style=Style(width='100%', height=1)))
     return Panel(style=Style(width='100%').merge(style), children=[
         Panel(style=Style(width='100%', paddingHorizontal=12, paddingTop=12,
               paddingBottom=8), children=[
@@ -94,7 +113,7 @@ def OreSettingsSection(title='', description='', children=None, style=None):
                   OreText(content=description, fontSize=7, color=Color(0xD0D1D4FF),
                           style=Style(width='100%')) if description else None,
               ]) if title or description else None,
-        children,
+        grouped,
     ])
 
 
@@ -124,9 +143,10 @@ def OreSegmentedControl(options, value, onChange=None, disabled=False,
 
 @Component
 def OreIconButton(icon='cross_white', onClick=None, disabled=False, size=20,
-                  color=None, style=None, iconSize=8):
+                  color=None, style=None, iconSize=8, framed=False):
     return NativeOreButton(style=Style(width=size, height=size).merge(style),
-        buttonBuilder=state_skin('icon', disabled=disabled, slices=(0, 0, 0, 0)),
+        buttonBuilder=state_skin('pack' if framed else 'icon', disabled=disabled,
+                                slices=(2, 2, 2, 2) if framed else (0, 0, 0, 0)),
         onClick=None if disabled else onClick, children=OreIcon(name=icon, size=iconSize, color=color))
 
 
@@ -166,7 +186,11 @@ def OreSettingsScreen(title='设置', navigation=None, children=None, onClose=No
                           left=1, right=0, top=0, height=1, zIndex=101)),
                 ]) if wide else None,
                 Image(color=Color(0x1E1E1FFF), style=Style(width=1, height='100%')) if wide else None,
-                OreScrollView(key=scrollKey, style=Style(flex=1, height='100%'), children=children),
+                Panel(style=Style(flex=1, height='100%'), children=[
+                    OreScrollView(key=scrollKey, style=Style(width='100%', height='100%'), children=children),
+                    Image(color=Color(0x00000020), style=Style(position=Position.absolute,
+                          left=0, right=0, top=0, height=1, zIndex=101)),
+                ]),
             ]),
         ]),
         OreDrawer(key='ore_settings_directory', visible=menu and not wide, title=title, side=OreSide.left, onClose=partial(set_menu, False),

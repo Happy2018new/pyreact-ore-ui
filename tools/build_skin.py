@@ -197,7 +197,10 @@ def build():
     bevel('thumb', '#d0d1d4')
     bevel('thumb_hover', '#e6e8eb', edge='#ffffff')
     bevel('thumb_locked', '#8b8b8e')
-    reflected('#e6e8eb', '#f0f1f3', '#f5f6f7', size=(6, 12), raised=True, edge='#000000').save(OUT / 'scroll_thumb.png')
+    scroll_thumb = reflected('#e6e8eb', '#f5f6f7', '#f0f1f3', size=(6, 12), raised=True, edge='#000000')
+    scroll_thumb.putpixel((1, 8), (249, 250, 250, 255))
+    scroll_thumb.putpixel((4, 1), (249, 250, 250, 255))
+    scroll_thumb.save(OUT / 'scroll_thumb.png')
     Image.new('RGBA', (1, 1)).save(OUT / 'transparent.png')
     Image.new('RGBA', (1, 6), '#1e1e1f').save(OUT / 'step.png')
     Image.new('RGBA', (1, 6), '#8c8d90').save(OUT / 'step_disabled.png')
@@ -219,9 +222,9 @@ def build():
             if prefix == 'menu_action':
                 draw.rectangle((1, 1, 6, 6), outline='#8c8d90')
             elif prefix in ('pack', 'pack_action'):
-                image = reflected(color, '#5a5b5c', '#323334', size=(8, 8), raised=False)
-                image.putpixel((6, 1), (71, 71, 72, 255))
-                image.putpixel((1, 6), (71, 71, 72, 255))
+                image = reflected(color, '#5a5b5c', '#333334', size=(8, 8), raised=False)
+                image.putpixel((6, 1), (63, 64, 65, 255))
+                image.putpixel((1, 6), (63, 64, 65, 255))
             elif prefix == 'pack_group':
                 image = Image.new('RGBA', (8, 8), color)
                 draw = ImageDraw.Draw(image)
@@ -232,6 +235,16 @@ def build():
                 draw.point((7, 0), fill='#292a2b' if state != 'hover' else '#363737')
                 draw.point((0, 7), fill='#292a2b' if state != 'hover' else '#363737')
             image.save(OUT / (prefix + '_' + state + '.png'))
+    # Joined cells have bevels but no private black border. Their row owns it.
+    for prefix in ('player_cell', 'player_options', 'pack_cell', 'pack_options'):
+        for state in ('default', 'hover', 'pressed', 'disabled'):
+            fill = '#707071' if state == 'hover' and prefix.endswith('options') else '#58585a' if state == 'hover' else '#48494a'
+            player = prefix.startswith('player')
+            image = reflected(fill, '#5a5b5c', '#323334' if player else '#333334', size=(8, 8), raised=False)
+            corner = (71, 71, 72, 255) if player else (63, 64, 65, 255)
+            image.putpixel((6, 1), corner)
+            image.putpixel((1, 6), corner)
+            image.crop((1, 1, 7, 7)).save(OUT / (prefix + '_' + state + '.png'))
     image = Image.new('RGBA', (2, 8))
     draw = ImageDraw.Draw(image)
     for y in (0, 3, 6):
@@ -277,7 +290,7 @@ def build():
                 '$edit_box_hover_texture': TEX + 'input_hover', '$nineslice_size': [1, 3, 1, 1],
                 '$place_holder_text': '', '$font_scale_factor': 1.0,
                 '$text_box_text_color': [1, 1, 1], 'controls': input_controls()},
-            'scroll_thumb': patch('scroll_thumb'),
+            'scroll_thumb': patch('scroll_thumb', slices=(2, 2, 2, 4)),
             'scroll_track': patch('scroll_track', (2, '100%'), (0, 0, 0, 0)),
             'scroll@PyreactBase.scrollBase': {'$scroll_size': [6, '100%'],
                 '$scroll_size_touch': [6, '100%'],
@@ -285,6 +298,10 @@ def build():
                 '$scroll_box_touch_image_control': NS + '.scroll_thumb',
                 '$scroll_track_image_control': NS + '.scroll_track'},
             'slider@PyreactBase.slider': {'$slider_box_size': [16, 16]}}
+    skin['scroll_thumb']['controls'] = [{'bottom_shadow': {
+        'type': 'image', 'texture': 'textures/ui/white_bg', 'color': [0, 0, 0],
+        'alpha': 0.2, 'size': [6, 1], 'offset': [0, 0], 'keep_ratio': False,
+        'anchor_from': 'bottom_left', 'anchor_to': 'top_left', 'layer': 1}}]
     # Each bevel has two texture rows in one logical pixel. Native nine-slice
     # cuts tie source rows to destination thickness, so use fixed-height UV
     # strips instead. They retain their thickness for custom navigation heights.

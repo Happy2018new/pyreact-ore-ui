@@ -3,7 +3,7 @@
 from ..pyreact import native, TextAlignment, Style, Position, FlexWrap
 from ..pyreact.primitives import LabelPrimitive as BaseLabelPrimitive
 from ..pyreact.style import resolve_padding, resolve_margin
-from .typography import OreString, text_value, layout
+from .typography import OreString, OreFont, text_value, layout
 
 
 def install_metrics():
@@ -19,7 +19,7 @@ def install_metrics():
             return original(host, text, font_scale, line_padding, text_alignment, shadow, max_width)
         font = (font_scale or 1.0) * 10.0
         unused, widths = layout(text, font, max_width)
-        return max(widths), len(widths) * font * 1.5
+        return max(widths), len(widths) * (getattr(text, 'line_height', None) or font * 1.5)
     measure._ore_metrics = True
     native.measure_text = measure
     from ..pyreact import layout as host_layout
@@ -81,6 +81,12 @@ def available_width(node, host_layout):
 
 
 class LabelPrimitive(BaseLabelPrimitive):
+    def props_affect_layout(self, prev_props, next_props, style):
+        if any((prev_props or {}).get(name) != next_props.get(name)
+               for name in ('fontFamily', 'lineHeight')):
+            return True
+        return BaseLabelPrimitive.props_affect_layout(self, prev_props, next_props, style)
+
     def apply_props(self, host, fiber, control, prev_props, next_props):
         install_metrics()
         BaseLabelPrimitive.apply_props(self, host, fiber, control,
@@ -100,12 +106,15 @@ class LabelPrimitive(BaseLabelPrimitive):
         font = props['fontSize'] * abs(state.get('_visual_scale', (1.0, 1.0))[1])
         color = props['color']
         alpha = state.get('_inherited_opacity', 1.0) * color.a
-        signature = (props['content'], font, width, height, color.to_rgb_tuple(), alpha, props.get('textAlign'))
+        text = props['content']
+        family = getattr(text, 'font_family', None)
+        line_height = (getattr(text, 'line_height', None) or props['fontSize'] * 1.5) * abs(state.get('_visual_scale', (1.0, 1.0))[1])
+        signature = (text, family, line_height, font, width, height, color.to_rgb_tuple(), alpha, props.get('textAlign'))
         if state.get('ore_text_paint') == signature:
             return
         state['ore_text_paint'] = signature
         pieces, widths = layout(text_value(props['content']), font, None if props.get('singleLine') else width,
-            spacing=0.2 * abs(state.get('_visual_scale', (1.0, 1.0))[1]))
+            spacing=(0.125 if family == OreFont.body else 0.2) * abs(state.get('_visual_scale', (1.0, 1.0))[1]), font_family=family)
         pool = state.setdefault('ore_glyph_pool', [])
         while len(pool) < len(pieces):
             name = 'ink%d' % len(pool)
@@ -123,11 +132,11 @@ class LabelPrimitive(BaseLabelPrimitive):
             elif props.get('textAlign') == TextAlignment.right:
                 x += width - widths[row]
             image = patch.asImage()
-            image.SetSprite('textures/pyreact_ore/type/atlas_%03d' % page)
+            image.SetSprite('textures/pyreact_ore/type/' + (page if isinstance(page, basestring) else 'atlas_%03d' % page))
             image.SetSpriteUV((u, v))
             image.SetSpriteUVSize((glyph_width, 88))
             image.SetSpriteColor(color.to_rgb_tuple())
-            patch.SetPosition((x, row * font * 1.5))
+            patch.SetPosition((x, row * line_height))
             patch.SetSize((glyph_width * font / 64.0, 88 * font / 64.0))
             patch.SetAlpha(alpha)
         host._commit_native_dirty = True

@@ -11,15 +11,16 @@ from ._button import NativeOreButton
 from ._portal import modal_surface
 from ._skins import state_skin
 from .settings import OreIconButton
+from ._joined import joined_rows
 
 
 @Component
 def OrePlayerRow(name='', status='离线', avatar='no_player_profile', selfPlayer=False,
                  online=False, onClick=None, onOptions=None, style=None):
-    return Panel(style=Style(width='100%', height=36 if selfPlayer else 35,
+    return Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height=36, padding=1,
         flexDirection=FlexDirection.row).merge(style), children=[
-        NativeOreButton(key='ore_player_profile', buttonBuilder=state_skin('pack', slices=(2, 2, 2, 2)),
-            onClick=onClick, style=Style(flex=1, height='100%', paddingVertical=4, paddingHorizontal=5, gap=4,
+        NativeOreButton(key='ore_player_profile', buttonBuilder=state_skin('player_cell', slices=(1, 1, 1, 1)),
+            onClick=onClick, style=Style(flex=1, height='100%', paddingVertical=3, paddingHorizontal=4, gap=4,
                 flexDirection=FlexDirection.row, alignItems=AlignItems.center,
                 justifyContent=JustifyContent.flex_start), children=[
             Image(color=Color(0x1E1E1FFF), style=Style(width=26, height=26, padding=1), children=[
@@ -34,8 +35,8 @@ def OrePlayerRow(name='', status='离线', avatar='no_player_profile', selfPlaye
             ]),
         ]),
         NativeOreButton(key='ore_player_options', onClick=onOptions,
-            buttonBuilder=state_skin('pack_action', slices=(2, 2, 2, 2)),
-            style=Style(width=36, height='100%'), children=Image(src='textures/pyreact_ore/skin/more_vertical',
+            buttonBuilder=state_skin('player_options', slices=(1, 1, 1, 1)),
+            style=Style(width=34, height='100%'), children=Image(src='textures/pyreact_ore/skin/more_vertical',
                 style=Style(width=2, height=8)))
         if not selfPlayer else None,
     ])
@@ -51,13 +52,15 @@ def OrePlayerGroup(title='在线', count=0, online=False, children=None, style=N
             maxWidth='100%', padding=1, alignSelf=AlignSelf.flex_start), children=
             Image(color=color, style=Style(height=13, paddingHorizontal=4), children=
                 OreText(content=label, fontSize=7, color=Color(0x1E1E1FFF), style=Style(marginTop=1)))),
-        Image(color=Color(0x1E1E1FFF), style=Style(width='100%', padding=1, marginTop=-4), children=[
-            Image(color=color, style=Style(width='100%', height=3)),
-            Panel(style=Style(width='100%', gap=1), children=children) if count else
+        Panel(style=Style(width='100%', marginTop=-4), children=[
+            Image(color=Color(0x1E1E1FFF), style=Style(width='100%', paddingHorizontal=1, paddingTop=1),
+                children=Image(color=color, style=Style(width='100%', height=3))),
+            Panel(style=Style(width='100%'), children=joined_rows(children)) if count else
+            Image(color=Color(0x1E1E1FFF), style=Style(width='100%', paddingHorizontal=1, paddingBottom=1), children=
             Image(color=Color(0x313233FF), style=Style(width='100%', height=27,
                 alignItems=AlignItems.center, justifyContent=JustifyContent.center),
                 children=OreText(content='没有好友在线' if online else '没有离线好友',
-                    color=Color(0xB1B2B5FF), fontSize=7, style=Style(marginTop=2))),
+                    color=Color(0xB1B2B5FF), fontSize=7, style=Style(marginTop=2)))),
         ]),
     ])
 
@@ -120,9 +123,8 @@ def OreFriendsPanel(visible=False, onClose=None, children=None, query='', onSear
                         Panel(style=Style(width='100%', height=24, flexDirection=FlexDirection.row, gap=4), children=[
                             OreField(key='ore_friends_search', value=query, onChange=onSearch, search=True,
                                 placeholder='搜索人员', style=Style(flex=1)),
-                            NativeOreButton(key='ore_friends_close', buttonBuilder=state_skin('pack', slices=(1, 1, 1, 1)),
-                                onClick=onClose, style=Style(width=22, height=24),
-                                children=OreIcon(name='cross_white', size=8)),
+                            OreIconButton(key='ore_friends_close', framed=True, iconSize=7,
+                                onClick=onClose, style=Style(width=22, height=24)),
                         ]),
                         OreTabs(key='ore_friends_tabs', value=tab, onChange=onTabChange,
                             options=[('', 'friends', 'reference_friends'), ('', 'team', 'reference_team')], keyboardHints=True),

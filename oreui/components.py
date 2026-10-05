@@ -14,7 +14,7 @@ from ._slider import NativeOreSlider
 from ._input import NativeOreInput, NativeOreSearchInput
 from ._scroll import NativeOreScrollView
 from ._text import NativeOreText, NativeOreFieldText
-from .typography import OreString, text_value, layout as text_layout
+from .typography import OreString, OreFont, text_value, layout as text_layout
 from ._image import NativeOreImage
 from ._portal import NativeOrePortal, OreModal, modal_surface
 from ._skins import state_skin, skin_image
@@ -108,9 +108,9 @@ def OreIcon(name=OreIconName.check, size=12, style=None, color=None):
 
 @Component
 def OreText(content='', style=None, color=OreColors.text, fontSize=FontSize.normal,
-            textAlign=TextAlignment.left):
-    return NativeOreText(style=style, content=OreString(text_value(content)), color=color, fontSize=max(7, fontSize),
-                 textAlign=textAlign, shadow=False)
+            textAlign=TextAlignment.left, fontFamily=OreFont.pixel, lineHeight=None):
+    return NativeOreText(style=style, content=OreString(text_value(content), fontFamily, lineHeight), color=color, fontSize=max(1, fontSize),
+                 textAlign=textAlign, shadow=False, fontFamily=fontFamily, lineHeight=lineHeight)
 
 
 @Component
@@ -271,10 +271,13 @@ def OreSlider(value=_UNSET, defaultValue=0.5, steps=1, onChange=None, disabled=F
     count = len(tickLabels)
     return Panel(style=Style(width='100%').merge(style), children=[slider,
         Panel(style=Style(width='100%', height=12), children=Panel(
-            style=Style(position=Position.absolute, left=8, right=8, height=12), children=[
+            style=Style(position=Position.absolute, left=0, right=0, height=12), children=[
             OreText(content=str(label), fontSize=8, textAlign=TextAlignment.center,
                 style=Style(position=Position.absolute, left=str(100.0 * index / max(1, count - 1)) + '%',
-                            top=0, width=16, marginLeft=-8))
+                            # Interior ticks span the complete painted track.
+                            # End labels stay under the inset thumb endpoints.
+                            top=0, width=16, marginLeft=0 if index == 0 else
+                            -16 if index == count - 1 else -8.5))
             for index, label in enumerate(tickLabels)]))])
 
 

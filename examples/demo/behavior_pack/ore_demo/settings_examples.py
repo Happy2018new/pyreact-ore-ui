@@ -40,8 +40,7 @@ def DemoPacks(values, onChange):
                         description=PACKS[index][2], expanded=values['packOpen'] == index,
                         active=index in values['activePacks'],
                         onToggle=partial(onChange, 'packOpen', None if values['packOpen'] == index else index),
-                        onAction=partial(action, index),
-                        style=Style(marginBottom=6 if values['packOpen'] == index else 0)) for index in shown]),
+                        onAction=partial(action, index)) for index in shown]),
             OreText(content='尚未激活资源包' if not shown else '', fontSize=7),
         ]),
     ])

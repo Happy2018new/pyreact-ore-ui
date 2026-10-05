@@ -52,11 +52,48 @@ def build(path, license_path, latin_path=None, latin_baseline=64):
     print('Baked %d glyphs in %d pages' % (len(mapping), page + 1), flush=True)
 
 
+def build_body(path):
+    """Body Latin/punctuation share CJK with the main atlas; no duplicate CJK."""
+    output = ROOT / 'resource_pack/textures/pyreact_ore/type'
+    font = ImageFont.truetype(str(path), 64)
+    cmap = TTFont(str(path)).getBestCmap()
+    mapping = {}
+    page, x, y = 0, 2, 2
+    image = Image.new('RGBA', (2048, 2048), (255, 255, 255, 0))
+    draw = ImageDraw.Draw(image)
+    for code in sorted(cmap):
+        if not (32 <= code < 0x250 or 0x2000 <= code < 0x2070):
+            continue
+        char = chr(code)
+        advance = font.getlength(char)
+        width = max(1, math.ceil(advance) + 4)
+        if x + width + 2 > 2048:
+            x, y = 2, y + 92
+        if y + 90 > 2048:
+            image.save(output / ('body_%03d.png' % page), optimize=True)
+            page, x, y = page + 1, 2, 2
+            image = Image.new('RGBA', (2048, 2048), (255, 255, 255, 0))
+            draw = ImageDraw.Draw(image)
+        draw.text((x + 1, y + 69), char, font=font, fill='white', anchor='ls')
+        mapping[char] = ['body_%03d' % page, x, y, width, advance]
+        x += width + 4
+    image.save(output / ('body_%03d.png' % page), optimize=True)
+    (ROOT / 'oreui/_body_font.py').write_text('# -*- coding: utf-8 -*-\n# Generated Noto Sans body glyphs.\n'
+        'import json\nGLYPHS = json.loads(r\'\'\'' + json.dumps(mapping, ensure_ascii=True, separators=(',', ':')) + "''')\n", encoding='utf8')
+    print('Baked %d body glyphs in %d pages' % (len(mapping), page + 1), flush=True)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--font', type=Path, required=True)
-    parser.add_argument('--license', type=Path, required=True)
+    parser.add_argument('--font', type=Path)
+    parser.add_argument('--license', type=Path)
+    parser.add_argument('--body-font', type=Path)
     parser.add_argument('--latin-font', type=Path)
     parser.add_argument('--latin-baseline', type=int, default=64)
     args = parser.parse_args()
-    build(args.font, args.license, args.latin_font, args.latin_baseline)
+    if args.body_font:
+        build_body(args.body_font)
+    else:
+        if not args.font or not args.license:
+            parser.error('--font and --license are required for the main atlas')
+        build(args.font, args.license, args.latin_font, args.latin_baseline)

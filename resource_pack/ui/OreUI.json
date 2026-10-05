@@ -156,9 +156,35 @@
       2,
       2,
       2,
-      3
+      4
     ],
-    "keep_ratio": false
+    "keep_ratio": false,
+    "controls": [
+      {
+        "bottom_shadow": {
+          "type": "image",
+          "texture": "textures/ui/white_bg",
+          "color": [
+            0,
+            0,
+            0
+          ],
+          "alpha": 0.2,
+          "size": [
+            6,
+            1
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "keep_ratio": false,
+          "anchor_from": "bottom_left",
+          "anchor_to": "top_left",
+          "layer": 1
+        }
+      }
+    ]
   },
   "scroll_track": {
     "type": "image",

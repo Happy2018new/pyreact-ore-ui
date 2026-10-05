@@ -2,6 +2,12 @@
 """Atlas metrics shared by layout and painting, including narrow Python 2."""
 from __future__ import unicode_literals
 from ._font_atlas import GLYPHS
+from ._body_font import GLYPHS as BODY_GLYPHS
+
+
+class OreFont(object):
+    pixel = 'pixel'
+    body = 'body'
 
 CLOSING = frozenset('，。！？；：、）》】」』…,.!?;:%）')
 OPENING = frozenset('（《【「『(')
@@ -9,6 +15,11 @@ OPENING = frozenset('（《【「『(')
 
 class OreString(unicode):
     """Identify atlas text at the host's text measurement boundary."""
+    def __new__(cls, value, fontFamily=OreFont.pixel, lineHeight=None):
+        result = unicode.__new__(cls, value)
+        result.font_family = fontFamily
+        result.line_height = lineHeight
+        return result
 
 
 def text_value(value):
@@ -30,14 +41,17 @@ def characters(value):
         yield char
 
 
-def layout(value, font, width=None, spacing=0.2):
+def layout(value, font, width=None, spacing=None, font_family=None):
+    font_family = font_family or getattr(value, 'font_family', OreFont.pixel)
+    if spacing is None:
+        spacing = 0.125 if font_family == OreFont.body else 0.2
     lines, widths = [[]], [0.0]
     for char in characters(value):
         if char == '\n':
             lines.append([])
             widths.append(0.0)
             continue
-        data = GLYPHS.get(char, GLYPHS.get('\ufffd', GLYPHS['?']))
+        data = (BODY_GLYPHS.get(char) if font_family == OreFont.body else None) or GLYPHS.get(char, GLYPHS.get('\ufffd', GLYPHS['?']))
         step = data[4] * font / 64.0 + spacing
         # Native sizes use floats; a measured single line must survive rounding.
         if width and lines[-1] and widths[-1] + step > width + max(0.0001, width * 0.000001):

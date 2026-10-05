@@ -12,6 +12,8 @@ Minecraft、OreUI、Mojang、Microsoft、网易及资源相关权利仍归相应
 
 `textures/pyreact_ore/type/` 和 `oreui/_font_atlas.py` 的中文部分由源包 `NotoSansSC-Regular-a4317c614d07055b56ed.otf` 烘焙生成，采用 SIL Open Font License 1.1。完整许可证位于 `resource_pack/textures/pyreact_ore/type/OFL.txt`，随 core 和 all 包部署。源字体 SHA-256 为 `8c37936063c7c8ab747a939e13833894f9edc80dd41b98874ca8f3938a33c32f`。生成器独立实现，其图集尺寸、基线与 advance 方法参考 better-building-editor。
 
+正文补充图集 `type/body_000.png` 与 `oreui/_body_font.py` 来自用户 ZIP 内 `NotoSansMerged-Regular-5df70ade1ecaa8cdc5e2.ttf`，SHA-256 为 `9a88bcaaec0511b775de97c286fc50db1553bed00dbdc763835b8966077243c9`。它提供拉丁及标点正文，其他字符共用前述 Noto Sans SC 图集，保留字体原有许可。
+
 ## Minecraft Seven
 
 图集中西文部分来自用户 ZIP 的 `Minecraft-Seven-66398119c2c20ee73019.otf`，SHA-256 为 `3ac46d75d4fe3aae7412d18e09047b70073a8e779488f72560c09f8c474fecc6`。该字体的数字宽度与国际版参考相符，替换了先前使用的 v4 字体。源包没有附加字体开源许可，相关字形保留 Minecraft 资产权利，不能引用 Noto 的 OFL 授予其许可。字体版权及许可不被根目录 MIT 覆盖。
