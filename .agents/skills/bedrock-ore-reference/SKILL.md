@@ -112,6 +112,11 @@ Use half-open crop boxes `[left, top, right, bottom]`: width is `right-left`.
 Convert logical coordinates with `pixels.logical_box`, rounding both endpoints.
 Do not round position and length separately. Record measured scale and client
 size independently; a one-pixel client-width difference is not a new UI scale.
+For an owned ModSDK fixture, also record `GetScreenSize()` and
+`GetScreenViewInfo()`. After a cold start the engine viewport can differ from
+the Windows client by one pixel. If these disagree, resize the owned client
+and read them again before fixed-scale comparison; do not compensate by
+shifting a crop or changing a component offset.
 Do not search for a lower-error crop, silently resize a dimension mismatch,
 mask text, or trim transparent margins in the acceptance comparison. Keep any
 exploratory alignment or resampling as a separately labeled result. A successful
