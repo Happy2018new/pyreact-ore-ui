@@ -113,11 +113,17 @@ def control_skins():
         shifted.save(OUT / ('segment_selected_' + state + '.png'))
         for selected in (False, True):
             fill_nav = '#48494a' if selected or state in ('hover', 'pressed') else '#313233'
-            image = Image.new('RGBA', (4, 4), fill_nav)
-            if selected or state in ('hover', 'pressed'):
-                draw = ImageDraw.Draw(image)
-                draw.line((0, 0, 3, 0), fill='#1e1e1f' if selected else '#5a5b5c')
-                draw.line((0, 3, 3, 3), fill='#5a5b5c' if selected else '#1e1e1f')
+            image = Image.new('RGBA', (4, 6), fill_nav)
+            if selected:
+                edge_rows = ('#1d1e1f', '#2b2c2c', None, None, '#5a5b5c', '#454647')
+            elif state in ('hover', 'pressed'):
+                edge_rows = ('#454647', '#5a5b5c', None, None, '#2b2c2c', '#1d1e1f')
+            else:
+                edge_rows = (None,) * 6
+            draw = ImageDraw.Draw(image)
+            for row, color in enumerate(edge_rows):
+                if color:
+                    draw.line((0, row, 3, row), fill=color)
             image.save(OUT / ('navigation' + ('_selected' if selected else '') + '_' + state + '.png'))
             tab_fill = '#313233' if selected else '#58585a' if state == 'hover' else '#48494a'
             tab = reflected(tab_fill, '#5a5b5c' if selected else '#6d6d6e',
@@ -279,6 +285,19 @@ def build():
                 '$scroll_box_touch_image_control': NS + '.scroll_thumb',
                 '$scroll_track_image_control': NS + '.scroll_track'},
             'slider@PyreactBase.slider': {'$slider_box_size': [16, 16]}}
+    # Each bevel has two texture rows in one logical pixel. Native nine-slice
+    # cuts tie source rows to destination thickness, so use fixed-height UV
+    # strips instead. They retain their thickness for custom navigation heights.
+    skin['navigation_state@PyreactBase.image'] = {
+        'size': ['100%', '100%'], 'layer': 0, 'bilinear': False,
+        'texture': TEX + 'navigation_default', 'uv': [0, 2], 'uv_size': [4, 2],
+        'controls': [{name: {'type': 'image', 'texture': TEX + 'navigation_default',
+            'layer': 1, 'size': ['100%', 1], 'uv': [0, row], 'uv_size': [4, 2],
+            'keep_ratio': False, 'bilinear': False,
+            'anchor_from': anchor, 'anchor_to': anchor}}
+            for name, row, anchor in (('top_edge', 0, 'top_left'), ('bottom_edge', 4, 'bottom_left'))]}
+    skin['navigation@PyreactBase.button'] = {'controls': [
+        {state + '@OreUI.navigation_state': {}} for state in ('default', 'hover', 'pressed')]}
     skin['search_input@OreUI.input'] = {'controls': input_controls(search=True)}
     slider = skin['slider@PyreactBase.slider']
     for state in ('default', 'hover'):

@@ -6,6 +6,7 @@ from ..pyreact import native
 
 class ScrollViewPrimitive(BaseScrollViewPrimitive):
     template_path = '/root/ore_scroll_tmpl'
+    scrollbar_insets = (8.0, 3.0, 4.0)
 
     def _sync_scroll_view_branch(self, host, scroll_view_path, is_touch, width, height, show_scrollbar):
         BaseScrollViewPrimitive._sync_scroll_view_branch(self, host, scroll_view_path,
@@ -13,8 +14,9 @@ class ScrollViewPrimitive(BaseScrollViewPrimitive):
         body = scroll_view_path + ('/panel' if is_touch else '/stack_panel')
         track = native.get_control(host, body + '/bar_and_track')
         if track is not None:
-            native.set_size(track, (6.0, max(0.0, height - 7.0)))
-            track.SetPosition((max(0.0, width - 8.0), 3.0))
+            right, top, bottom = self.scrollbar_insets
+            native.set_size(track, (6.0, max(0.0, height - top - bottom)))
+            track.SetPosition((max(0.0, width - right), top))
             track.SetLayer(100)
         for suffix in ('/background_and_viewport', '/background_and_viewport/scrolling_view_port'):
             control = native.get_control(host, body + suffix)
@@ -51,3 +53,12 @@ class ScrollViewPrimitive(BaseScrollViewPrimitive):
 
 
 NativeOreScrollView = ScrollViewPrimitive()
+
+
+class NavigationScrollViewPrimitive(ScrollViewPrimitive):
+    # The sidebar's border is outside the scroll viewport. Keep the thumb one
+    # logical pixel from it, with equal top and bottom insets.
+    scrollbar_insets = (7.0, 4.0, 4.0)
+
+
+NativeOreNavigationScrollView = NavigationScrollViewPrimitive()

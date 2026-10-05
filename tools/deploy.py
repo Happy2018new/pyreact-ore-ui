@@ -55,7 +55,8 @@ def deploy(client_package, resource_pack, pyreact_root=None, asset_set='all'):
     template = json.loads(template_path.read_text(encoding='utf-8-sig'))
     controls = template['rootBase']['controls']
     for suffix, target in [('glyph', 'glyph'), ('field_text', 'field_text'), ('input', 'input'),
-                          ('search_input', 'search_input'), ('step', 'step'), ('slider', 'slider'), ('scroll', 'scroll')]:
+                          ('search_input', 'search_input'), ('step', 'step'), ('slider', 'slider'), ('scroll', 'scroll'),
+                          ('navigation', 'navigation')]:
         name = 'ore_' + suffix + '_tmpl@OreUI.' + target
         if not any(name in entry for entry in controls):
             controls.append({name: {}})

@@ -226,6 +226,84 @@
       "slider_step_progress_hover": "@OreUI.slider_step_progress_hover"
     }
   },
+  "navigation_state@PyreactBase.image": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "layer": 0,
+    "bilinear": false,
+    "texture": "textures/pyreact_ore/skin/navigation_default",
+    "uv": [
+      0,
+      2
+    ],
+    "uv_size": [
+      4,
+      2
+    ],
+    "controls": [
+      {
+        "top_edge": {
+          "type": "image",
+          "texture": "textures/pyreact_ore/skin/navigation_default",
+          "layer": 1,
+          "size": [
+            "100%",
+            1
+          ],
+          "uv": [
+            0,
+            0
+          ],
+          "uv_size": [
+            4,
+            2
+          ],
+          "keep_ratio": false,
+          "bilinear": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      },
+      {
+        "bottom_edge": {
+          "type": "image",
+          "texture": "textures/pyreact_ore/skin/navigation_default",
+          "layer": 1,
+          "size": [
+            "100%",
+            1
+          ],
+          "uv": [
+            0,
+            4
+          ],
+          "uv_size": [
+            4,
+            2
+          ],
+          "keep_ratio": false,
+          "bilinear": false,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left"
+        }
+      }
+    ]
+  },
+  "navigation@PyreactBase.button": {
+    "controls": [
+      {
+        "default@OreUI.navigation_state": {}
+      },
+      {
+        "hover@OreUI.navigation_state": {}
+      },
+      {
+        "pressed@OreUI.navigation_state": {}
+      }
+    ]
+  },
   "search_input@OreUI.input": {
     "controls": [
       {

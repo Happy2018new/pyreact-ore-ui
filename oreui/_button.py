@@ -40,6 +40,32 @@ class ButtonPrimitive(BaseButtonPrimitive):
 NativeOreButton = ButtonPrimitive()
 
 
+class NavigationButtonPrimitive(ButtonPrimitive):
+    """Stretch the fill, keeping both rows of each bevel in one logical pixel."""
+    template_path = '/root/ore_navigation_tmpl'
+
+    def apply_props(self, host, fiber, control, prev_props, next_props):
+        ButtonPrimitive.apply_props(self, host, fiber, control, prev_props, next_props)
+        builder = next_props.get('buttonBuilder')
+        if control is None or builder is None:
+            return
+        for state in (ButtonState.default, ButtonState.hover, ButtonState.pressed):
+            src = builder(state).props['src']
+            cache_key = ('ore_navigation_edges', state)
+            if fiber.primitive_state.get(cache_key) == src:
+                continue
+            path = native.join_path(fiber.native_path, state)
+            image = native.get_control(host, path).asImage()
+            image.SetSpriteUV((0, 2))
+            image.SetSpriteUVSize((4, 2))
+            for edge in ('top_edge', 'bottom_edge'):
+                native.get_control(host, native.join_path(path, edge)).asImage().SetSprite(src)
+            fiber.primitive_state[cache_key] = src
+
+
+NativeOreNavigationButton = NavigationButtonPrimitive()
+
+
 class RadioButtonPrimitive(ButtonPrimitive):
     """A full-row hit target whose native state image is a small diamond."""
 

@@ -6,7 +6,8 @@ from ..pyreact import (Component, Panel, Image, Style, Color, Position,
                       FlexDirection, AlignItems, JustifyContent, TextAlignment,
                       SafeArea, use_state, use_event, use_effect, native)
 from .components import OreText, OreIcon, OreScrollView, OreDrawer
-from ._button import NativeOreButton
+from ._button import NativeOreButton, NativeOreNavigationButton
+from ._scroll import NativeOreNavigationScrollView
 from ._skins import state_skin
 from .theme import OreSide
 
@@ -28,10 +29,10 @@ def OreDivider(style=None):
 @Component
 def OreNavigationItem(label='', icon=None, selected=False, disabled=False,
                       onClick=None, style=None):
-    return NativeOreButton(style=Style(width='100%', height=24, paddingHorizontal=8,
+    return NativeOreNavigationButton(style=Style(width='100%', height=24, paddingHorizontal=8,
         flexDirection=FlexDirection.row, gap=4, alignItems=AlignItems.center,
         justifyContent=JustifyContent.flex_start).merge(style),
-        buttonBuilder=state_skin('navigation', selected, disabled, (0, 0, 1, 1)),
+        buttonBuilder=state_skin('navigation', selected, disabled, (0, 0, 0, 0)),
         onClick=None if disabled else onClick, children=[
             OreIcon(name=icon, size=12) if icon else None,
             OreText(content=label, fontSize=8, color=Color(0x8B8B8EFF) if disabled else Color(0xFFFFFFFF),
@@ -156,9 +157,14 @@ def OreSettingsScreen(title='设置', navigation=None, children=None, onClose=No
             ]),
             Image(color=Color(0xB1B2B5FF), style=Style(width='100%', height=3)),
             Panel(style=Style(width='100%', flex=1, flexDirection=FlexDirection.row), children=[
-                Image(color=Color(0x313233FF), style=Style(width=int(size[0] / 3), height='100%'), children=
-                    OreScrollView(key='ore_settings_navigation', style=Style(width='100%', height='100%'),
-                                  children=Panel(style=Style(width='100%', paddingLeft=1, paddingRight=7), children=navigation))) if wide else None,
+                Image(color=Color(0x313233FF), style=Style(width=max(0, int(size[0] / 3) - 1), height='100%'), children=[
+                    NativeOreNavigationScrollView(key='ore_settings_navigation', style=Style(width='100%', height='100%'),
+                                  children=Panel(style=Style(width='100%', paddingLeft=1), children=navigation)),
+                    Image(color=Color(0x1E1E1FFF), style=Style(position=Position.absolute,
+                          left=0, top=0, width=1, height='100%', zIndex=101)),
+                    Image(color=Color(0x00000093), style=Style(position=Position.absolute,
+                          left=1, right=0, top=0, height=1, zIndex=101)),
+                ]) if wide else None,
                 Image(color=Color(0x1E1E1FFF), style=Style(width=1, height='100%')) if wide else None,
                 OreScrollView(key=scrollKey, style=Style(flex=1, height='100%'), children=children),
             ]),
