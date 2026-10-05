@@ -1,0 +1,1740 @@
+{
+  "passed": true,
+  "dimensions": null,
+  "checks": [
+    {
+      "name": "friends-scroll-0: heading joins bar without a black cut",
+      "passed": true,
+      "box": [
+        1308,
+        744,
+        1312,
+        748
+      ]
+    },
+    {
+      "name": "friends-scroll-60: heading joins bar without a black cut",
+      "passed": true,
+      "box": [
+        1308,
+        504,
+        1312,
+        508
+      ]
+    },
+    {
+      "name": "friends-scroll-119.75: heading joins bar without a black cut",
+      "passed": true,
+      "box": [
+        1308,
+        265,
+        1312,
+        269
+      ]
+    },
+    {
+      "name": "friends-scroll-120: heading joins bar without a black cut",
+      "passed": true,
+      "box": [
+        1308,
+        264,
+        1312,
+        268
+      ]
+    },
+    {
+      "name": "switch to team: starts at zero without rebound",
+      "passed": true
+    },
+    {
+      "name": "switch to team: independent native scroll",
+      "passed": true
+    },
+    {
+      "name": "switch to friends: starts at zero without rebound",
+      "passed": true
+    },
+    {
+      "name": "switch to friends: independent native scroll",
+      "passed": true
+    },
+    {
+      "name": "switch to team: starts at zero without rebound",
+      "passed": true
+    },
+    {
+      "name": "switch to team: independent native scroll",
+      "passed": true
+    }
+  ],
+  "transitions": [
+    {
+      "before": {
+        "content": [
+          176.0,
+          347.0
+        ],
+        "groups": [
+          {
+            "position": [
+              326.0,
+              6.0
+            ],
+            "size": [
+              160.0,
+              42.0
+            ],
+            "title": "在线"
+          },
+          {
+            "position": [
+              326.0,
+              56.0
+            ],
+            "size": [
+              160.0,
+              225.0
+            ],
+            "title": "离线"
+          }
+        ],
+        "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_437",
+        "pos": 120.0,
+        "size": [
+          176.0,
+          227.0
+        ],
+        "tab": "friends"
+      },
+      "target": "team",
+      "frames": [
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                6.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                56.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_437",
+          "pos": 120.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.19983219995629042
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                6.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                56.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_437",
+          "pos": 120.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.4015155999804847
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                6.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                56.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_437",
+          "pos": 120.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.6024501000065356
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 0.9459465999971144
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.1951710999710485
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.4142950999666937
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.6477084999787621
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.8982738999766298
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.1450243999715894
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.3479331000125967
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.6573733999975957
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.9504139999626204
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 3.2604034999967553
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 3.5862094999756664
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 3.819066700001713
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.050340199959464
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.249702300003264
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.485562899964862
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.701137700001709
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.90465799998492
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 5.2003279000055045
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 5.446329700003844
+        }
+      ]
+    },
+    {
+      "before": {
+        "content": [
+          176.0,
+          227.0
+        ],
+        "groups": [],
+        "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+        "pos": 0.0,
+        "size": [
+          176.0,
+          227.0
+        ],
+        "tab": "team"
+      },
+      "target": "friends",
+      "frames": [
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 0.18705150001915172
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 0.5150741999968886
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_533",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 0.7182674999930896
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.9523919000057504
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 1.2017647000029683
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 1.5241426000138745
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 1.7885032999911346
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 1.9892806999851018
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 2.1913091000169516
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 2.486150600016117
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 2.7188227000297047
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 2.952474699995946
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 3.2183838000055403
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 3.450138700020034
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 3.6862134000402875
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 3.9190186000196263
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 4.183850500034168
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 4.430052699986845
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 4.77190839999821
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 5.004949200025294
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 5.236640500021167
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                126.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                176.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 5.531331100035459
+        }
+      ]
+    },
+    {
+      "before": {
+        "content": [
+          176.0,
+          347.0
+        ],
+        "groups": [
+          {
+            "position": [
+              326.0,
+              6.0
+            ],
+            "size": [
+              160.0,
+              42.0
+            ],
+            "title": "在线"
+          },
+          {
+            "position": [
+              326.0,
+              56.0
+            ],
+            "size": [
+              160.0,
+              225.0
+            ],
+            "title": "离线"
+          }
+        ],
+        "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+        "pos": 120.0,
+        "size": [
+          176.0,
+          227.0
+        ],
+        "tab": "friends"
+      },
+      "target": "team",
+      "frames": [
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                6.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                56.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 120.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.20181320002302527
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                6.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                56.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 120.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.48075410001911223
+        },
+        {
+          "content": [
+            176.0,
+            347.0
+          ],
+          "groups": [
+            {
+              "position": [
+                326.0,
+                6.0
+              ],
+              "size": [
+                160.0,
+                42.0
+              ],
+              "title": "在线"
+            },
+            {
+              "position": [
+                326.0,
+                56.0
+              ],
+              "size": [
+                160.0,
+                225.0
+              ],
+              "title": "离线"
+            }
+          ],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_542",
+          "pos": 120.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "friends",
+          "time": 0.790444899990689
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.1158640999929048
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.3341725000063889
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.675895499996841
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 1.9092661999748088
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.15852450003149
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.467770399991423
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.701019499974791
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 2.979827400005888
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 3.1782167999772355
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 3.473250699986238
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 3.750970499997493
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.04356680001365
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.289977699983865
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.490284100000281
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.688043700007256
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 4.936946899979375
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 5.2465432999888435
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 5.49088140000822
+        },
+        {
+          "content": [
+            176.0,
+            227.0
+          ],
+          "groups": [],
+          "path": "/root/__pyr_410/ore_friends_surface__412/__pyr_413/__pyr_414/__pyr_435/__pyr_436/__pyr_636",
+          "pos": 0.0,
+          "size": [
+            176.0,
+            227.0
+          ],
+          "tab": "team",
+          "time": 5.752737000002526
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "reference": "friends-icon-reference.png",
+  "actual": "friends-icon-actual.png",
+  "reference_size": [
+    128,
+    80
+  ],
+  "actual_native_size": [
+    128,
+    80
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 10240,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "friends-icon",
+  "purpose": "Supplement: selected icon, underline and immediate surrounding pixels",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/friends-open.png",
+      "box": [
+        1408,
+        148,
+        1536,
+        228
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "5713340b41df49da0dd7ab23033daab01a8c82a6fdd04a19cc90305c0eee8f4a",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791194998.7777185,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": null,
+        "hold_ms": null
+      }
+    },
+    {
+      "side": "actual",
+      "file": "final/icons-0-0-default.png",
+      "box": [
+        148,
+        176,
+        276,
+        256
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "78b1aeb28aaed33328ed139bba22ea431935b25f0f062fa92f11270020bd88e8",
+      "capture": {
+        "timestamp": 1791200370.4563122,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 0
+}

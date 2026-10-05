@@ -46,6 +46,7 @@
 | `OreSettingsSection` | `title=''`，`description=''`，`children=None`，`style=None`。每段连续的直接 `OreSettingsRow` 子项以一条浅线开始，以一条深线结束，中间保留深浅双线。组件复制行的 props，不修改传入的 Element，保留 key 与 ref。支持嵌套 section，下一组标题前保留空白。直接传入行或行数组即可；自定义包装组件自行组织行时，应在包装内部使用 section。 |
 | `OreSegmentedControl` | `options` 和 `value` 必填，`onChange=None`，`disabled=False`，`disabledOptions=None`，`style=None`。options 为 `(文本, 值)` 或 `(文本, 值, 图标名)`。绿色选中项有居中的底部白色短线，禁用项可逐项指定。 |
 | `OreIconButton` | `icon='cross_white'`，`onClick=None`，`disabled=False`，`size=20`，`color=None`，`style=None`，`iconSize=8`，`framed=False`，`light=False`。light 使用浅色页头反馈。默认透明背景，`framed=True` 使用完整外框和一像素内侧明暗边。好友搜索旁的关闭按钮使用 22×24、iconSize=7。命中区域与图标尺寸分别设置。 |
+| `OreHeader` | `title=''`，`onBack=None`，`onSocial=None`，`socialCount=0`，`onMenu=None`，`style=None`。独立公共页头，高 24，其中表面高 22、下沿深度高 2。返回与社交按钮都有默认、悬停及按下反馈，点击分别回调。传入 onSocial 显示社交人数入口及双线分隔，否则可用 onMenu 显示目录按钮。标题始终居中。 |
 | `OreWorldCard` | `title=''`，`subtitle=''`，`mode=''`，`image='world_demo_screen_big'`，`onOpen=None`，`onEdit=None`，`disabled=False`，`style=None`。完整比例的世界预览，下方名称与日期，打开和铅笔编辑分别回调。 |
 | `OreSettingsScreen` | `title='设置'`，`navigation=None`，`children=None`，`onClose=None`，`onSocial=None`，`scrollKey='ore_settings_scroll'`，`activeItem=None`，`style=None`，`scrollbarGutter=False`。gutter 传给内容滚动区域。浅灰顶栏、灰色侧栏和独立滚动内容。宽屏可显示社交入口，标题始终居中；窄屏用目录抽屉，activeItem 变化时收起目录。 |
 | `OreWorldNavigation` | `image='world_demo_screen_big'`，`onPlay=None`，`onRealms=None`，`children=None`，`style=None`。世界预览、游戏按钮、Realms 按钮和成就状态组成的存档编辑导航区。 |
@@ -58,7 +59,7 @@
 | `OrePackGroup` | `title='已拥有'`，`count=None`，`expanded=False`，`onToggle=None`，`children=None`，`style=None`。带数量和开合箭头的资源包分组，收起时卸载内容。直接传入 `OrePackRow` 列表，相邻折叠行共用一像素外框。展开说明之后到下一行保留 6 个逻辑像素，不需要业务页面再加 margin。 |
 | `OrePlayerRow` | `name=''`，`status='离线'`，`avatar='no_player_profile'`，`selfPlayer=False`，`online=False`，`onClick=None`，`onOptions=None`，`style=None`。头像与资料在左侧，其他玩家的选项在右侧，在线头像带状态标记。两种点击分别回调。 |
 | `OrePlayerGroup` | `title='在线'`，`count=0`，`online=False`，`children=None`，`style=None`。绿色在线组或灰色离线组，标签宽度随文字变化，彩色横线与列表相接；数量为零时显示空状态。 |
-| `OreFriendsPanel` | `visible=False`，`onClose=None`，`children=None`，`query=''`，`onSearch=None`，`tab='friends'`，`onTabChange=None`，`style=None`。右侧全高好友面板，宽 188，最大屏宽 90%，包含搜索、关闭、好友和队伍页签及独立滚动列表。 |
+| `OreFriendsPanel` | `visible=False`，`onClose=None`，`children=None`，`query=''`，`onSearch=None`，`tab='friends'`，`onTabChange=None`，`style=None`。右侧全高好友面板，宽 188，最大屏宽 90%，包含搜索、关闭、好友和队伍页签及独立滚动列表。tab 改变时创建该页的原生滚动实例，直接从顶部显示，不继承上一页的惯性与越界回弹。 |
 | `OreActionMenu` | `visible=False`，`title=''`，`actions=None`，`onClose=None`，`style=None`。actions 是 `(文本, 回调)` 序列。第一项与后续选项分组，宽 238，最大屏宽和屏高 90%。正文在小窗口中滚动，标题和关闭按钮固定。 |
 
 以上资源包和好友组件负责展示与输入回调。示例的激活、停用与玩家操作使用本地状态，实际的游戏资源管理和好友服务由调用模组接入。
@@ -66,6 +67,8 @@
 `OrePackRow` 和 `OrePlayerRow` 的整行高度均为 36 个逻辑像素。外框由整行绘制，左右按钮之间只保留相接的明暗边，两个命中区域仍然独立。`OrePlayerGroup` 中每个后续玩家行与前一行共用 1 像素外框，行距为 35。资源包说明使用 `OreFont.body`、字号 7、行高 10，并由行组件绘制说明区的侧边和底边。
 
 `OreSettingsScreen` 的左右滚动区域分别绘制固定的半透明顶边。右侧使用约 12.5% 黑色，随其下方滚动内容混色。`OreScrollView` 的滚动块下方有 1 像素、20% 黑色阴影，鼠标与触屏模板共用同一材质。
+
+`OreTabs` 和 `OreSegmentedControl` 在原生布局应用时将相邻按钮的两端对齐物理像素，避免 flex 分配小数宽度产生突起。纯图标页签省略空文字的间距，并将图标等比放入 12×12 的区域。`OreWorldCard` 的预览与名称区共用黑色边框；`OrePlayerGroup` 的标签覆盖与横线相接的上沿，滚动时不会露出穿过标签的黑线。局部实机证据见 [SEAMS_SCROLL.md](SEAMS_SCROLL.md)。
 
 玩家行默认使用不含状态标记的占位头像，`online=True` 才叠加在线标记。`reference_steve_face` 是当前玩家的历史截图裁切，图片内含在线标记，仅用于在线参考展示。业务模组应传入独立头像资源。
 

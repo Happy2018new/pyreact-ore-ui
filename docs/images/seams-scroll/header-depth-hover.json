@@ -1,0 +1,87 @@
+{
+  "reference": "header-depth-hover-reference.png",
+  "actual": "header-depth-hover-actual.png",
+  "reference_size": [
+    2021,
+    16
+  ],
+  "actual_native_size": [
+    2021,
+    16
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 32336,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "header-depth-hover",
+  "purpose": "Supplement: bottom of face, reflection row and lower depth",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/header-social-hover.png",
+      "box": [
+        0,
+        80,
+        2021,
+        96
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195714.569219,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "hover",
+        "hold_ms": 0
+      }
+    },
+    {
+      "side": "actual",
+      "file": "header-verified/header-1-hover.png",
+      "box": [
+        0,
+        240,
+        2021,
+        256
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+      "capture": {
+        "timestamp": 1791200885.0819023,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "hover",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 0
+}

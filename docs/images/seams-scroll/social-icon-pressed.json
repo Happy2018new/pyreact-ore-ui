@@ -1,0 +1,87 @@
+{
+  "reference": "social-icon-pressed-reference.png",
+  "actual": "social-icon-pressed-actual.png",
+  "reference_size": [
+    57,
+    52
+  ],
+  "actual_native_size": [
+    57,
+    52
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 2964,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "social-icon-pressed",
+  "purpose": "Supplement: social icon and its immediate background",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/header-social-pressed.png",
+      "box": [
+        1791,
+        16,
+        1848,
+        68
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195715.4774241,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": true,
+        "mouse_left_down_after": true,
+        "state": "pressed",
+        "hold_ms": 450
+      }
+    },
+    {
+      "side": "actual",
+      "file": "header-verified/header-1-pressed.png",
+      "box": [
+        1791,
+        176,
+        1848,
+        228
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+      "capture": {
+        "timestamp": 1791200886.074186,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": true,
+        "mouse_left_down_after": true,
+        "state": "pressed",
+        "hold_ms": 450
+      }
+    }
+  ],
+  "differing_pixels": 0
+}

@@ -97,7 +97,7 @@ def SettingsPage():
 
 ## 示例与验证
 
-`examples/demo/` 是带 ModSDK 入口的示例源码。默认打开 `settings_playground.py` 的设置测试页，布局使用公共 `OreSettingsScreen`、`OreNavigationItem` 和 `OreSettingsRow`，控件参考国际版 Bedrock 的原尺寸采集。包含 **13 个分区、39 个公共组件**：通用、高级、多人游戏、按钮、输入框、下拉菜单、滑块、导航、资源包、消息、弹窗、资源图鉴、好友。
+`examples/demo/` 是带 ModSDK 入口的示例源码。默认打开 `settings_playground.py` 的设置测试页，布局使用公共 `OreHeader`、`OreSettingsScreen`、`OreNavigationItem` 和 `OreSettingsRow`，控件参考国际版 Bedrock 的原尺寸采集。包含 **13 个分区、40 个公共组件**：通用、高级、多人游戏、按钮、输入框、下拉菜单、滑块、导航、资源包、消息、弹窗、资源图鉴、好友。
 
 五种按钮配色、分段选项、双线设置行、带图标页签和完整图像预览都有交互示例。输入和菜单包含空值、禁用、受控与非受控模式，滑块包含连续值和五档整数值。资源包可以分别展开、激活和停用，好友抽屉包含搜索、在线与离线分组及玩家选项。资源图鉴支持检索和翻页，可浏览全部 589 项导入资产与补充参考图标。窄屏改用抽屉目录。旧版图鉴保留为 `LegacyOrePlayground`，其回归记录不代表新版设置页已经通过。
 
@@ -115,6 +115,8 @@ python -X utf8 -m unittest discover -s tests -v
 验证包含真实 Python 2.7 组件契约、589 项资源校验、实际鼠标输入、关闭 UI 后用 F11 切换的单指模拟，以及逐页截图检查。26 个参考状态使用完整控件比较，保留文字、图标和外围像素，固定端点且容差为零。**当前仍未达到完整控件原像素一致。** 本次结果和截图记录在 [VISUAL_REPAIR.md](docs/VISUAL_REPAIR.md) 和 [validation-latest.json](docs/validation-latest.json)。Android、iOS 硬件、手机输入法和多指操作仍需独立验收。
 
 早期记录使用开发游戏 **3.9.0.401155**。最新按压回归已在 **3.10.0.420447** 建立受管 IPC 连接并执行真实输入，包含列表点击、禁用字段、长按与触屏模拟。组件覆盖和像素差异见 [PRESSED_STATES.md](docs/PRESSED_STATES.md)。交互通过与完整图像逐像素一致分别记录。
+
+页头双按钮、拼接边缘、好友页切换及世界卡片接缝的局部修复见 [SEAMS_SCROLL.md](docs/SEAMS_SCROLL.md)。这一轮仅检查受影响部分，完整裁块与局部边缘断言分别报告。
 
 新版截图：
 

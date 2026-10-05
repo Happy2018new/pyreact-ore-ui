@@ -1,0 +1,87 @@
+{
+  "reference": "team-icon-reference.png",
+  "actual": "team-icon-actual.png",
+  "reference_size": [
+    128,
+    80
+  ],
+  "actual_native_size": [
+    128,
+    80
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 10240,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "team-icon",
+  "purpose": "Supplement: selected icon, underline and immediate surrounding pixels",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/team.png",
+      "box": [
+        1760,
+        148,
+        1888,
+        228
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "0354d837f74439d1c0f7af30d2be9facfa8001cab1a6cde563a36c4134553b9b",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195163.4361105,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": null,
+        "hold_ms": null
+      }
+    },
+    {
+      "side": "actual",
+      "file": "final/icons-1-1-default.png",
+      "box": [
+        500,
+        176,
+        628,
+        256
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "e0e615889f8c0232e15df7194c69cf68e68b3268cb40b3bfa620ec9cf0ae5eda",
+      "capture": {
+        "timestamp": 1791200377.2285233,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 0
+}

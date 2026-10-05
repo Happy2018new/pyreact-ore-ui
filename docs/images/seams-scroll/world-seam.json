@@ -1,0 +1,87 @@
+{
+  "reference": "world-seam-reference.png",
+  "actual": "world-seam-actual.png",
+  "reference_size": [
+    32,
+    20
+  ],
+  "actual_native_size": [
+    32,
+    20
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 640,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "world-seam",
+  "purpose": "Supplement: preview/name seam, one black row followed by one reflection row",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/start.png",
+      "box": [
+        184,
+        682,
+        216,
+        702
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "0353857f27b173d63d9a251266777de7e4a7c3fda8877b8b47b9fac0620003cf",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791194741.0763636,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": null,
+        "hold_ms": null
+      }
+    },
+    {
+      "side": "actual",
+      "file": "after/world-0-default.png",
+      "box": [
+        176,
+        516,
+        208,
+        536
+      ],
+      "client_size": [
+        2016,
+        1164
+      ],
+      "sha256": "c60e7702ce523a173b0ebef0c11deef2b47a3f84a553911a5dce9edd314dc419",
+      "capture": {
+        "timestamp": 1791198358.5791123,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 0
+}

@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "dimensions": {
+    "logical": [
+      506.0,
+      291.0
+    ],
+    "viewport": [
+      2024.0,
+      1164.0,
+      0.0,
+      0.0
+    ]
+  },
+  "checks": [
+    {
+      "name": "header-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "header-0: native default is not hover",
+      "passed": true
+    },
+    {
+      "name": "header-0: native pressed visible",
+      "passed": true
+    },
+    {
+      "name": "header-0: actual button held",
+      "passed": true
+    },
+    {
+      "name": "header-0: no callback while held or released outside",
+      "passed": true
+    },
+    {
+      "name": "header-0: neighbors unchanged",
+      "passed": true,
+      "differing_pixels": 0
+    },
+    {
+      "name": "header-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "header-0: click invokes correct callback exactly once",
+      "passed": true,
+      "events": [
+        "back"
+      ]
+    },
+    {
+      "name": "header-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "header-1: native default is not hover",
+      "passed": true
+    },
+    {
+      "name": "header-1: native pressed visible",
+      "passed": true
+    },
+    {
+      "name": "header-1: actual button held",
+      "passed": true
+    },
+    {
+      "name": "header-1: no callback while held or released outside",
+      "passed": true
+    },
+    {
+      "name": "header-1: neighbors unchanged",
+      "passed": true,
+      "differing_pixels": 0
+    },
+    {
+      "name": "header-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "header-1: click invokes correct callback exactly once",
+      "passed": true,
+      "events": [
+        "back",
+        "social"
+      ]
+    }
+  ],
+  "transitions": []
+}

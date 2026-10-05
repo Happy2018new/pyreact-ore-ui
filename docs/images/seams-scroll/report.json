@@ -1,0 +1,3178 @@
+{
+  "scale": 4,
+  "resampled": false,
+  "alignment": "fixed measured bounds; no shift search",
+  "comparisons": [
+    {
+      "reference": "back-default-reference.png",
+      "actual": "back-default-actual.png",
+      "reference_size": [
+        96,
+        96
+      ],
+      "actual_native_size": [
+        96,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 9216,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "back-default",
+      "purpose": "Complete back button including arrow and surrounding header",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-back-default.png",
+          "box": [
+            0,
+            0,
+            96,
+            96
+          ],
+          "client_size": [
+            2020,
+            1156
+          ],
+          "sha256": "344465f0e41f8aefb937251de602d3194d3644e90c59baac77616794072b4917",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791199287.9558523,
+            "client": [
+              379,
+              209,
+              2020,
+              1156
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-0-default.png",
+          "box": [
+            0,
+            160,
+            96,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "73ed09b2288ccdc1cd534bd4828828bcbdae2de87549a8ee78f1c6ceaed065c6",
+          "capture": {
+            "timestamp": 1791200876.7348185,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "social-default-reference.png",
+      "actual": "social-default-actual.png",
+      "reference_size": [
+        278,
+        96
+      ],
+      "actual_native_size": [
+        278,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.5396183053557153,
+      "max_channel_error": 201,
+      "different_fraction": 0.042865707434052755,
+      "compared_pixels": 26688,
+      "changed_bounds": [
+        109,
+        30,
+        236,
+        61
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-default",
+      "purpose": "Complete social button, text and separator",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-default.png",
+          "box": [
+            1743,
+            0,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195713.7053509,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-default.png",
+          "box": [
+            1743,
+            160,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+          "capture": {
+            "timestamp": 1791200884.136986,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 1144
+    },
+    {
+      "reference": "header-default-reference.png",
+      "actual": "header-default-actual.png",
+      "reference_size": [
+        2021,
+        100
+      ],
+      "actual_native_size": [
+        2021,
+        100
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.88858650832921,
+      "max_channel_error": 201,
+      "different_fraction": 0.05095002474022761,
+      "compared_pixels": 202100,
+      "changed_bounds": [
+        0,
+        26,
+        2021,
+        100
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-default",
+      "purpose": "Complete header including title, both buttons and four pixels below it",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-default.png",
+          "box": [
+            0,
+            0,
+            2021,
+            100
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195713.7053509,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-default.png",
+          "box": [
+            0,
+            160,
+            2021,
+            260
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+          "capture": {
+            "timestamp": 1791200884.136986,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 10297
+    },
+    {
+      "reference": "header-face-default-reference.png",
+      "actual": "header-face-default-actual.png",
+      "reference_size": [
+        2021,
+        96
+      ],
+      "actual_native_size": [
+        2021,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.5211958463906757,
+      "max_channel_error": 201,
+      "different_fraction": 0.011406275771070427,
+      "compared_pixels": 194016,
+      "changed_bounds": [
+        973,
+        26,
+        1979,
+        64
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-face-default",
+      "purpose": "Whole header without the page background below it; glyph differences remain included",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-default.png",
+          "box": [
+            0,
+            0,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195713.7053509,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-default.png",
+          "box": [
+            0,
+            160,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+          "capture": {
+            "timestamp": 1791200884.136986,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 2213
+    },
+    {
+      "reference": "social-frame-default-reference.png",
+      "actual": "social-frame-default-actual.png",
+      "reference_size": [
+        278,
+        16
+      ],
+      "actual_native_size": [
+        278,
+        16
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 4448,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-frame-default",
+      "purpose": "Supplement: full social width above the icon; feedback bounds and separator",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-default.png",
+          "box": [
+            1743,
+            0,
+            2021,
+            16
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195713.7053509,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-default.png",
+          "box": [
+            1743,
+            160,
+            2021,
+            176
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+          "capture": {
+            "timestamp": 1791200884.136986,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "social-icon-default-reference.png",
+      "actual": "social-icon-default-actual.png",
+      "reference_size": [
+        57,
+        52
+      ],
+      "actual_native_size": [
+        57,
+        52
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 2964,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-icon-default",
+      "purpose": "Supplement: social icon and its immediate background",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-default.png",
+          "box": [
+            1791,
+            16,
+            1848,
+            68
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195713.7053509,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-default.png",
+          "box": [
+            1791,
+            176,
+            1848,
+            228
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+          "capture": {
+            "timestamp": 1791200884.136986,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "header-depth-default-reference.png",
+      "actual": "header-depth-default-actual.png",
+      "reference_size": [
+        2021,
+        16
+      ],
+      "actual_native_size": [
+        2021,
+        16
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 32336,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-depth-default",
+      "purpose": "Supplement: bottom of face, reflection row and lower depth",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-default.png",
+          "box": [
+            0,
+            80,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195713.7053509,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-default.png",
+          "box": [
+            0,
+            240,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+          "capture": {
+            "timestamp": 1791200884.136986,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "back-hover-reference.png",
+      "actual": "back-hover-actual.png",
+      "reference_size": [
+        96,
+        96
+      ],
+      "actual_native_size": [
+        96,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 9216,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "back-hover",
+      "purpose": "Complete back button including arrow and surrounding header",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-back-hover.png",
+          "box": [
+            0,
+            0,
+            96,
+            96
+          ],
+          "client_size": [
+            2020,
+            1156
+          ],
+          "sha256": "72cb66cb8253c5f644fa5b0b9c7b0a548aa675a073b2b19eb6eec7d494d768b4",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791199288.8555415,
+            "client": [
+              379,
+              209,
+              2020,
+              1156
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-0-hover.png",
+          "box": [
+            0,
+            160,
+            96,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "a7638fffbe62e077dab4ac9b44a605fe1bca36cf61099563b3650c80ce65ef3b",
+          "capture": {
+            "timestamp": 1791200877.7113914,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "social-hover-reference.png",
+      "actual": "social-hover-actual.png",
+      "reference_size": [
+        278,
+        96
+      ],
+      "actual_native_size": [
+        278,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.7164018784972024,
+      "max_channel_error": 215,
+      "different_fraction": 0.04282823741007194,
+      "compared_pixels": 26688,
+      "changed_bounds": [
+        109,
+        30,
+        236,
+        61
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-hover",
+      "purpose": "Complete social button, text and separator",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-hover.png",
+          "box": [
+            1743,
+            0,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195714.569219,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-hover.png",
+          "box": [
+            1743,
+            160,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+          "capture": {
+            "timestamp": 1791200885.0819023,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 1143
+    },
+    {
+      "reference": "header-hover-reference.png",
+      "actual": "header-hover-actual.png",
+      "reference_size": [
+        2021,
+        100
+      ],
+      "actual_native_size": [
+        2021,
+        100
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.9131007751937985,
+      "max_channel_error": 215,
+      "different_fraction": 0.05094507669470559,
+      "compared_pixels": 202100,
+      "changed_bounds": [
+        0,
+        26,
+        2021,
+        100
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-hover",
+      "purpose": "Complete header including title, both buttons and four pixels below it",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-hover.png",
+          "box": [
+            0,
+            0,
+            2021,
+            100
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195714.569219,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-hover.png",
+          "box": [
+            0,
+            160,
+            2021,
+            260
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+          "capture": {
+            "timestamp": 1791200885.0819023,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 10296
+    },
+    {
+      "reference": "header-face-hover-reference.png",
+      "actual": "header-face-hover-actual.png",
+      "reference_size": [
+        2021,
+        96
+      ],
+      "actual_native_size": [
+        2021,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.5455134284457639,
+      "max_channel_error": 215,
+      "different_fraction": 0.011401121556984991,
+      "compared_pixels": 194016,
+      "changed_bounds": [
+        973,
+        26,
+        1979,
+        64
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-face-hover",
+      "purpose": "Whole header without the page background below it; glyph differences remain included",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-hover.png",
+          "box": [
+            0,
+            0,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195714.569219,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-hover.png",
+          "box": [
+            0,
+            160,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+          "capture": {
+            "timestamp": 1791200885.0819023,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 2212
+    },
+    {
+      "reference": "social-frame-hover-reference.png",
+      "actual": "social-frame-hover-actual.png",
+      "reference_size": [
+        278,
+        16
+      ],
+      "actual_native_size": [
+        278,
+        16
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 4448,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-frame-hover",
+      "purpose": "Supplement: full social width above the icon; feedback bounds and separator",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-hover.png",
+          "box": [
+            1743,
+            0,
+            2021,
+            16
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195714.569219,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-hover.png",
+          "box": [
+            1743,
+            160,
+            2021,
+            176
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+          "capture": {
+            "timestamp": 1791200885.0819023,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "social-icon-hover-reference.png",
+      "actual": "social-icon-hover-actual.png",
+      "reference_size": [
+        57,
+        52
+      ],
+      "actual_native_size": [
+        57,
+        52
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 2964,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-icon-hover",
+      "purpose": "Supplement: social icon and its immediate background",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-hover.png",
+          "box": [
+            1791,
+            16,
+            1848,
+            68
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195714.569219,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-hover.png",
+          "box": [
+            1791,
+            176,
+            1848,
+            228
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+          "capture": {
+            "timestamp": 1791200885.0819023,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "header-depth-hover-reference.png",
+      "actual": "header-depth-hover-actual.png",
+      "reference_size": [
+        2021,
+        16
+      ],
+      "actual_native_size": [
+        2021,
+        16
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 32336,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-depth-hover",
+      "purpose": "Supplement: bottom of face, reflection row and lower depth",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-hover.png",
+          "box": [
+            0,
+            80,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "b53cea81d9f569ad5485580060ff13d606dfbceacc9ab3b742c64d7c8a21340a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195714.569219,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-hover.png",
+          "box": [
+            0,
+            240,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "724cce7644a22f4113dffa495873db1b9d61d4e03992240633677bd5f84e87cf",
+          "capture": {
+            "timestamp": 1791200885.0819023,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "back-pressed-reference.png",
+      "actual": "back-pressed-actual.png",
+      "reference_size": [
+        96,
+        96
+      ],
+      "actual_native_size": [
+        96,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 9216,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "back-pressed",
+      "purpose": "Complete back button including arrow and surrounding header",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-back-pressed.png",
+          "box": [
+            0,
+            0,
+            96,
+            96
+          ],
+          "client_size": [
+            2020,
+            1156
+          ],
+          "sha256": "599357b0c08353da2b3a19e5b1ee8d900742f4d5901fa248ce717ee762a2a5b0",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791199289.8192344,
+            "client": [
+              379,
+              209,
+              2020,
+              1156
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-0-pressed.png",
+          "box": [
+            0,
+            160,
+            96,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "f9d7fe1f9e73a628f36e924bcab77868a13938330ddb7afb52311a26369dc437",
+          "capture": {
+            "timestamp": 1791200878.6603425,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "social-pressed-reference.png",
+      "actual": "social-pressed-actual.png",
+      "reference_size": [
+        278,
+        96
+      ],
+      "actual_native_size": [
+        278,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.254733713029576,
+      "max_channel_error": 179,
+      "different_fraction": 0.042715827338129495,
+      "compared_pixels": 26688,
+      "changed_bounds": [
+        109,
+        30,
+        236,
+        61
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-pressed",
+      "purpose": "Complete social button, text and separator",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-pressed.png",
+          "box": [
+            1743,
+            0,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195715.4774241,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-pressed.png",
+          "box": [
+            1743,
+            160,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+          "capture": {
+            "timestamp": 1791200886.074186,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 1140
+    },
+    {
+      "reference": "header-pressed-reference.png",
+      "actual": "header-pressed-actual.png",
+      "reference_size": [
+        2021,
+        100
+      ],
+      "actual_native_size": [
+        2021,
+        100
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.8735576447303317,
+      "max_channel_error": 179,
+      "different_fraction": 0.050930232558139533,
+      "compared_pixels": 202100,
+      "changed_bounds": [
+        0,
+        26,
+        2021,
+        100
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-pressed",
+      "purpose": "Complete header including title, both buttons and four pixels below it",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-pressed.png",
+          "box": [
+            0,
+            0,
+            2021,
+            100
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195715.4774241,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-pressed.png",
+          "box": [
+            0,
+            160,
+            2021,
+            260
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+          "capture": {
+            "timestamp": 1791200886.074186,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 10293
+    },
+    {
+      "reference": "header-face-pressed-reference.png",
+      "actual": "header-face-pressed-actual.png",
+      "reference_size": [
+        2021,
+        96
+      ],
+      "actual_native_size": [
+        2021,
+        96
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.48200835669910386,
+      "max_channel_error": 179,
+      "different_fraction": 0.011385658914728682,
+      "compared_pixels": 194016,
+      "changed_bounds": [
+        973,
+        26,
+        1979,
+        64
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-face-pressed",
+      "purpose": "Whole header without the page background below it; glyph differences remain included",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-pressed.png",
+          "box": [
+            0,
+            0,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195715.4774241,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-pressed.png",
+          "box": [
+            0,
+            160,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+          "capture": {
+            "timestamp": 1791200886.074186,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 2209
+    },
+    {
+      "reference": "social-frame-pressed-reference.png",
+      "actual": "social-frame-pressed-actual.png",
+      "reference_size": [
+        278,
+        16
+      ],
+      "actual_native_size": [
+        278,
+        16
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 4448,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-frame-pressed",
+      "purpose": "Supplement: full social width above the icon; feedback bounds and separator",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-pressed.png",
+          "box": [
+            1743,
+            0,
+            2021,
+            16
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195715.4774241,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-pressed.png",
+          "box": [
+            1743,
+            160,
+            2021,
+            176
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+          "capture": {
+            "timestamp": 1791200886.074186,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "social-icon-pressed-reference.png",
+      "actual": "social-icon-pressed-actual.png",
+      "reference_size": [
+        57,
+        52
+      ],
+      "actual_native_size": [
+        57,
+        52
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 2964,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "social-icon-pressed",
+      "purpose": "Supplement: social icon and its immediate background",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-pressed.png",
+          "box": [
+            1791,
+            16,
+            1848,
+            68
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195715.4774241,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-pressed.png",
+          "box": [
+            1791,
+            176,
+            1848,
+            228
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+          "capture": {
+            "timestamp": 1791200886.074186,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "header-depth-pressed-reference.png",
+      "actual": "header-depth-pressed-actual.png",
+      "reference_size": [
+        2021,
+        16
+      ],
+      "actual_native_size": [
+        2021,
+        16
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 32336,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "header-depth-pressed",
+      "purpose": "Supplement: bottom of face, reflection row and lower depth",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/header-social-pressed.png",
+          "box": [
+            0,
+            80,
+            2021,
+            96
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195715.4774241,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "header-verified/header-1-pressed.png",
+          "box": [
+            0,
+            240,
+            2021,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+          "capture": {
+            "timestamp": 1791200886.074186,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "segment-corner-before-reference.png",
+      "actual": "segment-corner-before-actual.png",
+      "reference_size": [
+        32,
+        40
+      ],
+      "actual_native_size": [
+        32,
+        40
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 5.428125,
+      "max_channel_error": 198,
+      "different_fraction": 0.046875,
+      "compared_pixels": 1280,
+      "changed_bounds": [
+        11,
+        16,
+        20,
+        40
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "segment-corner-before",
+      "purpose": "Supplement: original selected-left joint, anchored to this joint rather than the group origin",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/segment-middle.png",
+          "box": [
+            1124,
+            360,
+            1156,
+            400
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195375.4439838,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "before/segment-middle.png",
+          "box": [
+            438,
+            152,
+            470,
+            192
+          ],
+          "client_size": [
+            2016,
+            1164
+          ],
+          "sha256": "896f531a75e3da0996e42fd946dbc1107866aeb07c0796e1449b2280c9d85f3d",
+          "capture": {
+            "timestamp": 1791195807.859702,
+            "client": [
+              272,
+              235,
+              2016,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        }
+      ],
+      "differing_pixels": 60
+    },
+    {
+      "reference": "segment-corner-after-reference.png",
+      "actual": "segment-corner-after-actual.png",
+      "reference_size": [
+        32,
+        40
+      ],
+      "actual_native_size": [
+        32,
+        40
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 1280,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "segment-corner-after",
+      "purpose": "Supplement: repaired selected-left joint at the same anchor",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/segment-middle.png",
+          "box": [
+            1124,
+            360,
+            1156,
+            400
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195375.4439838,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "after/segments-1-1-default.png",
+          "box": [
+            438,
+            152,
+            470,
+            192
+          ],
+          "client_size": [
+            2016,
+            1164
+          ],
+          "sha256": "46a36bd9ca10e876a3236bfc4bee95ae4693408e70766e948db546373c78b55a",
+          "capture": {
+            "timestamp": 1791198277.61872,
+            "client": [
+              272,
+              235,
+              2016,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "segment-group-default-reference.png",
+      "actual": "segment-group-default-actual.png",
+      "reference_size": [
+        1265,
+        128
+      ],
+      "actual_native_size": [
+        1265,
+        128
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.0089468050065875,
+      "max_channel_error": 216,
+      "different_fraction": 0.022455533596837943,
+      "compared_pixels": 161920,
+      "changed_bounds": [
+        181,
+        4,
+        1082,
+        120
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "segment-group-default",
+      "purpose": "Entire three-choice group and margin, anchored to the outer group",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/segment-selected-middle-default.png",
+          "box": [
+            715,
+            364,
+            1980,
+            492
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195496.1506798,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "after/segments-1-1-default.png",
+          "box": [
+            28,
+            156,
+            1293,
+            284
+          ],
+          "client_size": [
+            2016,
+            1164
+          ],
+          "sha256": "46a36bd9ca10e876a3236bfc4bee95ae4693408e70766e948db546373c78b55a",
+          "capture": {
+            "timestamp": 1791198277.61872,
+            "client": [
+              272,
+              235,
+              2016,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 3636
+    },
+    {
+      "reference": "segment-group-hover-reference.png",
+      "actual": "segment-group-hover-actual.png",
+      "reference_size": [
+        1265,
+        128
+      ],
+      "actual_native_size": [
+        1265,
+        128
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.0089468050065875,
+      "max_channel_error": 216,
+      "different_fraction": 0.022455533596837943,
+      "compared_pixels": 161920,
+      "changed_bounds": [
+        181,
+        4,
+        1082,
+        120
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "segment-group-hover",
+      "purpose": "Entire three-choice group and margin, anchored to the outer group",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/segment-selected-middle-hover.png",
+          "box": [
+            715,
+            364,
+            1980,
+            492
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195496.894468,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        },
+        {
+          "side": "actual",
+          "file": "after/segments-1-1-hover.png",
+          "box": [
+            28,
+            156,
+            1293,
+            284
+          ],
+          "client_size": [
+            2016,
+            1164
+          ],
+          "sha256": "2988da4b98837292a8d91aa7e98f071346108ec24e7ba8b80adcccadbf4342c2",
+          "capture": {
+            "timestamp": 1791198278.5781827,
+            "client": [
+              272,
+              235,
+              2016,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "hover",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 3636
+    },
+    {
+      "reference": "segment-group-pressed-reference.png",
+      "actual": "segment-group-pressed-actual.png",
+      "reference_size": [
+        1265,
+        128
+      ],
+      "actual_native_size": [
+        1265,
+        128
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 2.0089468050065875,
+      "max_channel_error": 216,
+      "different_fraction": 0.022455533596837943,
+      "compared_pixels": 161920,
+      "changed_bounds": [
+        181,
+        4,
+        1082,
+        120
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "segment-group-pressed",
+      "purpose": "Entire three-choice group and margin, anchored to the outer group",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/segment-selected-middle-pressed.png",
+          "box": [
+            715,
+            364,
+            1980,
+            492
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195497.6663752,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        },
+        {
+          "side": "actual",
+          "file": "after/segments-1-1-pressed.png",
+          "box": [
+            28,
+            156,
+            1293,
+            284
+          ],
+          "client_size": [
+            2016,
+            1164
+          ],
+          "sha256": "85cd10e7a54b4dcade598554ba3b5955e7f97e5d660c4b1ca174050bfebfc0de",
+          "capture": {
+            "timestamp": 1791198279.4887905,
+            "client": [
+              272,
+              235,
+              2016,
+              1164
+            ],
+            "mouse_left_down_before": true,
+            "mouse_left_down_after": true,
+            "state": "pressed",
+            "hold_ms": 450
+          }
+        }
+      ],
+      "differing_pixels": 3636
+    },
+    {
+      "reference": "tabs-group-reference.png",
+      "actual": "tabs-group-actual.png",
+      "reference_size": [
+        1976,
+        104
+      ],
+      "actual_native_size": [
+        1976,
+        104
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 9.773203116889858,
+      "max_channel_error": 231,
+      "different_fraction": 0.18247333385238243,
+      "compared_pixels": 205504,
+      "changed_bounds": [
+        0,
+        0,
+        1976,
+        104
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "tabs-group",
+      "purpose": "Entire world tab group, keyboard hints and surrounding pixels; backdrop differs",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/tabs-middle.png",
+          "box": [
+            24,
+            108,
+            2000,
+            212
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "6d63af9cd62a4f92b79c6502ec4b65a0b5ac51f8e34bdcd97441fe15d7109a19",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791194797.9865122,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "final/tabs-1-1-default.png",
+          "box": [
+            16,
+            156,
+            1992,
+            260
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "c2e0fd663e3e645542a87b0b9408e46502ea0e71ff33f5e43e1f3982fa4f4189",
+          "capture": {
+            "timestamp": 1791200344.5734098,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 37499
+    },
+    {
+      "reference": "friends-icon-reference.png",
+      "actual": "friends-icon-actual.png",
+      "reference_size": [
+        128,
+        80
+      ],
+      "actual_native_size": [
+        128,
+        80
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 10240,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "friends-icon",
+      "purpose": "Supplement: selected icon, underline and immediate surrounding pixels",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/friends-open.png",
+          "box": [
+            1408,
+            148,
+            1536,
+            228
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5713340b41df49da0dd7ab23033daab01a8c82a6fdd04a19cc90305c0eee8f4a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791194998.7777185,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "final/icons-0-0-default.png",
+          "box": [
+            148,
+            176,
+            276,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "78b1aeb28aaed33328ed139bba22ea431935b25f0f062fa92f11270020bd88e8",
+          "capture": {
+            "timestamp": 1791200370.4563122,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "friends-group-reference.png",
+      "actual": "friends-group-actual.png",
+      "reference_size": [
+        748,
+        104
+      ],
+      "actual_native_size": [
+        748,
+        104
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 3.3986271081859316,
+      "max_channel_error": 231,
+      "different_fraction": 0.08793963389551625,
+      "compared_pixels": 77792,
+      "changed_bounds": [
+        0,
+        0,
+        748,
+        104
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "friends-group",
+      "purpose": "Both icon tabs, keyboard hints and outer margin; containing panel differs",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/friends-open.png",
+          "box": [
+            1272,
+            128,
+            2020,
+            232
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "5713340b41df49da0dd7ab23033daab01a8c82a6fdd04a19cc90305c0eee8f4a",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791194998.7777185,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "final/icons-0-0-default.png",
+          "box": [
+            12,
+            156,
+            760,
+            260
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "78b1aeb28aaed33328ed139bba22ea431935b25f0f062fa92f11270020bd88e8",
+          "capture": {
+            "timestamp": 1791200370.4563122,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 6841
+    },
+    {
+      "reference": "team-icon-reference.png",
+      "actual": "team-icon-actual.png",
+      "reference_size": [
+        128,
+        80
+      ],
+      "actual_native_size": [
+        128,
+        80
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 10240,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "team-icon",
+      "purpose": "Supplement: selected icon, underline and immediate surrounding pixels",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/team.png",
+          "box": [
+            1760,
+            148,
+            1888,
+            228
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "0354d837f74439d1c0f7af30d2be9facfa8001cab1a6cde563a36c4134553b9b",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195163.4361105,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "final/icons-1-1-default.png",
+          "box": [
+            500,
+            176,
+            628,
+            256
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "e0e615889f8c0232e15df7194c69cf68e68b3268cb40b3bfa620ec9cf0ae5eda",
+          "capture": {
+            "timestamp": 1791200377.2285233,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    },
+    {
+      "reference": "team-group-reference.png",
+      "actual": "team-group-actual.png",
+      "reference_size": [
+        748,
+        104
+      ],
+      "actual_native_size": [
+        748,
+        104
+      ],
+      "scale": 1.0,
+      "native_exact": false,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 4.118311223090635,
+      "max_channel_error": 231,
+      "different_fraction": 0.08796534348004936,
+      "compared_pixels": 77792,
+      "changed_bounds": [
+        0,
+        0,
+        748,
+        104
+      ],
+      "exact": false,
+      "within_tolerance": false,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "team-group",
+      "purpose": "Both icon tabs, keyboard hints and outer margin; containing panel differs",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/team.png",
+          "box": [
+            1272,
+            128,
+            2020,
+            232
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "0354d837f74439d1c0f7af30d2be9facfa8001cab1a6cde563a36c4134553b9b",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791195163.4361105,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "final/icons-1-1-default.png",
+          "box": [
+            12,
+            156,
+            760,
+            260
+          ],
+          "client_size": [
+            2024,
+            1164
+          ],
+          "sha256": "e0e615889f8c0232e15df7194c69cf68e68b3268cb40b3bfa620ec9cf0ae5eda",
+          "capture": {
+            "timestamp": 1791200377.2285233,
+            "client": [
+              268,
+              199,
+              2024,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 6843
+    },
+    {
+      "reference": "world-seam-reference.png",
+      "actual": "world-seam-actual.png",
+      "reference_size": [
+        32,
+        20
+      ],
+      "actual_native_size": [
+        32,
+        20
+      ],
+      "scale": 1.0,
+      "native_exact": true,
+      "tolerance": 0,
+      "alpha_background": null,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0,
+      "compared_pixels": 640,
+      "changed_bounds": null,
+      "exact": true,
+      "within_tolerance": true,
+      "resampled": false,
+      "alignment": "fixed crop coordinates; no shift search",
+      "name": "world-seam",
+      "purpose": "Supplement: preview/name seam, one black row followed by one reflection row",
+      "sources": [
+        {
+          "side": "reference",
+          "file": "reference/start.png",
+          "box": [
+            184,
+            682,
+            216,
+            702
+          ],
+          "client_size": [
+            2021,
+            1165
+          ],
+          "sha256": "0353857f27b173d63d9a251266777de7e4a7c3fda8877b8b47b9fac0620003cf",
+          "capture": {
+            "version": "1.26.5203.0",
+            "timestamp": 1791194741.0763636,
+            "client": [
+              379,
+              200,
+              2021,
+              1165
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": null,
+            "hold_ms": null
+          }
+        },
+        {
+          "side": "actual",
+          "file": "after/world-0-default.png",
+          "box": [
+            176,
+            516,
+            208,
+            536
+          ],
+          "client_size": [
+            2016,
+            1164
+          ],
+          "sha256": "c60e7702ce523a173b0ebef0c11deef2b47a3f84a553911a5dce9edd314dc419",
+          "capture": {
+            "timestamp": 1791198358.5791123,
+            "client": [
+              272,
+              235,
+              2016,
+              1164
+            ],
+            "mouse_left_down_before": false,
+            "mouse_left_down_after": false,
+            "state": "default",
+            "hold_ms": 0
+          }
+        }
+      ],
+      "differing_pixels": 0
+    }
+  ],
+  "checks": [
+    {
+      "name": "back-default",
+      "passed": true,
+      "scope": "Complete back button including arrow and surrounding header",
+      "differing_pixels": 0
+    },
+    {
+      "name": "social-frame-default",
+      "passed": true,
+      "scope": "Supplement: full social width above the icon; feedback bounds and separator",
+      "differing_pixels": 0
+    },
+    {
+      "name": "social-icon-default",
+      "passed": true,
+      "scope": "Supplement: social icon and its immediate background",
+      "differing_pixels": 0
+    },
+    {
+      "name": "header-depth-default",
+      "passed": true,
+      "scope": "Supplement: bottom of face, reflection row and lower depth",
+      "differing_pixels": 0
+    },
+    {
+      "name": "back-hover",
+      "passed": true,
+      "scope": "Complete back button including arrow and surrounding header",
+      "differing_pixels": 0
+    },
+    {
+      "name": "social-frame-hover",
+      "passed": true,
+      "scope": "Supplement: full social width above the icon; feedback bounds and separator",
+      "differing_pixels": 0
+    },
+    {
+      "name": "social-icon-hover",
+      "passed": true,
+      "scope": "Supplement: social icon and its immediate background",
+      "differing_pixels": 0
+    },
+    {
+      "name": "header-depth-hover",
+      "passed": true,
+      "scope": "Supplement: bottom of face, reflection row and lower depth",
+      "differing_pixels": 0
+    },
+    {
+      "name": "back-pressed",
+      "passed": true,
+      "scope": "Complete back button including arrow and surrounding header",
+      "differing_pixels": 0
+    },
+    {
+      "name": "social-frame-pressed",
+      "passed": true,
+      "scope": "Supplement: full social width above the icon; feedback bounds and separator",
+      "differing_pixels": 0
+    },
+    {
+      "name": "social-icon-pressed",
+      "passed": true,
+      "scope": "Supplement: social icon and its immediate background",
+      "differing_pixels": 0
+    },
+    {
+      "name": "header-depth-pressed",
+      "passed": true,
+      "scope": "Supplement: bottom of face, reflection row and lower depth",
+      "differing_pixels": 0
+    },
+    {
+      "name": "segment-corner-after",
+      "passed": true,
+      "scope": "Supplement: repaired selected-left joint at the same anchor",
+      "differing_pixels": 0
+    },
+    {
+      "name": "friends-icon",
+      "passed": true,
+      "scope": "Supplement: selected icon, underline and immediate surrounding pixels",
+      "differing_pixels": 0
+    },
+    {
+      "name": "team-icon",
+      "passed": true,
+      "scope": "Supplement: selected icon, underline and immediate surrounding pixels",
+      "differing_pixels": 0
+    },
+    {
+      "name": "world-seam",
+      "passed": true,
+      "scope": "Supplement: preview/name seam, one black row followed by one reflection row",
+      "differing_pixels": 0
+    },
+    {
+      "name": "friends: friends-scroll-0: heading joins bar without a black cut",
+      "passed": true
+    },
+    {
+      "name": "friends: friends-scroll-60: heading joins bar without a black cut",
+      "passed": true
+    },
+    {
+      "name": "friends: friends-scroll-119.75: heading joins bar without a black cut",
+      "passed": true
+    },
+    {
+      "name": "friends: friends-scroll-120: heading joins bar without a black cut",
+      "passed": true
+    },
+    {
+      "name": "friends: switch to team: starts at zero without rebound",
+      "passed": true
+    },
+    {
+      "name": "friends: switch to team: independent native scroll",
+      "passed": true
+    },
+    {
+      "name": "friends: switch to friends: starts at zero without rebound",
+      "passed": true
+    },
+    {
+      "name": "friends: switch to friends: independent native scroll",
+      "passed": true
+    },
+    {
+      "name": "friends: switch to team: starts at zero without rebound",
+      "passed": true
+    },
+    {
+      "name": "friends: switch to team: independent native scroll",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs selected 0: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-0-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-0-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-0-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-0-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs selected 1: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-1-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-1-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-1-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-1-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-1-2: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-1-2: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs selected 2: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-2-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-2-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-2-2: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: tabs-2-2: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: icons selected 0: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "joined: icons-0-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: icons-0-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "joined: icons selected 1: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "joined: icons-1-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "joined: icons-1-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: native default is not hover",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: native pressed visible",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: actual button held",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: no callback while held or released outside",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: neighbors unchanged",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "header: header-0: click invokes correct callback exactly once",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: native default is not hover",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: native pressed visible",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: actual button held",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: no callback while held or released outside",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: neighbors unchanged",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "header: header-1: click invokes correct callback exactly once",
+      "passed": true
+    }
+  ],
+  "world_full": {
+    "reference_size": [
+      624,
+      490
+    ],
+    "actual_size": [
+      624,
+      500
+    ],
+    "comparison": "Not compared: preview height and image content differ; only the shared seam is in scope"
+  },
+  "passed": true,
+  "full_native_exact": false
+}

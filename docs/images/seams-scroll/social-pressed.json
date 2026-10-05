@@ -1,0 +1,92 @@
+{
+  "reference": "social-pressed-reference.png",
+  "actual": "social-pressed-actual.png",
+  "reference_size": [
+    278,
+    96
+  ],
+  "actual_native_size": [
+    278,
+    96
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 2.254733713029576,
+  "max_channel_error": 179,
+  "different_fraction": 0.042715827338129495,
+  "compared_pixels": 26688,
+  "changed_bounds": [
+    109,
+    30,
+    236,
+    61
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "social-pressed",
+  "purpose": "Complete social button, text and separator",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/header-social-pressed.png",
+      "box": [
+        1743,
+        0,
+        2021,
+        96
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "313f7479bd19039c338e6b49af11f5ae4eb2389efe86d406526746ea42133013",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195715.4774241,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": true,
+        "mouse_left_down_after": true,
+        "state": "pressed",
+        "hold_ms": 450
+      }
+    },
+    {
+      "side": "actual",
+      "file": "header-verified/header-1-pressed.png",
+      "box": [
+        1743,
+        160,
+        2021,
+        256
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "37479ec8f805f522e3f7f8ad5c58cd5f858e5098e6162d9dde982b3b048814f9",
+      "capture": {
+        "timestamp": 1791200886.074186,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": true,
+        "mouse_left_down_after": true,
+        "state": "pressed",
+        "hold_ms": 450
+      }
+    }
+  ],
+  "differing_pixels": 1140
+}

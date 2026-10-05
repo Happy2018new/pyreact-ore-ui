@@ -1,0 +1,92 @@
+{
+  "reference": "tabs-group-reference.png",
+  "actual": "tabs-group-actual.png",
+  "reference_size": [
+    1976,
+    104
+  ],
+  "actual_native_size": [
+    1976,
+    104
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 9.773203116889858,
+  "max_channel_error": 231,
+  "different_fraction": 0.18247333385238243,
+  "compared_pixels": 205504,
+  "changed_bounds": [
+    0,
+    0,
+    1976,
+    104
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "tabs-group",
+  "purpose": "Entire world tab group, keyboard hints and surrounding pixels; backdrop differs",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/tabs-middle.png",
+      "box": [
+        24,
+        108,
+        2000,
+        212
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "6d63af9cd62a4f92b79c6502ec4b65a0b5ac51f8e34bdcd97441fe15d7109a19",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791194797.9865122,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": null,
+        "hold_ms": null
+      }
+    },
+    {
+      "side": "actual",
+      "file": "final/tabs-1-1-default.png",
+      "box": [
+        16,
+        156,
+        1992,
+        260
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "c2e0fd663e3e645542a87b0b9408e46502ea0e71ff33f5e43e1f3982fa4f4189",
+      "capture": {
+        "timestamp": 1791200344.5734098,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 37499
+}

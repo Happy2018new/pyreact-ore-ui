@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "dimensions": null,
+  "checks": [
+    {
+      "name": "tabs selected 0: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "tabs-0-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-0-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "tabs-0-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-0-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "tabs selected 1: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "tabs-1-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-1-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "tabs-1-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-1-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "tabs-1-2: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-1-2: mouse released",
+      "passed": true
+    },
+    {
+      "name": "tabs selected 2: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "tabs-2-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-2-1: mouse released",
+      "passed": true
+    },
+    {
+      "name": "tabs-2-2: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "tabs-2-2: mouse released",
+      "passed": true
+    },
+    {
+      "name": "icons selected 0: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "icons-0-0: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "icons-0-0: mouse released",
+      "passed": true
+    },
+    {
+      "name": "icons selected 1: shared boundaries land on physical pixels",
+      "passed": true
+    },
+    {
+      "name": "icons-1-1: held frame stable",
+      "passed": true
+    },
+    {
+      "name": "icons-1-1: mouse released",
+      "passed": true
+    }
+  ],
+  "transitions": []
+}

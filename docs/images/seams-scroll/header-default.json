@@ -1,0 +1,92 @@
+{
+  "reference": "header-default-reference.png",
+  "actual": "header-default-actual.png",
+  "reference_size": [
+    2021,
+    100
+  ],
+  "actual_native_size": [
+    2021,
+    100
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 2.88858650832921,
+  "max_channel_error": 201,
+  "different_fraction": 0.05095002474022761,
+  "compared_pixels": 202100,
+  "changed_bounds": [
+    0,
+    26,
+    2021,
+    100
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "header-default",
+  "purpose": "Complete header including title, both buttons and four pixels below it",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/header-social-default.png",
+      "box": [
+        0,
+        0,
+        2021,
+        100
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195713.7053509,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    },
+    {
+      "side": "actual",
+      "file": "header-verified/header-1-default.png",
+      "box": [
+        0,
+        160,
+        2021,
+        260
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+      "capture": {
+        "timestamp": 1791200884.136986,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 10297
+}

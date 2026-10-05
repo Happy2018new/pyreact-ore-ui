@@ -1,0 +1,92 @@
+{
+  "reference": "segment-group-pressed-reference.png",
+  "actual": "segment-group-pressed-actual.png",
+  "reference_size": [
+    1265,
+    128
+  ],
+  "actual_native_size": [
+    1265,
+    128
+  ],
+  "scale": 1.0,
+  "native_exact": false,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 2.0089468050065875,
+  "max_channel_error": 216,
+  "different_fraction": 0.022455533596837943,
+  "compared_pixels": 161920,
+  "changed_bounds": [
+    181,
+    4,
+    1082,
+    120
+  ],
+  "exact": false,
+  "within_tolerance": false,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "segment-group-pressed",
+  "purpose": "Entire three-choice group and margin, anchored to the outer group",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/segment-selected-middle-pressed.png",
+      "box": [
+        715,
+        364,
+        1980,
+        492
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195497.6663752,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": true,
+        "mouse_left_down_after": true,
+        "state": "pressed",
+        "hold_ms": 450
+      }
+    },
+    {
+      "side": "actual",
+      "file": "after/segments-1-1-pressed.png",
+      "box": [
+        28,
+        156,
+        1293,
+        284
+      ],
+      "client_size": [
+        2016,
+        1164
+      ],
+      "sha256": "85cd10e7a54b4dcade598554ba3b5955e7f97e5d660c4b1ca174050bfebfc0de",
+      "capture": {
+        "timestamp": 1791198279.4887905,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "mouse_left_down_before": true,
+        "mouse_left_down_after": true,
+        "state": "pressed",
+        "hold_ms": 450
+      }
+    }
+  ],
+  "differing_pixels": 3636
+}

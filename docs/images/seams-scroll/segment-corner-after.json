@@ -1,0 +1,87 @@
+{
+  "reference": "segment-corner-after-reference.png",
+  "actual": "segment-corner-after-actual.png",
+  "reference_size": [
+    32,
+    40
+  ],
+  "actual_native_size": [
+    32,
+    40
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 1280,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "segment-corner-after",
+  "purpose": "Supplement: repaired selected-left joint at the same anchor",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/segment-middle.png",
+      "box": [
+        1124,
+        360,
+        1156,
+        400
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "5df7b3637bfaaa7defecddfe2acf8ea7c0083906cd96a48ca8d4bd1629db07e7",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195375.4439838,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": null,
+        "hold_ms": null
+      }
+    },
+    {
+      "side": "actual",
+      "file": "after/segments-1-1-default.png",
+      "box": [
+        438,
+        152,
+        470,
+        192
+      ],
+      "client_size": [
+        2016,
+        1164
+      ],
+      "sha256": "46a36bd9ca10e876a3236bfc4bee95ae4693408e70766e948db546373c78b55a",
+      "capture": {
+        "timestamp": 1791198277.61872,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 0
+}

@@ -1,0 +1,87 @@
+{
+  "reference": "social-frame-default-reference.png",
+  "actual": "social-frame-default-actual.png",
+  "reference_size": [
+    278,
+    16
+  ],
+  "actual_native_size": [
+    278,
+    16
+  ],
+  "scale": 1.0,
+  "native_exact": true,
+  "tolerance": 0,
+  "alpha_background": null,
+  "mean_channel_error": 0.0,
+  "max_channel_error": 0,
+  "different_fraction": 0.0,
+  "compared_pixels": 4448,
+  "changed_bounds": null,
+  "exact": true,
+  "within_tolerance": true,
+  "resampled": false,
+  "alignment": "fixed crop coordinates; no shift search",
+  "name": "social-frame-default",
+  "purpose": "Supplement: full social width above the icon; feedback bounds and separator",
+  "sources": [
+    {
+      "side": "reference",
+      "file": "reference/header-social-default.png",
+      "box": [
+        1743,
+        0,
+        2021,
+        16
+      ],
+      "client_size": [
+        2021,
+        1165
+      ],
+      "sha256": "eeab4812607b1acf3a4993181d479a2898f1e2c1c7cd929d89f9480fbf89a101",
+      "capture": {
+        "version": "1.26.5203.0",
+        "timestamp": 1791195713.7053509,
+        "client": [
+          379,
+          200,
+          2021,
+          1165
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    },
+    {
+      "side": "actual",
+      "file": "header-verified/header-1-default.png",
+      "box": [
+        1743,
+        160,
+        2021,
+        176
+      ],
+      "client_size": [
+        2024,
+        1164
+      ],
+      "sha256": "58140ba083cfd3d2d8eb3f43a6fde4210b1c8ad7e130524903f73c3cc8e5a749",
+      "capture": {
+        "timestamp": 1791200884.136986,
+        "client": [
+          268,
+          199,
+          2024,
+          1164
+        ],
+        "mouse_left_down_before": false,
+        "mouse_left_down_after": false,
+        "state": "default",
+        "hold_ms": 0
+      }
+    }
+  ],
+  "differing_pixels": 0
+}
