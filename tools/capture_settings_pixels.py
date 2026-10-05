@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = ROOT / '.agents/skills/bedrock-ore-reference/scripts'
 
 
-def operate(session, owner, output=None, points=None, click=False, steps=None):
+def operate(session, owner, output=None, points=None, click=False, steps=None, sample=None):
     data = json.loads(Path(session).read_text(encoding='utf8'))
     if data['owner'] != owner:
         raise RuntimeError('Instance owner does not match')
@@ -29,6 +29,10 @@ def operate(session, owner, output=None, points=None, click=False, steps=None):
             raise RuntimeError('Expected one owned NetEase window')
         window = windows[0]
         desktop.activate(window)
+        if sample is not None:
+            if output is None:
+                raise ValueError('Held sampling requires an output path')
+            return desktop.sample_states(window, output=output, **sample)
         if steps:
             desktop.run(window, steps)
         for point in points or ():

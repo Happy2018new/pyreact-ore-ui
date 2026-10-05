@@ -18,6 +18,8 @@ U = ctypes.WinDLL('user32', use_last_error=True)
 K = ctypes.WinDLL('kernel32', use_last_error=True)
 U.SetProcessDPIAware()
 U.GetForegroundWindow.restype = W.HWND
+U.GetAsyncKeyState.argtypes = [ctypes.c_int]
+U.GetAsyncKeyState.restype = ctypes.c_short
 U.GetWindowThreadProcessId.argtypes = [W.HWND, ctypes.POINTER(W.DWORD)]
 U.GetWindowThreadProcessId.restype = W.DWORD
 U.GetWindowTextW.argtypes = [W.HWND, W.LPWSTR, ctypes.c_int]
@@ -231,12 +233,19 @@ def geometry(window):
     return origin.x, origin.y, rect.right, rect.bottom
 
 
-def capture(window, output):
+def capture(window, output, expected_down=None, observation=None):
     import mss
     foreground(window)
+    down_before = bool(U.GetAsyncKeyState(1) & 0x8000)
+    if expected_down is not None and down_before != expected_down:
+        raise RuntimeError('Mouse state does not match requested capture state')
     x, y, width, height = geometry(window)
     with mss.MSS() as screen:
         shot = screen.grab(dict(left=x, top=y, width=width, height=height))
+    down_after = bool(U.GetAsyncKeyState(1) & 0x8000)
+    foreground(window)
+    if expected_down is not None and down_after != expected_down:
+        raise RuntimeError('Mouse state changed during capture')
     image = Image.frombytes('RGB', shot.size, shot.rgb)
     if image.getextrema() == ((0, 0),) * 3:
         raise RuntimeError('Blank game capture')
@@ -246,7 +255,9 @@ def capture(window, output):
     cursor = Point()
     U.GetCursorPos(ctypes.byref(cursor))
     metadata = dict(window, client=[x, y, width, height], cursor=[cursor.x - x, cursor.y - y], timestamp=time.time(),
-                    output=str(output.resolve()), sha256=hashlib.sha256(output.read_bytes()).hexdigest())
+                    output=str(output.resolve()), sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
+                    mouse_left_down_before=down_before, mouse_left_down_after=down_after,
+                    observation=observation)
     output.with_suffix('.json').write_text(json.dumps(metadata, indent=2), encoding='utf8')
     return metadata
 
@@ -269,30 +280,80 @@ def _desktop_pointer(x, y):
     U.mouse_event(0xC001, round((target[0] - left + 0.5) * 65536 / desktop_width),
                   round((target[1] - top + 0.5) * 65536 / desktop_height), 0, 0)
     actual = Point()
-    U.GetCursorPos(ctypes.byref(actual))
-    if abs(actual.x - target[0]) > 1 or abs(actual.y - target[1]) > 1:
-        raise RuntimeError('Pointer constrained outside requested position; no click sent')
+    for unused in range(5):
+        U.GetCursorPos(ctypes.byref(actual))
+        if abs(actual.x - target[0]) <= 1 and abs(actual.y - target[1]) <= 1:
+            return
+        # Absolute input delivery can lag GetCursorPos by one desktop frame.
+        # Wait for that same event; do not replay input or release confinement.
+        time.sleep(.025)
+    raise RuntimeError('Pointer constrained outside requested position; no click sent: requested %r, actual %r'
+                       % (target, (actual.x, actual.y)))
 
 
-def sample_states(window, at, output, control_type='button', states=('default', 'hover', 'pressed')):
+def sample_states(window, at, output, control_type='button', states=('default', 'hover', 'pressed'),
+                  away=(0.75, 0.04), context_box=None, observe=None):
     prefix = Path(output)
     results = {}
-    for state, position in (('default', [0.75, 0.04]), ('hover', at), ('pressed', at)):
+    held_since = None
+
+    def frame(state, position, down):
+        observation = dict(state=state, hold_ms=round((time.monotonic() - held_since) * 1000)
+            if held_since is not None and down else 0, requested_pointer=position, context_box=context_box)
+        if observe is not None:
+            observation['runtime'] = observe(state)
+        return capture(window, prefix.with_name(prefix.stem + '-' + state + '.png'),
+                       expected_down=down, observation=observation)
+    if U.GetAsyncKeyState(1) & 0x8000:
+        raise RuntimeError('Mouse is already held; no sampling input sent')
+    for state, position in (('default', away), ('hover', at), ('pressed', at)):
         if state not in states:
             continue
         foreground(window)
+        if state == 'default':
+            # A remounted native UI can retain its old hover until it receives
+            # a nonzero pointer delta, even when GetCursorPos already says away.
+            pointer(window, at)
+            time.sleep(.15)
+            refresh = (away[0] - .01 if away[0] >= .01 else away[0] + .01, away[1])
+            pointer(window, refresh)
+            time.sleep(.15)
         pointer(window, position)
+        # Let the engine update hit testing before sending mouse-down.
+        time.sleep(.2)
+        foreground(window)
         if state == 'pressed':
             U.mouse_event(2, 0, 0, 0, 0)
+            held_since = time.monotonic()
         try:
             time.sleep(0.45)
-            results[state] = capture(window, prefix.with_name(prefix.stem + '-' + state + '.png'))
+            results[state] = frame(state, position, state == 'pressed')
+            if state == 'pressed':
+                time.sleep(.45)
+                results['pressed-held'] = frame('pressed-held', position, True)
+                if control_type != 'slider':
+                    pointer(window, away)
+                    time.sleep(.2)
+                    results['pressed-outside'] = frame('pressed-outside', away, True)
+                    pointer(window, at)
+                    time.sleep(.2)
+                    results['pressed-reentered'] = frame('pressed-reentered', at, True)
         finally:
             if state == 'pressed':
-                if control_type != 'slider':
-                    pointer(window, [0.75, 0.04])
-                U.mouse_event(4, 0, 0, 0, 0)
-    return dict(ok=True, states=results, release_moved_outside=control_type != 'slider')
+                try:
+                    if control_type != 'slider':
+                        pointer(window, away)
+                        time.sleep(.1)
+                finally:
+                    U.mouse_event(4, 0, 0, 0, 0)
+    time.sleep(.2)
+    results['released'] = frame('released', at if control_type == 'slider' else away, False)
+    if context_box is not None:
+        import pixels
+        for state, metadata in results.items():
+            pixels.checked_crop(metadata['output'], context_box).save(prefix.with_name(prefix.stem + '-' + state + '-context.png'))
+    return dict(ok=True, states=results, release_moved_outside=control_type != 'slider',
+                mouse_released=not bool(U.GetAsyncKeyState(1) & 0x8000))
 
 
 def run(window, steps):
@@ -371,6 +432,8 @@ def main():
     parser.add_argument('--at', nargs=2, type=float)
     parser.add_argument('--control-type', choices=('button', 'slider'), default='button')
     parser.add_argument('--states', choices=('default', 'hover', 'pressed'), nargs='+', default=['default', 'hover', 'pressed'])
+    parser.add_argument('--away', nargs=2, type=float, default=[.75, .04])
+    parser.add_argument('--context-box', nargs=4, type=int, help='Half-open client box including the control and its neighbors')
     args = parser.parse_args()
     if args.op == 'list':
         return windows()
@@ -415,7 +478,7 @@ def main():
         if args.op == 'sample':
             if not args.at or not args.output:
                 parser.error('State sampling requires --at and --output')
-            return sample_states(window, args.at, args.output, args.control_type, args.states)
+            return sample_states(window, args.at, args.output, args.control_type, args.states, args.away, args.context_box)
         recipe = json.loads(args.recipe.read_text(encoding='utf8'))
         result = run(window, recipe['steps'])
         if args.output:

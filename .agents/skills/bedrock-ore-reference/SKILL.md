@@ -45,6 +45,30 @@ and for dropdowns each option and close button. Disabled and keyboard focus are
 separate states, never inferred from hover. Move the cursor away for a default
 capture and let the state settle before comparing original pixels.
 
+`sample` enters and leaves the target before recording default, waits for pointer
+hit testing before mouse-down, and records the physical left-button state before
+and after each screenshot. Pressed sampling waits 450 ms before the first frame
+and another 450 ms before the held frame, recording actual elapsed hold time.
+It also captures moving outside, re-entering while held, and the final release.
+The left button is released in a `finally` block. For owned ModSDK fixtures, read
+native default/hover/pressed visibility too: an initially focused first button
+must not silently become the default reference. `sample_states(observe=...)`
+accepts a read-only runtime probe and stores its result with each frame.
+Treat old pressed captures without this evidence as unverified. Use
+`--context-box left top right bottom` for the complete control group plus outer
+margin, and `--away x y` when the default resting point is interactive. A held
+button can activate on mouse-down; inspect the resulting page and restore any
+temporary value before continuing.
+
+For joined tabs, segments, navigation and lists, include both immediate neighbors
+in the comparison. Shared edges, overlap order, depressed face height, content
+offset, and the lower edge must be checked while held. Default and hover passing
+does not cover pressed. Check the full exported clickable-component inventory,
+mapping composed controls to the state primitive they use. A control without a
+matching international specimen must be marked as such, not as pixel-verified.
+The repository's `tools/verify_reference_sampler.py` verifies actual held input,
+unchanged adjacent pixels, fixed context crops and release using an owned GUI.
+
 If Windows refuses foreground activation, the tool may click the bound game's
 title bar only after checking both window ownership and `WM_NCHITTEST` caption
 geometry. An obscured title bar is never clicked. Game actions still require
