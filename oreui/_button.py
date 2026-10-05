@@ -40,6 +40,124 @@ class ButtonPrimitive(BaseButtonPrimitive):
 NativeOreButton = ButtonPrimitive()
 
 
+def _press_state(host, args):
+    path = args.get('ButtonPath') if isinstance(args, dict) else None
+    return getattr(host, '_ore_press_states', {}).get(path)
+
+
+def _move_content(state, active):
+    state['ore_inside'] = active
+    offset = state.get('ore_press_offset', 0) if active else 0
+    content = state.get('ore_press_content')
+    if content is not None:
+        content.SetPosition((0, offset * state.get('ore_press_scale', 1)))
+
+
+def _ore_press_down(host, args):
+    state = _press_state(host, args)
+    if state is not None:
+        state['ore_held'] = True
+        _move_content(state, True)
+
+
+def _ore_press_up(host, args):
+    state = _press_state(host, args)
+    if state is not None:
+        state['ore_held'] = False
+        _move_content(state, False)
+    # Restore geometry before a click can replace or unmount this control.
+    host._pyreact_dispatch_touch_up(args)
+
+
+def _ore_press_cancel(host, args):
+    state = _press_state(host, args)
+    if state is not None:
+        state['ore_held'] = False
+        _move_content(state, False)
+
+
+def _ore_press_out(host, args):
+    state = _press_state(host, args)
+    if state is not None:
+        # The native button cancels its pressed state on exit. Re-entering
+        # while the physical mouse is still held produces hover, not a second
+        # down event. Keep the content in sync with that native face.
+        state['ore_held'] = False
+        _move_content(state, False)
+
+
+def _ore_press_in(host, args):
+    state = _press_state(host, args)
+    if state is not None:
+        _move_content(state, state.get('ore_held', False))
+
+
+class PressablePrimitive(ButtonPrimitive):
+    """Keep the hit rectangle fixed while the raised face and content sink.
+
+    Native state images own the face visibility. Event callbacks move one
+    content panel, including caller-supplied icons and custom children. There
+    is no frame polling and no duplicated text or interaction subtree.
+    """
+    template_path = '/root/ore_pressable_tmpl'
+
+    def children_path(self, native_path, host=None):
+        return native_path + '/content'
+
+    def fill_children(self, native_path):
+        return ButtonPrimitive.fill_children(self, native_path) + [native_path + '/content']
+
+    def props_affect_layout(self, prev_props, next_props, style):
+        return prev_props.get('pressOffset') != next_props.get('pressOffset')
+
+    def apply_props(self, host, fiber, control, prev_props, next_props):
+        ButtonPrimitive.apply_props(self, host, fiber, control, prev_props, next_props)
+        if control is None:
+            return
+        state = fiber.primitive_state
+        state['ore_press_offset'] = max(0, next_props.get('pressOffset', 0))
+        if prev_props is None:
+            if not hasattr(host, '_ore_press_states'):
+                host._ore_press_states = {}
+            host._ore_press_states[fiber.native_path] = state
+            state['ore_press_content'] = native.get_control(host, self.children_path(fiber.native_path))
+            button = control.asButton()
+            for setter, callback in (
+                    (button.SetButtonTouchDownCallback, _ore_press_down),
+                    (button.SetButtonTouchUpCallback, _ore_press_up),
+                    (button.SetButtonTouchCancelCallback, _ore_press_cancel),
+                    (button.SetButtonTouchMoveOutCallback, _ore_press_out),
+                    (button.SetButtonTouchMoveInCallback, _ore_press_in)):
+                # ModSDK requires a ScreenNode class method, not a closure.
+                setattr(type(host), callback.__name__, callback)
+                setter(getattr(host, callback.__name__))
+        if not state['ore_press_offset']:
+            state['ore_held'] = False
+        _move_content(state, state.get('ore_held', False) and state.get('ore_inside', False))
+
+    def apply_layout(self, host, node):
+        ButtonPrimitive.apply_layout(self, host, node)
+        state = node.fiber.primitive_state
+        offset = state.get('ore_press_offset', 0) * node.visual_scale_y
+        pressed = native.get_control(host, node.fiber.native_path + '/pressed')
+        if pressed is not None:
+            pressed.SetPosition((0, offset))
+            native.set_size(pressed, (node.frame_w * node.visual_scale_x,
+                                     max(0, node.frame_h * node.visual_scale_y - offset)))
+        state['ore_press_scale'] = node.visual_scale_y
+        content = state.get('ore_press_content')
+        if content is not None:
+            content.SetAlpha(node.inherited_opacity)
+        _move_content(state, state.get('ore_held', False) and state.get('ore_inside', False))
+
+    def unmount(self, host, fiber):
+        getattr(host, '_ore_press_states', {}).pop(fiber.native_path, None)
+        ButtonPrimitive.unmount(self, host, fiber)
+
+
+NativeOrePressable = PressablePrimitive()
+
+
 class NavigationButtonPrimitive(ButtonPrimitive):
     """Stretch the fill, keeping both rows of each bevel in one logical pixel."""
     template_path = '/root/ore_navigation_tmpl'

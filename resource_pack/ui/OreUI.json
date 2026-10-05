@@ -330,6 +330,50 @@
       }
     ]
   },
+  "pressable@PyreactBase.button": {
+    "is_handle_button_move_event": true,
+    "controls": [
+      {
+        "default@PyreactBase.image": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 0
+        }
+      },
+      {
+        "hover@PyreactBase.image": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 0
+        }
+      },
+      {
+        "pressed@PyreactBase.image": {
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 0
+        }
+      },
+      {
+        "content": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
+        }
+      }
+    ]
+  },
   "search_input@OreUI.input": {
     "controls": [
       {
@@ -456,6 +500,117 @@
       },
       {
         "locked@PyreactBase.edit_box_background_default": {}
+      }
+    ]
+  },
+  "readonly_input@PyreactBase.panel": {
+    "controls": [
+      {
+        "frame@PyreactBase.image": {
+          "visible": true,
+          "layer": 0,
+          "texture": "textures/pyreact_ore/skin/input",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "nineslice_size": [
+            1,
+            3,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "centering_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "clipper_panel": {
+                "type": "panel",
+                "size": [
+                  "100% - 12px",
+                  "100% - 8px"
+                ],
+                "offset": [
+                  0,
+                  0
+                ],
+                "clips_children": true,
+                "controls": []
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "readonly_search_input@PyreactBase.panel": {
+    "controls": [
+      {
+        "frame@PyreactBase.image": {
+          "visible": true,
+          "layer": 0,
+          "texture": "textures/pyreact_ore/skin/input",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "nineslice_size": [
+            1,
+            3,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "centering_panel": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "search_icon": {
+                "type": "image",
+                "texture": "textures/pyreact_ore/reference/reference_search",
+                "layer": 4,
+                "size": [
+                  12,
+                  12
+                ],
+                "offset": [
+                  7,
+                  1
+                ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle"
+              }
+            },
+            {
+              "clipper_panel": {
+                "type": "panel",
+                "size": [
+                  "100% - 28px",
+                  "100% - 8px"
+                ],
+                "offset": [
+                  8,
+                  0
+                ],
+                "clips_children": true,
+                "controls": []
+              }
+            }
+          ]
+        }
       }
     ]
   },

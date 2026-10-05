@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Preserve the host input implementation and add native disable handling."""
-from ..pyreact.primitives import InputPrimitive
+from ..pyreact.primitives import InputPrimitive, PanelPrimitive
 
 
 class OreInputPrimitive(InputPrimitive):
@@ -22,3 +22,20 @@ class OreInputPrimitive(InputPrimitive):
 NativeOreInput = OreInputPrimitive()
 NativeOreSearchInput = OreInputPrimitive()
 NativeOreSearchInput.template_path = '/root/ore_search_input_tmpl'
+
+
+class ReadOnlyInputPrimitive(PanelPrimitive):
+    """The same clipped field geometry without a focusable native edit box.
+
+    SetTouchEnable(False) alone still lets the native editor take focus and
+    hide its baked placeholder. Disabled fields must not mount that editor.
+    """
+    template_path = '/root/ore_readonly_input_tmpl'
+
+    def children_path(self, native_path, host=None):
+        return native_path + '/centering_panel/clipper_panel'
+
+
+NativeOreReadOnlyInput = ReadOnlyInputPrimitive()
+NativeOreReadOnlySearchInput = ReadOnlyInputPrimitive()
+NativeOreReadOnlySearchInput.template_path = '/root/ore_readonly_search_input_tmpl'

@@ -84,8 +84,9 @@ def control_skins():
             ('pressed', '#b1b2b5', '#eff0f0', '#e0e0e1'),
             ('disabled', '#b1b2b5', '#eff0f0', '#e0e0e1')):
         reflected(fill, top, bottom, edge='#58585a' if state == 'disabled' else '#1e1e1f').save(OUT / ('thumb_' + state + '.png'))
-        segment = reflected(fill, top, bottom)
-        ImageDraw.Draw(segment).rectangle((1, 13, 14, 14), fill='#58585a')
+        segment = reflected(fill, top, bottom, raised=state != 'pressed')
+        if state != 'pressed':
+            ImageDraw.Draw(segment).rectangle((1, 13, 14, 14), fill='#58585a')
         segment.save(OUT / ('segment_' + state + '.png'))
         for selected in (False, True):
             image = Image.new('RGBA', (30, 16))
@@ -94,16 +95,22 @@ def control_skins():
             track = reflected('#3c8527' if active else '#8c8d90',
                               '#639d52' if active else '#a3a4a6',
                               '#4f913c' if active else '#97989b', size=(30, 14), raised=False)
+            if state == 'disabled':
+                track = Image.new('RGBA', (30, 14), '#8c8d90')
+                ImageDraw.Draw(track).rectangle((1, 1, 28, 12), fill='#b1b2b5')
             image.paste(track, (0, 2))
             if selected:
-                draw.rectangle((7, 6, 7, 11), fill='#ffffff' if active else '#58585a')
+                draw.rectangle((7, 6, 7, 11), fill='#ffffff' if active else '#6d6d6d')
             else:
-                draw.rectangle((19, 6, 24, 11), outline='#242425')
-                draw.point((19, 6), fill='#8c8d90')
-                draw.point((24, 6), fill='#8c8d90')
-                draw.point((19, 11), fill='#8c8d90')
-                draw.point((24, 11), fill='#8c8d90')
+                draw.rectangle((19, 6, 24, 11), outline='#6d6d6d' if state=='disabled' else '#242425')
+                for point in ((19,6),(24,6),(19,11),(24,11)):
+                    draw.point(point, fill='#b1b2b5' if state=='disabled' else '#8c8d90')
             thumb = Image.open(OUT / ('thumb_' + state + '.png'))
+            if state == 'disabled':
+                thumb = Image.new('RGBA', (16,16), '#58585a')
+                thumb_draw=ImageDraw.Draw(thumb)
+                thumb_draw.rectangle((1,1,14,12),fill='#b1b2b5')
+                thumb_draw.rectangle((1,13,14,14),fill='#8c8d90')
             image.paste(thumb, (14 if selected else 0, 0))
             image.save(OUT / ('switch_%s_%s.png' % ('on' if selected else 'off', state)))
         selected = reflected('#3c8527' if state != 'disabled' else '#58585a',
@@ -112,11 +119,13 @@ def control_skins():
         shifted.paste(selected, (0, 2))
         shifted.save(OUT / ('segment_selected_' + state + '.png'))
         for selected in (False, True):
-            fill_nav = '#48494a' if selected or state in ('hover', 'pressed') else '#313233'
+            fill_nav = '#48494a' if selected or state == 'hover' else '#242425' if state == 'pressed' else '#313233'
             image = Image.new('RGBA', (4, 6), fill_nav)
             if selected:
                 edge_rows = ('#1d1e1f', '#2b2c2c', None, None, '#5a5b5c', '#454647')
-            elif state in ('hover', 'pressed'):
+            elif state == 'pressed':
+                edge_rows = ('#0a0a0a', '#070707', None, None, '#39393a', '#454647')
+            elif state == 'hover':
                 edge_rows = ('#454647', '#5a5b5c', None, None, '#2b2c2c', '#1d1e1f')
             else:
                 edge_rows = (None,) * 6
@@ -125,28 +134,54 @@ def control_skins():
                 if color:
                     draw.line((0, row, 3, row), fill=color)
             image.save(OUT / ('navigation' + ('_selected' if selected else '') + '_' + state + '.png'))
-            tab_fill = '#313233' if selected else '#58585a' if state == 'hover' else '#48494a'
-            tab = reflected(tab_fill, '#5a5b5c' if selected else '#6d6d6e',
-                '#454647' if selected else '#5a5b5c', raised=not selected,
+            flat_tab = selected or state == 'pressed'
+            tab_fill = '#313233' if flat_tab else '#58585a' if state == 'hover' else '#48494a'
+            tab = reflected(tab_fill, '#5a5b5c' if flat_tab else '#79797b' if state == 'hover' else '#6d6d6e',
+                '#454647' if flat_tab else '#68686a' if state == 'hover' else '#5a5b5c', raised=not flat_tab,
                 size=(16, 14) if selected else (16, 16))
             tab_draw = ImageDraw.Draw(tab)
-            if not selected:
+            if not flat_tab:
                 tab_draw.rectangle((1, 13, 14, 14), fill='#313233')
-            corner = '#6f7071' if selected else '#7b7b7c'
+            corner = '#6a6b6c' if flat_tab else '#868688' if state == 'hover' else '#7b7b7c'
             tab.putpixel((14, 1), tuple(int(corner[i:i+2], 16) for i in (1, 3, 5)) + (255,))
-            tab.putpixel((1, 12), tuple(int(corner[i:i+2], 16) for i in (1, 3, 5)) + (255,))
+            tab.putpixel((1, tab.height - 2 if flat_tab else 12), tuple(int(corner[i:i+2], 16) for i in (1, 3, 5)) + (255,))
             if selected:
                 lowered = Image.new('RGBA', (16, 16))
                 lowered.paste(tab, (0, 2))
                 tab = lowered
             tab.save(OUT / ('tab' + ('_selected' if selected else '') + '_' + state + '.png'))
         Image.new('RGBA', (1, 1), '#58585a' if state == 'hover' else '#313233' if state == 'pressed' else (0, 0, 0, 0)).save(OUT / ('icon_' + state + '.png'))
+        Image.new('RGBA', (1, 1), '#f4f6f9' if state == 'hover' else '#d0d1d4' if state == 'pressed' else (0, 0, 0, 0)).save(OUT / ('icon_light_' + state + '.png'))
+    # Measured international button faces. The original ZIP uses different
+    # reflection colors for several pressed edges, including secondary.
+    palettes = {
+        'secondary': [('default', '#d0d1d4', '#ecedee', '#e3e3e5', '#f4f4f5'),
+                      ('hover', '#b1b2b5', '#eff0f0', '#e0e0e1', '#f9f9f9'),
+                      ('pressed', '#b1b2b5', '#eff0f0', '#e0e0e1', '#f9f9f9')],
+        'primary': [('default', '#3c8527', '#639d52', '#4f913c', '#72a763'),
+                    ('hover', '#2a641c', '#7fa277', '#699260', '#a5bea0'),
+                    ('pressed', '#1d4d13', '#779471', '#608259', '#a0b49b')],
+    }
+    for variant, palette in palettes.items():
+        for raised in (False, True):
+            for state, fill, top, bottom, corner in palette:
+                elevated = raised and state != 'pressed'
+                image = reflected(fill, top, bottom, raised=elevated)
+                if elevated:
+                    ImageDraw.Draw(image).rectangle((1, 13, 14, 14), fill='#1d4d13' if variant == 'primary' else '#58585a')
+                rgba = tuple(int(corner[i:i+2], 16) for i in (1, 3, 5)) + (255,)
+                image.putpixel((14, 1), rgba)
+                image.putpixel((1, 12 if elevated else 14), rgba)
+                image.save(OUT / ('button_' + variant + ('_raised' if raised else '') + '_' + state + '.png'))
     Image.open(OUT / 'thumb_default.png').save(OUT / 'thumb.png')
     Image.open(OUT / 'thumb_disabled.png').save(OUT / 'thumb_locked.png')
     reflected('#8c8d90', '#a3a4a6', '#97989b', (8, 6), False).save(OUT / 'track.png')
     reflected('#3c8527', '#639d52', '#4f913c', (8, 6), False).save(OUT / 'progress.png')
     Image.open(OUT / 'progress.png').save(OUT / 'progress_hover.png')
-    reflected('#48494a', '#707071', '#5a5b5c', raised=False).save(OUT / 'dropdown_header.png')
+    header=reflected('#48494a', '#6d6d6e', '#5a5b5c', raised=False)
+    header.putpixel((14,1),(123,123,124,255))
+    header.putpixel((1,14),(123,123,124,255))
+    header.save(OUT / 'dropdown_header.png')
     for name in ('input', 'input_hover'):
         image = Image.new('RGBA', (8, 8), '#1e1e1f')
         draw = ImageDraw.Draw(image)
@@ -184,7 +219,7 @@ def radio_skins():
 def build():
     OUT.mkdir(parents=True, exist_ok=True)
     for name in ('member', 'operator', 'player_permissions', 'permission_visitor', 'permission_custom',
-                 'information', 'add_resource_pack', 'remove_resource_pack', 'chevron_up', 'chevron_down'):
+                 'information', 'add_resource_pack', 'remove_resource_pack', 'chevron_up', 'chevron_down', 'edit'):
         source = Image.open(OUT.parent / (name + '.png')).convert('RGBA')
         mask = Image.new('RGBA', source.size, '#ffffff')
         mask.putalpha(source.getchannel('A'))
@@ -209,9 +244,11 @@ def build():
     for prefix, fill in (('pack', '#48494a'), ('pack_action', '#48494a'),
                           ('pack_group', '#313233'), ('menu_action', '#58585a')):
         for state in ('default', 'hover', 'pressed', 'disabled'):
-            color = '#58585a' if state == 'hover' and prefix != 'pack_action' else '#707071' if state == 'hover' else fill
+            color = '#58585a' if state == 'hover' else '#313233' if state == 'pressed' else fill
             if prefix == 'pack_group' and state == 'hover':
                 color = '#48494a'
+            if prefix == 'pack_group' and state == 'pressed':
+                color = '#242425'
             if prefix == 'menu_action':
                 color = '#48494a' if state == 'hover' else '#313233' if state == 'pressed' else fill
             image = Image.new('RGBA', (8, 8), '#1e1e1f')
@@ -222,9 +259,12 @@ def build():
             if prefix == 'menu_action':
                 draw.rectangle((1, 1, 6, 6), outline='#8c8d90')
             elif prefix in ('pack', 'pack_action'):
-                image = reflected(color, '#5a5b5c', '#333334', size=(8, 8), raised=False)
-                image.putpixel((6, 1), (63, 64, 65, 255))
-                image.putpixel((1, 6), (63, 64, 65, 255))
+                top, bottom, corner = ('#68686a', '#3e3e3f', '#49494a') if state == 'hover' else (
+                    '#454647', '#222324', '#303132') if state == 'pressed' else ('#5a5b5c', '#333334', '#3f4041')
+                image = reflected(color, top, bottom, size=(8, 8), raised=False)
+                rgba = tuple(int(corner[i:i+2], 16) for i in (1, 3, 5)) + (255,)
+                image.putpixel((6, 1), rgba)
+                image.putpixel((1, 6), rgba)
             elif prefix == 'pack_group':
                 image = Image.new('RGBA', (8, 8), color)
                 draw = ImageDraw.Draw(image)
@@ -234,14 +274,24 @@ def build():
                 draw.line((0, 7, 7, 7), fill='#1d1e1f' if state != 'hover' else '#2b2c2c')
                 draw.point((7, 0), fill='#292a2b' if state != 'hover' else '#363737')
                 draw.point((0, 7), fill='#292a2b' if state != 'hover' else '#363737')
+                if state == 'pressed':
+                    draw.line((0, 0, 7, 0), fill='#070707')
+                    draw.line((0, 0, 0, 7), fill='#070707')
+                    draw.line((7, 0, 7, 7), fill='#39393a')
+                    draw.line((0, 7, 7, 7), fill='#39393a')
+                    draw.point((7, 0), fill='#1f1f1f')
+                    draw.point((0, 7), fill='#1f1f1f')
             image.save(OUT / (prefix + '_' + state + '.png'))
     # Joined cells have bevels but no private black border. Their row owns it.
     for prefix in ('player_cell', 'player_options', 'pack_cell', 'pack_options'):
         for state in ('default', 'hover', 'pressed', 'disabled'):
-            fill = '#707071' if state == 'hover' and prefix.endswith('options') else '#58585a' if state == 'hover' else '#48494a'
+            fill = '#58585a' if state == 'hover' else '#313233' if state == 'pressed' else '#48494a'
             player = prefix.startswith('player')
-            image = reflected(fill, '#5a5b5c', '#323334' if player else '#333334', size=(8, 8), raised=False)
-            corner = (71, 71, 72, 255) if player else (63, 64, 65, 255)
+            top = ('#69696b' if player else '#68686a') if state == 'hover' else ('#464747' if player else '#454647') if state == 'pressed' else '#5a5b5c'
+            bottom = '#3e3e3f' if state == 'hover' else '#222324' if state == 'pressed' else '#323334' if player else '#333334'
+            image = reflected(fill, top, bottom, size=(8, 8), raised=False)
+            corner_hex = ('#515152' if player else '#49494a') if state == 'hover' else ('#38393a' if player else '#303132') if state == 'pressed' else '#474748' if player else '#3f4041'
+            corner = tuple(int(corner_hex[i:i+2], 16) for i in (1, 3, 5)) + (255,)
             image.putpixel((6, 1), corner)
             image.putpixel((1, 6), corner)
             image.crop((1, 1, 7, 7)).save(OUT / (prefix + '_' + state + '.png'))
@@ -315,7 +365,19 @@ def build():
             for name, row, anchor in (('top_edge', 0, 'top_left'), ('bottom_edge', 4, 'bottom_left'))]}
     skin['navigation@PyreactBase.button'] = {'controls': [
         {state + '@OreUI.navigation_state': {}} for state in ('default', 'hover', 'pressed')]}
+    skin['pressable@PyreactBase.button'] = {'is_handle_button_move_event': True, 'controls': [
+        {state + '@PyreactBase.image': {'size': ['100%', '100%'], 'layer': 0}}
+        for state in ('default', 'hover', 'pressed')] + [
+        {'content': {'type': 'panel', 'size': ['100%', '100%'], 'layer': 1,
+                     'anchor_from': 'top_left', 'anchor_to': 'top_left'}}]}
     skin['search_input@OreUI.input'] = {'controls': input_controls(search=True)}
+    for name, search in (('readonly_input', False), ('readonly_search_input', True)):
+        content = input_controls(search=search)[0]
+        content['centering_panel']['controls'][-1]['clipper_panel']['controls'] = []
+        skin[name + '@PyreactBase.panel'] = {'controls': [
+            {'frame@PyreactBase.image': {'visible': True, 'layer': 0,
+                'texture': TEX + 'input', 'size': ['100%', '100%'],
+                'nineslice_size': [1, 3, 1, 1]}}, content]}
     slider = skin['slider@PyreactBase.slider']
     for state in ('default', 'hover'):
         names = ('slider_background', 'slider_progress') if state == 'default' else ('slider_background_hover', 'slider_progress_hover')

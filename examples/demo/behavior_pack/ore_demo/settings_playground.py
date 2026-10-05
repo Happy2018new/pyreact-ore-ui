@@ -302,6 +302,7 @@ def OrePlayground():
             style=Style(width=20, height=20)), OreProgress(value=values['volume'])])
     return Panel(style=Style(width='100%', height='100%'), children=[
         OreSettingsScreen(title='编辑世界', navigation=navigation, activeItem=page, onClose=navigator.pop,
+            scrollbarGutter=page == 'containers',
             onSocial=partial(set_overlay, 'drawer'),
             scrollKey='lab_scroll_' + page + '_' + str(generation), children=body),
         OreDialog(key='lab_dialog', visible=overlay in ('form', 'progress', 'warning'),

@@ -19,15 +19,16 @@ def OreWorldCard(title='', subtitle='', mode='', image='world_demo_screen_big',
                 Image(color=Color(0x313233FF), style=Style(position=Position.absolute,
                     left=1, bottom=1, paddingHorizontal=3), children=OreText(content=mode, fontSize=8)) if mode else None,
             ]),
-        Panel(style=Style(width='100%', flexDirection=FlexDirection.row), children=[
+        Image(color=Color(0x1E1E1FFF), style=Style(width='100%', height=34, padding=1,
+            flexDirection=FlexDirection.row), children=[
             NativeOreButton(key='ore_world_open', onClick=None if disabled else onOpen,
-                buttonBuilder=state_skin('pack', disabled=disabled, slices=(2, 2, 2, 2)),
+                buttonBuilder=state_skin('player_cell', disabled=disabled, slices=(1, 1, 1, 1)),
                 style=Style(flex=1, height=32, paddingHorizontal=5, alignItems=AlignItems.flex_start),
                 children=[OreText(content=title, fontSize=8),
-                          OreText(content=subtitle, fontSize=8, color=Color(0xD0D1D4FF)) if subtitle else None]),
+                          OreText(content=subtitle, fontSize=8, color=Color(0xB1B2B5FF)) if subtitle else None]),
             NativeOreButton(key='ore_world_edit', onClick=None if disabled else onEdit,
-                buttonBuilder=state_skin('pack', disabled=disabled, slices=(2, 2, 2, 2)), style=Style(width=32, height=32),
-                children=OreIcon(name='edit', size=12)),
+                buttonBuilder=state_skin('player_options', disabled=disabled, slices=(1, 1, 1, 1)), style=Style(width=32, height=32),
+                children=OreIcon(name='edit', size=12, color=Color(0xFFFFFFFF))),
         ]),
     ])
 
