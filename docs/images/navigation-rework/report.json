@@ -1,0 +1,456 @@
+{
+  "scale": 1,
+  "measured_gui_scale": 4,
+  "reference_version": "1.26.5203.0",
+  "reference_client": [
+    2015,
+    1144
+  ],
+  "actual_client": [
+    2016,
+    1164
+  ],
+  "alignment": "Fixed row origins: reference y=773, actual y=808. No resize, masks or shift search.",
+  "full_rows": [
+    {
+      "name": "general-default",
+      "reference_box": [
+        0,
+        769,
+        672,
+        969
+      ],
+      "actual_box": [
+        0,
+        804,
+        672,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-general-default.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\general-default.png",
+      "reference_sha256": "8b1a5f38a6bba012675c2b97a63557639e85dbebd9c02310936253d2fa4a4cf0",
+      "actual_sha256": "2f2bc148803a1e36cc76c4bdbdca64d78d63f3102155f9ed577f91fa5179f00a",
+      "native_exact": false,
+      "mean_channel_error": 4.3324082341269845,
+      "max_channel_error": 216,
+      "different_fraction": 0.037700892857142856
+    },
+    {
+      "name": "general-hover",
+      "reference_box": [
+        0,
+        769,
+        672,
+        969
+      ],
+      "actual_box": [
+        0,
+        804,
+        672,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-general-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\general-hover.png",
+      "reference_sha256": "8b1a5f38a6bba012675c2b97a63557639e85dbebd9c02310936253d2fa4a4cf0",
+      "actual_sha256": "0e1816c640e704dd890245423c4eb91e3ad77c915e746a38f6c7272e7fd0b6e9",
+      "native_exact": false,
+      "mean_channel_error": 4.3324082341269845,
+      "max_channel_error": 216,
+      "different_fraction": 0.037700892857142856
+    },
+    {
+      "name": "advanced-unselected-hover",
+      "reference_box": [
+        0,
+        769,
+        672,
+        969
+      ],
+      "actual_box": [
+        0,
+        804,
+        672,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-advanced-unselected-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\advanced-unselected-hover.png",
+      "reference_sha256": "01af434b13a8b0d6b97ee2a0f8dfc135a9ce5d16e5705a2957031014c07420cb",
+      "actual_sha256": "8ef95ea1b40afa151a268927c98ae8e0dabb63f37fcf6281688d933a1f5f342f",
+      "native_exact": false,
+      "mean_channel_error": 4.218831845238095,
+      "max_channel_error": 216,
+      "different_fraction": 0.03769345238095238
+    },
+    {
+      "name": "advanced-default",
+      "reference_box": [
+        0,
+        769,
+        672,
+        969
+      ],
+      "actual_box": [
+        0,
+        804,
+        672,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-advanced-default.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\advanced-default.png",
+      "reference_sha256": "e5c962e808148395c3cabf0e875b41330ad4d675d15e6810cbba6757bcc4a076",
+      "actual_sha256": "8f2da0f0ebbaace248124d6efecb21070b3777907c4057a3d497ec3f8996f31c",
+      "native_exact": false,
+      "mean_channel_error": 4.317480158730159,
+      "max_channel_error": 206,
+      "different_fraction": 0.03769345238095238
+    },
+    {
+      "name": "advanced-hover",
+      "reference_box": [
+        0,
+        769,
+        672,
+        969
+      ],
+      "actual_box": [
+        0,
+        804,
+        672,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-advanced-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\advanced-hover.png",
+      "reference_sha256": "e5c962e808148395c3cabf0e875b41330ad4d675d15e6810cbba6757bcc4a076",
+      "actual_sha256": "dc9224bd9225ff38f9c2890800754d5bfb6789e4401a95b94b80ff553afa3a2b",
+      "native_exact": false,
+      "mean_channel_error": 4.317480158730159,
+      "max_channel_error": 206,
+      "different_fraction": 0.03769345238095238
+    },
+    {
+      "name": "general-unselected-hover",
+      "reference_box": [
+        0,
+        769,
+        672,
+        969
+      ],
+      "actual_box": [
+        0,
+        804,
+        672,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-general-unselected-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\general-unselected-hover.png",
+      "reference_sha256": "aab1238d25c6fa345355fc35c62942591b92822a33ce265939c8a302554692f6",
+      "actual_sha256": "2afade9bb3ce9d46e04c5fbb1e0ceaf57a849dcd4ae46a708dbeeac15b4ec6f4",
+      "native_exact": false,
+      "mean_channel_error": 4.197482638888889,
+      "max_channel_error": 196,
+      "different_fraction": 0.03769345238095238
+    }
+  ],
+  "supplementary_bands": [
+    {
+      "name": "general-default-bands",
+      "reference_box": [
+        500,
+        769,
+        600,
+        969
+      ],
+      "actual_box": [
+        500,
+        804,
+        600,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-general-default.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\general-default.png",
+      "reference_sha256": "8b1a5f38a6bba012675c2b97a63557639e85dbebd9c02310936253d2fa4a4cf0",
+      "actual_sha256": "2f2bc148803a1e36cc76c4bdbdca64d78d63f3102155f9ed577f91fa5179f00a",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    },
+    {
+      "name": "general-hover-bands",
+      "reference_box": [
+        500,
+        769,
+        600,
+        969
+      ],
+      "actual_box": [
+        500,
+        804,
+        600,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-general-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\general-hover.png",
+      "reference_sha256": "8b1a5f38a6bba012675c2b97a63557639e85dbebd9c02310936253d2fa4a4cf0",
+      "actual_sha256": "0e1816c640e704dd890245423c4eb91e3ad77c915e746a38f6c7272e7fd0b6e9",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    },
+    {
+      "name": "advanced-unselected-hover-bands",
+      "reference_box": [
+        500,
+        769,
+        600,
+        969
+      ],
+      "actual_box": [
+        500,
+        804,
+        600,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-advanced-unselected-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\advanced-unselected-hover.png",
+      "reference_sha256": "01af434b13a8b0d6b97ee2a0f8dfc135a9ce5d16e5705a2957031014c07420cb",
+      "actual_sha256": "8ef95ea1b40afa151a268927c98ae8e0dabb63f37fcf6281688d933a1f5f342f",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    },
+    {
+      "name": "advanced-default-bands",
+      "reference_box": [
+        500,
+        769,
+        600,
+        969
+      ],
+      "actual_box": [
+        500,
+        804,
+        600,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-advanced-default.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\advanced-default.png",
+      "reference_sha256": "e5c962e808148395c3cabf0e875b41330ad4d675d15e6810cbba6757bcc4a076",
+      "actual_sha256": "8f2da0f0ebbaace248124d6efecb21070b3777907c4057a3d497ec3f8996f31c",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    },
+    {
+      "name": "advanced-hover-bands",
+      "reference_box": [
+        500,
+        769,
+        600,
+        969
+      ],
+      "actual_box": [
+        500,
+        804,
+        600,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-advanced-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\advanced-hover.png",
+      "reference_sha256": "e5c962e808148395c3cabf0e875b41330ad4d675d15e6810cbba6757bcc4a076",
+      "actual_sha256": "dc9224bd9225ff38f9c2890800754d5bfb6789e4401a95b94b80ff553afa3a2b",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    },
+    {
+      "name": "general-unselected-hover-bands",
+      "reference_box": [
+        500,
+        769,
+        600,
+        969
+      ],
+      "actual_box": [
+        500,
+        804,
+        600,
+        1004
+      ],
+      "reference_source": ".runtime\\nav-rework\\reference-general-unselected-hover.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\general-unselected-hover.png",
+      "reference_sha256": "aab1238d25c6fa345355fc35c62942591b92822a33ce265939c8a302554692f6",
+      "actual_sha256": "2afade9bb3ce9d46e04c5fbb1e0ceaf57a849dcd4ae46a708dbeeac15b4ec6f4",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    },
+    {
+      "name": "group-divider-bands",
+      "reference_box": [
+        500,
+        220,
+        600,
+        236
+      ],
+      "actual_box": [
+        500,
+        656,
+        600,
+        672
+      ],
+      "reference_source": "docs\\images\\navigation-rework\\user-sidebar-reference.png",
+      "actual_source": ".runtime\\nav-rework\\actual\\group-default.png",
+      "reference_sha256": "003cb70a8acc4d3f95d56d8f503f73ea97cf2c1831e351981e1b6b54613f13a4",
+      "actual_sha256": "ffa8f2fcefc5c13285b3fbfa9475e5e1ab46addf954fd33b5124f7a31d4e9629",
+      "native_exact": true,
+      "mean_channel_error": 0.0,
+      "max_channel_error": 0,
+      "different_fraction": 0.0
+    }
+  ],
+  "live_checks": [
+    {
+      "name": "general-default: selected four half-pixel bands",
+      "passed": true
+    },
+    {
+      "name": "general-default: adjacent row state",
+      "passed": true
+    },
+    {
+      "name": "general-hover: selected four half-pixel bands",
+      "passed": true
+    },
+    {
+      "name": "general-hover: adjacent row state",
+      "passed": true
+    },
+    {
+      "name": "general-hover: native hover active",
+      "passed": true
+    },
+    {
+      "name": "advanced-unselected-hover: selected four half-pixel bands",
+      "passed": true
+    },
+    {
+      "name": "advanced-unselected-hover: adjacent row state",
+      "passed": true
+    },
+    {
+      "name": "advanced-unselected-hover: native hover active",
+      "passed": true
+    },
+    {
+      "name": "click changes selected page",
+      "passed": true
+    },
+    {
+      "name": "advanced-default: selected four half-pixel bands",
+      "passed": true
+    },
+    {
+      "name": "advanced-default: adjacent row state",
+      "passed": true
+    },
+    {
+      "name": "advanced-hover: selected four half-pixel bands",
+      "passed": true
+    },
+    {
+      "name": "advanced-hover: adjacent row state",
+      "passed": true
+    },
+    {
+      "name": "advanced-hover: native hover active",
+      "passed": true
+    },
+    {
+      "name": "general-unselected-hover: selected four half-pixel bands",
+      "passed": true
+    },
+    {
+      "name": "general-unselected-hover: adjacent row state",
+      "passed": true
+    },
+    {
+      "name": "general-unselected-hover: native hover active",
+      "passed": true
+    },
+    {
+      "name": "group-default: first item visible",
+      "passed": true
+    },
+    {
+      "name": "group-default: four-pixel group bands reach boundary",
+      "passed": true
+    },
+    {
+      "name": "group-default: first item edge state",
+      "passed": true
+    },
+    {
+      "name": "group-default: continuous fixed side boundaries",
+      "passed": true
+    },
+    {
+      "name": "group-first-hover: first item visible",
+      "passed": true
+    },
+    {
+      "name": "group-first-hover: four-pixel group bands reach boundary",
+      "passed": true
+    },
+    {
+      "name": "group-first-hover: first item edge state",
+      "passed": true
+    },
+    {
+      "name": "group-first-hover: continuous fixed side boundaries",
+      "passed": true
+    },
+    {
+      "name": "group first item selected",
+      "passed": true
+    },
+    {
+      "name": "group first selected retains thin bevel",
+      "passed": true
+    },
+    {
+      "name": "shadow_follows_underlying_color",
+      "passed": true
+    },
+    {
+      "name": "content_below_shadow",
+      "passed": true
+    },
+    {
+      "name": "corners_stay_opaque",
+      "passed": true
+    }
+  ],
+  "boundary_sample_y": [
+    100,
+    1148
+  ],
+  "boundary_exclusion": "Bottom 16 client pixels include the Windows 11 rounded window corners",
+  "targeted_passed": true,
+  "full_row_exact": false,
+  "top_shadow_capture": {
+    "source": ".runtime\\nav-rework\\actual\\selected-under-shadow.png",
+    "box": [
+      0,
+      96,
+      672,
+      116
+    ],
+    "sha256": "7e69b1818b167026dcf195f0d306bc0afc7266ba7f17958c8d298d0337f102c5"
+  }
+}
