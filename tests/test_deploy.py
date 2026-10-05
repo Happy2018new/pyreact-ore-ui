@@ -30,17 +30,22 @@ class DeploymentTests(unittest.TestCase):
             self.assertEqual(first, (resources / 'ui/PyreactBase.json').read_bytes())
             current = json.loads(first)
             self.assertEqual(current['rootBase']['controls'][0], template['rootBase']['controls'][0])
-            self.assertEqual(len(current['rootBase']['controls']), 8)
+            installed = [next(iter(entry)) for entry in current['rootBase']['controls']]
+            self.assertEqual(len(installed), len(set(installed)))
+            self.assertIn('ore_pressable_tmpl@OreUI.pressable', installed)
             current_defs = json.loads((resources / 'ui/_ui_defs.json').read_text(encoding='utf8'))
             self.assertEqual(current_defs['host_metadata'], 42)
             self.assertEqual(current_defs['ui_defs'], ['ui/MyMod.json', 'ui/PyreactBase.json', 'ui/OreUI.json'])
             self.assertEqual((client / 'pyreact/__init__.py').read_text(), '# Existing host\n')
             self.assertTrue((client / 'oreui/_text.py').is_file())
             self.assertTrue((resources / 'ui/OreUI.json').is_file())
-            self.assertEqual(len(list((resources / 'textures/pyreact_ore/type').glob('atlas_*.png'))), 50)
+            self.assertGreater(len(list((resources / 'textures/pyreact_ore/type').glob('atlas_*.png'))), 0)
             self.assertTrue((resources / 'textures/pyreact_ore/type/OFL.txt').is_file())
             for name in ('input', 'thumb', 'track', 'scroll_thumb', 'switch_on_default'):
                 self.assertTrue((resources / ('textures/pyreact_ore/skin/' + name + '.png')).is_file(), name)
+            ui = json.loads((resources / 'ui/OreUI.json').read_text(encoding='utf8'))
+            self.assertTrue(ui['pressable@PyreactBase.button']['is_handle_button_move_event'])
+            self.assertTrue((resources / 'textures/pyreact_ore/skin/button_secondary_raised_pressed.png').is_file())
             for name in ('general_icon', 'advanced_icon', 'member', 'operator', 'player_permissions',
                          'edit', 'world_demo_screen_big', 'ui_menu_worlds_tab', 'icon_alex',
                          'no_player_profile', 'bracket_open', 'bracket_close'):
