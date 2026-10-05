@@ -1,0 +1,607 @@
+{
+  "scope": "Only the changed component boundaries and their input behavior",
+  "client": [
+    2016,
+    1164
+  ],
+  "scale": 4,
+  "comparisons": {
+    "players": {
+      "frame": {
+        "position": [
+          8.0,
+          54.0
+        ],
+        "size": [
+          160.0,
+          36.0
+        ]
+      },
+      "crop_box": [
+        32,
+        216,
+        672,
+        780
+      ],
+      "metadata": {
+        "hwnd": 22938088,
+        "pid": 52128,
+        "title": "(2016, 1164) Minecraft",
+        "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+        "created": 134356512657129515,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "cursor": [
+          1914,
+          1047
+        ],
+        "timestamp": 1791177760.94813,
+        "output": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\players.png",
+        "sha256": "270c34a305407bafebb3e45e063dbf47ac082a4fc48017d13026115899e9df6f"
+      },
+      "comparison": {
+        "reference": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\docs\\images\\component-boundaries\\references\\players.png",
+        "actual": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\players-crop.png",
+        "reference_size": [
+          640,
+          564
+        ],
+        "actual_native_size": [
+          640,
+          564
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 2.595163822399527,
+        "max_channel_error": 183,
+        "different_fraction": 0.03362699468085106,
+        "compared_pixels": 360960,
+        "changed_bounds": [
+          141,
+          4,
+          637,
+          526
+        ],
+        "exact": false,
+        "within_tolerance": false,
+        "resampled": false,
+        "alignment": "fixed crop coordinates; no shift search"
+      }
+    },
+    "packs": {
+      "frame": {
+        "position": [
+          8.0,
+          32.0
+        ],
+        "size": [
+          325.25,
+          165.0
+        ]
+      },
+      "crop_box": [
+        32,
+        128,
+        1333,
+        788
+      ],
+      "metadata": {
+        "hwnd": 22938088,
+        "pid": 52128,
+        "title": "(2016, 1164) Minecraft",
+        "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+        "created": 134356512657129515,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "cursor": [
+          1914,
+          1047
+        ],
+        "timestamp": 1791177764.029924,
+        "output": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\packs.png",
+        "sha256": "8383a88806d4f3e6d24ab596244165812c11aa7dc18d89be0cffb0e527b2e97c"
+      },
+      "comparison": {
+        "reference": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\docs\\images\\component-boundaries\\references\\packs.png",
+        "actual": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\packs-crop.png",
+        "reference_size": [
+          1301,
+          660
+        ],
+        "actual_native_size": [
+          1301,
+          660
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 2.1914219054495763,
+        "max_channel_error": 206,
+        "different_fraction": 0.030171429902406073,
+        "compared_pixels": 858660,
+        "changed_bounds": [
+          38,
+          8,
+          1298,
+          656
+        ],
+        "exact": false,
+        "within_tolerance": false,
+        "resampled": false,
+        "alignment": "fixed crop coordinates; no shift search"
+      }
+    },
+    "expanded": {
+      "frame": {
+        "position": [
+          8.0,
+          56.0
+        ],
+        "size": [
+          325.25,
+          69.0
+        ]
+      },
+      "crop_box": [
+        32,
+        224,
+        1333,
+        668
+      ],
+      "metadata": {
+        "hwnd": 22938088,
+        "pid": 52128,
+        "title": "(2016, 1164) Minecraft",
+        "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+        "created": 134356512657129515,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "cursor": [
+          1914,
+          1047
+        ],
+        "timestamp": 1791177768.3321939,
+        "output": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\expanded.png",
+        "sha256": "4b92280fb167c37d4c085a24947f69e233c56e600d77af0715c9c3d69a42502d"
+      },
+      "comparison": {
+        "reference": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\docs\\images\\component-boundaries\\references\\expanded.png",
+        "actual": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\expanded-crop.png",
+        "reference_size": [
+          1301,
+          444
+        ],
+        "actual_native_size": [
+          1301,
+          444
+        ],
+        "scale": 1.0,
+        "native_exact": false,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 3.312460038824374,
+        "max_channel_error": 206,
+        "different_fraction": 0.04233057038591243,
+        "compared_pixels": 577644,
+        "changed_bounds": [
+          28,
+          4,
+          1298,
+          440
+        ],
+        "exact": false,
+        "within_tolerance": false,
+        "resampled": false,
+        "alignment": "fixed crop coordinates; no shift search"
+      }
+    },
+    "close": {
+      "frame": {
+        "position": [
+          8.0,
+          32.0
+        ],
+        "size": [
+          22.0,
+          24.0
+        ]
+      },
+      "crop_box": [
+        32,
+        128,
+        120,
+        224
+      ],
+      "metadata": {
+        "hwnd": 22938088,
+        "pid": 52128,
+        "title": "(2016, 1164) Minecraft",
+        "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+        "created": 134356512657129515,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "cursor": [
+          1914,
+          1047
+        ],
+        "timestamp": 1791177771.5172591,
+        "output": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\close.png",
+        "sha256": "7a57a24e032abd3fcdd62568827dd0e431ed5f267df5fd665a3402bb63e125fd"
+      },
+      "comparison": {
+        "reference": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\docs\\images\\component-boundaries\\references\\close.png",
+        "actual": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\close-crop.png",
+        "reference_size": [
+          88,
+          96
+        ],
+        "actual_native_size": [
+          88,
+          96
+        ],
+        "scale": 1.0,
+        "native_exact": true,
+        "tolerance": 0,
+        "alpha_background": null,
+        "mean_channel_error": 0.0,
+        "max_channel_error": 0,
+        "different_fraction": 0.0,
+        "compared_pixels": 8448,
+        "changed_bounds": null,
+        "exact": true,
+        "within_tolerance": true,
+        "resampled": false,
+        "alignment": "fixed crop coordinates; no shift search"
+      }
+    },
+    "sliders": {
+      "frame": {
+        "position": [
+          8.0,
+          32.0
+        ],
+        "size": [
+          312.0,
+          28.0
+        ]
+      },
+      "crop_box": [
+        32,
+        128,
+        1280,
+        240
+      ],
+      "metadata": {
+        "hwnd": 22938088,
+        "pid": 52128,
+        "title": "(2016, 1164) Minecraft",
+        "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+        "created": 134356512657129515,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "cursor": [
+          1914,
+          1047
+        ],
+        "timestamp": 1791177774.579967,
+        "output": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\sliders.png",
+        "sha256": "fdd199523c7d5ae97ed3b4c6d23feb89e48614bcdb0434049966d7335931cdfe"
+      }
+    },
+    "sections": {
+      "frame": {
+        "position": [
+          168.0,
+          68.5
+        ],
+        "size": [
+          336.0,
+          34.5
+        ]
+      },
+      "crop_box": [
+        672,
+        274,
+        2016,
+        412
+      ],
+      "metadata": {
+        "hwnd": 22938088,
+        "pid": 52128,
+        "title": "(2016, 1164) Minecraft",
+        "exe": "D:\\MCStudioDownload\\game\\MinecraftPE_Netease\\3.10.0.420447\\Minecraft.Windows.exe",
+        "created": 134356512657129515,
+        "client": [
+          272,
+          235,
+          2016,
+          1164
+        ],
+        "cursor": [
+          1914,
+          1047
+        ],
+        "timestamp": 1791177777.5248098,
+        "output": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\sections.png",
+        "sha256": "635b1d5863916a32613635077eae4e7e5b3b27cf4ecf293b47c18249f8a95fec"
+      },
+      "reference_scope": "Boundary colors and one-pixel bands only; no full-page fidelity claim"
+    }
+  },
+  "thumb_comparison": {
+    "reference": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\thumb-bottom-reference.png",
+    "actual": "D:\\Happy2018newの个人文件\\GitHub\\pyreact-ore-ui\\.runtime\\component-boundaries\\acceptance\\thumb-bottom.png",
+    "reference_size": [
+      24,
+      28
+    ],
+    "actual_native_size": [
+      24,
+      28
+    ],
+    "scale": 1.0,
+    "native_exact": true,
+    "tolerance": 0,
+    "alpha_background": null,
+    "mean_channel_error": 0.0,
+    "max_channel_error": 0,
+    "different_fraction": 0.0,
+    "compared_pixels": 672,
+    "changed_bounds": null,
+    "exact": true,
+    "within_tolerance": true,
+    "resampled": false,
+    "alignment": "fixed crop coordinates; no shift search"
+  },
+  "checks": [
+    {
+      "name": "players: complete reference dimensions",
+      "passed": true
+    },
+    {
+      "name": "players: first, middle and final row borders",
+      "passed": true
+    },
+    {
+      "name": "packs: complete reference dimensions",
+      "passed": true
+    },
+    {
+      "name": "packs: first, middle and final row borders",
+      "passed": true
+    },
+    {
+      "name": "expanded: complete reference dimensions",
+      "passed": true
+    },
+    {
+      "name": "expanded: first, middle and final row borders",
+      "passed": true
+    },
+    {
+      "name": "players: joined profile/options bevels have no black seam",
+      "passed": true
+    },
+    {
+      "name": "packs: expanded gap is six logical pixels",
+      "passed": true
+    },
+    {
+      "name": "close: all 8448 default pixels match",
+      "passed": true
+    },
+    {
+      "name": "players: full control residual below 0.04",
+      "passed": true
+    },
+    {
+      "name": "packs: full control residual below 0.045",
+      "passed": true
+    },
+    {
+      "name": "expanded: full control residual below 0.065",
+      "passed": true
+    },
+    {
+      "name": "player real click dispatches only profile",
+      "passed": true
+    },
+    {
+      "name": "player hover preserves shared horizontal border: profile",
+      "passed": true
+    },
+    {
+      "name": "player hover changes only its own cell: profile",
+      "passed": true
+    },
+    {
+      "name": "player real click dispatches only options",
+      "passed": true
+    },
+    {
+      "name": "player hover preserves shared horizontal border: options",
+      "passed": true
+    },
+    {
+      "name": "player hover changes only its own cell: options",
+      "passed": true
+    },
+    {
+      "name": "pack details keeps independent activation",
+      "passed": true
+    },
+    {
+      "name": "expanded row reserves description plus six-pixel gap",
+      "passed": true
+    },
+    {
+      "name": "pack action keeps independent activation",
+      "passed": true
+    },
+    {
+      "name": "expanded row reserves description plus six-pixel gap",
+      "passed": true
+    },
+    {
+      "name": "disabled pack blocks both actions",
+      "passed": true
+    },
+    {
+      "name": "disabled pack stays collapsed",
+      "passed": true
+    },
+    {
+      "name": "framed close responds once",
+      "passed": true
+    },
+    {
+      "name": "label 5 is centered under native tick",
+      "passed": true
+    },
+    {
+      "name": "label 6 is centered under native tick",
+      "passed": true
+    },
+    {
+      "name": "label 7 is centered under native tick",
+      "passed": true
+    },
+    {
+      "name": "labeled slider still snaps to 0",
+      "passed": true
+    },
+    {
+      "name": "labeled slider still snaps to 1",
+      "passed": true
+    },
+    {
+      "name": "labeled slider still snaps to 2",
+      "passed": true
+    },
+    {
+      "name": "labeled slider still snaps to 3",
+      "passed": true
+    },
+    {
+      "name": "labeled slider still snaps to 4",
+      "passed": true
+    },
+    {
+      "name": "section starts with only one light line",
+      "passed": true
+    },
+    {
+      "name": "section internal separator is dark then light",
+      "passed": true
+    },
+    {
+      "name": "section ends with only one dark line",
+      "passed": true
+    },
+    {
+      "name": "next heading starts after blank space",
+      "passed": true
+    },
+    {
+      "name": "body font has independent width and explicit line height",
+      "passed": true
+    },
+    {
+      "name": "section preserves caller element, key and ref",
+      "passed": true
+    },
+    {
+      "name": "right pane top shadow blends over light section edge",
+      "passed": true
+    },
+    {
+      "name": "thumb bevel, black edge and full-width translucent shadow match",
+      "passed": true
+    },
+    {
+      "name": "right shadow blends over scrolling control content",
+      "passed": true
+    },
+    {
+      "name": "public friends close dismisses actual overlay",
+      "passed": true
+    },
+    {
+      "name": "verified native input mode is touch",
+      "passed": true
+    },
+    {
+      "name": "touch player options dispatch once",
+      "passed": true
+    },
+    {
+      "name": "touch pack expansion and activation remain independent",
+      "passed": true
+    },
+    {
+      "name": "touch framed close dispatches once",
+      "passed": true
+    },
+    {
+      "name": "touch labeled slider still snaps",
+      "passed": true
+    },
+    {
+      "name": "verified native input mode is mouse",
+      "passed": true
+    },
+    {
+      "name": "joined rows preserve Unicode and ASCII keys",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "mode_transitions": [
+    {
+      "requested_touch": true,
+      "keyboard_changed": null,
+      "method": "GameComponentClient.SimulateTouchWithMouse",
+      "actual": {
+        "mode": 1,
+        "simulated": true,
+        "touch": true
+      }
+    },
+    {
+      "requested_touch": false,
+      "keyboard_changed": null,
+      "method": "GameComponentClient.SimulateTouchWithMouse",
+      "actual": {
+        "mode": 0,
+        "simulated": false,
+        "touch": false
+      }
+    }
+  ],
+  "f11_automation_verified": false,
+  "hardware_touch_tested": false,
+  "input_mode_note": "Automated F11 dispatch did not reliably change mode. Touch input was tested after the documented SimulateTouchWithMouse API and a blank-background tap, with both native readbacks confirmed. Mouse mode was restored."
+}

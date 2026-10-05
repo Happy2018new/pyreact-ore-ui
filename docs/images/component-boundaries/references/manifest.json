@@ -1,0 +1,61 @@
+{
+  "source": "User-supplied international Bedrock crops, 2026-10-05",
+  "physical_pixels_per_logical_pixel": 4,
+  "references": [
+    {
+      "file": "players.png",
+      "attachment": "codex-clipboard-2471aad5-0102-46d3-aaba-6e36670ded8d.png",
+      "sha256": "4134f9e8046ef7e993372afea3327d913d97dc2464f1f9f3864e3983d3a3775a",
+      "size": [
+        640,
+        564
+      ]
+    },
+    {
+      "file": "packs.png",
+      "attachment": "codex-clipboard-ec974771-6522-493e-8927-b679817a9ac9.png",
+      "sha256": "f38a9753ddb3277c8f61a297a32de9056999a4f3d7e7de99ddf7bcc29a99f58e",
+      "size": [
+        1301,
+        660
+      ]
+    },
+    {
+      "file": "expanded.png",
+      "attachment": "codex-clipboard-0541fbc5-f8fa-4363-8507-28664031bcfb.png",
+      "sha256": "4b9cf20c05ebc06fed80b709e23a5cc7bee2cf8425a7081ef2fb75bcc00a59b6",
+      "size": [
+        1301,
+        444
+      ]
+    },
+    {
+      "file": "close.png",
+      "attachment": "codex-clipboard-fe2c221d-e927-4d41-86ba-40096190b2dc.png",
+      "sha256": "a538b8f797e601db7a37892917283f685c44fcfb93f50678250ae21d2a475aac",
+      "size": [
+        88,
+        96
+      ]
+    },
+    {
+      "file": "sections.png",
+      "attachment": "codex-clipboard-a15fafff-b16d-4aa9-adc6-b29331270d26.png",
+      "sha256": "2fae8e2235be5e1c98f00663637a2810d1c343b73e99c619e6c3bc749156bad8",
+      "size": [
+        1343,
+        1043
+      ]
+    },
+    {
+      "file": "scroll-shadow.png",
+      "attachment": "codex-clipboard-1b311bcc-6848-478b-b940-92222685a170.png",
+      "sha256": "7d50c2fc051fe8dc64668fc10a2211fd0f2e862d6de6d3adb133d311e5ba78b2",
+      "size": [
+        24,
+        121
+      ]
+    }
+  ],
+  "fixture_content": "Only avatar and pack-thumbnail interiors are copied into test-only resources. Component borders, labels and icons are rendered by the public library."
+}
