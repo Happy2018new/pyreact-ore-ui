@@ -68,8 +68,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128100.6279552,
-        "full_capture_sha256": "0169e60ec0920706ae8cbd653039774573c7a6efd90e39b1a74b554850d78469"
+        "timestamp": 1791162966.8490696,
+        "full_capture_sha256": "a2ef63fc78dbc89294afbb286e36e267269afe3bb84a0b3538abe39f6f678c4f"
       },
       "provenance": {
         "capture": "audit-segment-selected-default.png",
@@ -175,8 +175,8 @@
           240,
           220
         ],
-        "timestamp": 1791128101.6462293,
-        "full_capture_sha256": "0169e60ec0920706ae8cbd653039774573c7a6efd90e39b1a74b554850d78469"
+        "timestamp": 1791162967.9034212,
+        "full_capture_sha256": "c67093055423313b7c2a8978a16f1244f215d2764958aac39e5ea8d21d13d38c"
       },
       "provenance": {
         "capture": "audit-segment-selected-hover.png",
@@ -282,8 +282,8 @@
           656,
           220
         ],
-        "timestamp": 1791128102.851362,
-        "full_capture_sha256": "d08fdfbd9773d23099cdacf98e4199244b223077157ee56cdfb5eed570e1b95d"
+        "timestamp": 1791162968.9611294,
+        "full_capture_sha256": "559d94b1a79d297d9db3c4f4a266bb210dcd636f4ceb2f018628c5e47d5416d3"
       },
       "provenance": {
         "capture": "audit-segment-unselected-hover.png",
@@ -389,8 +389,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128105.8629096,
-        "full_capture_sha256": "7e5f3d3dad50712a418429273ddc19c10afa19f81b6c0c84cfe54c3297589399"
+        "timestamp": 1791162971.998724,
+        "full_capture_sha256": "e878c7a3a29ee65eb01b72de1cfc0f3e3e9bf6aacd639cc9e374130aa94b53d2"
       },
       "provenance": {
         "capture": "field-final-default.png",
@@ -496,8 +496,8 @@
           232,
           208
         ],
-        "timestamp": 1791128106.8941138,
-        "full_capture_sha256": "7e5f3d3dad50712a418429273ddc19c10afa19f81b6c0c84cfe54c3297589399"
+        "timestamp": 1791162973.044819,
+        "full_capture_sha256": "3d674a776837680d84d764cc1f1b9446c83afd158a469d55e0b5d86a5fd42cd6"
       },
       "provenance": {
         "capture": "field-final-hover.png",
@@ -603,8 +603,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128109.964797,
-        "full_capture_sha256": "acf2ac9bd1889b47e8d4070f63e96f9f2887660d8a45274fe429c17f8644c215"
+        "timestamp": 1791162976.223823,
+        "full_capture_sha256": "81c7c6686d6e4b0b32e1727289a4d0d8232aebc1d5bfa6a1a50e098804001319"
       },
       "provenance": {
         "capture": "switch-on-final-default.png",
@@ -710,8 +710,8 @@
           92,
           192
         ],
-        "timestamp": 1791128110.9571085,
-        "full_capture_sha256": "c31efc233a8bb7e3e51573e577e1685ddd38fa711861cd0e44a648d2a1a8e9f8"
+        "timestamp": 1791162977.2748036,
+        "full_capture_sha256": "b33819853b1d8399db153e024a4dbf5a77e6f7b2240eca9326b337046455aa4e"
       },
       "provenance": {
         "capture": "switch-on-final-hover.png",
@@ -817,8 +817,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128113.9978244,
-        "full_capture_sha256": "4d96e4fa4832f37d8dcf9b328a0bdac0d4f778f723f9325f8901e81c8bf2439e"
+        "timestamp": 1791162980.2960196,
+        "full_capture_sha256": "c033eef6f483b260b67e17905d2fbf4afcf30a82985781ba2fd1ac412be73733"
       },
       "provenance": {
         "capture": "switch-off-final-default.png",
@@ -924,8 +924,8 @@
           92,
           192
         ],
-        "timestamp": 1791128115.0066688,
-        "full_capture_sha256": "820ac153229e5d38bd3ae770d3a8744926e4006d64f6869f4dbcafd321a5aa00"
+        "timestamp": 1791162981.318075,
+        "full_capture_sha256": "73440b7eb0ac3084ab2a655ce0e48b2bd923b913248918a9607c7c42102987ad"
       },
       "provenance": {
         "capture": "switch-off-final-hover.png",
@@ -1031,8 +1031,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128118.0616474,
-        "full_capture_sha256": "667a785b3d0e7ae426b589eadab22b3fca95c96d7bf8700f6906f72b79d3b8a4"
+        "timestamp": 1791162984.444299,
+        "full_capture_sha256": "51fef3d652585443bb00f5cc92d00c9d4f2d27f72e4f53234b9dea743a21b588"
       },
       "provenance": {
         "capture": "audit-audio-selected-default.png",
@@ -1138,8 +1138,8 @@
           352,
           500
         ],
-        "timestamp": 1791128119.12976,
-        "full_capture_sha256": "667a785b3d0e7ae426b589eadab22b3fca95c96d7bf8700f6906f72b79d3b8a4"
+        "timestamp": 1791162985.5200386,
+        "full_capture_sha256": "7e8fec92208bd7cf213aa662d2539c0a3d5fb9a3834f018f537b9829680ba886"
       },
       "provenance": {
         "capture": "audit-audio-selected-hover.png",
@@ -1245,8 +1245,8 @@
           352,
           404
         ],
-        "timestamp": 1791128120.1790016,
-        "full_capture_sha256": "26897d21686d8fd5b331cb035d8fa81c035beddd70eaa152c0b862f5a6771afe"
+        "timestamp": 1791162986.629306,
+        "full_capture_sha256": "560ae3807351afe64cb06744d5fbc239c7619831044f9ca0695392cabe87706d"
       },
       "provenance": {
         "capture": "audit-audio-hover-video-hover.png",
@@ -1352,8 +1352,8 @@
           352,
           595
         ],
-        "timestamp": 1791128121.2199295,
-        "full_capture_sha256": "6d2123f03ee0187a34266b9c5b4dad64b6af03b9808e81252ca07bdcd38ad5c2"
+        "timestamp": 1791162987.7247658,
+        "full_capture_sha256": "dcea83002b48fc02a35fb7f330830fff7fbc1a18cdc2a41bbd7573c2eb301e52"
       },
       "provenance": {
         "capture": "audit-audio-hover-account-hover.png",
@@ -1459,8 +1459,8 @@
           352,
           308
         ],
-        "timestamp": 1791128122.263396,
-        "full_capture_sha256": "734db1fcc33877e3907139320f02e81a51e7b1a0c36803fe05f724c5f33ea4a5"
+        "timestamp": 1791162988.81025,
+        "full_capture_sha256": "7fea77aa934760ae3f77b5462bf8d50de67e8ce2951426d49ddba378eac2dcf4"
       },
       "provenance": {
         "capture": "audit-audio-hover-first-hover.png",
@@ -1566,8 +1566,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128125.3522785,
-        "full_capture_sha256": "117ba4159a920aad629648dc404cfebbca04f9f40c7fef10c0e6d2d0a5ab6fcb"
+        "timestamp": 1791162991.7898047,
+        "full_capture_sha256": "33ccbe3a577ec3af1ef88b7b22292080175d35cbfddb6d3fe3f6f20b147ba4a9"
       },
       "provenance": {
         "capture": "disabled-slider-fixed-default.png",
@@ -1673,8 +1673,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128128.3641777,
-        "full_capture_sha256": "0e5294ade70dc61cf991540fdf9dbb28994decb75a7142f85e3bd2a7c653161b"
+        "timestamp": 1791162994.8208325,
+        "full_capture_sha256": "a1682d66a59a001036d90ada153b8eb31c78f33e882a18be619b73a295d0d3e7"
       },
       "provenance": {
         "capture": "round5-pack-tabs-default.png",
@@ -1780,8 +1780,8 @@
           356,
           208
         ],
-        "timestamp": 1791128129.4304156,
-        "full_capture_sha256": "5c5a4bb4f668b3d3d2f9728ec380264ffc44d1cf24c84109b83064ca4621f477"
+        "timestamp": 1791162995.876344,
+        "full_capture_sha256": "b37a89942bff34aca8fe6126b8537ecec0a8c278abcbf68cc15c6ecdd6efebb6"
       },
       "provenance": {
         "capture": "round5-pack-tabs-hover.png",
@@ -1887,8 +1887,8 @@
           1004,
           208
         ],
-        "timestamp": 1791128130.4597442,
-        "full_capture_sha256": "0e5294ade70dc61cf991540fdf9dbb28994decb75a7142f85e3bd2a7c653161b"
+        "timestamp": 1791162996.9404235,
+        "full_capture_sha256": "88cfc85ee53485672c140b2135f54886dcf8916e7528323487f1307e3800cebf"
       },
       "provenance": {
         "capture": "round5-pack-tabs-selected-hover.png",
@@ -1994,8 +1994,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128133.4443107,
-        "full_capture_sha256": "c2829c5d2912e5d84302c706a8a81026bb7e24e9da7ddff94b752b7c8c2adf33"
+        "timestamp": 1791162999.9656882,
+        "full_capture_sha256": "9e6a4573ca137777354ee5976cf0d282c6752a6927e2a3f7ba1352cb40935cb3"
       },
       "provenance": {
         "capture": "audit-friends2.png",
@@ -2047,13 +2047,13 @@
       "native_exact": false,
       "exact": false,
       "within_tolerance": false,
-      "mean_channel_error": 2.087769879660217,
+      "mean_channel_error": 1.415277941639138,
       "max_channel_error": 206,
-      "different_fraction": 0.018943192543652666,
+      "different_fraction": 0.016332881075979234,
       "compared_pixels": 135616,
       "changed_bounds": [
         42,
-        35,
+        36,
         226,
         68
       ],
@@ -2101,8 +2101,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128136.4788654,
-        "full_capture_sha256": "a88422c3c88144df8b54faadeae93a894a508d5d41e97a4b0d0c03024f8117ab"
+        "timestamp": 1791163003.0384693,
+        "full_capture_sha256": "38ad31cbb1d0374648fe54d5466faef9bc076cd01667efcd45de3344dbbe640c"
       },
       "provenance": {
         "capture": "round5-pack-group-default.png",
@@ -2134,19 +2134,19 @@
         },
         "-actual.png": {
           "path": "docs/images/reference/audit/pack-group-default-actual.png",
-          "sha256": "3b2d71c5cbf6d1f0bad4293f8ac71e90e588fee49ac9efd096f125db541276d3"
+          "sha256": "177d49bf1cf8470223e71772003fa14e75396b9576e7050d85c02959ebc729fc"
         },
         ".pair.png": {
           "path": "docs/images/reference/audit/pack-group-default.pair.png",
-          "sha256": "0e446fda95c44eadd702a555e21d47d8b10e706861cd4162044e2258f5ac2c27"
+          "sha256": "f01c6772b50b4446493d390fc6cee87a1ae75de94aa19b6250516303dc512277"
         },
         ".diff.png": {
           "path": "docs/images/reference/audit/pack-group-default.diff.png",
-          "sha256": "a0a3286960ce58432db1f7808859e297a20c8b96defd1400b896821a04bb7afc"
+          "sha256": "7cc5494d9b57e2dfd0a9e45d4e1590a6858baf6310ab8df29cd411f4b5f46769"
         },
         ".overlay.png": {
           "path": "docs/images/reference/audit/pack-group-default.overlay.png",
-          "sha256": "6ab3db7fb3fdbb642ac51f49fb83e9665b7e38661f06eb755a60e84d7bba4cab"
+          "sha256": "fabf1a70768874c0336b18c6cb0a4baa450add20d42c60f4120fd67624b0f57a"
         }
       }
     },
@@ -2154,13 +2154,13 @@
       "native_exact": false,
       "exact": false,
       "within_tolerance": false,
-      "mean_channel_error": 1.818170422369042,
+      "mean_channel_error": 1.230491485763725,
       "max_channel_error": 183,
-      "different_fraction": 0.018943192543652666,
+      "different_fraction": 0.016318133553563003,
       "compared_pixels": 135616,
       "changed_bounds": [
         42,
-        35,
+        36,
         226,
         68
       ],
@@ -2208,8 +2208,8 @@
           680,
           208
         ],
-        "timestamp": 1791128137.4878795,
-        "full_capture_sha256": "a508a3ea0cd675e92ac7daa77c85013d9d60df5acc658fe0e7e79b556c394419"
+        "timestamp": 1791163004.0554874,
+        "full_capture_sha256": "db5e4f034851585eb2e07b6dc5dc674bdb915923283510d2e7dba54a93023a7e"
       },
       "provenance": {
         "capture": "round5-pack-group-hover.png",
@@ -2241,19 +2241,19 @@
         },
         "-actual.png": {
           "path": "docs/images/reference/audit/pack-group-hover-actual.png",
-          "sha256": "20a3463703aeb6e237ae85053b2824c45580bbeb4503398538dd0528739d5814"
+          "sha256": "3316901272b6784d34654459750e3891271670a452b2012980b97eeaa7f6731e"
         },
         ".pair.png": {
           "path": "docs/images/reference/audit/pack-group-hover.pair.png",
-          "sha256": "ba5b2e60db764ca211a71873d576c1430a1c5b7b18898f5bd0103b7570cb420a"
+          "sha256": "66e61544eecb56e773df8efee23b397e2a5845d0afff96a834ea1891ad8c2077"
         },
         ".diff.png": {
           "path": "docs/images/reference/audit/pack-group-hover.diff.png",
-          "sha256": "fc34819afde9f0726ddeaacc5d413212eed8dcf98b07c98b5a506458f0ae56b8"
+          "sha256": "dfd903d726c5e20c56ea97d7aa1e0afffbd636c1acba9d386c1e8bc6b221c18b"
         },
         ".overlay.png": {
           "path": "docs/images/reference/audit/pack-group-hover.overlay.png",
-          "sha256": "16b3702ebab1006feea30c9602e549ae485e89e619e84b5974bd91d9e4408933"
+          "sha256": "eca664447128dab5e7a4799d4af78fe8e5f764f53b7049f7b512a897b73ed2e5"
         }
       }
     },
@@ -2315,8 +2315,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128140.553826,
-        "full_capture_sha256": "9b4795249776380bb544416571ae4a236fce1faf7a7062b2fd630d1c1ef93180"
+        "timestamp": 1791163007.0858245,
+        "full_capture_sha256": "2df2b54437dbb96f3f46b14998ed85bd4ffe28942ae12ed6d79a949442834977"
       },
       "provenance": {
         "capture": "round5-search-default.png",
@@ -2422,8 +2422,8 @@
           352,
           208
         ],
-        "timestamp": 1791128141.5768995,
-        "full_capture_sha256": "9b4795249776380bb544416571ae4a236fce1faf7a7062b2fd630d1c1ef93180"
+        "timestamp": 1791163008.103009,
+        "full_capture_sha256": "026cd8394f9494aa8b2edf466c17b1d492cf91e673259104b1b672ee039de46a"
       },
       "provenance": {
         "capture": "round5-search-hover.png",
@@ -2529,8 +2529,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128144.495231,
-        "full_capture_sha256": "e10894558098b46112458a5264c124ae4081e296de9b03e12556227d52fca97f"
+        "timestamp": 1791163011.108502,
+        "full_capture_sha256": "e83d36007e369b99bfd9e83c32c17c6a9a8b5594a51783cb1db16fbf315a9735"
       },
       "provenance": {
         "capture": "audit-friends2.png",
@@ -2636,8 +2636,8 @@
           1814,
           234
         ],
-        "timestamp": 1791128147.4820461,
-        "full_capture_sha256": "a3ea20409b9973ced5f93d2f29d2874e8e9f9b54238e0822e0f5a423d526f7f0"
+        "timestamp": 1791163014.0292518,
+        "full_capture_sha256": "e4ae674ca97c6d6368bb50098815a443a0a074cdbc26f90b4259b63afd28315a"
       },
       "provenance": {
         "capture": "audit-action-first-default.png",
@@ -2743,8 +2743,8 @@
           772,
           432
         ],
-        "timestamp": 1791128148.624915,
-        "full_capture_sha256": "b07e0e69e4478568e9d06be9b66412fa62b9a66667e87839d4b28fce558b90af"
+        "timestamp": 1791163015.158825,
+        "full_capture_sha256": "496ff00463865fa9923d998717a2658d4dad03afbab94a5e101ea1386cf8ee93"
       },
       "provenance": {
         "capture": "audit-action-first-hover.png",
@@ -3673,7 +3673,7 @@
     "oreui/_text.py": "8c5c55f4064c3a0c93eecea7474236f0e9f66928a79a1b19211914a6f78df37b",
     "oreui/assets.py": "d35599c2ae5710ddbca86b9ed36651c763570faec90da6a42ab7b306f237e94c",
     "oreui/components.py": "7b58a3e9bd4949c97212c407df4e3a67db35acda02aeb0f55949944d871fcc89",
-    "oreui/packs.py": "c7efda2d7ea36c23cd2d75fc84cf43fcbca2b5b5cfc230367f215d62620147e9",
+    "oreui/packs.py": "bf1d0c082b409430d04d90c391f0b9e2277aef906ed6d9be3e0350d8743a1976",
     "oreui/settings.py": "20a465dd93932f7094100cf85e944330baf8d846cf37a7921141ab75cc62172a",
     "oreui/social.py": "f498b4c154e20715ccb64f5a4e860c647b44859a2b135b712162b9dfd1ad4873",
     "oreui/theme.py": "77c0deed0c8799bcabd1da337d3d5e62272005792ebedd45c9ad93a6e1b23e35",
