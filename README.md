@@ -97,7 +97,7 @@ def SettingsPage():
 
 ## 示例与验证
 
-`examples/demo/` 是带 ModSDK 入口的示例源码。默认打开 `settings_playground.py` 的设置测试页，布局使用公共 `OreHeader`、`OreSettingsScreen`、`OreNavigationItem` 和 `OreSettingsRow`，控件参考国际版 Bedrock 的原尺寸采集。包含 **13 个分区、40 个公共组件**：通用、高级、多人游戏、按钮、输入框、下拉菜单、滑块、导航、资源包、消息、弹窗、资源图鉴、好友。
+`examples/demo/` 是带 ModSDK 入口的示例源码。默认打开 `settings_playground.py` 的设置测试页，布局使用公共 `OreHeader`、`OreSettingsScreen`、`OreNavigationItem` 和 `OreSettingsRow`，控件参考国际版 Bedrock 的原尺寸采集。包含通用、高级、多人游戏、按钮、输入框、下拉菜单、滑块、导航、资源包、消息、弹窗、资源图鉴、好友及设置组件等分区。
 
 五种按钮配色、分段选项、双线设置行、带图标页签和完整图像预览都有交互示例。输入和菜单包含空值、禁用、受控与非受控模式，滑块包含连续值和五档整数值。资源包可以分别展开、激活和停用，好友抽屉包含搜索、在线与离线分组及玩家选项。资源图鉴支持检索和翻页，可浏览全部 589 项导入资产与补充参考图标。窄屏改用抽屉目录。旧版图鉴保留为 `LegacyOrePlayground`，其回归记录不代表新版设置页已经通过。
 
@@ -149,3 +149,5 @@ python -X utf8 tools/package_library.py --assets all
 原创组件、适配器、工具与示例代码采用 [MIT License](LICENSE)。导入的 Minecraft/OreUI 资产保留相应权利人的权利；源包没有附开源/再分发许可，本库 MIT 不覆盖这些资产。PyreactMC 依赖适用其自定义 LICENSE/NOTICE，开发技能适用其各自许可。范围、归属和源记录见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 本项目使用 PyreactMC 客户端 UI 框架。
+
+关闭当前 UI 后，**F8** 打开组件测试页，**F9** 打开独立设置示例。设置示例复用公共组件，并使用有上限的页面缓存减少快速切页时的重建。示例交互不修改真实游戏偏好。新增 API 和使用约束见 [API.md](docs/API.md)，实测数据见 [导航性能记录](docs/NAVIGATION_PERFORMANCE.md)。

@@ -1,0 +1,780 @@
+{
+  "date": "2026-10-06",
+  "client": "NetEase 3.10.0.420447",
+  "client_pixels": [
+    2020,
+    1156
+  ],
+  "metric": "Python NavigatorScreen.Update intervals, not GPU presentation times",
+  "runs": {
+    "baseline-valid": {
+      "pages": [
+        "keyboard",
+        "controller",
+        "touch"
+      ],
+      "rate_hz": 5.0,
+      "cycles": 3,
+      "actual_click_rate_hz": 5.014070945468857,
+      "update_count": 133,
+      "touch_up_count": 13,
+      "layout_count": 10,
+      "matching_commits": 10,
+      "missing_callbacks": 0,
+      "superseded_clicks": 3,
+      "commit_delays_ms": [
+        325.66869999999426,
+        187.0766000000117,
+        205.623600000024,
+        230.25930000000017,
+        315.25550000000635,
+        198.83740000000216,
+        197.2942999999816,
+        460.16700000001265,
+        223.29249999998524,
+        287.8008000000136
+      ],
+      "update_interval_p50_ms": 1.7630999999767027,
+      "update_interval_p95_ms": 208.9120000000264,
+      "max_update_interval_ms": 465.8665000000042,
+      "clicks": [
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 325.66869999999426
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 187.0766000000117
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 205.623600000024
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 230.25930000000017
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 315.25550000000635
+        },
+        {
+          "page": "controller",
+          "status": "superseded_before_update",
+          "commit_delay_ms": null
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 198.83740000000216
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 197.2942999999816
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 460.16700000001265
+        },
+        {
+          "page": "controller",
+          "status": "superseded_before_update",
+          "commit_delay_ms": null
+        },
+        {
+          "page": "touch",
+          "status": "superseded_before_update",
+          "commit_delay_ms": null
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 223.29249999998524
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 287.8008000000136
+        }
+      ],
+      "layout_durations_ms": [
+        195.19040000000132,
+        110.40020000001505,
+        139.34620000000564,
+        141.71519999999305,
+        200.62229999999204,
+        137.34270000000492,
+        121.92930000000501,
+        213.90339999999242,
+        138.94030000000157,
+        177.8026000000068
+      ]
+    },
+    "final-5hz": {
+      "pages": [
+        "keyboard",
+        "controller",
+        "touch"
+      ],
+      "rate_hz": 5.0,
+      "cycles": 4,
+      "actual_click_rate_hz": 5.007083301686177,
+      "update_count": 147,
+      "touch_up_count": 17,
+      "layout_count": 3,
+      "matching_commits": 17,
+      "missing_callbacks": 0,
+      "superseded_clicks": 0,
+      "commit_delays_ms": [
+        250.30050000000003,
+        173.96390000000005,
+        150.7562,
+        25.591700000000106,
+        24.197100000000084,
+        18.370599999999904,
+        17.52060000000011,
+        18.715499999999885,
+        21.289299999999844,
+        18.806300000000054,
+        18.56560000000007,
+        19.328400000000023,
+        23.449700000000018,
+        17.70499999999986,
+        17.79529999999996,
+        21.63830000000022,
+        23.406099999999874
+      ],
+      "update_interval_p50_ms": 32.93630000000025,
+      "update_interval_p95_ms": 41.77110000000006,
+      "max_update_interval_ms": 272.8534,
+      "clicks": [
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 250.30050000000003
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 173.96390000000005
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 150.7562
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 25.591700000000106
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 24.197100000000084
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 18.370599999999904
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 17.52060000000011
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 18.715499999999885
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 21.289299999999844
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 18.806300000000054
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 18.56560000000007
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 19.328400000000023
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 23.449700000000018
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 17.70499999999986
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 17.79529999999996
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 21.63830000000022
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 23.406099999999874
+        }
+      ],
+      "layout_durations_ms": [
+        162.75079999999997,
+        112.64070000000004,
+        102.27949999999986
+      ]
+    },
+    "final-warm-10hz": {
+      "pages": [
+        "keyboard",
+        "controller",
+        "touch"
+      ],
+      "rate_hz": 10.0,
+      "cycles": 6,
+      "actual_click_rate_hz": 9.947389912680633,
+      "update_count": 105,
+      "touch_up_count": 25,
+      "layout_count": 0,
+      "matching_commits": 25,
+      "missing_callbacks": 0,
+      "superseded_clicks": 0,
+      "commit_delays_ms": [
+        35.41820000000939,
+        31.358900000000745,
+        35.65779999999563,
+        30.290900000011334,
+        20.665699999995013,
+        27.142800000007128,
+        39.10890000000222,
+        34.335100000006946,
+        23.724400000006085,
+        31.304199999993898,
+        19.30860000000223,
+        31.533199999998374,
+        22.594200000000342,
+        20.03919999999937,
+        22.13589999999499,
+        18.854799999999727,
+        25.310300000001007,
+        32.84600000000637,
+        23.049700000001394,
+        19.507400000009056,
+        21.88420000000235,
+        22.295600000006743,
+        20.675900000000524,
+        19.721500000002834,
+        24.000499999999647
+      ],
+      "update_interval_p50_ms": 33.25309999999604,
+      "update_interval_p95_ms": 45.409499999991,
+      "max_update_interval_ms": 54.20870000000377,
+      "clicks": [
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 35.41820000000939
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 31.358900000000745
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 35.65779999999563
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 30.290900000011334
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 20.665699999995013
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 27.142800000007128
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 39.10890000000222
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 34.335100000006946
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 23.724400000006085
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 31.304199999993898
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 19.30860000000223
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 31.533199999998374
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 22.594200000000342
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 20.03919999999937
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 22.13589999999499
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 18.854799999999727
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 25.310300000001007
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 32.84600000000637
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 23.049700000001394
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 19.507400000009056
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 21.88420000000235
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 22.295600000006743
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 20.675900000000524
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 19.721500000002834
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 24.000499999999647
+        }
+      ],
+      "layout_durations_ms": [],
+      "glint_starts": 25,
+      "glint_frame_observations": 0
+    },
+    "final-six-pages": {
+      "pages": [
+        "accessibility",
+        "keyboard",
+        "controller",
+        "touch",
+        "general",
+        "video"
+      ],
+      "rate_hz": 10.0,
+      "cycles": 3,
+      "actual_click_rate_hz": 9.94318925669118,
+      "update_count": 135,
+      "touch_up_count": 31,
+      "layout_count": 0,
+      "matching_commits": 31,
+      "missing_callbacks": 0,
+      "superseded_clicks": 0,
+      "commit_delays_ms": [
+        26.841999999999977,
+        22.223300000000002,
+        18.373299999999983,
+        30.76230000000002,
+        16.235699999999966,
+        18.37080000000002,
+        16.344799999999935,
+        17.019899999999865,
+        17.44279999999998,
+        19.687699999999975,
+        20.356700000000004,
+        20.415500000000144,
+        17.02120000000007,
+        17.56340000000001,
+        16.61810000000008,
+        19.579299999999968,
+        16.886499999999806,
+        18.33449999999992,
+        16.6179999999998,
+        20.24399999999993,
+        21.946599999999705,
+        20.269900000000174,
+        17.79099999999989,
+        29.446699999999826,
+        17.76069999999974,
+        32.90990000000038,
+        17.18099999999989,
+        27.51920000000041,
+        31.736500000000056,
+        31.31750000000011,
+        28.883999999999688
+      ],
+      "update_interval_p50_ms": 33.6192999999998,
+      "update_interval_p95_ms": 45.02649999999986,
+      "max_update_interval_ms": 50.964299999999966,
+      "clicks": [
+        {
+          "page": "accessibility",
+          "status": "committed",
+          "commit_delay_ms": 26.841999999999977
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 22.223300000000002
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 18.373299999999983
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 30.76230000000002
+        },
+        {
+          "page": "general",
+          "status": "committed",
+          "commit_delay_ms": 16.235699999999966
+        },
+        {
+          "page": "video",
+          "status": "committed",
+          "commit_delay_ms": 18.37080000000002
+        },
+        {
+          "page": "general",
+          "status": "committed",
+          "commit_delay_ms": 16.344799999999935
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 17.019899999999865
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 17.44279999999998
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 19.687699999999975
+        },
+        {
+          "page": "accessibility",
+          "status": "committed",
+          "commit_delay_ms": 20.356700000000004
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 20.415500000000144
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 17.02120000000007
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 17.56340000000001
+        },
+        {
+          "page": "general",
+          "status": "committed",
+          "commit_delay_ms": 16.61810000000008
+        },
+        {
+          "page": "video",
+          "status": "committed",
+          "commit_delay_ms": 19.579299999999968
+        },
+        {
+          "page": "general",
+          "status": "committed",
+          "commit_delay_ms": 16.886499999999806
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 18.33449999999992
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 16.6179999999998
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 20.24399999999993
+        },
+        {
+          "page": "accessibility",
+          "status": "committed",
+          "commit_delay_ms": 21.946599999999705
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 20.269900000000174
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 17.79099999999989
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 29.446699999999826
+        },
+        {
+          "page": "general",
+          "status": "committed",
+          "commit_delay_ms": 17.76069999999974
+        },
+        {
+          "page": "video",
+          "status": "committed",
+          "commit_delay_ms": 32.90990000000038
+        },
+        {
+          "page": "general",
+          "status": "committed",
+          "commit_delay_ms": 17.18099999999989
+        },
+        {
+          "page": "touch",
+          "status": "committed",
+          "commit_delay_ms": 27.51920000000041
+        },
+        {
+          "page": "controller",
+          "status": "committed",
+          "commit_delay_ms": 31.736500000000056
+        },
+        {
+          "page": "keyboard",
+          "status": "committed",
+          "commit_delay_ms": 31.31750000000011
+        },
+        {
+          "page": "accessibility",
+          "status": "committed",
+          "commit_delay_ms": 28.883999999999688
+        }
+      ],
+      "layout_durations_ms": [],
+      "glint_starts": 31,
+      "glint_frame_observations": 254
+    }
+  },
+  "cache_checks": [
+    {
+      "name": "keyboard scroll reaches content",
+      "passed": true
+    },
+    {
+      "name": "visited page reuses native controls",
+      "passed": true
+    },
+    {
+      "name": "return resets scroll and keeps edited values",
+      "passed": true
+    },
+    {
+      "name": "retained page pixels match before switching",
+      "passed": true,
+      "crop": [
+        686,
+        125,
+        2016,
+        1152
+      ]
+    },
+    {
+      "name": "wheel reaches active page only",
+      "passed": true,
+      "before": {
+        "accessibility": 0.0,
+        "controller": 0.0,
+        "keyboard": 0.0,
+        "touch": 0.0
+      },
+      "after": {
+        "accessibility": 0.0,
+        "controller": 0.0,
+        "keyboard": 0.0,
+        "touch": 37.5
+      }
+    },
+    {
+      "name": "hidden page relayouts after resize",
+      "passed": true,
+      "before": [
+        338.0,
+        266.0
+      ],
+      "after": [
+        232.0,
+        226.0
+      ]
+    },
+    {
+      "name": "page retention is bounded",
+      "passed": true
+    },
+    {
+      "name": "evicted page restores saved values",
+      "passed": true
+    },
+    {
+      "name": "closed settings leave no active handlers",
+      "passed": true
+    }
+  ],
+  "wheel_before": 14.0625,
+  "wheel_after": 37.5,
+  "touch_page_mouse_scrolling": {
+    "page": "touch",
+    "before": {
+      "content": [
+        337.0,
+        899.0
+      ],
+      "fibers": 1004,
+      "fps": 264.9402160644531,
+      "glyphs": 1319,
+      "native": 657,
+      "path": "/root/__pyr_7923/__pyr_7924/__pyr_7934/__pyr_8031/__pyr_8032/touch__8329",
+      "position": [
+        168.0,
+        24.0
+      ],
+      "screen": [
+        505.0,
+        289.0
+      ],
+      "scroll": 0.0,
+      "size": [
+        337.0,
+        265.0
+      ]
+    },
+    "after": {
+      "content": [
+        337.0,
+        899.0
+      ],
+      "fibers": 1004,
+      "fps": 355.8647766113281,
+      "glyphs": 1319,
+      "native": 657,
+      "path": "/root/__pyr_7923/__pyr_7924/__pyr_7934/__pyr_8031/__pyr_8032/touch__8329",
+      "position": [
+        168.0,
+        24.0
+      ],
+      "screen": [
+        505.0,
+        289.0
+      ],
+      "scroll": 634.0,
+      "size": [
+        337.0,
+        265.0
+      ]
+    },
+    "idle": {
+      "max_ms": 39.924,
+      "over_16_7": 52,
+      "over_33_3": 29,
+      "over_50": 0,
+      "p50_ms": 33.832,
+      "p95_ms": 36.025,
+      "p99_ms": 36.639,
+      "updates": 53
+    },
+    "scrolling": {
+      "max_ms": 37.382,
+      "over_16_7": 108,
+      "over_33_3": 56,
+      "over_50": 0,
+      "p50_ms": 33.341,
+      "p95_ms": 35.514,
+      "p99_ms": 36.621,
+      "updates": 109
+    },
+    "scrolled": true
+  }
+}

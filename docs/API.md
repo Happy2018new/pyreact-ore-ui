@@ -48,7 +48,7 @@
 | `OreIconButton` | `icon='cross_white'`，`onClick=None`，`disabled=False`，`size=20`，`color=None`，`style=None`，`iconSize=8`，`framed=False`，`light=False`。light 使用浅色页头反馈。默认透明背景，`framed=True` 使用完整外框和一像素内侧明暗边。好友搜索旁的关闭按钮使用 22×24、iconSize=7。命中区域与图标尺寸分别设置。 |
 | `OreHeader` | `title=''`，`onBack=None`，`onSocial=None`，`socialCount=0`，`onMenu=None`，`style=None`。独立公共页头，高 24，其中表面高 22、下沿深度高 2。返回与社交按钮都有默认、悬停及按下反馈，点击分别回调。传入 onSocial 显示社交人数入口及双线分隔，否则可用 onMenu 显示目录按钮。标题始终居中。 |
 | `OreWorldCard` | `title=''`，`subtitle=''`，`mode=''`，`image='world_demo_screen_big'`，`onOpen=None`，`onEdit=None`，`disabled=False`，`style=None`。完整比例的世界预览，下方名称与日期，打开和铅笔编辑分别回调。 |
-| `OreSettingsScreen` | `title='设置'`，`navigation=None`，`children=None`，`onClose=None`，`onSocial=None`，`scrollKey='ore_settings_scroll'`，`activeItem=None`，`style=None`，`scrollbarGutter=False`。gutter 传给内容滚动区域。浅灰顶栏、灰色侧栏和独立滚动内容。宽屏可显示社交入口，标题始终居中；窄屏用目录抽屉，activeItem 变化时收起目录。 |
+| `OreSettingsScreen` | `title='设置'`，`navigation=None`，`children=None`，`onClose=None`，`onSocial=None`，`scrollKey='ore_settings_scroll'`，`activeItem=None`，`style=None`，`scrollbarGutter=False`，`scrollContent=True`。gutter 传给内容滚动区域。内容已自带滚动容器（例如 `OrePageCache`）时传 `scrollContent=False`。浅灰顶栏、灰色侧栏和独立滚动内容。宽屏可显示社交入口，标题始终居中；窄屏用目录抽屉，activeItem 变化时收起目录。 |
 | `OreWorldNavigation` | `image='world_demo_screen_big'`，`onPlay=None`，`onRealms=None`，`children=None`，`style=None`。世界预览、游戏按钮、Realms 按钮和成就状态组成的存档编辑导航区。 |
 
 资源包与好友组件：
@@ -66,7 +66,7 @@
 
 `OrePackRow` 和 `OrePlayerRow` 的整行高度均为 36 个逻辑像素。外框由整行绘制，左右按钮之间只保留相接的明暗边，两个命中区域仍然独立。`OrePlayerGroup` 中每个后续玩家行与前一行共用 1 像素外框，行距为 35。资源包说明使用 `OreFont.body`、字号 7、行高 10，并由行组件绘制说明区的侧边和底边。
 
-`OreSettingsScreen` 的左右滚动区域分别绘制固定的半透明顶边。右侧使用约 12.5% 黑色，随其下方滚动内容混色。`OreScrollView` 的滚动块下方有 1 像素、20% 黑色阴影，鼠标与触屏模板共用同一材质。
+`OreSettingsScreen` 的左右滚动区域分别绘制固定的半透明顶边。右侧使用约 29.4% 黑色，随其下方滚动内容混色。`OreScrollView` 的滚动块下方有 1 像素、20% 黑色阴影，鼠标与触屏模板共用同一材质。
 
 `OreTabs` 和 `OreSegmentedControl` 在原生布局应用时将相邻按钮的两端对齐物理像素，避免 flex 分配小数宽度产生突起。纯图标页签省略空文字的间距，并将图标等比放入 12×12 的区域。`OreWorldCard` 的预览与名称区共用黑色边框；`OrePlayerGroup` 的标签覆盖与横线相接的上沿，滚动时不会露出穿过标签的黑线。局部实机证据见 [SEAMS_SCROLL.md](SEAMS_SCROLL.md)。
 
@@ -98,3 +98,39 @@ OreImage(name='animation', animate=True, style=Style(width=14, height=14))
 `asset(name)` 返回独立元数据副本；src 不含 `.png` 后缀。未识别的资源/变体/状态会抛出明确 ValueError。GIF 的 frames 也复制，调用者更改不会污染 catalog。
 
 原生按钮提供 default、hover、pressed 三态，`focused` 由调用者指定。禁用控件不绑定业务回调，滑块和输入框调用 `SetTouchEnable(False)`。OreDialog、OreDrawer、OreDropdown、OreFriendsPanel 和 OreActionMenu 将模态子树挂到当前 render root，避免祖先滚动视口裁剪遮罩。正文自动滚动，内部点击被表面拦截，背景点击关闭。表面使用普通容器，透明命中区域按布局避开输入框，保留鼠标与 F11 触屏模式下的原生输入焦点。关闭组件时注销拦截按钮的事件处理器。
+
+
+## 设置页与快速导航
+
+`OrePageCache(activeKey, renderPage, cacheSize=8, resetScroll=True, scrollbarGutter=False, style=None)`
+按需创建页面，保留最近访问的最多 8 页。再次选中页面复用原生控件，默认回到顶部。
+`renderPage(key)` 只在首次访问或被淘汰后再次访问时调用。页面内使用自己的 hooks 管理状态，
+需要跨淘汰保存的数据由业务层保存。更换缓存组件的 `key` 可清空缓存。
+
+```python
+OreSettingsScreen(
+    title='设置', navigation=navigation, scrollContent=False,
+    children=OrePageCache(activeKey=page, renderPage=render_page, cacheSize=8),
+)
+```
+
+隐藏页保留 hooks 和原生控件，但不参与可见页面的布局计算。视口尺寸变化或隐藏页的内容发生更新后，
+再次显示时重新布局。该适配限定于缓存页的固定尺寸滚动容器，普通 `OreScrollView` 沿用框架布局。
+隐藏页的 effect 和事件订阅仍存在，需要持续运行任务的业务应自行暂停它们；切页前关闭挂到根节点的弹窗。
+缓存减少重复访问的开销，首次创建大量控件仍需时间。源码依赖当前 Pyreact 的布局收集入口，升级框架后请运行定向缓存验证。
+
+`OreNavigationIcon(name, selected=False, animated=True, size=12, style=None)` 使用采集得到的白色闪光帧。
+首次挂载不播放，`selected` 从假变真时重播。快速切走会让当前动画播放结束，再次选中则从头播放。
+图像控件保持挂载，结束后注销动画时钟。`OreNavigationItem` 自动为含 `navigationAnimation` 元数据的设置图标启用此效果。
+
+`OreSlider` 新增 `onChangeEnd(value)`，在拖动释放时提交最终值。`OreSliderRow` 将拖动中的值保留在行内，
+通过 `onCommit(value)` 向业务提交，避免连续滑动时重建整个页面。它支持 `title`、`description`、`value`、
+`steps`、`tickLabels`、`disabled`、`formatValue`、`onChange`、`sliderKey`、`style`、`divider` 和 `compact`。
+`OreSettingsRow` 与 `OreSettingsSection` 的 `compact=True` 用于密集设置页。
+
+另有 `OreStatusLabel`（蓝底白字状态）、`OreNotice`（提示块）、`OreKeyBinding`（按键绑定格）、
+`OreLanguageOption`（语言选项）和 `OreStorageMeter`（存储进度）。交互示例位于 F8 测试页的设置区域。
+F9 打开独立的设置页示例，示例选项保存在页面会话中，不修改实际游戏设置。
+
+Ore 滚动模板的鼠标 `scroll_speed` 为 40，原生默认值为 15。只调整 Ore 模板的鼠标分支，
+保持引擎负责命中、嵌套滚动和边界。触屏分支沿用原生速度。实测记录见 [NAVIGATION_PERFORMANCE.md](NAVIGATION_PERFORMANCE.md)。
