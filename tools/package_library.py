@@ -19,6 +19,8 @@ def package(output, asset_set):
     paths += list((ROOT / 'resource_pack/textures/pyreact_ore/type').glob('*'))
     paths += list((ROOT / 'resource_pack/textures/pyreact_ore/skin').glob('*'))
     paths += list((ROOT / 'resource_pack/textures/pyreact_ore/reference').glob('*'))
+    paths += list((ROOT / 'resource_pack/textures/pyreact_ore/settings').glob('*'))
+    paths += [ROOT / 'assets/settings-reference.json']
     paths += [ROOT / 'assets/reference-icons.json']
     paths += [ROOT / p for p in ('README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'assets/manifest.json',
                                   'tools/deploy.py')]

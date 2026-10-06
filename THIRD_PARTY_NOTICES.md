@@ -29,3 +29,5 @@ Minecraft、OreUI、Mojang、Microsoft、网易及资源相关权利仍归相应
 ## 开发技能
 
 七项通用 Mod 技能来自用户提供的 better-building-editor 中的 mcdk-assistant 技能，保留其本地统一工具入口适配。上游 `GitHub-Zero123/mcdk-assistant` 的 BSD 3-Clause 许可见 `docs/vendor/mcdk-assistant.LICENSE.txt`。技能来源和文件指纹见 `docs/skills-sources.json`。建筑编辑器专用参考只描述参考项目，不构成本库的运行要求。
+
+`textures/pyreact_ore/settings/` 的设置导航、按键、提示图标及导航闪光帧同样来自国际版 `1.26.5203.0` 的截图采集，裁切坐标、哈希和动画时序记录在 `assets/settings-reference.json`。这些图像保留 Minecraft 资产权利，不属于根目录 MIT 许可。

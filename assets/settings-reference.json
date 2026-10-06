@@ -1,0 +1,493 @@
+{
+  "version": "1.26.5203.0",
+  "assets": {
+    "settings_accessibility": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        156,
+        84,
+        204
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_keyboard": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        352,
+        84,
+        400
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_controller": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        448,
+        84,
+        496
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_touch": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        544,
+        84,
+        592
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_party": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        740,
+        84,
+        788
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_general": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        936,
+        84,
+        984
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_video": {
+      "source": "touch.png",
+      "crop": [
+        36,
+        1032,
+        84,
+        1080
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_audio": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        472,
+        84,
+        520
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "settings_account": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        568,
+        84,
+        616
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "settings_subscriptions": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        664,
+        84,
+        712
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "settings_resources": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        760,
+        84,
+        808
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "settings_storage": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        856,
+        84,
+        904
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "settings_language": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        952,
+        84,
+        1000
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "settings_creator": {
+      "source": "sidebar-bottom2.png",
+      "crop": [
+        36,
+        1048,
+        84,
+        1096
+      ],
+      "scale": 4,
+      "sha256": "c289d529b4e0329c8a3a9aaf65a8ab6bbc7812a225d9c58e2319d699e0c1607b"
+    },
+    "navigation_glint": {
+      "source": "animation-controller/frames.json",
+      "crop": [
+        16,
+        16,
+        64,
+        64
+      ],
+      "scale": 4,
+      "release_ms": 250,
+      "states": [
+        {
+          "time": 259.39620001008734,
+          "file": "frame-010.png"
+        },
+        {
+          "time": 307.84500000299886,
+          "file": "frame-012.png"
+        },
+        {
+          "time": 356.4831999829039,
+          "file": "frame-014.png"
+        },
+        {
+          "time": 405.5818999768235,
+          "file": "frame-016.png"
+        },
+        {
+          "time": 477.9032000224106,
+          "file": "frame-019.png"
+        },
+        {
+          "time": 532.1503999875858,
+          "file": "frame-021.png"
+        },
+        {
+          "time": 605.7866999763064,
+          "file": "frame-024.png"
+        },
+        {
+          "time": 653.4809999866411,
+          "file": "frame-026.png"
+        },
+        {
+          "time": 731.8788000266068,
+          "file": "frame-029.png"
+        }
+      ],
+      "loop": false,
+      "extraction": "White changed pixels against resting icon; other pixels transparent"
+    },
+    "settings_touch_layout": {
+      "source": "touch.png",
+      "crop": [
+        1392,
+        560,
+        1972,
+        876
+      ],
+      "scale": 4,
+      "sha256": "a96708ec85eb7ed17814a0d3660055aa93e0b6def98fbd89b9e025c6fbf35cb3"
+    },
+    "settings_touch_dpad": {
+      "source": "touch-dpad.png",
+      "crop": [
+        1392,
+        560,
+        1972,
+        876
+      ],
+      "scale": 4,
+      "sha256": "4fde77a9a3e1322f322679d75065956ae8b2e1657059d308f2b01b6ffd10d76a"
+    },
+    "settings_touch_crosshair": {
+      "source": "touch-crosshair.png",
+      "crop": [
+        1392,
+        560,
+        1972,
+        876
+      ],
+      "scale": 4,
+      "sha256": "e56d96603ba180184f2ac9078b283087c60fb54b866769147cddc78265d24fda"
+    },
+    "settings_drive": {
+      "source": "storage-current.png",
+      "crop": [
+        724,
+        288,
+        772,
+        336
+      ],
+      "scale": 4,
+      "sha256": "280a626399c40654907e34e120bc8179d506425642b46aab04c3f89fe3476e0f"
+    },
+    "settings_notice": {
+      "source": "touch-current.png",
+      "crop": [
+        760,
+        440,
+        800,
+        480
+      ],
+      "scale": 4,
+      "sha256": "ff47678a5a1fc285b905ca61361eb3c310561c7806baba9d5c4585592183271c"
+    },
+    "controller_A": {
+      "source": "controller/04.png",
+      "crop": [
+        1700,
+        510,
+        1764,
+        574
+      ],
+      "scale": 4,
+      "sha256": "fb985fcef6c173c12b41bb1740206ea00f3430f6dc0f60015825b20afe71fedf",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_down": {
+      "source": "controller/05.png",
+      "crop": [
+        1700,
+        126,
+        1764,
+        190
+      ],
+      "scale": 4,
+      "sha256": "7b2d84a709c443e79331981cd3568684e86bfd576711e08d360bbde4ff6de9a3",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_RT": {
+      "source": "controller/05.png",
+      "crop": [
+        1700,
+        270,
+        1764,
+        334
+      ],
+      "scale": 4,
+      "sha256": "7b2d84a709c443e79331981cd3568684e86bfd576711e08d360bbde4ff6de9a3",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LT": {
+      "source": "controller/05.png",
+      "crop": [
+        1700,
+        414,
+        1764,
+        478
+      ],
+      "scale": 4,
+      "sha256": "7b2d84a709c443e79331981cd3568684e86bfd576711e08d360bbde4ff6de9a3",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_X": {
+      "source": "controller/05.png",
+      "crop": [
+        1700,
+        558,
+        1764,
+        622
+      ],
+      "scale": 4,
+      "sha256": "7b2d84a709c443e79331981cd3568684e86bfd576711e08d360bbde4ff6de9a3",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_Y": {
+      "source": "controller/05.png",
+      "crop": [
+        1700,
+        702,
+        1764,
+        766
+      ],
+      "scale": 4,
+      "sha256": "7b2d84a709c443e79331981cd3568684e86bfd576711e08d360bbde4ff6de9a3",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LB": {
+      "source": "controller/06.png",
+      "crop": [
+        1700,
+        324,
+        1764,
+        388
+      ],
+      "scale": 4,
+      "sha256": "795d2718b846284c5954c4386fc6a5b1834eac8dc7d75bb1eb07e81a4bd4428c",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_RB": {
+      "source": "controller/06.png",
+      "crop": [
+        1700,
+        468,
+        1764,
+        532
+      ],
+      "scale": 4,
+      "sha256": "795d2718b846284c5954c4386fc6a5b1834eac8dc7d75bb1eb07e81a4bd4428c",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_up": {
+      "source": "controller/06.png",
+      "crop": [
+        1700,
+        613,
+        1764,
+        677
+      ],
+      "scale": 4,
+      "sha256": "795d2718b846284c5954c4386fc6a5b1834eac8dc7d75bb1eb07e81a4bd4428c",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_B": {
+      "source": "controller/06.png",
+      "crop": [
+        1700,
+        756,
+        1764,
+        820
+      ],
+      "scale": 4,
+      "sha256": "795d2718b846284c5954c4386fc6a5b1834eac8dc7d75bb1eb07e81a4bd4428c",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LS_press": {
+      "source": "controller/06.png",
+      "crop": [
+        1700,
+        900,
+        1764,
+        964
+      ],
+      "scale": 4,
+      "sha256": "795d2718b846284c5954c4386fc6a5b1834eac8dc7d75bb1eb07e81a4bd4428c",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_RS_press": {
+      "source": "controller/09.png",
+      "crop": [
+        1700,
+        126,
+        1764,
+        190
+      ],
+      "scale": 4,
+      "sha256": "b7951c4a9e89aff716174d3bf73235268d080157627796fbb2893e39c3b1f2a2",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_left": {
+      "source": "controller/09.png",
+      "crop": [
+        1700,
+        270,
+        1764,
+        334
+      ],
+      "scale": 4,
+      "sha256": "b7951c4a9e89aff716174d3bf73235268d080157627796fbb2893e39c3b1f2a2",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_view": {
+      "source": "controller/09.png",
+      "crop": [
+        1700,
+        414,
+        1764,
+        478
+      ],
+      "scale": 4,
+      "sha256": "b7951c4a9e89aff716174d3bf73235268d080157627796fbb2893e39c3b1f2a2",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_right": {
+      "source": "controller/09.png",
+      "crop": [
+        1700,
+        558,
+        1764,
+        622
+      ],
+      "scale": 4,
+      "sha256": "b7951c4a9e89aff716174d3bf73235268d080157627796fbb2893e39c3b1f2a2",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LS_left": {
+      "source": "controller/10.png",
+      "crop": [
+        1700,
+        174,
+        1764,
+        238
+      ],
+      "scale": 4,
+      "sha256": "0a43d76ed73c4bacd1f463583463f1b190a4e7f47b838276a71422b784d9bc37",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LS_right": {
+      "source": "controller/10.png",
+      "crop": [
+        1700,
+        318,
+        1764,
+        382
+      ],
+      "scale": 4,
+      "sha256": "0a43d76ed73c4bacd1f463583463f1b190a4e7f47b838276a71422b784d9bc37",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LS_down": {
+      "source": "controller/10.png",
+      "crop": [
+        1700,
+        462,
+        1764,
+        526
+      ],
+      "scale": 4,
+      "sha256": "0a43d76ed73c4bacd1f463583463f1b190a4e7f47b838276a71422b784d9bc37",
+      "extraction": "Exact uniform cell background made transparent"
+    },
+    "controller_LS_up": {
+      "source": "controller/10.png",
+      "crop": [
+        1700,
+        606,
+        1764,
+        670
+      ],
+      "scale": 4,
+      "sha256": "0a43d76ed73c4bacd1f463583463f1b190a4e7f47b838276a71422b784d9bc37",
+      "extraction": "Exact uniform cell background made transparent"
+    }
+  }
+}

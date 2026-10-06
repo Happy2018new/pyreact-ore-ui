@@ -2,6 +2,9 @@
 """Stable texture names, metadata, and OreUI theme enums."""
 from ._catalog import ASSETS, PALETTE
 from ._reference_assets import ASSETS as REFERENCE_ASSETS
+from ._settings_assets import ASSETS as SETTINGS_ASSETS
+
+REFERENCE_ASSETS = dict(REFERENCE_ASSETS, **SETTINGS_ASSETS)
 
 
 class OreVariant(object):

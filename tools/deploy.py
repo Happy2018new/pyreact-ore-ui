@@ -51,6 +51,7 @@ def deploy(client_package, resource_pack, pyreact_root=None, asset_set='all'):
     copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/type', resource_pack / 'textures/pyreact_ore/type')
     copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/skin', resource_pack / 'textures/pyreact_ore/skin')
     copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/reference', resource_pack / 'textures/pyreact_ore/reference')
+    copy_tree(ROOT / 'resource_pack/textures/pyreact_ore/settings', resource_pack / 'textures/pyreact_ore/settings')
     shutil.copyfile(ROOT / 'resource_pack/ui/OreUI.json', resource_pack / 'ui/OreUI.json')
     template = json.loads(template_path.read_text(encoding='utf-8-sig'))
     controls = template['rootBase']['controls']
