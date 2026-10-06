@@ -14,7 +14,7 @@ def OreWorldCard(title='', subtitle='', mode='', image='world_demo_screen_big',
     return Panel(style=Style(width='100%').merge(style), children=[
         NativeOreButton(key='ore_world_preview', onClick=None if disabled else onOpen,
             buttonBuilder=state_skin('pack', disabled=disabled, slices=(2, 2, 2, 2)),
-            style=Style(width='100%', height=90, padding=1), children=[
+            style=Style(width='100%', height=90, padding=2), children=[
                 OreImage(name=image, style=Style(width='100%', height='100%')),
                 Image(color=Color(0x313233FF), style=Style(position=Position.absolute,
                     left=1, bottom=1, paddingHorizontal=3), children=OreText(content=mode, fontSize=8)) if mode else None,

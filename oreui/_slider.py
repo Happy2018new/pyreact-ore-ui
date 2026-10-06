@@ -13,8 +13,7 @@ def _finish_listener(host):
     original = host._pyreact_dispatch_slider_change
 
     def dispatch(value=None, is_finish=False):
-        for record in records.values():
-            record['in_event'] = True
+        host._ore_slider_in_event = True
         try:
             original(value, is_finish)
             if is_finish:
@@ -22,8 +21,7 @@ def _finish_listener(host):
                     if record.get('dragging'):
                         record['finish']()
         finally:
-            for record in records.values():
-                record['in_event'] = False
+            host._ore_slider_in_event = False
     host._pyreact_dispatch_slider_change = dispatch
     return records
 
@@ -33,37 +31,54 @@ class SliderPrimitive(BaseSliderPrimitive):
 
     def apply_props(self, host, fiber, control, prev_props, next_props):
         steps = max(1, int(next_props.get('steps', 1)))
-        callback = next_props.get('onChange')
-        if steps > 1 and control is not None and not next_props.get('disabled'):
-            slider = control.asSlider()
+        if control is not None and not next_props.get('disabled'):
             records = _finish_listener(host)
             record = records.setdefault(fiber.native_path, {}) if records is not None else {}
+            record['props'] = next_props
+            if 'change' not in record:
+                slider = control.asSlider()
 
-            def finish():
-                record['dragging'] = False
-                target = max(0, min(steps - 1, int(float(slider.GetSliderValue()) + 0.5)))
-                self._set_property_bag(control, steps, target)
-                slider.SetSliderValue(target)
-                host.pyreact_set_slider_value(fiber.native_path, target)
-                if next_props.get('value') is not None:
-                    host.pyreact_set_slider_controlled_value(fiber.native_path, target)
-                record['finished'] = True
-                host.schedule_render(fiber)
-            record['finish'] = finish
+                def normalize(value):
+                    count = max(1, int(record['props'].get('steps', 1)))
+                    return max(0, min(count - 1, int(float(value) + .5))) if count > 1 else max(0., min(1., float(value)))
 
-            def snapped_change(value):
-                snapped = max(0, min(steps - 1, int(float(value) + 0.5)))
-                if record.get('in_event'):
-                    record['dragging'] = True
-                    host.pyreact_unset_slider_controlled_value(fiber.native_path)
-                elif float(value) != snapped:
-                    self._set_property_bag(control, steps, snapped)
-                    slider.SetSliderValue(snapped)
-                    host.pyreact_set_slider_value(fiber.native_path, snapped)
-                    host.pyreact_set_slider_controlled_value(fiber.native_path, snapped)
-                if callback is not None:
-                    callback(snapped)
-            applied_props = dict(next_props, onChange=snapped_change)
+                def finish():
+                    props = record['props']
+                    count = max(1, int(props.get('steps', 1)))
+                    record['dragging'] = False
+                    target = normalize(slider.GetSliderValue())
+                    if count > 1:
+                        self._set_property_bag(control, count, target)
+                        slider.SetSliderValue(target)
+                    host.pyreact_set_slider_value(fiber.native_path, target)
+                    if props.get('value') is not None:
+                        host.pyreact_set_slider_controlled_value(fiber.native_path, target)
+                    if record.get('last') != target and props.get('onChange'):
+                        props['onChange'](target)
+                    record['last'] = target
+                    if props.get('onChangeEnd'):
+                        props['onChangeEnd'](target)
+                    record['finished'] = True
+
+                def change(value):
+                    props = record['props']
+                    snapped = normalize(value)
+                    if getattr(host, '_ore_slider_in_event', False):
+                        record['dragging'] = True
+                        host.pyreact_unset_slider_controlled_value(fiber.native_path)
+                    elif float(value) != snapped:
+                        self._set_property_bag(control, props.get('steps', 1), snapped)
+                        slider.SetSliderValue(snapped)
+                        host.pyreact_set_slider_value(fiber.native_path, snapped)
+                        host.pyreact_set_slider_controlled_value(fiber.native_path, snapped)
+                    if record.get('last') != snapped:
+                        record['last'] = snapped
+                        if props.get('onChange'):
+                            props['onChange'](snapped)
+                record.update(finish=finish, change=change, last=None)
+            elif not record.get('dragging'):
+                record['last'] = next_props.get('value')
+            applied_props = dict(next_props, onChange=record['change'])
             if record.get('dragging'):
                 applied_props['value'] = None
             elif record.pop('finished', False):
@@ -100,14 +115,20 @@ class SliderPrimitive(BaseSliderPrimitive):
                     image.asImage().SetSprite('textures/pyreact_ore/skin/progress_disabled' if disabled else
                         'textures/pyreact_ore/skin/progress' + ('_hover' if state == 'hover' else ''))
                     image.SetAlpha(1.0)
-                cap = native.get_control(host, fiber.native_path + '/slider_bar_' + state + '/sizing_panel/progress_left_cap')
-                if cap is not None:
-                    cap.asImage().SetSprite('textures/pyreact_ore/skin/cap_disabled' if disabled else 'textures/pyreact_ore/skin/step')
+                for side in ('left', 'right'):
+                    cap = native.get_control(host, fiber.native_path + '/slider_bar_' + state + '/sizing_panel/progress_' + side + '_cap')
+                    if cap is not None:
+                        name = ('cap_disabled' if side == 'left' else 'step_disabled') if disabled else 'step'
+                        cap.asImage().SetSprite('textures/pyreact_ore/skin/' + name)
+        # A disabled value can change without a new layout pass.
+        self._paint_ticks(host, fiber)
 
     def apply_layout(self, host, node):
         # Native factories create duplicate child names, which the SDK cannot
         # address independently. Keep their offsets, paint addressable markers.
-        fiber = node.fiber
+        self._paint_ticks(host, node.fiber)
+
+    def _paint_ticks(self, host, fiber):
         props = fiber.props
         steps = max(1, int(props.get('steps', 1)))
         count = max(0, steps - 2) if steps > 1 else 0
@@ -116,7 +137,9 @@ class SliderPrimitive(BaseSliderPrimitive):
         if not applied:
             return
         width, height = applied[:2]
-        signature = (steps, bool(props.get('disabled')), width, height)
+        disabled = bool(props.get('disabled'))
+        cutoff = float(props.get('value') or 0) if disabled else None
+        signature = (steps, disabled, width, height, cutoff)
         if state.get('ore_ticks') == signature:
             return
         pool = state.setdefault('ore_tick_pool', [])
@@ -130,7 +153,8 @@ class SliderPrimitive(BaseSliderPrimitive):
                 continue
             tick.SetPosition(((width + 16) * (index + 1) / (steps - 1) - 9, (height - 6) / 2))
             tick.SetSize((1, 6))
-            tick.asImage().SetSprite('textures/pyreact_ore/skin/step_disabled' if props.get('disabled') else 'textures/pyreact_ore/skin/step')
+            texture = ('cap_disabled' if index + 1 <= cutoff else 'step_disabled') if disabled else 'step'
+            tick.asImage().SetSprite('textures/pyreact_ore/skin/' + texture)
         state['ore_ticks'] = signature
 
     def unmount(self, host, fiber):

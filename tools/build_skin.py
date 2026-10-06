@@ -9,6 +9,26 @@ TEX = 'textures/pyreact_ore/skin/'
 NS = 'OreUI'
 
 
+def scroll_controls():
+    # Preserve common.scrolling_panel's touch variables. Only the mouse
+    # ScrollView changes speed; input and clipping remain engine-managed.
+    touch = {'ignored': '(not $touch)', 'size': '$pane_size_touch',
+        'offset': '$scrolling_pane_offset', '$use_touch_mode': True,
+        '$scroll_track_image_control': 'common.empty_panel',
+        '$allow_scroll_even_when_content_fits': '$allow_scrolling_even_when_content_fits',
+        'variables': [{'requires': '$wider_scroll_area', '$pane_size_touch': '$scrolling_pane_size_touch'},
+                      {'requires': '(not $wider_scroll_area)', '$pane_size_touch': '$scrolling_pane_size'}]}
+    for name in ('scroll_bar_contained', 'scroll_box_visible', 'background_size', 'background_offset',
+                 'scroll_view_port_size', 'scroll_view_port_max_size', 'scroll_view_port_offset',
+                 'scroll_bar_left_padding_size', 'scroll_bar_right_padding_size', 'view_port_size', 'scroll_size'):
+        touch['$' + name] = '$' + name + '_touch'
+    mouse = {'ignored': '$touch', 'size': '$scrolling_pane_size', 'offset': '$scrolling_pane_offset',
+        'controls': [{'scroll_view@common.scroll_view_control': {
+            'allow_scroll_even_when_content_fits': '$allow_scroll_even_when_content_fits', 'scroll_speed': 40}}]}
+    return [{'scroll_touch@common.scrolling_panel_base': touch},
+            {'scroll_mouse@common.scrolling_panel_base': mouse}]
+
+
 def input_controls(search=False):
     # Leave room for the baked first glyph's bearing while retaining the native
     # editor's previous origin, available width and right inset.
@@ -241,6 +261,12 @@ def build():
     Image.new('RGBA', (1, 6), '#8c8d90').save(OUT / 'step_disabled.png')
     control_skins()
     radio_skins()
+    for state in ('default', 'hover', 'pressed', 'disabled'):
+        binding = Image.new('RGBA', (8, 8), '#ffffff' if state in ('hover','pressed') else '#1e1e1f')
+        draw = ImageDraw.Draw(binding)
+        draw.rectangle((1, 1, 6, 6), fill='#b1b2b5' if state == 'disabled' else '#313233')
+        draw.line((1, 1, 6, 1), fill='#a1a2a5' if state == 'disabled' else '#242425')
+        binding.save(OUT / ('binding_' + state + '.png'))
     for prefix, fill in (('pack', '#48494a'), ('pack_action', '#48494a'),
                           ('pack_group', '#313233'), ('menu_action', '#58585a')):
         for state in ('default', 'hover', 'pressed', 'disabled'):
@@ -346,7 +372,8 @@ def build():
                 '$scroll_size_touch': [6, '100%'],
                 '$scroll_box_mouse_image_control': NS + '.scroll_thumb',
                 '$scroll_box_touch_image_control': NS + '.scroll_thumb',
-                '$scroll_track_image_control': NS + '.scroll_track'},
+                '$scroll_track_image_control': NS + '.scroll_track',
+                'controls': scroll_controls()},
             'slider@PyreactBase.slider': {'$slider_box_size': [16, 16]}}
     skin['scroll_thumb']['controls'] = [{'bottom_shadow': {
         'type': 'image', 'texture': 'textures/ui/white_bg', 'color': [0, 0, 0],
@@ -388,6 +415,8 @@ def build():
                     {names[1] + '@OreUI.progress_' + state: {'clip_direction': 'left', 'clip_pixelperfect': False, 'layer': 3}},
                     {'progress_left_cap': {'type': 'image', 'texture': TEX + 'step', 'size': [1, 6],
                         'anchor_from': 'left_middle', 'anchor_to': 'left_middle', 'layer': 5}},
+                    {'progress_right_cap': {'type': 'image', 'texture': TEX + 'step', 'size': [1, 6],
+                        'anchor_from': 'right_middle', 'anchor_to': 'right_middle', 'layer': 5}},
                 ]}}]}
     slider['controls'] = [
         {'slider_box@common.slider_box': {'$slider_box_layout': '$slider_box_layout',

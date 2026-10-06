@@ -247,7 +247,7 @@ def OreCheckbox(value=_UNSET, defaultValue=False, onChange=None, disabled=False,
 
 @Component
 def OreSlider(value=_UNSET, defaultValue=0.5, steps=1, onChange=None, disabled=False,
-              style=None, tickLabels=None):
+              style=None, tickLabels=None, onChangeEnd=None):
     """Ore-sized wrapper around the host slider primitive."""
     steps = max(1, int(steps))
     upper = 1.0 if steps == 1 else float(steps - 1)
@@ -275,6 +275,7 @@ def OreSlider(value=_UNSET, defaultValue=0.5, steps=1, onChange=None, disabled=F
         steps=steps,
         disabled=disabled,
         onChange=None if disabled else change,
+        onChangeEnd=None if disabled else onChangeEnd,
         # The native engine places the thumb centre at both ends. Inset its
         # input range by half a thumb; the native skin extends the track back.
         style=Style(flex=1, height='100%', marginHorizontal=8, opacity=1.0),
@@ -287,10 +288,10 @@ def OreSlider(value=_UNSET, defaultValue=0.5, steps=1, onChange=None, disabled=F
             style=Style(position=Position.absolute, left=0, right=0, height=12), children=[
             OreText(content=str(label), fontSize=8, textAlign=TextAlignment.center,
                 style=Style(position=Position.absolute, left=str(100.0 * index / max(1, count - 1)) + '%',
-                            # Interior ticks span the complete painted track.
-                            # End labels stay under the inset thumb endpoints.
-                            top=0, width=16, marginLeft=0 if index == 0 else
-                            -16 if index == count - 1 else -8.5))
+                            # Centers follow the entire painted track, including
+                            # the half-pixel center of its two end caps.
+                            top=0, width=16, marginLeft=-7.5 if index == 0 else
+                            -8.5))
             for index, label in enumerate(tickLabels)]))])
 
 
@@ -427,7 +428,8 @@ def OreDropdown(options=None, value=_UNSET, defaultValue=_UNSET, onChange=None,
                             ]),
                         Image(color=Color(0x8C8D90FF), style=Style(width='100%', flex=1, paddingHorizontal=1,
                             marginTop=1, paddingTop=1),
-                            children=OreScrollView(showScrollbar=len(options) > 5, style=Style(width='100%', flex=1), children=Panel(style=Style(width='100%'), children=[
+                            children=OreScrollView(showScrollbar=len(options) > 5, scrollbarGutter=True,
+                                style=Style(width='100%', flex=1), children=Panel(style=Style(width='100%'), children=[
                             NativeOreButton(key='ore_option_' + str(index),
                                 buttonBuilder=partial(_menu_row, index), style=Style(width='100%', height=24,
                                     paddingHorizontal=8, flexDirection=FlexDirection.row, alignItems=AlignItems.center),

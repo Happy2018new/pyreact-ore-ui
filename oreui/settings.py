@@ -4,13 +4,15 @@
 from functools import partial
 from ..pyreact import (Component, Panel, Image, Style, Color, Position,
                       FlexDirection, AlignItems, JustifyContent, TextAlignment,
-                      SafeArea, use_state, use_event, use_effect, native)
-from .components import OreText, OreIcon, OreScrollView, OreDrawer
+                      SafeArea, use_state, use_event, use_effect, use_ref, native)
+from .components import OreText, OreIcon, OreScrollView, OreDrawer, OreSlider
 from ._button import NativeOreButton, NativeOreNavigationButton, NativeOrePressable
 from ._joined import NativeOreJoinedRow
 from ._scroll import NativeOreNavigationScrollView
 from ._skins import state_skin
 from .theme import OreSide
+from .assets import asset
+from .navigation import OreNavigationIcon
 from ..pyreact.element import Element, normalize_children
 
 
@@ -36,7 +38,8 @@ def OreNavigationItem(label='', icon=None, selected=False, disabled=False,
         justifyContent=JustifyContent.flex_start).merge(style),
         buttonBuilder=state_skin('navigation', selected, disabled, (0, 0, 0, 0)),
         onClick=None if disabled else onClick, children=[
-            OreIcon(name=icon, size=12) if icon else None,
+            OreNavigationIcon(name=icon, selected=selected,
+                animated=bool(asset(icon).get('navigationAnimation'))) if icon else None,
             OreText(content=label, fontSize=8, color=Color(0x8B8B8EFF) if disabled else Color(0xFFFFFFFF),
                     style=Style(flex=1)),
         ])
@@ -59,14 +62,14 @@ def OreNavigationGroup(title='', children=None, style=None):
 @Component
 def OreSettingsRow(title='', description='', valueText='', children=None,
                    layout=OreSettingLayout.inline, disabled=False, divider=True,
-                   style=None):
+                   style=None, compact=False):
     color = Color(0xB1B2B5FF) if disabled else Color(0xFFFFFFFF)
-    caption = OreText(content=description, fontSize=7, color=Color(0xD0D1D4FF),
+    caption = OreText(content=description, fontSize=7, lineHeight=8 if compact else None, color=Color(0xD0D1D4FF),
                       style=Style(width='100%')) if description else None
     heading = OreText(content=title, fontSize=8, color=color,
         style=Style(flex=1, marginBottom=-4 if layout == OreSettingLayout.field else -2))
     if layout == OreSettingLayout.inline:
-        body = Panel(style=Style(width='100%', minHeight=20, flexDirection=FlexDirection.row,
+        body = Panel(style=Style(width='100%', minHeight=18 if compact else 20, flexDirection=FlexDirection.row,
             gap=8, alignItems=AlignItems.center), children=[
                 Panel(style=Style(flex=1), children=[heading, caption]), children,
             ])
@@ -74,13 +77,16 @@ def OreSettingsRow(title='', description='', valueText='', children=None,
         body = Panel(style=Style(width='100%'), children=[
             Panel(style=Style(width='100%', flexDirection=FlexDirection.row,
                 alignItems=AlignItems.center, gap=6), children=[heading,
-                    OreText(content=valueText, fontSize=8, color=color) if valueText else None]),
+                    OreText(content=valueText, fontSize=8, color=color, textAlign=TextAlignment.right,
+                        style=Style(width=64, height=10 if compact else 12)) if valueText else None]),
             caption if layout == OreSettingLayout.stacked else None,
-            Panel(style=Style(width='100%', marginTop=6 if layout == OreSettingLayout.stacked else 3),
+            Panel(style=Style(width='100%', marginTop=(4 if compact else 6) if layout == OreSettingLayout.stacked else 3),
                   children=children),
             Panel(style=Style(width='100%', marginTop=3), children=caption)
             if layout == OreSettingLayout.field and description else None,
         ])
+    if not title and not description and not valueText:
+        body = Panel(style=Style(width='100%'), children=children)
     return Panel(style=Style(width='100%').merge(style), children=[
         Panel(style=Style(width='100%', paddingHorizontal=12, paddingVertical=6), children=body),
         OreDivider() if divider else None,
@@ -88,30 +94,66 @@ def OreSettingsRow(title='', description='', valueText='', children=None,
 
 
 @Component
-def OreSettingsSection(title='', description='', children=None, style=None):
+def OreSliderRow(title='', description='', value=0.5, steps=1, disabled=False,
+                 formatValue=None, onChange=None, onCommit=None, tickLabels=None,
+                 sliderKey=None, style=None, divider=True, compact=False):
+    """Keep continuous drafts local; commit the final value on release.
+
+    onChange still reports live values when needed. Expensive parent state or
+    persistence belongs in onCommit. The fixed value cell avoids page layout.
+    """
+    draft, set_draft = use_state(value)
+    external = use_ref(value)
+    if external.current != value:
+        external.current = value
+        draft = value
+        set_draft(value)
+
+    def change(next_value):
+        set_draft(next_value)
+        if onChange:
+            onChange(next_value)
+
+    def commit(next_value):
+        set_draft(next_value)
+        if onCommit:
+            onCommit(next_value)
+
+    shown = formatValue(draft) if formatValue else '%d%%' % int(round(draft * 100))
+    return OreSettingsRow(title=title, description=description, valueText=shown,
+        disabled=disabled, layout=OreSettingLayout.stacked, style=style, divider=divider, compact=compact,
+        children=OreSlider(key=sliderKey, value=draft, steps=steps, disabled=disabled,
+            tickLabels=tickLabels, onChange=change, onChangeEnd=commit))
+
+
+@Component
+def OreSettingsSection(title='', description='', children=None, style=None, compact=False):
     # A run of setting rows owns one light opening edge and one dark closing
     # edge. Keep row keys/refs intact and never mutate the caller's Elements.
     items = normalize_children(children)
     grouped = []
     for index, child in enumerate(items):
-        if child.comp_type is not OreSettingsRow:
+        row_types = (OreSettingsRow, OreSliderRow)
+        if child.comp_type not in row_types:
             grouped.append(child)
             continue
-        first = index == 0 or items[index - 1].comp_type is not OreSettingsRow
-        last = index == len(items) - 1 or items[index + 1].comp_type is not OreSettingsRow
+        first = index == 0 or items[index - 1].comp_type not in row_types
+        last = index == len(items) - 1 or items[index + 1].comp_type not in row_types
         if first:
             grouped.append(Image(color=Color(0x5A5B5CFF), style=Style(width='100%', height=1)))
         props = dict(child.props)
+        if compact:
+            props['compact'] = True
         if last:
             props['divider'] = False
         grouped.append(Element(child.comp_type, props, child.style, child.children, child.key, child.ref))
         if last:
             grouped.append(Image(color=Color(0x333334FF), style=Style(width='100%', height=1)))
     return Panel(style=Style(width='100%').merge(style), children=[
-        Panel(style=Style(width='100%', paddingHorizontal=12, paddingTop=12,
-              paddingBottom=8), children=[
-                  OreText(content=title, fontSize=8),
-                  OreText(content=description, fontSize=7, color=Color(0xD0D1D4FF),
+        Panel(style=Style(width='100%', paddingHorizontal=12, paddingTop=11.5 if compact else 12,
+              paddingBottom=2 if compact else 8), children=[
+                  OreText(content=title, fontSize=8, lineHeight=10.5 if compact and description else None),
+                  OreText(content=description, fontSize=7, lineHeight=12 if compact else None, color=Color(0xD0D1D4FF),
                           style=Style(width='100%')) if description else None,
               ]) if title or description else None,
         grouped,
@@ -194,7 +236,8 @@ def OreHeader(title='', onBack=None, onSocial=None, socialCount=0, onMenu=None, 
 
 @Component
 def OreSettingsScreen(title='设置', navigation=None, children=None, onClose=None, onSocial=None,
-                      scrollKey='ore_settings_scroll', activeItem=None, style=None, scrollbarGutter=False):
+                      scrollKey='ore_settings_scroll', activeItem=None, style=None, scrollbarGutter=False,
+                      scrollContent=True):
     size, set_size = use_state(native.get_screen_size())
     menu, set_menu = use_state(False)
     use_event('ScreenSizeChanged', lambda _: set_size(native.get_screen_size()))
@@ -216,8 +259,8 @@ def OreSettingsScreen(title='设置', navigation=None, children=None, onClose=No
                 Image(color=Color(0x1E1E1FFF), style=Style(width=1, height='100%')) if wide else None,
                 Panel(style=Style(flex=1, height='100%'), children=[
                     OreScrollView(key=scrollKey, style=Style(width='100%', height='100%'),
-                                  scrollbarGutter=scrollbarGutter, children=children),
-                    Image(color=Color(0x00000020), style=Style(position=Position.absolute,
+                                  scrollbarGutter=scrollbarGutter, children=children) if scrollContent else children,
+                    Image(color=Color(0x0000004B), style=Style(position=Position.absolute,
                           left=0, right=0, top=0, height=1, zIndex=101)),
                 ]),
             ]),

@@ -6,7 +6,7 @@ from ..pyreact import native
 
 class ScrollViewPrimitive(BaseScrollViewPrimitive):
     template_path = '/root/ore_scroll_tmpl'
-    scrollbar_insets = (8.0, 3.0, 4.0)
+    scrollbar_insets = (8.0, 4.0, 4.0)
 
     def _sync_scroll_view_branch(self, host, scroll_view_path, is_touch, width, height, show_scrollbar):
         BaseScrollViewPrimitive._sync_scroll_view_branch(self, host, scroll_view_path,
