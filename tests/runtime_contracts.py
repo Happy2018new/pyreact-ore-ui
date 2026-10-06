@@ -125,6 +125,14 @@ class FakeHost:
     def schedule_render(self, fiber):
         self.scheduled += 1
 
+    def pyreact_register_animation_frame(self, slot):
+        self.animation_slot = slot
+        slot['_registration_id'] = id(slot)
+
+    def pyreact_unregister_animation_frame(self, slot):
+        self.animation_slot = None
+        slot.pop('_registration_id', None)
+
 
 def render(component, fiber=None, **props):
     element = component(**props)
@@ -138,6 +146,167 @@ def render(component, fiber=None, **props):
 
 
 class ComponentTests(unittest.TestCase):
+    def test_continuous_slider_row_keeps_live_draft_local_and_commits_on_release(self):
+        commits = []
+        row, fiber = render(oreui.OreSliderRow, value=.25, onCommit=commits.append)
+        slider = row.props['children'][0]
+        slider.props['onChange'](.731)
+        self.assertEqual(commits, [])
+        updated, unused = render(oreui.OreSliderRow, fiber=fiber, value=.25, onCommit=commits.append)
+        self.assertAlmostEqual(updated.props['children'][0].props['value'], .731)
+        self.assertEqual(updated.props['valueText'], '73%')
+        updated.props['children'][0].props['onChangeEnd'](.731)
+        self.assertEqual(commits, [.731])
+        external, unused = render(oreui.OreSliderRow, fiber=fiber, value=.5, onCommit=commits.append)
+        self.assertEqual(external.props['children'][0].props['value'], .5)
+
+    def test_navigation_glint_restarts_without_remount_or_component_render(self):
+        from ore_demo.oreui.navigation import OreNavigationIcon, NativeNavigationGlint
+        from ore_demo.oreui import _image
+        icon, component = render(OreNavigationIcon, name='settings_video', selected=True)
+        self.assertEqual(component.hooks, [])
+        glint = icon.children[1]
+        host = FakeHost()
+        fiber = Fiber(glint, host)
+        fiber.native_path = '/glint'
+        image = host.GetBaseUIControl('/glint')
+        props = dict(glint.props)
+        def select(value):
+            props['selected'] = value
+            NativeNavigationGlint._sync_frame_animation(host, fiber, image, props['frames'], props)
+        select(True)
+        state = fiber.primitive_state['_image_frame_animation']
+        self.assertFalse(state['slot']['active'])
+        select(False)
+        select(True)
+        self.assertTrue(state['slot']['active'])
+        registration = state['slot']['_registration_id']
+        original = _image.native.get_control
+        _image.native.get_control = lambda h, path: image
+        try:
+            NativeNavigationGlint._tick_frame_animation(host, fiber, 0.0)
+            NativeNavigationGlint._tick_frame_animation(host, fiber, .3)
+            progressed = state['index']
+            self.assertGreater(progressed, 0)
+            select(True)
+            self.assertEqual(state['index'], progressed)
+            select(False)
+            self.assertTrue(state['slot']['active'])
+            self.assertEqual(state['index'], progressed)
+            select(True)
+            self.assertEqual(state['index'], 0)
+            self.assertIsNone(state['last_time'])
+            self.assertEqual(state['slot']['_registration_id'], registration)
+            NativeNavigationGlint._tick_frame_animation(host, fiber, 1.0)
+            NativeNavigationGlint._tick_frame_animation(host, fiber, 5.0)
+            self.assertTrue(state['completed'])
+            self.assertIsNone(host.animation_slot)
+            self.assertEqual(state['index'], len(props['frames']) - 1)
+            select(False)
+            select(True)
+            self.assertFalse(state['completed'])
+            self.assertTrue(state['slot']['active'])
+            NativeNavigationGlint.unmount(host, fiber)
+            self.assertIsNone(host.animation_slot)
+            self.assertNotIn('_image_frame_animation', fiber.primitive_state)
+        finally:
+            _image.native.get_control = original
+        self.assertEqual(host.scheduled, 0)
+
+    def test_navigation_item_passes_selection_without_extra_state(self):
+        changed = []
+        item, fiber = render(oreui.OreNavigationItem, label='Video',
+            icon='settings_video', selected=False, onClick=lambda: changed.append(True))
+        item.props['onClick']()
+        self.assertEqual(changed, [True])
+        self.assertEqual(fiber.host.scheduled, 0)
+        updated, unused = render(oreui.OreNavigationItem, fiber=fiber,
+            label='Video', icon='settings_video', selected=True)
+        self.assertTrue(updated.children[0].props['selected'])
+
+    def test_page_cache_reuses_elements_preserves_order_and_evicts_lru(self):
+        visited = []
+        def page(name):
+            visited.append(name)
+            return pyreact.Panel(key=name)
+        first, fiber = render(oreui.OrePageCache, activeKey='a', renderPage=page, cacheSize=2)
+        second, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='b', renderPage=page, cacheSize=2)
+        again, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='a', renderPage=page, cacheSize=2)
+        self.assertEqual(visited, ['a', 'b'])
+        self.assertEqual([c.key for c in again.children], ['a', 'b'])
+        self.assertIs(first.children[0].children[0], again.children[0].children[0])
+        self.assertEqual([c.style.get('visible') for c in again.children], [True, False])
+        third, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='c', renderPage=page, cacheSize=2)
+        self.assertEqual([c.key for c in third.children], ['a', 'c'])
+        fourth, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='b', renderPage=page, cacheSize=2)
+        self.assertEqual([c.key for c in fourth.children], ['c', 'b'])
+        self.assertEqual(visited, ['a', 'b', 'c', 'b'])
+        for invalid in (0, -1, True, 1.5):
+            with self.assertRaises(ValueError):
+                render(oreui.OrePageCache, activeKey='a', renderPage=page, cacheSize=invalid)
+
+    def test_page_scroll_resets_only_on_activation_when_requested(self):
+        from ore_demo.oreui.pages import PageScrollPrimitive
+        class Scroll(PageScrollPrimitive):
+            def scroll_to_top(self, control):
+                control.append('top')
+        primitive = Scroll()
+        control = []
+        inactive = dict(active=False, resetScroll=True)
+        active = dict(active=True, resetScroll=True)
+        primitive.apply_props(None, None, control, inactive, active)
+        primitive.apply_props(None, None, control, active, active)
+        primitive.apply_props(None, None, control, active, inactive)
+        primitive.apply_props(None, None, control, inactive, dict(active=True, resetScroll=False))
+        self.assertEqual(control, ['top'])
+
+    def test_page_cache_excludes_hidden_layout_but_preserves_native_geometry(self):
+        from ore_demo.oreui.pages import NativePageScroll, _install_page_layout, _content_version
+        from ore_demo.pyreact import layout as host_layout, native
+        _install_page_layout()
+        host = FakeHost()
+        root = Fiber(pyreact.Panel(), host)
+        visible = Fiber(NativePageScroll(active=True), host)
+        hidden = Fiber(NativePageScroll(active=False), host)
+        root.child_fibers = [visible, hidden]
+        for item in root.child_fibers:
+            child = Fiber(pyreact.Panel(), host)
+            item.child_fibers = [child]
+            item.native_parent_path = '/cache'
+        tree = host_layout.build_layout_tree(root)[0]
+        self.assertTrue(tree.children[0].children)
+        self.assertFalse(tree.children[1].children)
+        self.assertTrue(tree.children[1].display_none)
+        self.assertIsNone(hidden.style)
+        original = native.get_size
+        native.get_size = lambda h, path: (300., 200.)
+        try:
+            inactive = dict(active=False, resetScroll=False)
+            active = dict(active=True, resetScroll=False)
+            hidden.primitive_state['ore_page_layout'] = ((300., 200.), _content_version(hidden))
+            host._commit_layout_dirty = False
+            NativePageScroll.apply_props(host, hidden, FakeControl(), inactive, active)
+            self.assertFalse(host._commit_layout_dirty)
+            native.get_size = lambda h, path: (400., 200.)
+            NativePageScroll.apply_props(host, hidden, FakeControl(), inactive, active)
+            self.assertTrue(host._commit_layout_dirty)
+            native.get_size = lambda h, path: (300., 200.)
+            host._commit_layout_dirty = False
+            hidden.child_fibers[0].element = pyreact.Panel(children=pyreact.Label(content='changed'))
+            NativePageScroll.apply_props(host, hidden, FakeControl(), inactive, active)
+            self.assertTrue(host._commit_layout_dirty)
+        finally:
+            native.get_size = original
+
+    def test_settings_replica_inventory_renders_all_non_placeholder_pages(self):
+        from ore_demo.settings_replica import ReplicaPage
+        from ore_demo.settings_catalog import PAGES, NAVIGATION
+        actual = set(name for unused, entries in NAVIGATION for unused, name in entries)
+        self.assertEqual(actual - set(PAGES) - set(['language']), set(['party','subscriptions','resources']))
+        for page in list(PAGES) + ['language']:
+            element, unused = render(ReplicaPage, page=page, saved=None, onSave=lambda *args: None)
+            self.assertTrue(element.children)
+
     def test_pack_details_and_action_are_independent_and_disabled_blocks_both(self):
         changed = []
         element, unused = render(oreui.OrePackRow, title='Pack',
@@ -521,7 +690,7 @@ class ComponentTests(unittest.TestCase):
                 NativeOreImage._tick_frame_animation(host, fiber, start + duration / 2.0 + 0.00001)
                 self.assertEqual(state['index'], index, name)
                 if index:
-                    self.assertEqual(host.GetBaseUIControl('/animation').uv, metadata['frames'][index]['uv'])
+                    self.assertEqual(host.GetBaseUIControl('/animation').uv, tuple(metadata['frames'][index]['uv']))
                 start += duration
             NativeOreImage._tick_frame_animation(host, fiber,
                 start + metadata['frameDurations'][0] / 2.0 + 0.00001)
