@@ -5,7 +5,7 @@ from functools import partial
 from .pyreact import (Component, Panel, Style, FlexDirection, AlignItems,
                       use_state, navigator)
 from .oreui import (OreSettingsScreen, OreNavigationItem, OreNavigationGroup,
-                    OreSettingsRow, OreSettingsSection, OreSettingLayout,
+                    OreSettingsRow, OreSliderRow, OreSettingsSection, OreSettingLayout,
                     OreSegmentedControl, OreDivider, OreIconButton,
                     OreText, OreButton, OreVariant, OreColors, OreSwitch,
                     OreSlider, OreField, OreDropdown, OreTabs, OreCheckbox,
@@ -13,7 +13,8 @@ from .oreui import (OreSettingsScreen, OreNavigationItem, OreNavigationGroup,
                     OreScrollView, OreDialog, OreDrawer, OreSide, OreBanner,
                     OreTone, OreProgress, OreTag, OreBadge, OreAccordion,
                     OrePagination, OreHelp, asset_names, OreWorldNavigation,
-                    OreFriendsPanel, OreActionMenu)
+                    OreFriendsPanel, OreActionMenu, OreStatusLabel, OreNotice,
+                    OreKeyBinding, OreLanguageOption, OreStorageMeter)
 from .settings_examples import DemoPacks, DemoPlayers
 
 PAGES = [('通用', 'overview', 'general_icon'), ('高级', 'selection', 'advanced_icon'),
@@ -21,7 +22,8 @@ PAGES = [('通用', 'overview', 'general_icon'), ('高级', 'selection', 'advanc
          ('输入框', 'fields', None), ('下拉菜单', 'dropdowns', None),
          ('滑块', 'sliders', None), ('导航', 'navigation', 'ui_menu_worlds_tab'),
          ('列表与容器', 'containers', 'grass_block'), ('消息', 'messages', 'accessibility'),
-         ('弹窗', 'dialogs', None), ('资源图鉴', 'media', 'world'), ('好友', 'social', 'friends')]
+         ('弹窗', 'dialogs', None), ('资源图鉴', 'media', 'world'), ('好友', 'social', 'friends'),
+         ('设置组件', 'preferences', 'settings_accessibility')]
 INITIAL = dict(name='我的世界', seed='8675309', mode='creative', difficulty='peaceful',
                distance=0, multiplayer=True, coordinates=False, days=False,
                recipes=True, fire=True, respawn=False, beds=True, volume=0.6,
@@ -89,6 +91,10 @@ def OrePlayground():
         record(label)
         set_overlay('drawer')
 
+    def open_settings():
+        from .settings_replica import OreSettingsReplica
+        navigator.push(OreSettingsReplica)
+
     def row_switch(title, description, name, key=None, disabled=False):
         return OreSettingsRow(title=title, description=description, disabled=disabled,
             children=OreSwitch(key=key or 'setting_' + name, value=values[name], disabled=disabled,
@@ -110,6 +116,7 @@ def OrePlayground():
             label=label, icon=icon, selected=page == value, onClick=partial(set_page, value))
             for label, value, icon in PAGES[3:] if value != 'containers']),
         OreNavigationGroup(title='设置', children=[
+            OreNavigationItem(key='lab_settings_replica', label='设置页', icon='settings_general', onClick=open_settings),
             OreNavigationItem(key='lab_reset', label='恢复默认设置', icon='general_icon', onClick=reset),
             OreNavigationItem(key='lab_close', label='返回游戏', icon='world', onClick=navigator.pop),
         ]),
@@ -127,7 +134,21 @@ def OrePlayground():
         OreSettingsRow(title='世界种子', description='创建世界时使用的种子', layout=OreSettingLayout.field,
             children=OreField(key='lab_seed', value=values['seed'], onChange=partial(change, 'seed'))),
     ])
-    if page == 'selection':
+    if page == 'preferences':
+        body = OreSettingsSection(title='设置组件', children=[
+            OreSettingsRow(title='设置页', children=OreButton(label='打开', onClick=open_settings)),
+            OreSettingsRow(title='导航图标', layout=OreSettingLayout.stacked,children=[
+                OreNavigationItem(label='视频',icon='settings_video',selected=values['selected']=='a',onClick=partial(change,'selected','a')),
+                OreNavigationItem(label='音频',icon='settings_audio',selected=values['selected']=='b',onClick=partial(change,'selected','b'))]),
+            OreSettingsRow(title='状态标签',children=OreStatusLabel()),
+            OreSettingsRow(layout=OreSettingLayout.stacked,children=OreNotice(text='加载一个世界以自定义控件')),
+            OreSettingsRow(title='按键映射',children=OreKeyBinding(value='空格',onClick=partial(record,'选择了按键'))),
+            OreSettingsRow(title='手柄按键',children=OreKeyBinding(icon='controller_A',disabled=True)),
+            OreSettingsRow(layout=OreSettingLayout.stacked,children=OreLanguageOption(title='简体中文',description='中国',
+                selected=values['checkbox'],onClick=partial(change,'checkbox',not values['checkbox']))),
+            OreSettingsRow(layout=OreSettingLayout.stacked,children=OreStorageMeter(detail='已使用 48 GB，共 300 GB',value=.16)),
+        ])
+    elif page == 'selection':
         body = OreSettingsSection(title='世界选项', children=[
             row_switch('通过睡觉跳过夜晚', '晚上在床上睡觉会跳到早上', 'beds', 'lab_beds'),
             OreSettingsRow(title='需要睡觉的玩家', description='必须有多少玩家躺在床上才能跳过夜晚？',
@@ -168,9 +189,8 @@ def OrePlayground():
         ])
     elif page == 'sliders':
         body = OreSettingsSection(title='声音与显示', children=[
-            OreSettingsRow(title='主音量', description='游戏声音的音量', valueText='%d%%' % (values['volume'] * 100),
-                layout=OreSettingLayout.stacked, children=OreSlider(key='lab_slider', value=values['volume'],
-                    disabled=values['locked'], onChange=partial(change, 'volume'))),
+            OreSliderRow(title='主音量', description='游戏声音的音量', value=values['volume'],
+                sliderKey='lab_slider', disabled=values['locked'], onCommit=partial(change, 'volume')),
             OreSettingsRow(title='渲染距离', description='可见的区块范围', valueText=str(values['step'] + 4) + ' 个区块',
                 layout=OreSettingLayout.stacked, children=OreSlider(key='lab_step_slider', value=values['step'],
                     steps=5, tickLabels=['4', '5', '6', '7', '8'], onChange=partial(change, 'step'))),

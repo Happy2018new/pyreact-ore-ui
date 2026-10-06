@@ -3,6 +3,7 @@ import mod.client.extraClientApi as clientApi
 from .pyreact import runtime_init, navigator
 from .gallery import OreGallery
 from .playground import OrePlayground
+from .settings_replica import OreSettingsReplica
 
 ClientSystem = clientApi.GetClientSystemCls()
 
@@ -27,10 +28,17 @@ class OreDemoClientSystem(ClientSystem):
         if navigator.depth == 0:
             navigator.push(OrePlayground)
 
+    def open_settings(self):
+        if navigator.depth == 0:
+            navigator.push(OreSettingsReplica)
+
     def on_key(self, args):
         key = str(clientApi.GetMinecraftEnum().KeyBoardType.KEY_F8)
         if args.get('key') == key and args.get('isDown') == '0':
             self.open_playground()
+        settings_key = str(clientApi.GetMinecraftEnum().KeyBoardType.KEY_F9)
+        if args.get('key') == settings_key and args.get('isDown') == '0':
+            self.open_settings()
 
     def Destroy(self):
         self.UnListenForEvent(clientApi.GetEngineNamespace(), clientApi.GetEngineSystemName(),
