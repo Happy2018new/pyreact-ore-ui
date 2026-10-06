@@ -21,10 +21,10 @@ pages=[f for f in fs if isinstance(f.comp_type,PageScrollPrimitive)]
 active=next(f for f in pages if f.props.get('active'))
 control=h.GetBaseUIControl(active.native_path)
 '''
-STATE = WALK + '''_result=dict(active=active.key,path=active.native_path,
-    pages=[f.key for f in pages],size=control.GetSize(),position=control.GetGlobalPosition(),
+STATE = WALK + '''_result=dict(active=active.props['pageKey'],path=active.native_path,
+    pages=[f.props['pageKey'] for f in pages],size=control.GetSize(),position=control.GetGlobalPosition(),
     parent=native.get_size(h,active.native_parent_path),
-    scrolls=dict((f.key,f.comp_type.get_scroll_position(h.GetBaseUIControl(f.native_path))) for f in pages),
+    scrolls=dict((f.props['pageKey'],f.comp_type.get_scroll_position(h.GetBaseUIControl(f.native_path))) for f in pages),
     values=dict((f.props['page'],f.hooks[0]['value']) for f in fs if f.comp_type is ReplicaPage))
 '''
 

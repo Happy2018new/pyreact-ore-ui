@@ -36,6 +36,8 @@ def OreNavigationIcon(name, selected=False, animated=True, size=12, style=None):
         NativeNavigationGlint(key='ore_glint', selected=selected, src=glint['src'],
             frames=glint['frames'], frameDuration=glint['frameDuration'],
             frameDurations=glint['frameDurations'], loop=False,
-            style=Style(position=Position.absolute, left=0, top=0, width=size, height=size))
+            # Native siblings on the same layer can cover the glint with the
+            # base icon even though its atlas frames continue to advance.
+            style=Style(position=Position.absolute, left=0, top=0, width=size, height=size, zIndex=2))
         if animated else None,
     ])

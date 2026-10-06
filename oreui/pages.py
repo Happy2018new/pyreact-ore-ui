@@ -91,7 +91,12 @@ def OrePageCache(activeKey, renderPage, cacheSize=8, resetScroll=True,
     # Insertion order is stable: activating a page must not reorder siblings,
     # which would make Pyreact invalidate the whole layout on every switch.
     return Panel(style=Style(width='100%', height='100%').merge(style), children=[
-        NativePageScroll(key=name, active=name == activeKey, resetScroll=resetScroll,
+        # Keep business page names out of the native control-name prefix.
+        # In the 3.10 client, bare names such as accessibility/keyboard can
+        # prevent descendant buttons from receiving their SDK callbacks.
+        # The tuple keeps distinct hashable page keys distinct for reconciliation.
+        NativePageScroll(key=('ore_cached_page', name), pageKey=name,
+            active=name == activeKey, resetScroll=resetScroll,
             style=Style(position=Position.absolute, left=0, top=0, width='100%', height='100%',
                         visible=name == activeKey), children=content)
         for name, content in pages.current.items()])

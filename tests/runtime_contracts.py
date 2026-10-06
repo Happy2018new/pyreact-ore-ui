@@ -166,6 +166,7 @@ class ComponentTests(unittest.TestCase):
         icon, component = render(OreNavigationIcon, name='settings_video', selected=True)
         self.assertEqual(component.hooks, [])
         glint = icon.children[1]
+        self.assertGreater(glint.style.get('zIndex'), 1)
         host = FakeHost()
         fiber = Fiber(glint, host)
         fiber.native_path = '/glint'
@@ -233,13 +234,15 @@ class ComponentTests(unittest.TestCase):
         second, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='b', renderPage=page, cacheSize=2)
         again, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='a', renderPage=page, cacheSize=2)
         self.assertEqual(visited, ['a', 'b'])
-        self.assertEqual([c.key for c in again.children], ['a', 'b'])
+        self.assertEqual([c.props['pageKey'] for c in again.children], ['a', 'b'])
+        self.assertEqual(first.children[0].key, again.children[0].key)
+        self.assertNotEqual(again.children[0].key, again.children[1].key)
         self.assertIs(first.children[0].children[0], again.children[0].children[0])
         self.assertEqual([c.style.get('visible') for c in again.children], [True, False])
         third, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='c', renderPage=page, cacheSize=2)
-        self.assertEqual([c.key for c in third.children], ['a', 'c'])
+        self.assertEqual([c.props['pageKey'] for c in third.children], ['a', 'c'])
         fourth, unused = render(oreui.OrePageCache, fiber=fiber, activeKey='b', renderPage=page, cacheSize=2)
-        self.assertEqual([c.key for c in fourth.children], ['c', 'b'])
+        self.assertEqual([c.props['pageKey'] for c in fourth.children], ['c', 'b'])
         self.assertEqual(visited, ['a', 'b', 'c', 'b'])
         for invalid in (0, -1, True, 1.5):
             with self.assertRaises(ValueError):
