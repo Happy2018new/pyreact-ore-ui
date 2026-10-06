@@ -1,0 +1,177 @@
+{
+  "scope": "settings physical input and visible navigation animations",
+  "checks": [
+    {
+      "name": "accessibility: switch changes value and native skin",
+      "passed": true
+    },
+    {
+      "name": "accessibility: second click restores value",
+      "passed": true
+    },
+    {
+      "name": "accessibility-switch: native hover and held states",
+      "passed": true
+    },
+    {
+      "name": "accessibility-switch: cancelled press changes no value or dialog",
+      "passed": true
+    },
+    {
+      "name": "accessibility-switch: mouse released",
+      "passed": true
+    },
+    {
+      "name": "keyboard: animation changes actual pixels",
+      "passed": true,
+      "unique_frames": 5
+    },
+    {
+      "name": "keyboard: animation returns to the base icon",
+      "passed": true
+    },
+    {
+      "name": "physical navigation to keyboard",
+      "passed": true
+    },
+    {
+      "name": "keyboard: switch changes value and native skin",
+      "passed": true
+    },
+    {
+      "name": "keyboard: second click restores value",
+      "passed": true
+    },
+    {
+      "name": "touch: animation changes actual pixels",
+      "passed": true,
+      "unique_frames": 5
+    },
+    {
+      "name": "touch: animation returns to the base icon",
+      "passed": true
+    },
+    {
+      "name": "physical navigation to touch",
+      "passed": true
+    },
+    {
+      "name": "disabled action remains inactive",
+      "passed": true
+    },
+    {
+      "name": "touch-segment: native hover and held states",
+      "passed": true
+    },
+    {
+      "name": "touch-segment: cancelled press changes no value or dialog",
+      "passed": true
+    },
+    {
+      "name": "touch-segment: mouse released",
+      "passed": true
+    },
+    {
+      "name": "touch segment changes selection",
+      "passed": true
+    },
+    {
+      "name": "physical navigation to accessibility",
+      "passed": true
+    },
+    {
+      "name": "cached page retains native path and edited values",
+      "passed": true
+    },
+    {
+      "name": "accessibility-returned: switch changes value and native skin",
+      "passed": true
+    },
+    {
+      "name": "accessibility-returned: second click restores value",
+      "passed": true
+    },
+    {
+      "name": "keyboard: animation changes actual pixels",
+      "passed": true,
+      "unique_frames": 5
+    },
+    {
+      "name": "keyboard: animation returns to the base icon",
+      "passed": true
+    },
+    {
+      "name": "physical navigation to keyboard",
+      "passed": true
+    },
+    {
+      "name": "physical navigation to general",
+      "passed": true
+    },
+    {
+      "name": "general-action: native hover and held states",
+      "passed": true
+    },
+    {
+      "name": "general-action: cancelled press changes no value or dialog",
+      "passed": true
+    },
+    {
+      "name": "general-action: mouse released",
+      "passed": true
+    },
+    {
+      "name": "ordinary button opens its dialog on release",
+      "passed": true
+    },
+    {
+      "name": "dialog close button responds",
+      "passed": true
+    },
+    {
+      "name": "physical navigation to touch",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "date": "2026-10-06",
+  "game": "NetEase 3.10.0.420447",
+  "input": "physical desktop mouse",
+  "source": "tools/verify_settings_interactions.py",
+  "raw": ".runtime/interaction-regression/final",
+  "rapid_navigation": {
+    "touch_up_count": 9,
+    "layout_count": 0,
+    "matching_commits": 9,
+    "update_interval_p95_ms": 39.556900000000006,
+    "max_update_interval_ms": 46.57959999999997,
+    "commit_delays_ms": [
+      17.302299999999992,
+      20.070999999999948,
+      22.21679999999998,
+      21.122500000000045,
+      22.74429999999994,
+      19.18640000000005,
+      17.317499999999985,
+      18.294400000000046,
+      17.036200000000168
+    ],
+    "rate_hz": 10,
+    "commit_median_ms": 19.18640000000005,
+    "pages": [
+      "accessibility",
+      "keyboard",
+      "touch"
+    ]
+  },
+  "offline_contract_tests": 4,
+  "baseline": {
+    "icon_capture_frames": 49,
+    "icon_unique_frames": 1,
+    "switch_click_changes_value": false
+  },
+  "limitations": [
+    "Targeted mouse regression, not a full component or touch-device regression.",
+    "Animation assertions use captured pixel changes and a final return to the base icon. Timing counters alone are insufficient."
+  ]
+}

@@ -118,6 +118,8 @@ OreSettingsScreen(
 再次显示时重新布局。该适配限定于缓存页的固定尺寸滚动容器，普通 `OreScrollView` 沿用框架布局。
 隐藏页的 effect 和事件订阅仍存在，需要持续运行任务的业务应自行暂停它们；切页前关闭挂到根节点的弹窗。
 缓存减少重复访问的开销，首次创建大量控件仍需时间。源码依赖当前 Pyreact 的布局收集入口，升级框架后请运行定向缓存验证。
+缓存的原生容器使用库内部键，调用者仍以原始 `activeKey` 操作页面。需要读取私有滚动节点的
+调试工具应使用其 `pageKey` 属性取得逻辑页标识。物理点击验证见 [设置页交互回归](SETTINGS_INTERACTION_REGRESSION.md)。
 
 `OreNavigationIcon(name, selected=False, animated=True, size=12, style=None)` 使用采集得到的白色闪光帧。
 首次挂载不播放，`selected` 从假变真时重播。快速切走会让当前动画播放结束，再次选中则从头播放。
